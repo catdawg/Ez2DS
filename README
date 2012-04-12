@@ -1,0 +1,33 @@
+-------- PROJECT DESCRIPTION -------
+
+Easy 2D Scene (Ez2DS), is a library for creating a 2D scene tree which is created by reading the contents of an SVG file. In essence, the library provides an API for easily reading an SVG file and give any 2D application an editor for their interfaces.
+
+SVG is used, not with vector graphics in mind, but with the idea of using SVG to organize and tag raster images in a scene. The other supported elements are Paths, Groups and Clones. For example, Paths can be used to define the outline of a given image and Groups can be used for custom tagging and transformation management.
+
+Since the SVG capabilities are immense, it would be very difficult to support everything, thus this subset is used. As long this limitation is understood, the library should provide an easy to use solution for many applications in need of an editor.
+
+SVG was chosen because there are many editors available for this file format. We recommend Inkscape(www.inkscape.org) because it allows editting the SVG text directly, and thus allowing to give custom information to elements in the scene. 
+
+The library was created with programming language wrapping in mind to allow the connection with any Graphical/Physics Engine. The main library is developed in C to hopefully facilitate this wrapping.
+
+Examples of usage are: 
+ - When an 2D Engine does not have an editor, you can quickly use this library to provide an editor for your 2D scenes; 
+ - creating 2D Physics Engine scenario by tagging elements to specify physical characteristics; or for easily creating a 2D map editor. Using the common physics engine of Body(element which contains speed, momentum, mass and such) and Geometry(used for collision calculation), we can make the analogy that a Group can be the Body, which has a Path as a child, defining the Geometry of this body, and an Image which gives the physics object a visible appearance.
+
+-------- COMPILE INSTRUCTIONS --------
+
+I'm developing this on Windows in Netbeans and MinGW for compiling. Plans are for providing crossplatform compilation capabilities, such as CMake, but for now this will do. In order to compile this you just have to import the project into Netbeans, make sure you have MinGW installed and that the following folders are on the system path: "...\MinGW\msys\1.0\bin; ...\MinGW\bin;".
+
+-------- PROJECT STRUCTURE -----------
+
+Ez2DS folder contains the main library. e2dTester contains a sample application which uses the library to draw an SVG file in OpenGL using the API provided by the library.
+
+-------- CURRENT STATUS --------------
+
+In development, many parts are not properly tested. 
+
+Will only be useful for production use when I have some wrappers developed and examples with Graphics Engines.
+
+Will very soon start experimenting with wrapping on Python and Java.
+
+
