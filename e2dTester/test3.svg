@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg3781"
+   version="1.1"
+   inkscape:version="0.48.1 "
+   sodipodi:docname="test3.svg">
+  <defs
+     id="defs3783">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2987-1"
+       is_visible="true" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24748738"
+     inkscape:cx="-1008.9735"
+     inkscape:cy="1029.8869"
+     inkscape:document-units="px"
+     inkscape:current-layer="svg3781"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="716"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata3786">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g3056">
+    <image
+       sodipodi:absref="C:\Users\Rui\Documents\NetBeansProjects\e2dTester\./scaredface.png"
+       xlink:href="./scaredface.png"
+       y="-340.86249"
+       x="415.34671"
+       id="image3171-9-1-7"
+       height="32.163677"
+       width="32.163677" />
+  </g>
+  <g
+     id="g3042"
+     transform="matrix(1,0,0,1.3627617,0,-144.02201)">
+    <g
+       id="g3059">
+      <image
+         sodipodi:absref="C:\Users\Rui\Documents\NetBeansProjects\e2dTester\./scaredface.png"
+         xlink:href="./scaredface.png"
+         y="73.999863"
+         x="333.93277"
+         id="image3171-9"
+         height="32.163677"
+         width="32.163677" />
+    </g>
+    <g
+       id="g3062">
+      <image
+         sodipodi:absref="C:\Users\Rui\Documents\NetBeansProjects\e2dTester\./scaredface.png"
+         xlink:href="./scaredface.png"
+         width="32.163677"
+         height="32.163677"
+         id="image3171-9-1-7-4"
+         x="381.061"
+         y="364.85178" />
+    </g>
+  </g>
+  <image
+     sodipodi:absref="C:\Users\Rui\Documents\NetBeansProjects\e2dTester\./scaredface.png"
+     xlink:href="./scaredface.png"
+     y="-182.26854"
+     x="-96.800613"
+     id="image3171-9-1-7-0"
+     height="56.407337"
+     width="56.407337" />
+</svg>
