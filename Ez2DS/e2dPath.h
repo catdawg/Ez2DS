@@ -44,7 +44,7 @@ struct e2dPathPoint {
 struct e2dPathCurve {
     e2dPathElement element;
     
-    e2dPoint startElement; //redundant since it's the current point in the path.
+    e2dPoint startPoint; //redundant since it's the current point in the path.
                            //added for convenience so that we can iterate
                            //the path without keeping a state (knowing current
                            //point) which can be annoying given subpath loops

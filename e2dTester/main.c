@@ -128,7 +128,7 @@ int main(int argc, const char* argv[]) {
     
     glutStuff(argc, argv);
     
-    scene = createSceneFromFile("test5.svg");
+    scene = createSceneFromFile("test8.svg");
     e2dGroupFlatten(scene->root);
     e2dMatrix mat;
     e2dMatrixSetAsScale(&mat, 1, -1);

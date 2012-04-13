@@ -62,16 +62,16 @@ e2dPathCurveCalculateBBox(e2dPathCurve* curve, float* min_x, float* min_y, float
     float temp_min_y;
     float temp_max_x;
     float temp_max_y;
-    float dcx0 = curve->controlPoint1.x - curve->startElement.x;
-    float dcy0 = curve->controlPoint1.y - curve->startElement.y;
+    float dcx0 = curve->controlPoint1.x - curve->startPoint.x;
+    float dcy0 = curve->controlPoint1.y - curve->startPoint.y;
     float dcx1 = curve->controlPoint2.x - curve->controlPoint1.x;
     float dcy1 = curve->controlPoint2.y - curve->controlPoint1.y;
     float dcx2 = curve->endPoint.x - curve->controlPoint2.x;
     float dcy2 = curve->endPoint.y - curve->controlPoint2.y;
-    temp_min_x = E2D_MIN(curve->startElement.x, curve->endPoint.x);
-    temp_min_y = E2D_MIN(curve->startElement.y, curve->endPoint.y);
-    temp_max_x = E2D_MAX(curve->startElement.x, curve->endPoint.x);
-    temp_max_y = E2D_MAX(curve->startElement.y, curve->endPoint.y);
+    temp_min_x = E2D_MIN(curve->startPoint.x, curve->endPoint.x);
+    temp_min_y = E2D_MIN(curve->startPoint.y, curve->endPoint.y);
+    temp_max_x = E2D_MAX(curve->startPoint.x, curve->endPoint.x);
+    temp_max_y = E2D_MAX(curve->startPoint.y, curve->endPoint.y);
 
     if( curve->controlPoint1.x < temp_min_x ||
         curve->controlPoint1.x > temp_max_x ||
@@ -96,7 +96,7 @@ e2dPathCurveCalculateBBox(e2dPathCurve* curve, float* min_x, float* min_y, float
 
         if (0 < t1 && t1 < 1) {
             float mt = (1 - t1);
-            float z1 = (mt * mt * mt * curve->startElement.x) + (3 * mt * mt * t1 * curve->controlPoint1.x) +
+            float z1 = (mt * mt * mt * curve->startPoint.x) + (3 * mt * mt * t1 * curve->controlPoint1.x) +
                     (3 * mt * t1 * t1 * curve->controlPoint2.x) + (t1 * t1 * t1 * curve->endPoint.x);
 
             temp_min_x = E2D_MIN(temp_min_x, z1);
@@ -105,7 +105,7 @@ e2dPathCurveCalculateBBox(e2dPathCurve* curve, float* min_x, float* min_y, float
 
         if (0 < t2 && t2 < 1) {
             float mt = (1 - t2);
-            float z2 = (mt * mt * mt * curve->startElement.x) + (3 * mt * mt * t2 * curve->controlPoint1.x) +
+            float z2 = (mt * mt * mt * curve->startPoint.x) + (3 * mt * mt * t2 * curve->controlPoint1.x) +
                     (3 * mt * t2 * t2 * curve->controlPoint2.x) + (t2 * t2 * t2 * curve->endPoint.x);
 
             temp_min_x = E2D_MIN(temp_min_x, z2);
@@ -136,7 +136,7 @@ e2dPathCurveCalculateBBox(e2dPathCurve* curve, float* min_x, float* min_y, float
 
         if (0 < t1 && t1 < 1) {
             float mt = (1 - t1);
-            float z1 = (mt * mt * mt * curve->startElement.y) + (3 * mt * mt * t1 * curve->controlPoint1.y) +
+            float z1 = (mt * mt * mt * curve->startPoint.y) + (3 * mt * mt * t1 * curve->controlPoint1.y) +
                     (3 * mt * t1 * t1 * curve->controlPoint2.y) + (t1 * t1 * t1 * curve->endPoint.y);
 
             temp_min_y = E2D_MIN(temp_min_y, z1);
@@ -145,7 +145,7 @@ e2dPathCurveCalculateBBox(e2dPathCurve* curve, float* min_x, float* min_y, float
 
         if (0 < t2 && t2 < 1) {
             float mt = (1 - t2);
-            float z2 = (mt * mt * mt * curve->startElement.y) + (3 * mt * mt * t2 * curve->controlPoint1.y) +
+            float z2 = (mt * mt * mt * curve->startPoint.y) + (3 * mt * mt * t2 * curve->controlPoint1.y) +
                     (3 * mt * t2 * t2 * curve->controlPoint2.y) + (t2 * t2 * t2 * curve->endPoint.y);
 
             temp_min_y = E2D_MIN(temp_min_y, z2);
@@ -225,6 +225,8 @@ e2dPathCenterAtBBox(e2dPath* path, float tx, float ty) {
                 ((e2dPathPoint*) pathElem)->point.y -= offset.y;
                 break;
             case(E2D_PATHCURVE):
+                ((e2dPathCurve*) pathElem)->startPoint.x -= offset.x;
+                ((e2dPathCurve*) pathElem)->startPoint.y -= offset.y;
                 ((e2dPathCurve*) pathElem)->controlPoint1.x -= offset.x;
                 ((e2dPathCurve*) pathElem)->controlPoint1.y -= offset.y;
                 ((e2dPathCurve*) pathElem)->controlPoint2.x -= offset.x;

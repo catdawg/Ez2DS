@@ -145,15 +145,36 @@ drawImage(e2dImage* image)  {
     
 }
 
+void
+drawControlPoint(e2dPoint origin, e2dPoint point)  {
+    
+    glBindTexture(GL_TEXTURE_2D, 0);
+    glBegin(GL_LINE_STRIP);
+
+    glColor4ub(0, 255, 255, 255);
+    
+    glVertex3f(origin.x, origin.y, 5.0f);
+    glVertex3f(point.x, point.y, 5.0f);
+    glEnd();
+    glBegin(GL_LINE_LOOP);
+    glVertex3f(point.x - 10, point.y - 10, 5.0f);
+    glVertex3f(point.x + 10, point.y - 10, 5.0f);
+    glVertex3f(point.x + 10, point.y + 10, 5.0f);
+    glVertex3f(point.x - 10, point.y + 10, 5.0f);
+    
+    glEnd();
+    
+    glColor4ub(255, 255, 255, 255);
+}
+
 void 
 drawPath(e2dPath* path)  {
-    
     glBindTexture(GL_TEXTURE_2D, 0);
     
     e2dPoint startPointOfSubPath;
     e2dPoint currentPoint;
-    glBindTexture(GL_TEXTURE_2D, 0);
-    glColor4ub(255, 0, 0, 255);
+    glBindTexture(GL_TEXTURE_2D, 0); 
+    glColor4ub(255, 128, 128, 255);
     
     e2dPathElement* pathElem;
     e2dPathPoint* point;
@@ -197,8 +218,13 @@ drawPath(e2dPath* path)  {
                 break;
             case(E2D_PATHCURVE):
                 curve = (e2dPathCurve*)pathElem;
+                glEnd();
+                drawControlPoint(curve->startPoint, curve->controlPoint1);
+                drawControlPoint(curve->endPoint, curve->controlPoint2);
+                glColor4ub(255, 128, 128, 255);
+                glBegin(GL_LINE_STRIP);
                 float t;
-                for (t = 0.0f; t <= 1.0f; t += 0.5f)  {
+                for (t = 0.0f; t <= 1.0f; t += 0.05f)  {
                     float xt = 
                     powf(1.0f-t, 3.0f) * currentPoint.x + 
                     3.0f * t * powf (1.0f-t, 2.0f) * curve->controlPoint1.x +
@@ -270,6 +296,7 @@ drawRect(e2dPoint point, float width, float height)  {
     glBegin(GL_LINE_LOOP);
 
     glColor4ub(255, 255, 0, 255);
+    
     glVertex3f(point.x, point.y, 5.0f);
     glVertex3f(point.x + width, point.y, 5.0f);
     glVertex3f(point.x + width, point.y + height, 5.0f);

@@ -244,16 +244,29 @@ parseLineTo(e2dPath* path, const char** points, e2dPoint* currentPoint,
     }
 }
 
+static e2dPoint
+getPrevious2ndControlPoint(e2dPath* path, e2dPoint* currentPoint)  {
+    
+    if(path->pathElementsNum > 0 && 
+       path->pathElements[path->pathElementsNum - 1]->type == E2D_PATHCURVE)
+        return 
+            ((e2dPathCurve*)path->pathElements[path->pathElementsNum - 1])
+                ->controlPoint2;
+    else
+        return *currentPoint;
+    
+}
+
 static void 
 parseCurveTo(e2dPath* path, const char** points, e2dPoint* currentPoint,
-        E2D_BOOL relative)  {
+        E2D_BOOL relative, E2D_BOOL smooth)  {
     
     while(**points)  {
         while(**points && **points == ' ')
             ++*points;
         
         //check if we reached another command
-        while(**points && (!isalnum(**points) || **points == '-')) ++*points;
+        while(**points && !(isalnum(**points) || **points == '-')) ++*points;
         
         if(!**points)
             return;
@@ -261,13 +274,24 @@ parseCurveTo(e2dPath* path, const char** points, e2dPoint* currentPoint,
         if(isdigit(**points) || **points == '-')
         {
             
-            e2dPoint c1 = parsePoint(points);
-            e2dPoint c2 = parsePoint(points);
+            e2dPoint c1, c2;
+            
+            if(smooth)  {
+                e2dPoint prev2ndControlPoint = 
+                        getPrevious2ndControlPoint(path, currentPoint);
+                c1.x = 2*currentPoint->x - prev2ndControlPoint.x;
+                c1.y = 2*currentPoint->y - prev2ndControlPoint.y;
+                
+                c2 = parsePoint(points);
+            }
+            else  {
+                c1 = parsePoint(points);
+                c2 = parsePoint(points);
+            }
             e2dPoint p = parsePoint(points);
             
 
-            if(relative)
-            {
+            if(relative)  {
                 p.x += (*currentPoint).x;
                 p.y += (*currentPoint).y;
                 c1.x += (*currentPoint).x;
@@ -276,7 +300,7 @@ parseCurveTo(e2dPath* path, const char** points, e2dPoint* currentPoint,
                 c2.y += (*currentPoint).y;
             }
             e2dPathCurve* pathCurve = e2dPathCurveCreate();
-            pathCurve->startElement = *currentPoint;
+            pathCurve->startPoint = *currentPoint;
             pathCurve->endPoint = p;
             pathCurve->controlPoint1 = c1;
             pathCurve->controlPoint2 = c2;
@@ -348,6 +372,7 @@ parsePathElements(e2dPath* path, const char* points)  {
     
     parseLineTo(path, &points, &currentPoint, relative);
     
+    
     while(*points && !isalnum(*points)) ++points;
     
     
@@ -413,7 +438,18 @@ parsePathElements(e2dPath* path, const char* points)  {
             relative = !isupper(*points);
             //remove the command
             points++;
-            parseCurveTo(path, &points, &currentPoint, relative);
+            parseCurveTo(path, &points, &currentPoint, relative, E2D_FALSE);
+            
+            continue;
+        }
+        
+        //a curve-to command
+        if(*points == 's' || *points == 'S')
+        {
+            relative = !isupper(*points);
+            //remove the command
+            points++;
+            parseCurveTo(path, &points, &currentPoint, relative, E2D_TRUE);
             continue;
         }
         
