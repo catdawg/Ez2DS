@@ -19,7 +19,6 @@ extern "C" {
 #include <IL/ilu.h>
 #include <IL/ilut.h>
 
-GLuint getTextureID(unsigned int id, char* path);
 
 void initDebugDraw();
 
