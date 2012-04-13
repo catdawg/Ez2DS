@@ -20,41 +20,44 @@
 
 #include "uthash.h"
 
-struct elemIDAndTextureID
-{
-    unsigned int elemID;
+struct pathAndTextureID   {
+    char* path;
     GLuint textureID;
+    ILuint width;
+    ILuint height;
     UT_hash_handle hh; /* makes this structure hashable */
 };
 
-struct elemIDAndTextureID *elemToTexTable = NULL;
+typedef struct pathAndTextureID Texture;
 
-GLuint getTextureID(unsigned int id, char* path)
-{
-    struct elemIDAndTextureID *s;
+Texture *pathToTexTable = NULL;
 
-    HASH_FIND_INT( elemToTexTable, &id, s );  /* s: output pointer */
-    if(s == NULL)
-    {
-        s = malloc(sizeof(struct elemIDAndTextureID));
-        s->elemID = id; 
+Texture* 
+getTextureID(char* path)  {
+    Texture *s;
+    HASH_FIND_STR( pathToTexTable, path, s );  /* s: output pointer */
+    if(s == NULL)  {
+        s = (Texture*)malloc(sizeof(Texture));
+        s->path = (char*)malloc(strlen(path)*sizeof(char));
+        strcpy(s->path, path);
         s->textureID = ilutGLLoadImage(path);
-        HASH_ADD_INT( elemToTexTable, elemID, s);  /* id: name of key field */
+        s->width = ilGetInteger(IL_IMAGE_WIDTH);
+        s->height = ilGetInteger(IL_IMAGE_HEIGHT);
+        HASH_ADD_KEYPTR( hh, pathToTexTable, s->path, strlen(s->path), s );
     }
-    return s->textureID;
+    return s;
 }
 
-
-void initDebugDraw()
-{
+void 
+initDebugDraw()  {
     ilInit();
     iluInit();
     ilutInit();
     ilutRenderer(ILUT_OPENGL);
 }
 
-void setMatrix(float* matrix, e2dMatrix* mat)
-{
+void 
+setMatrix(float* matrix, e2dMatrix* mat)  {
     matrix[0] = mat->vals[0][0];
     matrix[4] = mat->vals[0][1];
     matrix[8] = 0;
@@ -76,22 +79,22 @@ void setMatrix(float* matrix, e2dMatrix* mat)
     matrix[15] = mat->vals[2][2];
 }
 
-void loadMatrix(e2dMatrix* mat)
-{
+void 
+loadMatrix(e2dMatrix* mat)  {
     static float matrix[16];
     setMatrix(matrix, mat);
     glLoadMatrixf(matrix);
 }
 
-void multMatrix(e2dMatrix* mat)
-{
+void 
+multMatrix(e2dMatrix* mat)  {
     static float matrix[16];
     setMatrix(matrix, mat);
     glMultMatrixf(matrix);
 }
 
-void drawElement(e2dElement* elem)
-{
+void 
+drawElement(e2dElement* elem)  {
     glPushMatrix();
     
     multMatrix(&elem->localTransform);
@@ -119,26 +122,31 @@ void drawElement(e2dElement* elem)
     glPopMatrix();
 }
 
-void drawGroup(e2dGroup* group)  {
+void 
+drawGroup(e2dGroup* group)  {
     e2dGroupIterator iter = e2dGroupGetChildIterator(group);
     while(e2dGroupIteratorHasNext(&iter))  {
         drawElement(e2dGroupIteratorNext(&iter));
     }
 }
 
-void drawImage(e2dImage* image)  {
-    glBindTexture(GL_TEXTURE_2D, getTextureID(image->element.unique_id, image->imagePath));
+void 
+drawImage(e2dImage* image)  {
+    Texture* tex = getTextureID(image->imagePath);
+    unsigned int height = image->height == 0? tex->height:image->height;
+    unsigned int width = image->width == 0? tex->width:image->width;
+    glBindTexture(GL_TEXTURE_2D, tex->textureID);
     glBegin(GL_QUADS);
-    glTexCoord2f(0.0, 0.0); glVertex2f(image->position.x, image->position.y + image->height);
-    glTexCoord2f(1.0, 0.0); glVertex2f(image->position.x + image->width, image->position.y + image->height);
-    glTexCoord2f(1.0, 1.0); glVertex2f(image->position.x + image->width, image->position.y);
+    glTexCoord2f(0.0, 0.0); glVertex2f(image->position.x, image->position.y + height);
+    glTexCoord2f(1.0, 0.0); glVertex2f(image->position.x + width, image->position.y + height);
+    glTexCoord2f(1.0, 1.0); glVertex2f(image->position.x + width, image->position.y);
     glTexCoord2f(0.0, 1.0); glVertex2f(image->position.x, image->position.y);
     glEnd();
     
 }
 
-void drawPath(e2dPath* path)
-{
+void 
+drawPath(e2dPath* path)  {
     
     glBindTexture(GL_TEXTURE_2D, 0);
     
@@ -231,8 +239,8 @@ void drawPath(e2dPath* path)
 
 
 
-void drawAxis()
-{
+void 
+drawAxis()  {
     
     glBindTexture(GL_TEXTURE_2D, 0);
     glBegin(GL_LINES);
@@ -256,8 +264,8 @@ void drawAxis()
     
 }
 
-void drawRect(e2dPoint point, float width, float height)
-{
+void 
+drawRect(e2dPoint point, float width, float height)  {
     glBindTexture(GL_TEXTURE_2D, 0);
     glBegin(GL_LINE_LOOP);
 
