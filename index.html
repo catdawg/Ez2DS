@@ -1,0 +1,105 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Ez2ds</title>
+  <meta name="description" content="Easy 2D Scene (Ez2DS), is a library for transforming an SVG file into a 2D scene tree with an API. In essence, the library provides the means for applications to quickly have a 2D editor (Any SVG editor). ">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Ez2ds</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">Easy 2D Scene (Ez2DS), is a library for transforming an SVG file into a 2D scene tree with an API. In essence, the library provides the means for applications to quickly have a 2D editor (Any SVG editor). </p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/catdawg/Ez2DS/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/catdawg/Ez2DS/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/catdawg/Ez2DS" class="code">fork Ez2ds on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <p>Are you developing a 2D game and just reached the part of development where you need to make a lot of levels? Need to easily place and update positions of your waypoints/obstacles/powerups/triggers? Don't really have resources to develop a map editor?</p>
+
+<p>Tired of asking your designer which size the button is? or bugging him to send you the size for each element in the interface so that you can hardcode it?</p>
+
+<p>Would like to test out physics scenarios, but don't really fancy creating the scenarios and playing with the physics element parameters in code?</p>
+
+<p>Maybe this library can help you!</p>
+
+<h5>EZ2DS</h5>
+
+<p>Easy 2D Scene (Ez2DS), is a library for transforming an SVG file into a 2D scene tree with an API. In essence, the library provides the means for applications to quickly have a 2D editor.</p>
+
+<p>SVG is used, not with vector graphics in mind, but with the idea of using SVG to organize and tag raster images in a scene. The other supported elements are Paths, Groups and Clones. For example, Paths can be used to define the outline of a given image and Groups can be used for custom tagging and transformation management.</p>
+
+<p>Since the SVG capabilities are immense, it would be very difficult to support everything, thus this subset is used. As long as this limitation is understood, the library should provide an easy to use solution for many applications in need of an editor.</p>
+
+<p>SVG was chosen because there are many editors available for this file format, although Inkscape(<a href="http://www.inkscape.org">www.inkscape.org</a>) is recommended because it allows editting the SVG text directly, giving the possibility of adding custom information to elements in the scene. </p>
+
+<p>The library was created with programming language wrapping in mind to allow the connection with any Graphical/Physics Engine. The main library is developed in C to hopefully facilitate this wrapping.</p>
+
+<p>Examples of usage are: 
+ *A 2D map editor for games! Specify the position/appearance of waypoints/triggers/obstacles of your scenarions in Inkscape and then read them easily using this API.
+ *When a 2D Engine does not have an editor, you can quickly use this library to provide an editor for your 2D interfaces/scenes; 
+ *Creating a 2D Physics Engine scenario by tagging elements to specify physical characteristics. Using the common physics engine concept of Body(element which contains speed, momentum, mass and such) and Geometry(used for collision calculation), we can make the analogy that a Group can be the Body, which has a Path as a child, defining the Geometry of this body, and an Image which gives the physics object a visible appearance.</p>
+
+<h5>COMPILE INSTRUCTIONS</h5>
+
+<p>I'm developing this on Windows in Netbeans and MinGW for compiling. Plans are for providing crossplatform compilation capabilities, such as CMake, but for now this will do. In order to compile this you just have to import the project into Netbeans, make sure you have MinGW installed and that the following folders are on the system path: "...\MinGW\msys\1.0\bin; ...\MinGW\bin;". </p>
+
+<h5>PROJECT STRUCTURE</h5>
+
+<p>Ez2DS folder contains the main library. e2dTester contains a sample application which uses the library to draw an SVG file in OpenGL using the API provided by the library.</p>
+
+<h5>CURRENT STATUS</h5>
+
+<p>Core functionality is mostly finished, just missing some utility methods, and supporting extra functionality on Paths (only supports straight line segments and simple curves).</p>
+
+<p>Will very soon start experimenting with wrapping on Python and Java( Android! ).</p>
+
+<p>Will only be useful for production use when I have some wrappers developed and examples in popular Graphics Engines.</p>
+
+<h5>LICENSE</h5>
+
+<p>ZLIB license (<a href="http://en.wikipedia.org/wiki/Zlib_License">http://en.wikipedia.org/wiki/Zlib_License</a>)</p>
+
+<p>Please tell me if you use this on a project, I would be very happy if you did!!</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/catdawg" class="avatar"><img src="https://secure.gravatar.com/avatar/f350cd5306f61d685dbb421970018888?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" width="48" height="48"/></a> <a href="https://github.com/catdawg">catdawg</a> maintains <a href="https://github.com/catdawg/Ez2DS">Ez2ds</a></p>
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/catdawg/Ez2DS/tarball/master" class="tar">tar</a><a href="https://github.com/catdawg/Ez2DS/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
