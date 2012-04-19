@@ -1,0 +1,138 @@
+\hypertarget{e2d_group_8c}{\section{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/e2d\-Group.c File Reference}
+\label{e2d_group_8c}\index{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/e2d\-Group.\-c@{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/e2d\-Group.\-c}}
+}
+{\ttfamily \#include \char`\"{}e2d\-Group.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e2d\-Scene.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$float.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+Include dependency graph for e2d\-Group.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{e2d_group_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{e2d_group_8c_a06fc3efe7fc1b630ad2bd4218decfe46}{e2d\-Group\-Init} (\hyperlink{structe2d_group}{e2d\-Group} $\ast$group, const \hyperlink{structe2d_scene}{e2d\-Scene} $\ast$scene, const \hyperlink{structe2d_group}{e2d\-Group} $\ast$parent)
+\item 
+\hyperlink{structe2d_group}{e2d\-Group} $\ast$ \hyperlink{e2d_group_8c_a2196711c72152dc3c876758b0deeef60}{e2d\-Group\-Create} (const \hyperlink{structe2d_scene}{e2d\-Scene} $\ast$scene, const \hyperlink{structe2d_group}{e2d\-Group} $\ast$parent)
+\item 
+void \hyperlink{e2d_group_8c_a545626effa0f89b72f244e56aadb05bc}{e2d\-Group\-Destroy} (\hyperlink{structe2d_group}{e2d\-Group} $\ast$group)
+\item 
+void \hyperlink{e2d_group_8c_a9569da6e74703187306878ec830d52c4}{e2d\-Group\-Free\-Members} (\hyperlink{structe2d_group}{e2d\-Group} $\ast$group)
+\item 
+void \hyperlink{e2d_group_8c_a6ae76730f78ad731621e9286a3980b8a}{e2d\-Group\-Add\-Child} (\hyperlink{structe2d_group}{e2d\-Group} $\ast$group, \hyperlink{structe2d_element}{e2d\-Element} $\ast$element)
+\item 
+void \hyperlink{e2d_group_8c_a7c5f43489bbd2d36a51414aee07abf5a}{e2d\-Group\-Calculate\-Bounding\-Box} (\hyperlink{structe2d_group}{e2d\-Group} $\ast$group)
+\item 
+void \hyperlink{e2d_group_8c_a04bf94419865ca7f9d6daf30ce3fadf0}{e2d\-Group\-Center\-At\-B\-Box} (\hyperlink{structe2d_group}{e2d\-Group} $\ast$group, float tx, float ty)
+\item 
+void \hyperlink{e2d_group_8c_ac02d75af2c137986d374a6f1e1d67579}{\-\_\-e2d\-Group\-Flatten} (\hyperlink{structe2d_group}{e2d\-Group} $\ast$destination, \hyperlink{structe2d_element}{e2d\-Element} $\ast$$\ast$child\-List, unsigned int child\-Num, \hyperlink{structe2d_matrix}{e2d\-Matrix} current\-Transform)
+\item 
+void \hyperlink{e2d_group_8c_afa65ab615b8a0c181a2d5b88eed9fa16}{e2d\-Group\-Flatten} (\hyperlink{structe2d_group}{e2d\-Group} $\ast$group)
+\item 
+\hyperlink{structe2d_group_iterator}{e2d\-Group\-Iterator} \hyperlink{e2d_group_8c_af5a7338c446192338b764a7ac89371d5}{e2d\-Group\-Get\-Child\-Iterator} (\hyperlink{structe2d_group}{e2d\-Group} $\ast$group)
+\item 
+\hyperlink{structe2d_element}{e2d\-Element} $\ast$ \hyperlink{e2d_group_8c_aa5ffe3eb2b83f318df4f22272f1e1189}{e2d\-Group\-Iterator\-Next} (\hyperlink{structe2d_group_iterator}{e2d\-Group\-Iterator} $\ast$iter)
+\item 
+\hyperlink{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O\-O\-L} \hyperlink{e2d_group_8c_a493d54c28198410762cfa32c97d8e646}{e2d\-Group\-Iterator\-Has\-Next} (\hyperlink{structe2d_group_iterator}{e2d\-Group\-Iterator} $\ast$iter)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{e2d_group_8c_ac02d75af2c137986d374a6f1e1d67579}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!\-\_\-e2d\-Group\-Flatten@{\-\_\-e2d\-Group\-Flatten}}
+\index{\-\_\-e2d\-Group\-Flatten@{\-\_\-e2d\-Group\-Flatten}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{\-\_\-e2d\-Group\-Flatten}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-\_\-e2d\-Group\-Flatten} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{destination, }
+\item[{{\bf e2d\-Element} $\ast$$\ast$}]{child\-List, }
+\item[{unsigned int}]{child\-Num, }
+\item[{{\bf e2d\-Matrix}}]{current\-Transform}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_ac02d75af2c137986d374a6f1e1d67579}
+\hypertarget{e2d_group_8c_a6ae76730f78ad731621e9286a3980b8a}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!e2d\-Group\-Add\-Child@{e2d\-Group\-Add\-Child}}
+\index{e2d\-Group\-Add\-Child@{e2d\-Group\-Add\-Child}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{e2d\-Group\-Add\-Child}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Add\-Child} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group, }
+\item[{{\bf e2d\-Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_a6ae76730f78ad731621e9286a3980b8a}
+\hypertarget{e2d_group_8c_a7c5f43489bbd2d36a51414aee07abf5a}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!e2d\-Group\-Calculate\-Bounding\-Box@{e2d\-Group\-Calculate\-Bounding\-Box}}
+\index{e2d\-Group\-Calculate\-Bounding\-Box@{e2d\-Group\-Calculate\-Bounding\-Box}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{e2d\-Group\-Calculate\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Calculate\-Bounding\-Box} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_a7c5f43489bbd2d36a51414aee07abf5a}
+\hypertarget{e2d_group_8c_a04bf94419865ca7f9d6daf30ce3fadf0}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!e2d\-Group\-Center\-At\-B\-Box@{e2d\-Group\-Center\-At\-B\-Box}}
+\index{e2d\-Group\-Center\-At\-B\-Box@{e2d\-Group\-Center\-At\-B\-Box}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{e2d\-Group\-Center\-At\-B\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Center\-At\-B\-Box} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group, }
+\item[{float}]{tx, }
+\item[{float}]{ty}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_a04bf94419865ca7f9d6daf30ce3fadf0}
+\hypertarget{e2d_group_8c_a2196711c72152dc3c876758b0deeef60}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!e2d\-Group\-Create@{e2d\-Group\-Create}}
+\index{e2d\-Group\-Create@{e2d\-Group\-Create}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{e2d\-Group\-Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Group}$\ast$ {\bf e2d\-Group\-Create} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Scene} $\ast$}]{scene, }
+\item[{const {\bf e2d\-Group} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_a2196711c72152dc3c876758b0deeef60}
+\hypertarget{e2d_group_8c_a545626effa0f89b72f244e56aadb05bc}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!e2d\-Group\-Destroy@{e2d\-Group\-Destroy}}
+\index{e2d\-Group\-Destroy@{e2d\-Group\-Destroy}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{e2d\-Group\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Destroy} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_a545626effa0f89b72f244e56aadb05bc}
+\hypertarget{e2d_group_8c_afa65ab615b8a0c181a2d5b88eed9fa16}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!e2d\-Group\-Flatten@{e2d\-Group\-Flatten}}
+\index{e2d\-Group\-Flatten@{e2d\-Group\-Flatten}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{e2d\-Group\-Flatten}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Flatten} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_afa65ab615b8a0c181a2d5b88eed9fa16}
+\hypertarget{e2d_group_8c_a9569da6e74703187306878ec830d52c4}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!e2d\-Group\-Free\-Members@{e2d\-Group\-Free\-Members}}
+\index{e2d\-Group\-Free\-Members@{e2d\-Group\-Free\-Members}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{e2d\-Group\-Free\-Members}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Free\-Members} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_a9569da6e74703187306878ec830d52c4}
+\hypertarget{e2d_group_8c_af5a7338c446192338b764a7ac89371d5}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!e2d\-Group\-Get\-Child\-Iterator@{e2d\-Group\-Get\-Child\-Iterator}}
+\index{e2d\-Group\-Get\-Child\-Iterator@{e2d\-Group\-Get\-Child\-Iterator}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{e2d\-Group\-Get\-Child\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Group\-Iterator} {\bf e2d\-Group\-Get\-Child\-Iterator} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_af5a7338c446192338b764a7ac89371d5}
+\hypertarget{e2d_group_8c_a06fc3efe7fc1b630ad2bd4218decfe46}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!e2d\-Group\-Init@{e2d\-Group\-Init}}
+\index{e2d\-Group\-Init@{e2d\-Group\-Init}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{e2d\-Group\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Init} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group, }
+\item[{const {\bf e2d\-Scene} $\ast$}]{scene, }
+\item[{const {\bf e2d\-Group} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_a06fc3efe7fc1b630ad2bd4218decfe46}
+\hypertarget{e2d_group_8c_a493d54c28198410762cfa32c97d8e646}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!e2d\-Group\-Iterator\-Has\-Next@{e2d\-Group\-Iterator\-Has\-Next}}
+\index{e2d\-Group\-Iterator\-Has\-Next@{e2d\-Group\-Iterator\-Has\-Next}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{e2d\-Group\-Iterator\-Has\-Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-B\-O\-O\-L} {\bf e2d\-Group\-Iterator\-Has\-Next} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group\-Iterator} $\ast$}]{iter}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_a493d54c28198410762cfa32c97d8e646}
+\hypertarget{e2d_group_8c_aa5ffe3eb2b83f318df4f22272f1e1189}{\index{e2d\-Group.\-c@{e2d\-Group.\-c}!e2d\-Group\-Iterator\-Next@{e2d\-Group\-Iterator\-Next}}
+\index{e2d\-Group\-Iterator\-Next@{e2d\-Group\-Iterator\-Next}!e2dGroup.c@{e2d\-Group.\-c}}
+\subsubsection[{e2d\-Group\-Iterator\-Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Element}$\ast$ {\bf e2d\-Group\-Iterator\-Next} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group\-Iterator} $\ast$}]{iter}
+\end{DoxyParamCaption}
+)}}\label{e2d_group_8c_aa5ffe3eb2b83f318df4f22272f1e1189}

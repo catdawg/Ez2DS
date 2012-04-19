@@ -1,0 +1,74 @@
+\hypertarget{e2d_scene_8c}{\section{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/e2d\-Scene.c File Reference}
+\label{e2d_scene_8c}\index{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/e2d\-Scene.\-c@{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/e2d\-Scene.\-c}}
+}
+{\ttfamily \#include \char`\"{}e2d\-Scene.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}mxml.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e2d\-Element.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e2d\-Group.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e2d\-Image.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e2d\-Path.\-h\char`\"{}}\\*
+Include dependency graph for e2d\-Scene.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{e2d_scene_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structe2d_scene}{e2d\-Scene} $\ast$ \hyperlink{e2d_scene_8c_aa0d6ded282c46461357e619f04636416}{create\-Scene\-From\-File} (char $\ast$file)
+\item 
+void \hyperlink{e2d_scene_8c_abff24d0e15b47a324490ca0fe34b498c}{\-\_\-e2d\-Scene\-Calculate\-Effective\-Transforms} (\hyperlink{structe2d_group}{e2d\-Group} $\ast$group)
+\item 
+void \hyperlink{e2d_scene_8c_ac4b32991ff8bab5d5ae429fb97b4e26c}{e2d\-Scene\-Calculate\-Effective\-Transforms} (\hyperlink{structe2d_scene}{e2d\-Scene} $\ast$scene)
+\item 
+void \hyperlink{e2d_scene_8c_ad61a1597886516b1e85749090d575480}{\-\_\-recursively\-Center\-Group\-At\-B\-Box} (\hyperlink{structe2d_group}{e2d\-Group} $\ast$group, float tx, float ty)
+\item 
+void \hyperlink{e2d_scene_8c_ab0487c3d83b8ae072a59286a9e8285c7}{e2d\-Scene\-Center\-All\-At\-B\-Box} (\hyperlink{structe2d_scene}{e2d\-Scene} $\ast$scene, float tx, float ty)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{e2d_scene_8c_abff24d0e15b47a324490ca0fe34b498c}{\index{e2d\-Scene.\-c@{e2d\-Scene.\-c}!\-\_\-e2d\-Scene\-Calculate\-Effective\-Transforms@{\-\_\-e2d\-Scene\-Calculate\-Effective\-Transforms}}
+\index{\-\_\-e2d\-Scene\-Calculate\-Effective\-Transforms@{\-\_\-e2d\-Scene\-Calculate\-Effective\-Transforms}!e2dScene.c@{e2d\-Scene.\-c}}
+\subsubsection[{\-\_\-e2d\-Scene\-Calculate\-Effective\-Transforms}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-\_\-e2d\-Scene\-Calculate\-Effective\-Transforms} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group}
+\end{DoxyParamCaption}
+)}}\label{e2d_scene_8c_abff24d0e15b47a324490ca0fe34b498c}
+\hypertarget{e2d_scene_8c_ad61a1597886516b1e85749090d575480}{\index{e2d\-Scene.\-c@{e2d\-Scene.\-c}!\-\_\-recursively\-Center\-Group\-At\-B\-Box@{\-\_\-recursively\-Center\-Group\-At\-B\-Box}}
+\index{\-\_\-recursively\-Center\-Group\-At\-B\-Box@{\-\_\-recursively\-Center\-Group\-At\-B\-Box}!e2dScene.c@{e2d\-Scene.\-c}}
+\subsubsection[{\-\_\-recursively\-Center\-Group\-At\-B\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-\_\-recursively\-Center\-Group\-At\-B\-Box} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group, }
+\item[{float}]{tx, }
+\item[{float}]{ty}
+\end{DoxyParamCaption}
+)}}\label{e2d_scene_8c_ad61a1597886516b1e85749090d575480}
+\hypertarget{e2d_scene_8c_aa0d6ded282c46461357e619f04636416}{\index{e2d\-Scene.\-c@{e2d\-Scene.\-c}!create\-Scene\-From\-File@{create\-Scene\-From\-File}}
+\index{create\-Scene\-From\-File@{create\-Scene\-From\-File}!e2dScene.c@{e2d\-Scene.\-c}}
+\subsubsection[{create\-Scene\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Scene}$\ast$ {\bf create\-Scene\-From\-File} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{e2d_scene_8c_aa0d6ded282c46461357e619f04636416}
+\hypertarget{e2d_scene_8c_ac4b32991ff8bab5d5ae429fb97b4e26c}{\index{e2d\-Scene.\-c@{e2d\-Scene.\-c}!e2d\-Scene\-Calculate\-Effective\-Transforms@{e2d\-Scene\-Calculate\-Effective\-Transforms}}
+\index{e2d\-Scene\-Calculate\-Effective\-Transforms@{e2d\-Scene\-Calculate\-Effective\-Transforms}!e2dScene.c@{e2d\-Scene.\-c}}
+\subsubsection[{e2d\-Scene\-Calculate\-Effective\-Transforms}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Scene\-Calculate\-Effective\-Transforms} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)}}\label{e2d_scene_8c_ac4b32991ff8bab5d5ae429fb97b4e26c}
+\hypertarget{e2d_scene_8c_ab0487c3d83b8ae072a59286a9e8285c7}{\index{e2d\-Scene.\-c@{e2d\-Scene.\-c}!e2d\-Scene\-Center\-All\-At\-B\-Box@{e2d\-Scene\-Center\-All\-At\-B\-Box}}
+\index{e2d\-Scene\-Center\-All\-At\-B\-Box@{e2d\-Scene\-Center\-All\-At\-B\-Box}!e2dScene.c@{e2d\-Scene.\-c}}
+\subsubsection[{e2d\-Scene\-Center\-All\-At\-B\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Scene\-Center\-All\-At\-B\-Box} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Scene} $\ast$}]{scene, }
+\item[{float}]{tx, }
+\item[{float}]{ty}
+\end{DoxyParamCaption}
+)}}\label{e2d_scene_8c_ab0487c3d83b8ae072a59286a9e8285c7}

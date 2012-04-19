@@ -1,0 +1,322 @@
+\hypertarget{group__e2d_element}{\section{E2d\-Element}
+\label{group__e2d_element}\index{E2d\-Element@{E2d\-Element}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structe2d_element}{e2d\-Element}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2d_element}{e2d\-Element} struct is the base of all elements in the scene. Common scene information such as id, attribute values or transformations are saved in the \hyperlink{structe2d_element}{e2d\-Element} struct. You are not meant to instance this struct by itself. By creating other elements such as \hyperlink{structe2d_group}{e2d\-Group} or \hyperlink{structe2d_image}{e2d\-Image}, this struct will be automatically allocated in them. This \char`\"{}inheritance\char`\"{} is mimic'd by placing the \hyperlink{structe2d_element}{e2d\-Element} struct as the first element in structs which are meant to be \char`\"{}substructs\char`\"{} of it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__e2d_element_ga13e962cd8fa5eaa7d4bec3fc7d774d59}{typedef enum \hyperlink{group__e2d_element_ga9bc8cfdec08c7e9069fc707ee456fd38}{e2d\-Element\-Type} \hyperlink{group__e2d_element_ga13e962cd8fa5eaa7d4bec3fc7d774d59}{e2d\-Element\-Type}}\label{group__e2d_element_ga13e962cd8fa5eaa7d4bec3fc7d774d59}
+
+\begin{DoxyCompactList}\small\item\em The e2d\-Element\-Type enum defines the possible \char`\"{}substructs\char`\"{} of \hyperlink{structe2d_element}{e2d\-Element}. This is used for reflection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__e2d_element_ga9bc8cfdec08c7e9069fc707ee456fd38}{e2d\-Element\-Type} \{ {\bfseries E2\-D\-\_\-\-G\-R\-O\-U\-P}, 
+{\bfseries E2\-D\-\_\-\-P\-A\-T\-H}, 
+{\bfseries E2\-D\-\_\-\-I\-M\-A\-G\-E}
+ \}
+\begin{DoxyCompactList}\small\item\em The e2d\-Element\-Type enum defines the possible \char`\"{}substructs\char`\"{} of \hyperlink{structe2d_element}{e2d\-Element}. This is used for reflection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__e2d_element_ga8734d10ef40a380dfc51bfe1790a92a7}{e2d\-Element\-Init} (\hyperlink{structe2d_element}{e2d\-Element} $\ast$element, \hyperlink{group__e2d_element_ga9bc8cfdec08c7e9069fc707ee456fd38}{e2d\-Element\-Type} type, const \hyperlink{structe2d_scene}{e2d\-Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Called by the create methods of structs which inherit \hyperlink{structe2d_element}{e2d\-Element} (e.\-g. e2d\-Group\-Create). Will initialize all members of the struct with the parameters of this method and with default values on everything else. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2d_element_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy} (\hyperlink{structe2d_element}{e2d\-Element} $\ast$elem)
+\begin{DoxyCompactList}\small\item\em Will check the type member of elem and call the appropriate destructor (e.\-g. e2d\-Group\-Destroy()) \end{DoxyCompactList}\item 
+void \hyperlink{group__e2d_element_gae8da5104d70a09549ca74044dda8313c}{e2d\-Element\-Free\-Members} (\hyperlink{structe2d_element}{e2d\-Element} $\ast$elem)
+\begin{DoxyCompactList}\small\item\em Will free all the allocated memory inside the \hyperlink{structe2d_element}{e2d\-Element} struct pointed by elem. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2d_element_ga5cfa0a343d3dd1a30b0addc4ec6e7f88}{e2d\-Element\-Add\-Attribute} (\hyperlink{structe2d_element}{e2d\-Element} $\ast$elem, const char $\ast$name, const char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Will add an attribute to the element. Increases the size of the array if necessary. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__e2d_element_gac32ea8a33b317fc014929102d64ac157}{e2d\-Element\-Get\-Attribute} (\hyperlink{structe2d_element}{e2d\-Element} $\ast$elem, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Returns the value of an attribute with a given name. \end{DoxyCompactList}\item 
+\hyperlink{structe2d_point}{e2d\-Point} \hyperlink{group__e2d_element_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position} (const \hyperlink{structe2d_element}{e2d\-Element} $\ast$elem)
+\begin{DoxyCompactList}\small\item\em Returns the position of the element, taken from the local\-Transform. \end{DoxyCompactList}\item 
+\hyperlink{structe2d_point}{e2d\-Point} \hyperlink{group__e2d_element_ga9b85de42e52c0d89e82f9231ea923c8c}{e2d\-Element\-Get\-World\-Position} (const \hyperlink{structe2d_element}{e2d\-Element} $\ast$elem)
+\begin{DoxyCompactList}\small\item\em U\-N\-T\-E\-S\-T\-E\-D Will get the local position (\hyperlink{group__e2d_element_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position()}) and multiply it by the inverse\-Effective\-Transform and obtain the world position. Needs effective transformations to be calculated ( e2d\-Scene\-Calculate\-Effective\-Transforms() has been called) \end{DoxyCompactList}\item 
+\hyperlink{structe2d_point}{e2d\-Point} \hyperlink{group__e2d_element_gab4e3f4eeba31c937a946f68617c5cb06}{e2d\-Element\-Get\-Relative\-Position} (const \hyperlink{structe2d_element}{e2d\-Element} $\ast$elem, const \hyperlink{structe2d_element}{e2d\-Element} $\ast$relative\-To)
+\begin{DoxyCompactList}\small\item\em U\-N\-T\-E\-S\-T\-E\-D Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relative\-To. The multiply it with the local position of elem (\hyperlink{group__e2d_element_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position()}). Needs effective transformations to be calculated (e2d\-Scene\-Calculate\-Effective\-Transforms() has been called) \end{DoxyCompactList}\item 
+\hyperlink{structe2d_point}{e2d\-Point} \hyperlink{group__e2d_element_gac3ad9f8cdc0782378c9f2e93cb7da68f}{e2d\-Element\-Get\-Relative\-Point} (const \hyperlink{structe2d_element}{e2d\-Element} $\ast$elem, const \hyperlink{structe2d_element}{e2d\-Element} $\ast$relative\-To, const \hyperlink{structe2d_point}{e2d\-Point} $\ast$point)
+\begin{DoxyCompactList}\small\item\em U\-N\-T\-E\-S\-T\-E\-D Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relative\-To. The multiply it with point. Needs effective transformations to be calculated (e2d\-Scene\-Calculate\-Effective\-Transforms() has been called) \end{DoxyCompactList}\item 
+void \hyperlink{group__e2d_element_ga94aa710b2da71af2091fe4d5b87ce47e}{e2d\-Element\-Calculate\-Bounding\-Box} (\hyperlink{structe2d_element}{e2d\-Element} $\ast$elem)
+\begin{DoxyCompactList}\small\item\em Will check type and calculate the appropriate method (e.\-g. e2d\-Group\-Calculate\-Bounding\-Box()) \end{DoxyCompactList}\item 
+void \hyperlink{group__e2d_element_ga36b01a888c97163c990e16d348aff61c}{e2d\-Element\-Center\-At\-B\-Box} (\hyperlink{structe2d_element}{e2d\-Element} $\ast$elem, float tx, float ty)
+\begin{DoxyCompactList}\small\item\em Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e.\-g. e2d\-Group\-Center\-At\-B\-Box()). (tx, ty) will define where in the bounding box, the element will be centered, e.\-g. (0,0, will center on the top left corner, (0.\-5, 0.\-5) will center on the center of the bbox. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__e2d_element_ga5cfa0a343d3dd1a30b0addc4ec6e7f88}{\index{E2d\-Element@{E2d\-Element}!e2d\-Element\-Add\-Attribute@{e2d\-Element\-Add\-Attribute}}
+\index{e2d\-Element\-Add\-Attribute@{e2d\-Element\-Add\-Attribute}!E2dElement@{E2d\-Element}}
+\subsubsection[{e2d\-Element\-Add\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Element\-Add\-Attribute} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Element} $\ast$}]{elem, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{group__e2d_element_ga5cfa0a343d3dd1a30b0addc4ec6e7f88}
+
+
+Will add an attribute to the element. Increases the size of the array if necessary. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2d_element}{e2d\-Element} where the attribute will be added. \\
+\hline
+\mbox{\tt in}  & {\em name} & The name of the attribute. \\
+\hline
+\mbox{\tt in}  & {\em value} & The value of the attribute. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__e2d_element_ga94aa710b2da71af2091fe4d5b87ce47e}{\index{E2d\-Element@{E2d\-Element}!e2d\-Element\-Calculate\-Bounding\-Box@{e2d\-Element\-Calculate\-Bounding\-Box}}
+\index{e2d\-Element\-Calculate\-Bounding\-Box@{e2d\-Element\-Calculate\-Bounding\-Box}!E2dElement@{E2d\-Element}}
+\subsubsection[{e2d\-Element\-Calculate\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Element\-Calculate\-Bounding\-Box} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Element} $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}}\label{group__e2d_element_ga94aa710b2da71af2091fe4d5b87ce47e}
+
+
+Will check type and calculate the appropriate method (e.\-g. e2d\-Group\-Calculate\-Bounding\-Box()) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2d_element}{e2d\-Element} to calculate.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+e2d\-Group\-Calculate\-Bounding\-Box() 
+
+e2d\-Image\-Calculate\-Bounding\-Box() 
+
+e2d\-Path\-Calculate\-Bounding\-Box() 
+\end{DoxySeeAlso}
+\hypertarget{group__e2d_element_ga36b01a888c97163c990e16d348aff61c}{\index{E2d\-Element@{E2d\-Element}!e2d\-Element\-Center\-At\-B\-Box@{e2d\-Element\-Center\-At\-B\-Box}}
+\index{e2d\-Element\-Center\-At\-B\-Box@{e2d\-Element\-Center\-At\-B\-Box}!E2dElement@{E2d\-Element}}
+\subsubsection[{e2d\-Element\-Center\-At\-B\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Element\-Center\-At\-B\-Box} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Element} $\ast$}]{elem, }
+\item[{float}]{tx, }
+\item[{float}]{ty}
+\end{DoxyParamCaption}
+)}}\label{group__e2d_element_ga36b01a888c97163c990e16d348aff61c}
+
+
+Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e.\-g. e2d\-Group\-Center\-At\-B\-Box()). (tx, ty) will define where in the bounding box, the element will be centered, e.\-g. (0,0, will center on the top left corner, (0.\-5, 0.\-5) will center on the center of the bbox. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2d_element}{e2d\-Element} to center. \\
+\hline
+\mbox{\tt in}  & {\em tx} & x axis offset. \\
+\hline
+\mbox{\tt in}  & {\em ty} & y axis offset.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+e2d\-Group\-Center\-At\-B\-Box() 
+
+e2d\-Image\-Center\-At\-B\-Box() 
+
+e2d\-Path\-Center\-At\-B\-Box() 
+\end{DoxySeeAlso}
+\hypertarget{group__e2d_element_ga214c437a16fe6f3fc795539f851a2019}{\index{E2d\-Element@{E2d\-Element}!e2d\-Element\-Destroy@{e2d\-Element\-Destroy}}
+\index{e2d\-Element\-Destroy@{e2d\-Element\-Destroy}!E2dElement@{E2d\-Element}}
+\subsubsection[{e2d\-Element\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Element\-Destroy} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Element} $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}}\label{group__e2d_element_ga214c437a16fe6f3fc795539f851a2019}
+
+
+Will check the type member of elem and call the appropriate destructor (e.\-g. e2d\-Group\-Destroy()) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2d_element}{e2d\-Element} to be destroyed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+e2d\-Group\-Destroy() 
+
+e2d\-Image\-Destroy() 
+
+e2d\-Path\-Destroy() 
+\end{DoxySeeAlso}
+\hypertarget{group__e2d_element_gae8da5104d70a09549ca74044dda8313c}{\index{E2d\-Element@{E2d\-Element}!e2d\-Element\-Free\-Members@{e2d\-Element\-Free\-Members}}
+\index{e2d\-Element\-Free\-Members@{e2d\-Element\-Free\-Members}!E2dElement@{E2d\-Element}}
+\subsubsection[{e2d\-Element\-Free\-Members}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Element\-Free\-Members} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Element} $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}}\label{group__e2d_element_gae8da5104d70a09549ca74044dda8313c}
+
+
+Will free all the allocated memory inside the \hyperlink{structe2d_element}{e2d\-Element} struct pointed by elem. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2d_element}{e2d\-Element} struct where the members will be freed. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__e2d_element_gac32ea8a33b317fc014929102d64ac157}{\index{E2d\-Element@{E2d\-Element}!e2d\-Element\-Get\-Attribute@{e2d\-Element\-Get\-Attribute}}
+\index{e2d\-Element\-Get\-Attribute@{e2d\-Element\-Get\-Attribute}!E2dElement@{E2d\-Element}}
+\subsubsection[{e2d\-Element\-Get\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf e2d\-Element\-Get\-Attribute} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Element} $\ast$}]{elem, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group__e2d_element_gac32ea8a33b317fc014929102d64ac157}
+
+
+Returns the value of an attribute with a given name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2d_element}{e2d\-Element} containing the attribute. \\
+\hline
+\mbox{\tt in}  & {\em name} & The name of the attribute.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em e2d\-Element$\ast$} & The value of the name. Null if not found. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__e2d_element_ga39dd883e42f609efba3f75300a29ff31}{\index{E2d\-Element@{E2d\-Element}!e2d\-Element\-Get\-Local\-Position@{e2d\-Element\-Get\-Local\-Position}}
+\index{e2d\-Element\-Get\-Local\-Position@{e2d\-Element\-Get\-Local\-Position}!E2dElement@{E2d\-Element}}
+\subsubsection[{e2d\-Element\-Get\-Local\-Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf e2d\-Element\-Get\-Local\-Position} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Element} $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}}\label{group__e2d_element_ga39dd883e42f609efba3f75300a29ff31}
+
+
+Returns the position of the element, taken from the local\-Transform. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2d_element}{e2d\-Element} where the position will be requested.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{structe2d_point}{e2d\-Point}} & The position. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__e2d_element_gac3ad9f8cdc0782378c9f2e93cb7da68f}{\index{E2d\-Element@{E2d\-Element}!e2d\-Element\-Get\-Relative\-Point@{e2d\-Element\-Get\-Relative\-Point}}
+\index{e2d\-Element\-Get\-Relative\-Point@{e2d\-Element\-Get\-Relative\-Point}!E2dElement@{E2d\-Element}}
+\subsubsection[{e2d\-Element\-Get\-Relative\-Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf e2d\-Element\-Get\-Relative\-Point} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Element} $\ast$}]{elem, }
+\item[{const {\bf e2d\-Element} $\ast$}]{relative\-To, }
+\item[{const {\bf e2d\-Point} $\ast$}]{point}
+\end{DoxyParamCaption}
+)}}\label{group__e2d_element_gac3ad9f8cdc0782378c9f2e93cb7da68f}
+
+
+U\-N\-T\-E\-S\-T\-E\-D Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relative\-To. The multiply it with point. Needs effective transformations to be calculated (e2d\-Scene\-Calculate\-Effective\-Transforms() has been called) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2d_element}{e2d\-Element} where the position will be requested. \\
+\hline
+\mbox{\tt in}  & {\em relative\-To} & The result will be relative to this \hyperlink{structe2d_element}{e2d\-Element}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{structe2d_point}{e2d\-Point}} & The position.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2d_element_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position()} 
+
+e2d\-Scene\-Calculate\-Effective\-Transforms() 
+\end{DoxySeeAlso}
+\hypertarget{group__e2d_element_gab4e3f4eeba31c937a946f68617c5cb06}{\index{E2d\-Element@{E2d\-Element}!e2d\-Element\-Get\-Relative\-Position@{e2d\-Element\-Get\-Relative\-Position}}
+\index{e2d\-Element\-Get\-Relative\-Position@{e2d\-Element\-Get\-Relative\-Position}!E2dElement@{E2d\-Element}}
+\subsubsection[{e2d\-Element\-Get\-Relative\-Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf e2d\-Element\-Get\-Relative\-Position} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Element} $\ast$}]{elem, }
+\item[{const {\bf e2d\-Element} $\ast$}]{relative\-To}
+\end{DoxyParamCaption}
+)}}\label{group__e2d_element_gab4e3f4eeba31c937a946f68617c5cb06}
+
+
+U\-N\-T\-E\-S\-T\-E\-D Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relative\-To. The multiply it with the local position of elem (\hyperlink{group__e2d_element_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position()}). Needs effective transformations to be calculated (e2d\-Scene\-Calculate\-Effective\-Transforms() has been called) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2d_element}{e2d\-Element} where the position will be requested. \\
+\hline
+\mbox{\tt in}  & {\em relative\-To} & The result will be relative to this \hyperlink{structe2d_element}{e2d\-Element}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{structe2d_point}{e2d\-Point}} & The position.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2d_element_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position()} 
+
+e2d\-Scene\-Calculate\-Effective\-Transforms() 
+\end{DoxySeeAlso}
+\hypertarget{group__e2d_element_ga9b85de42e52c0d89e82f9231ea923c8c}{\index{E2d\-Element@{E2d\-Element}!e2d\-Element\-Get\-World\-Position@{e2d\-Element\-Get\-World\-Position}}
+\index{e2d\-Element\-Get\-World\-Position@{e2d\-Element\-Get\-World\-Position}!E2dElement@{E2d\-Element}}
+\subsubsection[{e2d\-Element\-Get\-World\-Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf e2d\-Element\-Get\-World\-Position} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Element} $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}}\label{group__e2d_element_ga9b85de42e52c0d89e82f9231ea923c8c}
+
+
+U\-N\-T\-E\-S\-T\-E\-D Will get the local position (\hyperlink{group__e2d_element_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position()}) and multiply it by the inverse\-Effective\-Transform and obtain the world position. Needs effective transformations to be calculated ( e2d\-Scene\-Calculate\-Effective\-Transforms() has been called) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2d_element}{e2d\-Element} where the position will be requested.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{structe2d_point}{e2d\-Point}} & The position.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2d_element_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position()} 
+
+e2d\-Scene\-Calculate\-Effective\-Transforms() 
+\end{DoxySeeAlso}
+\hypertarget{group__e2d_element_ga8734d10ef40a380dfc51bfe1790a92a7}{\index{E2d\-Element@{E2d\-Element}!e2d\-Element\-Init@{e2d\-Element\-Init}}
+\index{e2d\-Element\-Init@{e2d\-Element\-Init}!E2dElement@{E2d\-Element}}
+\subsubsection[{e2d\-Element\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Element\-Init} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Element} $\ast$}]{element, }
+\item[{{\bf e2d\-Element\-Type}}]{type, }
+\item[{const {\bf e2d\-Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)}}\label{group__e2d_element_ga8734d10ef40a380dfc51bfe1790a92a7}
+
+
+Called by the create methods of structs which inherit \hyperlink{structe2d_element}{e2d\-Element} (e.\-g. e2d\-Group\-Create). Will initialize all members of the struct with the parameters of this method and with default values on everything else. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em element} & The \hyperlink{structe2d_element}{e2d\-Element} which will have its members be initialized \\
+\hline
+\mbox{\tt in}  & {\em type} & The type of the struct where element is placed (e.\-g. if this element is placed in a \hyperlink{structe2d_group}{e2d\-Group} then E2\-D\-\_\-\-G\-R\-O\-U\-P is passed here). This grants reflection capabilities to some level. \\
+\hline
+\mbox{\tt in}  & {\em scene} & The \hyperlink{structe2d_scene}{e2d\-Scene} where this element will belong to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+e2d\-Group\-Create() 
+
+e2d\-Image\-Create() 
+
+e2d\-Path\-Create() 
+\end{DoxySeeAlso}

@@ -1,0 +1,36 @@
+\hypertarget{group__transformations}{\section{Transformations}
+\label{group__transformations}\index{Transformations@{Transformations}}
+}
+Collaboration diagram for Transformations\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{group__transformations}
+\end{center}
+\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structe2d_matrix}{e2d\-Matrix} \hyperlink{group__transformations_ga52bda732df714953f93c1e6f5f7c7c93}{local\-Transform}
+\item 
+\hyperlink{structe2d_matrix}{e2d\-Matrix} \hyperlink{group__transformations_ga6c8e26945f09b5157e2111e42f99b879}{effective\-Transform}
+\item 
+\hyperlink{structe2d_matrix}{e2d\-Matrix} \hyperlink{group__transformations_ga5e6d7341f2dbef1923b0a3fcc13781c6}{inverse\-Effective\-Transform}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Attributes taken from S\-V\-G elements are stored here. Useful for when you need to read custom tags placed in the S\-V\-G's X\-M\-L. 
+
+\subsection{Variable Documentation}
+\hypertarget{group__transformations_ga6c8e26945f09b5157e2111e42f99b879}{\index{Transformations@{Transformations}!effective\-Transform@{effective\-Transform}}
+\index{effective\-Transform@{effective\-Transform}!Transformations@{Transformations}}
+\subsubsection[{effective\-Transform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Matrix} effective\-Transform}}\label{group__transformations_ga6c8e26945f09b5157e2111e42f99b879}
+transform calculated by multiplying all the transformations from the root of the scene until this element \hypertarget{group__transformations_ga5e6d7341f2dbef1923b0a3fcc13781c6}{\index{Transformations@{Transformations}!inverse\-Effective\-Transform@{inverse\-Effective\-Transform}}
+\index{inverse\-Effective\-Transform@{inverse\-Effective\-Transform}!Transformations@{Transformations}}
+\subsubsection[{inverse\-Effective\-Transform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Matrix} inverse\-Effective\-Transform}}\label{group__transformations_ga5e6d7341f2dbef1923b0a3fcc13781c6}
+utility for methods such as e2d\-Element\-Get\-World\-Position \hypertarget{group__transformations_ga52bda732df714953f93c1e6f5f7c7c93}{\index{Transformations@{Transformations}!local\-Transform@{local\-Transform}}
+\index{local\-Transform@{local\-Transform}!Transformations@{Transformations}}
+\subsubsection[{local\-Transform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Matrix} local\-Transform}}\label{group__transformations_ga52bda732df714953f93c1e6f5f7c7c93}
+transform taken directly from the svg. If changed directly, effective transforms will have to be recalculated with e2d\-Scene\-Calculate\-Effective\-Transforms 
