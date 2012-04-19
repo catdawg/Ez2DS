@@ -23,20 +23,13 @@ e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene* scene){
     element->attributeNum = 0;
     element->attributeNames = (char**) malloc(sizeof (char*)*4);
     element->attributeValues = (char**) malloc(sizeof (char*)*4);
-    element->_attributeAlloc = 4;
+    element->attributeAlloc = 4;
 
     element->bboxHeight = -1;
     element->bboxWidth = -1;
     element->bboxPosition.x = 0;
     element->bboxPosition.y = 0;
 
-}
-
-e2dElement*
-e2dElementCreate(const e2dScene* scene) {
-    e2dElement* elem = (e2dElement*) malloc(sizeof (e2dElement));
-    e2dElementInit(elem, E2D_ELEMENT, scene);
-    return elem;
 }
 
 void 
@@ -77,15 +70,15 @@ e2dElementDestroy(e2dElement* elem) {
 
 static void 
 e2dElementIncreaseAttributeSpace(e2dElement* element) {
-    element->_attributeAlloc *= 2;
-    element->attributeNames = (char**) realloc(element->attributeNames, element->_attributeAlloc * sizeof (char*));
-    element->attributeValues = (char**) realloc(element->attributeValues, element->_attributeAlloc * sizeof (char*));
+    element->attributeAlloc *= 2;
+    element->attributeNames = (char**) realloc(element->attributeNames, element->attributeAlloc * sizeof (char*));
+    element->attributeValues = (char**) realloc(element->attributeValues, element->attributeAlloc * sizeof (char*));
 }
 
 void 
 e2dElementAddAttribute(e2dElement* element, const char* name, const char* value)
 {
-    if (element->attributeNum + 1 > element->_attributeAlloc)
+    if (element->attributeNum + 1 > element->attributeAlloc)
         e2dElementIncreaseAttributeSpace(element);
     
     element->attributeNames[element->attributeNum] = 
@@ -127,7 +120,8 @@ e2dPoint
 e2dElementGetWorldPosition(const e2dElement* elem) {
     e2dMatrix mat = e2dMatrixMultiply(&(elem->scene->root->element.effectiveTransform),
             &(elem->inverseEffectiveTransform));
-    return e2dMatrixApplyToPoint(&mat, &E2DPOINT_ZERO_ZERO);
+    e2dPoint localP = e2dElementGetLocalPosition(elem);
+    return e2dMatrixApplyToPoint(&mat, &localP);
 }
 
 e2dPoint 
@@ -135,7 +129,8 @@ e2dElementGetRelativePosition(const e2dElement* elem,
         const e2dElement* relativeTo)   {
     e2dMatrix mat = e2dMatrixMultiply(&(relativeTo->effectiveTransform),
             &(elem->inverseEffectiveTransform));
-    return e2dMatrixApplyToPoint(&mat, &E2DPOINT_ZERO_ZERO);
+    e2dPoint localP = e2dElementGetLocalPosition(elem);
+    return e2dMatrixApplyToPoint(&mat, &localP);
 }
 
 e2dPoint 

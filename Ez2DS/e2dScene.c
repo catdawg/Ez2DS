@@ -504,25 +504,27 @@ parseGroup(mxml_node_t* node, e2dScene* scene, e2dGroup* parent);
 static void 
 parseChildElements(mxml_node_t* node, e2dScene* scene, e2dGroup* parent) {
     mxml_node_t* current = mxmlGetFirstChild(node); 
-    while(current != NULL)
-    {
-        if(mxmlGetElement(current) == NULL)
+    const char* currentName;
+    while(current != NULL)  {
+        currentName = mxmlGetElement(current);
+        if(currentName == NULL)
         {
             current = mxmlGetNextSibling(current);
             continue;
         }
             
-        if(strcmp("g", mxmlGetElement(current)) == 0)
+        if(strcmp("g", currentName) == 0)
             e2dGroupAddChild(parent, (e2dElement*)parseGroup(current, scene, parent));
         else
         {
-            if(strcmp("image", mxmlGetElement(current)) == 0)
+            if(strcmp("image", currentName) == 0)
                 e2dGroupAddChild(parent, (e2dElement*)parseImage(current, scene));
-            else if(strcmp("path", mxmlGetElement(current)) == 0)
+            else if(strcmp("path", currentName) == 0)
                 e2dGroupAddChild(parent, (e2dElement*)parsePath(current, scene));
         }
         
         current = mxmlGetNextSibling(current);
+        
         
     }
 }
