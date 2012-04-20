@@ -1,8 +1,8 @@
 \section{Data Structures}
 Here are the data structures with brief descriptions\-:\begin{DoxyCompactList}
 \item\contentsline{section}{\hyperlink{structe2d_element}{e2d\-Element} \\*The \hyperlink{structe2d_element}{e2d\-Element} struct is the base of all elements in the scene. Common scene information such as id, attribute values or transformations are saved in the \hyperlink{structe2d_element}{e2d\-Element} struct. You are not meant to instance this struct by itself. By creating other elements such as \hyperlink{structe2d_group}{e2d\-Group} or \hyperlink{structe2d_image}{e2d\-Image}, this struct will be automatically allocated in them. This \char`\"{}inheritance\char`\"{} is mimic'd by placing the \hyperlink{structe2d_element}{e2d\-Element} struct as the first element in structs which are meant to be \char`\"{}substructs\char`\"{} of it }{\pageref{structe2d_element}}{}
-\item\contentsline{section}{\hyperlink{structe2d_group}{e2d\-Group} }{\pageref{structe2d_group}}{}
-\item\contentsline{section}{\hyperlink{structe2d_group_iterator}{e2d\-Group\-Iterator} }{\pageref{structe2d_group_iterator}}{}
+\item\contentsline{section}{\hyperlink{structe2d_group}{e2d\-Group} \\*The e2d\-Struct is used to group elements in the scene, called childs. This struct is created from the \char`\"{}g\char`\"{} element in S\-V\-G. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2d_element}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Struct$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++ }{\pageref{structe2d_group}}{}
+\item\contentsline{section}{\hyperlink{structe2d_group_iterator}{e2d\-Group\-Iterator} \\*An iterator for the children of \hyperlink{structe2d_group}{e2d\-Group} }{\pageref{structe2d_group_iterator}}{}
 \item\contentsline{section}{\hyperlink{structe2d_image}{e2d\-Image} }{\pageref{structe2d_image}}{}
 \item\contentsline{section}{\hyperlink{structe2d_matrix}{e2d\-Matrix} }{\pageref{structe2d_matrix}}{}
 \item\contentsline{section}{\hyperlink{structe2d_path}{e2d\-Path} }{\pageref{structe2d_path}}{}

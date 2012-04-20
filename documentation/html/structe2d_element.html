@@ -93,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 </div>
@@ -114,7 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -131,7 +132,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct is the base of all elements in the scene. Common scene information such as id, attribute values or transformations are saved in the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct. You are not meant to instance this struct by itself. By creating other elements such as <a class="el" href="structe2d_group.html">e2dGroup</a> or <a class="el" href="structe2d_image.html">e2dImage</a>, this struct will be automatically allocated in them. This "inheritance" is mimic'd by placing the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct as the first element in structs which are meant to be "substructs" of it.  
+<p>The <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct is the base of all elements in the scene. Common scene information such as id, attribute values or transformations are saved in the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct. You are not meant to instance this struct by itself. By creating other elements such as <a class="el" href="structe2d_group.html" title="The e2dStruct is used to group elements in the scene, called childs. This struct is created from the ...">e2dGroup</a> or <a class="el" href="structe2d_image.html">e2dImage</a>, this struct will be automatically allocated in them. This "inheritance" is mimic'd by placing the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct as the first element in structs which are meant to be "substructs" of it.  
  <a href="structe2d_element.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="e2d_element_8h_source.html">e2dElement.h</a>&gt;</code></p>
@@ -140,43 +141,260 @@ Collaboration diagram for e2dElement:</div>
 <div class="dyncontent">
 <div class="center"><img src="structe2d_element__coll__graph.png" border="0" usemap="#e2d_element_coll__map" alt="Collaboration graph"/></div>
 <map name="e2d_element_coll__map" id="e2d_element_coll__map">
-<area shape="rect" id="node8" href="structe2d_group.html" title="e2dGroup" alt="" coords="5,229,83,256"/><area shape="rect" id="node2" href="structe2d_point.html" title="e2dPoint" alt="" coords="67,5,140,32"/><area shape="rect" id="node4" href="structe2d_matrix.html" title="e2dMatrix" alt="" coords="175,5,253,32"/><area shape="rect" id="node6" href="structe2d_scene.html" title="e2dScene" alt="" coords="107,320,187,347"/></map>
+<area shape="rect" id="node2" href="structe2d_group.html" title="The e2dStruct is used to group elements in the scene, called childs. This struct is created from the ..." alt="" coords="30,229,108,256"/><area shape="rect" id="node9" href="structe2d_scene.html" title="e2dScene" alt="" coords="84,320,164,347"/><area shape="rect" id="node5" href="structe2d_point.html" title="e2dPoint" alt="" coords="5,5,77,32"/><area shape="rect" id="node7" href="structe2d_matrix.html" title="e2dMatrix" alt="" coords="113,5,191,32"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a0ebd8fae058dd45496c86a2ca317ca9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ebd8fae058dd45496c86a2ca317ca9c"></a>
-<a class="el" href="structe2d_scene.html">e2dScene</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>scene</b></td></tr>
-<tr class="memitem:a7df43d7f6c23b61b843acb56eb3ca19a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7df43d7f6c23b61b843acb56eb3ca19a"></a>
-<a class="el" href="group__e2d_element.html#ga9bc8cfdec08c7e9069fc707ee456fd38">e2dElementType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
-<tr class="memitem:aecb3b0d045ada529257a2fbf8f829599"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecb3b0d045ada529257a2fbf8f829599"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
-<tr class="memitem:a300bb6cf5b184e200523e9bce8346dc4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a300bb6cf5b184e200523e9bce8346dc4"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>unique_id</b></td></tr>
-<tr class="memitem:a52bda732df714953f93c1e6f5f7c7c93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52bda732df714953f93c1e6f5f7c7c93"></a>
-<a class="el" href="structe2d_matrix.html">e2dMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>localTransform</b></td></tr>
-<tr class="memitem:a6c8e26945f09b5157e2111e42f99b879"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c8e26945f09b5157e2111e42f99b879"></a>
-<a class="el" href="structe2d_matrix.html">e2dMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>effectiveTransform</b></td></tr>
-<tr class="memitem:a5e6d7341f2dbef1923b0a3fcc13781c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e6d7341f2dbef1923b0a3fcc13781c6"></a>
-<a class="el" href="structe2d_matrix.html">e2dMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>inverseEffectiveTransform</b></td></tr>
-<tr class="memitem:a836181401227a3ca42da026a8d35e730"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a836181401227a3ca42da026a8d35e730"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>attributeNum</b></td></tr>
-<tr class="memitem:a70d94929e3789bf7c019c939b0084985"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70d94929e3789bf7c019c939b0084985"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>attributeAlloc</b></td></tr>
-<tr class="memitem:af9b5d9dbbf270b6f92a3ee66ce1b47ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9b5d9dbbf270b6f92a3ee66ce1b47ac"></a>
-char **&#160;</td><td class="memItemRight" valign="bottom"><b>attributeNames</b></td></tr>
-<tr class="memitem:ae8591ff93c366b4d66817a70f2d9f33e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8591ff93c366b4d66817a70f2d9f33e"></a>
-char **&#160;</td><td class="memItemRight" valign="bottom"><b>attributeValues</b></td></tr>
-<tr class="memitem:a6a1d9b223870deeaec7f5e8b23ca4b22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a1d9b223870deeaec7f5e8b23ca4b22"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>bboxWidth</b></td></tr>
-<tr class="memitem:a680d0d4219ac8720005c46b55a9676ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a680d0d4219ac8720005c46b55a9676ae"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>bboxHeight</b></td></tr>
-<tr class="memitem:ac2c17ce4cba805b594b314a77923cbf5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2c17ce4cba805b594b314a77923cbf5"></a>
-<a class="el" href="structe2d_point.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bboxPosition</b></td></tr>
+<tr class="memitem:a0ebd8fae058dd45496c86a2ca317ca9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2d_scene.html">e2dScene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#a0ebd8fae058dd45496c86a2ca317ca9c">scene</a></td></tr>
+<tr class="memitem:a7df43d7f6c23b61b843acb56eb3ca19a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__e2d_element.html#ga9bc8cfdec08c7e9069fc707ee456fd38">e2dElementType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#a7df43d7f6c23b61b843acb56eb3ca19a">type</a></td></tr>
+<tr class="memitem:aecb3b0d045ada529257a2fbf8f829599"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#aecb3b0d045ada529257a2fbf8f829599">id</a></td></tr>
+<tr class="memitem:a300bb6cf5b184e200523e9bce8346dc4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#a300bb6cf5b184e200523e9bce8346dc4">unique_id</a></td></tr>
+<tr class="memitem:a52bda732df714953f93c1e6f5f7c7c93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2d_matrix.html">e2dMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#a52bda732df714953f93c1e6f5f7c7c93">localTransform</a></td></tr>
+<tr class="memitem:a6c8e26945f09b5157e2111e42f99b879"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2d_matrix.html">e2dMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#a6c8e26945f09b5157e2111e42f99b879">effectiveTransform</a></td></tr>
+<tr class="memitem:a5e6d7341f2dbef1923b0a3fcc13781c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2d_matrix.html">e2dMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#a5e6d7341f2dbef1923b0a3fcc13781c6">inverseEffectiveTransform</a></td></tr>
+<tr class="memitem:a3e62eb2fbf1d6bc6d6fe549096a6cee9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2d_group.html">e2dGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#a3e62eb2fbf1d6bc6d6fe549096a6cee9">parent</a></td></tr>
+<tr class="memitem:a836181401227a3ca42da026a8d35e730"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#a836181401227a3ca42da026a8d35e730">attributeNum</a></td></tr>
+<tr class="memitem:a70d94929e3789bf7c019c939b0084985"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#a70d94929e3789bf7c019c939b0084985">attributeAlloc</a></td></tr>
+<tr class="memitem:af9b5d9dbbf270b6f92a3ee66ce1b47ac"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#af9b5d9dbbf270b6f92a3ee66ce1b47ac">attributeNames</a></td></tr>
+<tr class="memitem:ae8591ff93c366b4d66817a70f2d9f33e"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#ae8591ff93c366b4d66817a70f2d9f33e">attributeValues</a></td></tr>
+<tr class="memitem:a6a1d9b223870deeaec7f5e8b23ca4b22"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#a6a1d9b223870deeaec7f5e8b23ca4b22">bboxWidth</a></td></tr>
+<tr class="memitem:a680d0d4219ac8720005c46b55a9676ae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#a680d0d4219ac8720005c46b55a9676ae">bboxHeight</a></td></tr>
+<tr class="memitem:ac2c17ce4cba805b594b314a77923cbf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2d_point.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_element.html#ac2c17ce4cba805b594b314a77923cbf5">bboxPosition</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct is the base of all elements in the scene. Common scene information such as id, attribute values or transformations are saved in the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct. You are not meant to instance this struct by itself. By creating other elements such as <a class="el" href="structe2d_group.html">e2dGroup</a> or <a class="el" href="structe2d_image.html">e2dImage</a>, this struct will be automatically allocated in them. This "inheritance" is mimic'd by placing the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct as the first element in structs which are meant to be "substructs" of it. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<div class="textblock"><p>The <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct is the base of all elements in the scene. Common scene information such as id, attribute values or transformations are saved in the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct. You are not meant to instance this struct by itself. By creating other elements such as <a class="el" href="structe2d_group.html" title="The e2dStruct is used to group elements in the scene, called childs. This struct is created from the ...">e2dGroup</a> or <a class="el" href="structe2d_image.html">e2dImage</a>, this struct will be automatically allocated in them. This "inheritance" is mimic'd by placing the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct as the first element in structs which are meant to be "substructs" of it. </p>
+</div><hr/><h2>Field Documentation</h2>
+<a class="anchor" id="a70d94929e3789bf7c019c939b0084985"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="structe2d_element.html#a70d94929e3789bf7c019c939b0084985">attributeAlloc</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Allocated size of <a class="el" href="structe2d_group.html#a55f6dde874716dc99dcd270fc0999a01">e2dGroup::childList</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="af9b5d9dbbf270b6f92a3ee66ce1b47ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char** <a class="el" href="structe2d_element.html#af9b5d9dbbf270b6f92a3ee66ce1b47ac">attributeNames</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Attribute names array, allocated size given by &lt; e2dGroup::attributeAlloc. &lt; </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2d_element.html#ga5cfa0a343d3dd1a30b0addc4ec6e7f88" title="Will add an attribute to the element. Increases the size of the array if necessary.">e2dElementAddAttribute()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a836181401227a3ca42da026a8d35e730"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="structe2d_element.html#a836181401227a3ca42da026a8d35e730">attributeNum</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Number of attributes in <a class="el" href="structe2d_element.html#af9b5d9dbbf270b6f92a3ee66ce1b47ac">e2dElement::attributeNames</a> and &lt; <a class="el" href="structe2d_element.html#ae8591ff93c366b4d66817a70f2d9f33e">e2dElement::attributeValues</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae8591ff93c366b4d66817a70f2d9f33e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char** <a class="el" href="structe2d_element.html#ae8591ff93c366b4d66817a70f2d9f33e">attributeValues</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Attribute values array, allocated size given by &lt; e2dGroup::attributeAlloc. &lt; </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2d_element.html#ga5cfa0a343d3dd1a30b0addc4ec6e7f88" title="Will add an attribute to the element. Increases the size of the array if necessary.">e2dElementAddAttribute()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a680d0d4219ac8720005c46b55a9676ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="structe2d_element.html#a680d0d4219ac8720005c46b55a9676ae">bboxHeight</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Bounding box height. &lt; </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2d_element.html#ga94aa710b2da71af2091fe4d5b87ce47e" title="Will check type and calculate the appropriate method (e.g. e2dGroupCalculateBoundingBox())">e2dElementCalculateBoundingBox()</a> &lt; </dd>
+<dd>
+<a class="el" href="group__e2d_element.html#ga36b01a888c97163c990e16d348aff61c" title="Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e...">e2dElementCenterAtBBox()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac2c17ce4cba805b594b314a77923cbf5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe2d_point.html">e2dPoint</a> <a class="el" href="structe2d_element.html#ac2c17ce4cba805b594b314a77923cbf5">bboxPosition</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Bounding box position. &lt; </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2d_element.html#ga94aa710b2da71af2091fe4d5b87ce47e" title="Will check type and calculate the appropriate method (e.g. e2dGroupCalculateBoundingBox())">e2dElementCalculateBoundingBox()</a> &lt; </dd>
+<dd>
+<a class="el" href="group__e2d_element.html#ga36b01a888c97163c990e16d348aff61c" title="Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e...">e2dElementCenterAtBBox()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6a1d9b223870deeaec7f5e8b23ca4b22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="structe2d_element.html#a6a1d9b223870deeaec7f5e8b23ca4b22">bboxWidth</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Bounding box width. &lt; </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2d_element.html#ga94aa710b2da71af2091fe4d5b87ce47e" title="Will check type and calculate the appropriate method (e.g. e2dGroupCalculateBoundingBox())">e2dElementCalculateBoundingBox()</a> &lt; </dd>
+<dd>
+<a class="el" href="group__e2d_element.html#ga36b01a888c97163c990e16d348aff61c" title="Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e...">e2dElementCenterAtBBox()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6c8e26945f09b5157e2111e42f99b879"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe2d_matrix.html">e2dMatrix</a> <a class="el" href="structe2d_element.html#a6c8e26945f09b5157e2111e42f99b879">effectiveTransform</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Actual transform calculated applied here. &lt; </p>
+<dl class="section see"><dt>See also:</dt><dd>e2dSceneCalculateEffectiveTransforms() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aecb3b0d045ada529257a2fbf8f829599"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* <a class="el" href="structe2d_element.html#aecb3b0d045ada529257a2fbf8f829599">id</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>ID taken from SVG </p>
+
+</div>
+</div>
+<a class="anchor" id="a5e6d7341f2dbef1923b0a3fcc13781c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe2d_matrix.html">e2dMatrix</a> <a class="el" href="structe2d_element.html#a5e6d7341f2dbef1923b0a3fcc13781c6">inverseEffectiveTransform</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Useful for point transformations. &lt; &lt; </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2d_element.html#ga39dd883e42f609efba3f75300a29ff31" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a> &lt; </dd>
+<dd>
+<a class="el" href="group__e2d_element.html#ga9b85de42e52c0d89e82f9231ea923c8c" title="UNTESTED Will get the local position (e2dElementGetLocalPosition()) and multiply it by the inverseEff...">e2dElementGetWorldPosition()</a> &lt; </dd>
+<dd>
+<a class="el" href="group__e2d_element.html#gab4e3f4eeba31c937a946f68617c5cb06" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePosition()</a> &lt; </dd>
+<dd>
+<a class="el" href="group__e2d_element.html#gac3ad9f8cdc0782378c9f2e93cb7da68f" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePoint()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a52bda732df714953f93c1e6f5f7c7c93"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe2d_matrix.html">e2dMatrix</a> <a class="el" href="structe2d_element.html#a52bda732df714953f93c1e6f5f7c7c93">localTransform</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>LocalTransform taken from SVG </p>
+
+</div>
+</div>
+<a class="anchor" id="a3e62eb2fbf1d6bc6d6fe549096a6cee9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe2d_group.html">e2dGroup</a>* <a class="el" href="structe2d_element.html#a3e62eb2fbf1d6bc6d6fe549096a6cee9">parent</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>parent of the element in the scene tree. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ebd8fae058dd45496c86a2ca317ca9c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe2d_scene.html">e2dScene</a>* <a class="el" href="structe2d_element.html#a0ebd8fae058dd45496c86a2ca317ca9c">scene</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Belongs to this scene </p>
+
+</div>
+</div>
+<a class="anchor" id="a7df43d7f6c23b61b843acb56eb3ca19a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__e2d_element.html#ga9bc8cfdec08c7e9069fc707ee456fd38">e2dElementType</a> <a class="el" href="structe2d_element.html#a7df43d7f6c23b61b843acb56eb3ca19a">type</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Used for reflection </p>
+
+</div>
+</div>
+<a class="anchor" id="a300bb6cf5b184e200523e9bce8346dc4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="structe2d_element.html#a300bb6cf5b184e200523e9bce8346dc4">unique_id</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>unique id for this execution. &lt; (static int in <a class="el" href="group__e2d_group.html#ga25406e9ff8a7746af03833e40ccf259a" title="This method will initialize the members of the struct, i.e. it will allocate the e2dGroup::childList ...">e2dGroupInit()</a> ) </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>C:/Users/Rui/Desktop/Ez2DS/Ez2DS/Ez2DS/<a class="el" href="e2d_element_8h_source.html">e2dElement.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -185,7 +403,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>bboxHeight</b></td><
     <ul>
       <li class="navelem"><a class="el" href="structe2d_element.html">e2dElement</a>      </li>
 
-    <li class="footer">Generated on Thu Apr 19 2012 12:12:00 for Ez2DS by
+    <li class="footer">Generated on Fri Apr 20 2012 04:04:51 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

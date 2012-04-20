@@ -11,6 +11,7 @@ var structe2d_element =
     [ "id", "structe2d_element.html#aecb3b0d045ada529257a2fbf8f829599", null ],
     [ "inverseEffectiveTransform", "structe2d_element.html#a5e6d7341f2dbef1923b0a3fcc13781c6", null ],
     [ "localTransform", "structe2d_element.html#a52bda732df714953f93c1e6f5f7c7c93", null ],
+    [ "parent", "structe2d_element.html#a3e62eb2fbf1d6bc6d6fe549096a6cee9", null ],
     [ "scene", "structe2d_element.html#a0ebd8fae058dd45496c86a2ca317ca9c", null ],
     [ "type", "structe2d_element.html#a7df43d7f6c23b61b843acb56eb3ca19a", null ],
     [ "unique_id", "structe2d_element.html#a300bb6cf5b184e200523e9bce8346dc4", null ]

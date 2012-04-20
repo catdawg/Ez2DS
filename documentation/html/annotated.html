@@ -93,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
 </div>
@@ -114,7 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -129,9 +130,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock">Here are the data structures with brief descriptions:</div><table>
-  <tr><td class="indexkey"><a class="el" href="structe2d_element.html">e2dElement</a></td><td class="indexvalue">The <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct is the base of all elements in the scene. Common scene information such as id, attribute values or transformations are saved in the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct. You are not meant to instance this struct by itself. By creating other elements such as <a class="el" href="structe2d_group.html">e2dGroup</a> or <a class="el" href="structe2d_image.html">e2dImage</a>, this struct will be automatically allocated in them. This "inheritance" is mimic'd by placing the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct as the first element in structs which are meant to be "substructs" of it </td></tr>
-  <tr><td class="indexkey"><a class="el" href="structe2d_group.html">e2dGroup</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="structe2d_group_iterator.html">e2dGroupIterator</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="structe2d_element.html">e2dElement</a></td><td class="indexvalue">The <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct is the base of all elements in the scene. Common scene information such as id, attribute values or transformations are saved in the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct. You are not meant to instance this struct by itself. By creating other elements such as <a class="el" href="structe2d_group.html" title="The e2dStruct is used to group elements in the scene, called childs. This struct is created from the ...">e2dGroup</a> or <a class="el" href="structe2d_image.html">e2dImage</a>, this struct will be automatically allocated in them. This "inheritance" is mimic'd by placing the <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct as the first element in structs which are meant to be "substructs" of it </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structe2d_group.html">e2dGroup</a></td><td class="indexvalue">The e2dStruct is used to group elements in the scene, called childs. This struct is created from the "g" element in SVG. It "inherits" from <a class="el" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++ </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structe2d_group_iterator.html">e2dGroupIterator</a></td><td class="indexvalue">An iterator for the children of <a class="el" href="structe2d_group.html" title="The e2dStruct is used to group elements in the scene, called childs. This struct is created from the ...">e2dGroup</a> </td></tr>
   <tr><td class="indexkey"><a class="el" href="structe2d_image.html">e2dImage</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="structe2d_matrix.html">e2dMatrix</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="structe2d_path.html">e2dPath</a></td><td class="indexvalue"></td></tr>
@@ -147,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Thu Apr 19 2012 12:12:00 for Ez2DS by
+    <li class="footer">Generated on Fri Apr 20 2012 04:04:51 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

@@ -1,5 +1,7 @@
-var e2d_group_8h =
+var group__e2d_group =
 [
+    [ "e2dGroup", "structe2d_group.html", null ],
+    [ "e2dGroupIterator", "structe2d_group_iterator.html", null ],
     [ "e2dGroupAddChild", "group__e2d_group.html#ga6ae76730f78ad731621e9286a3980b8a", null ],
     [ "e2dGroupCalculateBoundingBox", "group__e2d_group.html#ga7c5f43489bbd2d36a51414aee07abf5a", null ],
     [ "e2dGroupCenterAtBBox", "group__e2d_group.html#ga04bf94419865ca7f9d6daf30ce3fadf0", null ],

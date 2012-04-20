@@ -15,7 +15,19 @@ var searchData=
   ['e2delementinit',['e2dElementInit',['../group__e2d_element.html#ga8734d10ef40a380dfc51bfe1790a92a7',1,'e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene *scene):&#160;e2dElement.c'],['../group__e2d_element.html#ga8734d10ef40a380dfc51bfe1790a92a7',1,'e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene *scene):&#160;e2dElement.c']]],
   ['e2delementtype',['e2dElementType',['../group__e2d_element.html#ga9bc8cfdec08c7e9069fc707ee456fd38',1,'e2dElementType():&#160;e2dElement.h'],['../group__e2d_element.html#ga13e962cd8fa5eaa7d4bec3fc7d774d59',1,'e2dElementType():&#160;e2dElement.h']]],
   ['e2dgroup',['e2dGroup',['../structe2d_group.html',1,'']]],
+  ['e2dgroup_2eh',['e2dGroup.h',['../e2d_group_8h.html',1,'']]],
+  ['e2dgroupaddchild',['e2dGroupAddChild',['../group__e2d_group.html#ga6ae76730f78ad731621e9286a3980b8a',1,'e2dGroupAddChild(e2dGroup *group, e2dElement *element):&#160;e2dGroup.c'],['../group__e2d_group.html#ga6ae76730f78ad731621e9286a3980b8a',1,'e2dGroupAddChild(e2dGroup *group, e2dElement *element):&#160;e2dGroup.c']]],
+  ['e2dgroupcalculateboundingbox',['e2dGroupCalculateBoundingBox',['../group__e2d_group.html#ga7c5f43489bbd2d36a51414aee07abf5a',1,'e2dGroupCalculateBoundingBox(e2dGroup *group):&#160;e2dGroup.c'],['../group__e2d_group.html#ga7c5f43489bbd2d36a51414aee07abf5a',1,'e2dGroupCalculateBoundingBox(e2dGroup *group):&#160;e2dGroup.c']]],
+  ['e2dgroupcenteratbbox',['e2dGroupCenterAtBBox',['../group__e2d_group.html#ga04bf94419865ca7f9d6daf30ce3fadf0',1,'e2dGroupCenterAtBBox(e2dGroup *group, float tx, float ty):&#160;e2dGroup.c'],['../group__e2d_group.html#ga04bf94419865ca7f9d6daf30ce3fadf0',1,'e2dGroupCenterAtBBox(e2dGroup *group, float tx, float ty):&#160;e2dGroup.c']]],
+  ['e2dgroupcreate',['e2dGroupCreate',['../group__e2d_group.html#gaea870c0efafe302d65baaec0b028c6fb',1,'e2dGroupCreate(const e2dScene *scene):&#160;e2dGroup.c'],['../group__e2d_group.html#gaea870c0efafe302d65baaec0b028c6fb',1,'e2dGroupCreate(const e2dScene *scene):&#160;e2dGroup.c']]],
+  ['e2dgroupdestroy',['e2dGroupDestroy',['../group__e2d_group.html#ga545626effa0f89b72f244e56aadb05bc',1,'e2dGroupDestroy(e2dGroup *group):&#160;e2dGroup.c'],['../group__e2d_group.html#ga545626effa0f89b72f244e56aadb05bc',1,'e2dGroupDestroy(e2dGroup *group):&#160;e2dGroup.c']]],
+  ['e2dgroupflatten',['e2dGroupFlatten',['../group__e2d_group.html#gafa65ab615b8a0c181a2d5b88eed9fa16',1,'e2dGroupFlatten(e2dGroup *group):&#160;e2dGroup.c'],['../group__e2d_group.html#gafa65ab615b8a0c181a2d5b88eed9fa16',1,'e2dGroupFlatten(e2dGroup *group):&#160;e2dGroup.c']]],
+  ['e2dgroupfreemembers',['e2dGroupFreeMembers',['../group__e2d_group.html#ga9569da6e74703187306878ec830d52c4',1,'e2dGroupFreeMembers(e2dGroup *group):&#160;e2dGroup.c'],['../group__e2d_group.html#ga9569da6e74703187306878ec830d52c4',1,'e2dGroupFreeMembers(e2dGroup *group):&#160;e2dGroup.c']]],
+  ['e2dgroupgetchilditerator',['e2dGroupGetChildIterator',['../group__e2d_group.html#gaf5a7338c446192338b764a7ac89371d5',1,'e2dGroupGetChildIterator(e2dGroup *group):&#160;e2dGroup.c'],['../group__e2d_group.html#gaf5a7338c446192338b764a7ac89371d5',1,'e2dGroupGetChildIterator(e2dGroup *group):&#160;e2dGroup.c']]],
+  ['e2dgroupinit',['e2dGroupInit',['../group__e2d_group.html#ga25406e9ff8a7746af03833e40ccf259a',1,'e2dGroupInit(e2dGroup *group, const e2dScene *scene):&#160;e2dGroup.c'],['../group__e2d_group.html#ga25406e9ff8a7746af03833e40ccf259a',1,'e2dGroupInit(e2dGroup *group, const e2dScene *scene):&#160;e2dGroup.c']]],
   ['e2dgroupiterator',['e2dGroupIterator',['../structe2d_group_iterator.html',1,'']]],
+  ['e2dgroupiteratorhasnext',['e2dGroupIteratorHasNext',['../group__e2d_group.html#ga493d54c28198410762cfa32c97d8e646',1,'e2dGroupIteratorHasNext(e2dGroupIterator *iter):&#160;e2dGroup.c'],['../group__e2d_group.html#ga493d54c28198410762cfa32c97d8e646',1,'e2dGroupIteratorHasNext(e2dGroupIterator *iter):&#160;e2dGroup.c']]],
+  ['e2dgroupiteratornext',['e2dGroupIteratorNext',['../group__e2d_group.html#gaa5ffe3eb2b83f318df4f22272f1e1189',1,'e2dGroupIteratorNext(e2dGroupIterator *iter):&#160;e2dGroup.c'],['../group__e2d_group.html#gaa5ffe3eb2b83f318df4f22272f1e1189',1,'e2dGroupIteratorNext(e2dGroupIterator *iter):&#160;e2dGroup.c']]],
   ['e2dimage',['e2dImage',['../structe2d_image.html',1,'']]],
   ['e2dmatrix',['e2dMatrix',['../structe2d_matrix.html',1,'']]],
   ['e2dpath',['e2dPath',['../structe2d_path.html',1,'']]],
@@ -24,5 +36,7 @@ var searchData=
   ['e2dpathelementiterator',['e2dPathElementIterator',['../structe2d_path_element_iterator.html',1,'']]],
   ['e2dpathpoint',['e2dPathPoint',['../structe2d_path_point.html',1,'']]],
   ['e2dpoint',['e2dPoint',['../structe2d_point.html',1,'']]],
-  ['e2dscene',['e2dScene',['../structe2d_scene.html',1,'']]]
+  ['e2dscene',['e2dScene',['../structe2d_scene.html',1,'']]],
+  ['effectivetransform',['effectiveTransform',['../structe2d_element.html#a6c8e26945f09b5157e2111e42f99b879',1,'e2dElement']]],
+  ['element',['element',['../structe2d_group.html#a55bc7a3a0af41fba9e5b91f390c5928c',1,'e2dGroup']]]
 ];
