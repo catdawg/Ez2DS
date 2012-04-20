@@ -46,25 +46,43 @@ extern "C" {
      * 
      **/
     struct e2dElement {
-        e2dScene* scene;
-        e2dElementType type;
-        char* id;
-        unsigned int unique_id;
+        e2dScene* scene;/**< Belongs to this scene **/
+        e2dElementType type;/**< Used for reflection **/
+        char* id;/**< ID taken from SVG **/
+        unsigned int unique_id; /**< unique id for this execution. 
+                                 *< (static int in e2dGroupInit() ) **/
 
-        e2dMatrix localTransform;
-        e2dMatrix effectiveTransform;
-        e2dMatrix inverseEffectiveTransform;
+        e2dMatrix localTransform; /**< LocalTransform taken from SVG **/
+        e2dMatrix effectiveTransform; /**< Actual transform calculated applied here.
+                                       *< @see e2dSceneCalculateEffectiveTransforms() **/
+        e2dMatrix inverseEffectiveTransform;   /**< Useful for point transformations.
+                                                *< 
+                                                *< @see e2dElementGetLocalPosition()
+                                                *< @see e2dElementGetWorldPosition()
+                                                *< @see e2dElementGetRelativePosition()
+                                                *< @see e2dElementGetRelativePoint()**/
         
-        e2dGroup* parent;
+        e2dGroup* parent;/**< parent of the element in the scene tree.**/
         
-        unsigned int attributeNum;
-        unsigned int attributeAlloc;
-        char** attributeNames;
-        char** attributeValues;
+        unsigned int attributeNum;/**< Number of attributes in e2dElement::attributeNames and
+                                   *< e2dElement::attributeValues. **/
+        unsigned int attributeAlloc;/**< Allocated size of e2dGroup::childList**/
+        char** attributeNames;  /**< Attribute names array, allocated size given by
+                                 *< e2dGroup::attributeAlloc. 
+                                 *< @see e2dElementAddAttribute()**/
+        char** attributeValues;/**< Attribute values array, allocated size given by
+                                 *< e2dGroup::attributeAlloc. 
+                                 *< @see e2dElementAddAttribute()**/
 
-        float bboxWidth;
-        float bboxHeight;
-        e2dPoint bboxPosition;
+        float bboxWidth;/**< Bounding box width.
+                         *< @see e2dElementCalculateBoundingBox()
+                         *< @see e2dElementCenterAtBBox() **/
+        float bboxHeight;/**< Bounding box height.
+                         *< @see e2dElementCalculateBoundingBox()
+                         *< @see e2dElementCenterAtBBox() **/
+        e2dPoint bboxPosition;/**< Bounding box position.
+                         *< @see e2dElementCalculateBoundingBox()
+                         *< @see e2dElementCenterAtBBox() **/
     };
 
 
@@ -191,7 +209,7 @@ extern "C" {
      * the effective transform of elem with the inverse effective transform of
      * relativeTo. The multiply it with point.
      * Needs effective transformations to be calculated (e2dSceneCalculateEffectiveTransforms() 
-     * has been called)
+     * has been called).
      *
      * @param [in] elem  The e2dElement where the position will be requested.
      * @param [in] relativeTo  The result will be relative to this e2dElement.
@@ -231,6 +249,7 @@ extern "C" {
      * @param [in] ty  y offset in BBox height units.
      * 
      * 
+     * @see e2dElementCalculateBoundingBox()
      * @see e2dGroupCenterAtBBox()
      * @see e2dImageCenterAtBBox()
      * @see e2dPathCenterAtBBox()

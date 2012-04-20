@@ -25,18 +25,20 @@ extern "C" {
 
     /**
      *  @brief The e2dStruct is used to group elements in the scene, called childs.
-     *This struct is created from the "g" element in SVG. It "inherits" from 
-     *e2dElement by placing it as the first element in the struct, if you 
-     *typecast e2dStruct* into e2dElement*, it will work thus mimicing 
-     *inheritance in e.g. C++.
+     * This struct is created from the "g" element in SVG. It "inherits" from 
+     * e2dElement by placing it as the first element in the struct, if you 
+     * typecast e2dStruct* into e2dElement*, it will work thus mimicing 
+     * inheritance in e.g. C++.
      * 
      **/
     struct e2dGroup {
-        e2dElement element;
-
-        unsigned int childNum;
-        e2dElement** childList;
-        unsigned int childListAlloc;
+        e2dElement element; /**< e2dGroup inherits from e2dElement. Typecasting
+                             *< e2dGroup* to e2dElement* will work.**/
+        unsigned int childNum;/**< Number of children in e2dGroup::childListArray **/
+        e2dElement** childList; /**< child list array, allocated size given by
+                                 *< e2dGroup::childListAlloc. 
+                                 *< @see e2dGroupAddChild()**/
+        unsigned int childListAlloc;/**< Allocated size of e2dGroup::childList**/
 
     };
 
@@ -149,7 +151,7 @@ extern "C" {
      * which yields a transformation equal to if there were groups. I.e., it flattens
      * the group, making it have only one level. Calling this on the e2dScene::root will
      * make "group" be the only in the tree. !!Warning!! custom (and non custom) tags written 
-     * in groups is lost!
+     * in groups are lost!
      *
      * @param [in] group  The e2dGroup to be flattened.
      * 
@@ -163,8 +165,8 @@ extern "C" {
      * 
      **/
     struct e2dGroupIterator {
-        e2dGroup* group;
-        unsigned int currentIndex;
+        e2dGroup* group;/**< This iterator is working on this group. **/
+        unsigned int currentIndex;/**< Current index in e2dGroup::childList.**/
     };
 
     
