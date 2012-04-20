@@ -499,7 +499,7 @@ parsePath(mxml_node_t* node, e2dScene* scene)  {
 }
 
 static e2dGroup* 
-parseGroup(mxml_node_t* node, e2dScene* scene, e2dGroup* parent);
+parseGroup(mxml_node_t* node, e2dScene* scene);
 
 static void 
 parseChildElements(mxml_node_t* node, e2dScene* scene, e2dGroup* parent) {
@@ -514,7 +514,7 @@ parseChildElements(mxml_node_t* node, e2dScene* scene, e2dGroup* parent) {
         }
             
         if(strcmp("g", currentName) == 0)
-            e2dGroupAddChild(parent, (e2dElement*)parseGroup(current, scene, parent));
+            e2dGroupAddChild(parent, (e2dElement*)parseGroup(current, scene));
         else
         {
             if(strcmp("image", currentName) == 0)
@@ -530,8 +530,8 @@ parseChildElements(mxml_node_t* node, e2dScene* scene, e2dGroup* parent) {
 }
 
 static e2dGroup* 
-parseGroup(mxml_node_t* node, e2dScene* scene, e2dGroup* parent)  {
-    e2dGroup* group = e2dGroupCreate(scene, parent); 
+parseGroup(mxml_node_t* node, e2dScene* scene)  {
+    e2dGroup* group = e2dGroupCreate(scene); 
     //parse transformation
     group->element.localTransform = parseTransform(node);
     //parse attributes
@@ -582,7 +582,7 @@ createSceneFromFile(char* file)  {
     
     e2dScene* scene = (e2dScene*)malloc(sizeof(e2dScene));
     
-    scene->root = e2dGroupCreate(scene, 0);
+    scene->root = e2dGroupCreate(scene);
     
     parseChildElements(start_elem, scene, scene->root);
     
@@ -594,7 +594,7 @@ createSceneFromFile(char* file)  {
 
 void 
 _e2dSceneCalculateEffectiveTransforms(e2dGroup* group)  {
-    if(group->parent == 0)
+    if(group->element.parent == 0)
     {
         ((e2dElement*)group)->effectiveTransform = 
                 ((e2dElement*)group)->localTransform;
@@ -603,7 +603,7 @@ _e2dSceneCalculateEffectiveTransforms(e2dGroup* group)  {
     else
     {
         ((e2dElement*)group)->effectiveTransform = e2dMatrixMultiply(
-                &(((e2dElement*)group->parent)->effectiveTransform), 
+                &(((e2dElement*)group->element.parent)->effectiveTransform), 
                 &(((e2dElement*)group)->localTransform));
     }
         

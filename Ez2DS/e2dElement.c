@@ -8,8 +8,10 @@
 #include "stdlib.h"
 #include "string.h"
 
+#define INITIAL_ATTRIBUTE_ALLOC 4
+
 void
-e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene* scene){
+e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene* scene)  {
     
     e2dMatrixToIdent(&(element->localTransform));
     e2dMatrixToIdent(&(element->effectiveTransform));
@@ -21,9 +23,11 @@ e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene* scene){
     
     
     element->attributeNum = 0;
-    element->attributeNames = (char**) malloc(sizeof (char*)*4);
-    element->attributeValues = (char**) malloc(sizeof (char*)*4);
-    element->attributeAlloc = 4;
+    element->attributeNames = (char**) malloc(sizeof (char*)*INITIAL_ATTRIBUTE_ALLOC);
+    element->attributeValues = (char**) malloc(sizeof (char*)*INITIAL_ATTRIBUTE_ALLOC);
+    element->attributeAlloc = INITIAL_ATTRIBUTE_ALLOC;
+    
+    element->parent = 0;
 
     element->bboxHeight = -1;
     element->bboxWidth = -1;
@@ -33,8 +37,7 @@ e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene* scene){
 }
 
 void 
-e2dElementFreeMembers(e2dElement* elem)
-{
+e2dElementFreeMembers(e2dElement* elem)  {
     int i;
     for(i = 0; i < elem->attributeNum; ++i)
     {
@@ -46,10 +49,6 @@ e2dElementFreeMembers(e2dElement* elem)
     if(elem->id)
         free(elem->id);
 }
-
-
-
-
 
 void
 e2dElementDestroy(e2dElement* elem) {
@@ -76,8 +75,7 @@ e2dElementIncreaseAttributeSpace(e2dElement* element) {
 }
 
 void 
-e2dElementAddAttribute(e2dElement* element, const char* name, const char* value)
-{
+e2dElementAddAttribute(e2dElement* element, const char* name, const char* value)  {
     if (element->attributeNum + 1 > element->attributeAlloc)
         e2dElementIncreaseAttributeSpace(element);
     
@@ -94,8 +92,7 @@ e2dElementAddAttribute(e2dElement* element, const char* name, const char* value)
 
 const char*
 e2dElementGetAttribute(e2dElement* element, 
-        const char* name)
-{
+        const char* name)  {
     int i;
     const char* n1;
     const char* n2;
@@ -141,10 +138,6 @@ e2dElementGetRelativePoint(const e2dElement* elem,
     return e2dMatrixApplyToPoint(&mat, point);
 }
 
-
- 
-
-
 void
 e2dElementCalculateBoundingBox(e2dElement* elem) {
     switch (elem->type) {
@@ -160,13 +153,7 @@ e2dElementCalculateBoundingBox(e2dElement* elem) {
         default:
             break;
     }
-
 }
-
-
-
-
-
 
 void
 e2dElementCenterAtBBox(e2dElement* elem, float tx, float ty) {

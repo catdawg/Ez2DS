@@ -54,8 +54,9 @@ extern "C" {
         e2dMatrix localTransform;
         e2dMatrix effectiveTransform;
         e2dMatrix inverseEffectiveTransform;
-
-
+        
+        e2dGroup* parent;
+        
         unsigned int attributeNum;
         unsigned int attributeAlloc;
         char** attributeNames;
@@ -133,7 +134,7 @@ extern "C" {
     * @param [in] elem  The e2dElement containing the attribute.
     * @param [in] name  The name of the attribute.
     * 
-    * @retval e2dElement* The value of the name. Null if not found.
+    * @retval const char* The value of the name. Null if not found.
     * 
     */
     const char*
@@ -160,7 +161,7 @@ extern "C" {
      * 
      * @retval e2dPoint The position.
      * 
-     * @sa e2dElementGetLocalPosition()
+     * @see e2dElementGetLocalPosition()
      * @see e2dSceneCalculateEffectiveTransforms()
     **/
     e2dPoint
@@ -226,8 +227,8 @@ extern "C" {
      * on the top left corner, (0.5, 0.5) will center on the center of the bbox.
      *
      * @param [in] elem  The e2dElement to center.
-     * @param [in] tx  x axis offset.
-     * @param [in] ty  y axis offset.
+     * @param [in] tx  x offset in BBox width units.
+     * @param [in] ty  y offset in BBox height units.
      * 
      * 
      * @see e2dGroupCenterAtBBox()

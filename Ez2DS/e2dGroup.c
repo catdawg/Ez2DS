@@ -12,17 +12,16 @@ e2dGroupInitChildList(e2dGroup* group)  {
 }
 
 void
-e2dGroupInit(e2dGroup *group, const e2dScene* scene, const e2dGroup* parent) {
+e2dGroupInit(e2dGroup *group, const e2dScene* scene) {
     e2dGroupInitChildList(group);
-    group->parent = (e2dGroup*) parent;
 
     e2dElementInit((e2dElement*) group, E2D_GROUP, scene);
 }
 
 e2dGroup*
-e2dGroupCreate(const e2dScene* scene, const e2dGroup* parent) {
+e2dGroupCreate(const e2dScene* scene) {
     e2dGroup* group = (e2dGroup*) malloc(sizeof (e2dGroup));
-    e2dGroupInit(group, scene, parent);
+    e2dGroupInit(group, scene);
     return group;
 }
 
@@ -60,6 +59,7 @@ e2dGroupAddChild(e2dGroup* group, e2dElement* element) {
         e2dGroupIncreaseChildSpace(group);
     group->childList[group->childNum] = element;
     group->childNum++;
+    element->parent = group;
 }
 
 
