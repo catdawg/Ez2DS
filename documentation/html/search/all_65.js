@@ -29,6 +29,13 @@ var searchData=
   ['e2dgroupiteratorhasnext',['e2dGroupIteratorHasNext',['../group__e2d_group.html#ga493d54c28198410762cfa32c97d8e646',1,'e2dGroupIteratorHasNext(e2dGroupIterator *iter):&#160;e2dGroup.c'],['../group__e2d_group.html#ga493d54c28198410762cfa32c97d8e646',1,'e2dGroupIteratorHasNext(e2dGroupIterator *iter):&#160;e2dGroup.c']]],
   ['e2dgroupiteratornext',['e2dGroupIteratorNext',['../group__e2d_group.html#gaa5ffe3eb2b83f318df4f22272f1e1189',1,'e2dGroupIteratorNext(e2dGroupIterator *iter):&#160;e2dGroup.c'],['../group__e2d_group.html#gaa5ffe3eb2b83f318df4f22272f1e1189',1,'e2dGroupIteratorNext(e2dGroupIterator *iter):&#160;e2dGroup.c']]],
   ['e2dimage',['e2dImage',['../structe2d_image.html',1,'']]],
+  ['e2dimage_2eh',['e2dImage.h',['../e2d_image_8h.html',1,'']]],
+  ['e2dimagecalculateboundingbox',['e2dImageCalculateBoundingBox',['../group__e2d_image.html#ga6df4ef2b71e130f5817b079b6b32d249',1,'e2dImageCalculateBoundingBox(e2dImage *image):&#160;e2dImage.c'],['../group__e2d_image.html#ga6df4ef2b71e130f5817b079b6b32d249',1,'e2dImageCalculateBoundingBox(e2dImage *image):&#160;e2dImage.c']]],
+  ['e2dimagecenteratbbox',['e2dImageCenterAtBBox',['../group__e2d_image.html#ga08652fd1ad70d4935d98bcc02a38fb69',1,'e2dImageCenterAtBBox(e2dImage *image, float tx, float ty):&#160;e2dImage.c'],['../group__e2d_image.html#ga08652fd1ad70d4935d98bcc02a38fb69',1,'e2dImageCenterAtBBox(e2dImage *image, float tx, float ty):&#160;e2dImage.c']]],
+  ['e2dimagecreate',['e2dImageCreate',['../group__e2d_image.html#gafc7e085a237f8d2f1b147b3cca8259d6',1,'e2dImageCreate(const e2dScene *scene):&#160;e2dImage.c'],['../group__e2d_image.html#gafc7e085a237f8d2f1b147b3cca8259d6',1,'e2dImageCreate(const e2dScene *scene):&#160;e2dImage.c']]],
+  ['e2dimagedestroy',['e2dImageDestroy',['../group__e2d_image.html#gacf174e48578f0e23888e37f47a3ef10b',1,'e2dImageDestroy(e2dImage *image):&#160;e2dImage.c'],['../group__e2d_image.html#gacf174e48578f0e23888e37f47a3ef10b',1,'e2dImageDestroy(e2dImage *image):&#160;e2dImage.c']]],
+  ['e2dimagefreemembers',['e2dImageFreeMembers',['../group__e2d_image.html#gaf5409c0b10e8a8d8b9bd3f08e1d5da1f',1,'e2dImageFreeMembers(e2dImage *image):&#160;e2dImage.c'],['../group__e2d_image.html#gaf5409c0b10e8a8d8b9bd3f08e1d5da1f',1,'e2dImageFreeMembers(e2dImage *image):&#160;e2dImage.c']]],
+  ['e2dimageinit',['e2dImageInit',['../group__e2d_image.html#ga11703b45867fb00d56489a3a6bc6bb9c',1,'e2dImageInit(e2dImage *image, const e2dScene *scene):&#160;e2dImage.c'],['../group__e2d_image.html#ga11703b45867fb00d56489a3a6bc6bb9c',1,'e2dImageInit(e2dImage *image, const e2dScene *scene):&#160;e2dImage.c']]],
   ['e2dmatrix',['e2dMatrix',['../structe2d_matrix.html',1,'']]],
   ['e2dpath',['e2dPath',['../structe2d_path.html',1,'']]],
   ['e2dpathcurve',['e2dPathCurve',['../structe2d_path_curve.html',1,'']]],
@@ -38,5 +45,5 @@ var searchData=
   ['e2dpoint',['e2dPoint',['../structe2d_point.html',1,'']]],
   ['e2dscene',['e2dScene',['../structe2d_scene.html',1,'']]],
   ['effectivetransform',['effectiveTransform',['../structe2d_element.html#a6c8e26945f09b5157e2111e42f99b879',1,'e2dElement']]],
-  ['element',['element',['../structe2d_group.html#a55bc7a3a0af41fba9e5b91f390c5928c',1,'e2dGroup']]]
+  ['element',['element',['../structe2d_group.html#a55bc7a3a0af41fba9e5b91f390c5928c',1,'e2dGroup::element()'],['../structe2d_image.html#a55bc7a3a0af41fba9e5b91f390c5928c',1,'e2dImage::element()']]]
 ];

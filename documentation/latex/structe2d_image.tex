@@ -3,6 +3,15 @@
 }
 
 
+The \hyperlink{structe2d_image}{e2d\-Image} struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the S\-V\-G image element. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2d_element}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Struct$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++.  
+
+
+
+
+{\ttfamily \#include $<$e2d\-Image.\-h$>$}
+
+
+
 Collaboration diagram for e2d\-Image\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -13,23 +22,39 @@ Collaboration diagram for e2d\-Image\-:\nopagebreak
 \subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{structe2d_image_a55bc7a3a0af41fba9e5b91f390c5928c}{\hyperlink{structe2d_element}{e2d\-Element} {\bfseries element}}\label{structe2d_image_a55bc7a3a0af41fba9e5b91f390c5928c}
-
+\hyperlink{structe2d_element}{e2d\-Element} \hyperlink{structe2d_image_a55bc7a3a0af41fba9e5b91f390c5928c}{element}
 \item 
-\hypertarget{structe2d_image_afa8983f25fd6aa6aca18feb07d8d2249}{\hyperlink{structe2d_point}{e2d\-Point} {\bfseries position}}\label{structe2d_image_afa8983f25fd6aa6aca18feb07d8d2249}
-
+\hyperlink{structe2d_point}{e2d\-Point} \hyperlink{structe2d_image_afa8983f25fd6aa6aca18feb07d8d2249}{position}
 \item 
-\hypertarget{structe2d_image_ae426f00e82704fa09578f5446e22d915}{float {\bfseries width}}\label{structe2d_image_ae426f00e82704fa09578f5446e22d915}
-
+float \hyperlink{structe2d_image_ae426f00e82704fa09578f5446e22d915}{width}
 \item 
-\hypertarget{structe2d_image_a48083b65ac9a863566dc3e3fff09a5b4}{float {\bfseries height}}\label{structe2d_image_a48083b65ac9a863566dc3e3fff09a5b4}
-
+float \hyperlink{structe2d_image_a48083b65ac9a863566dc3e3fff09a5b4}{height}
 \item 
-\hypertarget{structe2d_image_afb14ab23ba86115c3b01ad4122943f89}{char $\ast$ {\bfseries image\-Path}}\label{structe2d_image_afb14ab23ba86115c3b01ad4122943f89}
-
+char $\ast$ \hyperlink{structe2d_image_afb14ab23ba86115c3b01ad4122943f89}{image\-Path}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+The \hyperlink{structe2d_image}{e2d\-Image} struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the S\-V\-G image element. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2d_element}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Struct$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. 
+
+\subsection{Field Documentation}
+\hypertarget{structe2d_image_a55bc7a3a0af41fba9e5b91f390c5928c}{\index{e2d\-Image@{e2d\-Image}!element@{element}}
+\index{element@{element}!e2dImage@{e2d\-Image}}
+\subsubsection[{element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Element} {\bf element}}}\label{structe2d_image_a55bc7a3a0af41fba9e5b91f390c5928c}
+\hyperlink{structe2d_image}{e2d\-Image} inherits from \hyperlink{structe2d_element}{e2d\-Element}. Typecasting e2d\-Image$\ast$ to e2d\-Element$\ast$ will work. \hypertarget{structe2d_image_a48083b65ac9a863566dc3e3fff09a5b4}{\index{e2d\-Image@{e2d\-Image}!height@{height}}
+\index{height@{height}!e2dImage@{e2d\-Image}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf height}}}\label{structe2d_image_a48083b65ac9a863566dc3e3fff09a5b4}
+Height of the image, may be -\/1 if not defined in the S\-V\-G \hypertarget{structe2d_image_afb14ab23ba86115c3b01ad4122943f89}{\index{e2d\-Image@{e2d\-Image}!image\-Path@{image\-Path}}
+\index{image\-Path@{image\-Path}!e2dImage@{e2d\-Image}}
+\subsubsection[{image\-Path}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf image\-Path}}}\label{structe2d_image_afb14ab23ba86115c3b01ad4122943f89}
+Path to the image. This is taken directly from the S\-V\-G, so if you are getting a local path for example, you need to fix it on the S\-V\-G. \hypertarget{structe2d_image_afa8983f25fd6aa6aca18feb07d8d2249}{\index{e2d\-Image@{e2d\-Image}!position@{position}}
+\index{position@{position}!e2dImage@{e2d\-Image}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf position}}}\label{structe2d_image_afa8983f25fd6aa6aca18feb07d8d2249}
+Position of the image. Note that it is after applying the transformation present in \hyperlink{structe2d_element_a52bda732df714953f93c1e6f5f7c7c93}{e2d\-Element\-::local\-Transform}. \hypertarget{structe2d_image_ae426f00e82704fa09578f5446e22d915}{\index{e2d\-Image@{e2d\-Image}!width@{width}}
+\index{width@{width}!e2dImage@{e2d\-Image}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf width}}}\label{structe2d_image_ae426f00e82704fa09578f5446e22d915}
+Width of the image, may be -\/1 if not defined in the S\-V\-G 
+
 The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/\-Ez2\-D\-S/e2d\-Image.\-h\end{DoxyCompactItemize}
+C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/\-Ez2\-D\-S/\hyperlink{e2d_image_8h}{e2d\-Image.\-h}\end{DoxyCompactItemize}

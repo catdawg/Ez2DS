@@ -3,7 +3,7 @@
 }
 
 
-The e2d\-Struct is used to group elements in the scene, called childs. This struct is created from the \char`\"{}g\char`\"{} element in S\-V\-G. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2d_element}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Struct$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++.  
+The \hyperlink{structe2d_group}{e2d\-Group} struct is used to group elements in the scene. This struct is created from the \char`\"{}g\char`\"{} element in S\-V\-G. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2d_element}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Struct$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++.  
 
 
 
@@ -33,13 +33,13 @@ unsigned int \hyperlink{structe2d_group_a9c89d7cf35b835ef1917855c78a79cc5}{child
 
 
 \subsection{Detailed Description}
-The e2d\-Struct is used to group elements in the scene, called childs. This struct is created from the \char`\"{}g\char`\"{} element in S\-V\-G. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2d_element}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Struct$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. 
+The \hyperlink{structe2d_group}{e2d\-Group} struct is used to group elements in the scene. This struct is created from the \char`\"{}g\char`\"{} element in S\-V\-G. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2d_element}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Struct$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. 
 
 \subsection{Field Documentation}
 \hypertarget{structe2d_group_a55f6dde874716dc99dcd270fc0999a01}{\index{e2d\-Group@{e2d\-Group}!child\-List@{child\-List}}
 \index{child\-List@{child\-List}!e2dGroup@{e2d\-Group}}
 \subsubsection[{child\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Element}$\ast$$\ast$ {\bf child\-List}}}\label{structe2d_group_a55f6dde874716dc99dcd270fc0999a01}
-child list array, allocated size given by $<$ \hyperlink{structe2d_group_a9c89d7cf35b835ef1917855c78a79cc5}{e2d\-Group\-::child\-List\-Alloc}. $<$ \begin{DoxySeeAlso}{See also}
+Child list array, allocated size given by \hyperlink{structe2d_group_a9c89d7cf35b835ef1917855c78a79cc5}{e2d\-Group\-::child\-List\-Alloc}. \begin{DoxySeeAlso}{See also}
 \hyperlink{group__e2d_group_ga6ae76730f78ad731621e9286a3980b8a}{e2d\-Group\-Add\-Child()} 
 \end{DoxySeeAlso}
 \hypertarget{structe2d_group_a9c89d7cf35b835ef1917855c78a79cc5}{\index{e2d\-Group@{e2d\-Group}!child\-List\-Alloc@{child\-List\-Alloc}}
@@ -48,10 +48,10 @@ child list array, allocated size given by $<$ \hyperlink{structe2d_group_a9c89d7
 Allocated size of \hyperlink{structe2d_group_a55f6dde874716dc99dcd270fc0999a01}{e2d\-Group\-::child\-List} \hypertarget{structe2d_group_a0af3697c2c9df6ed0ddd340cded35d65}{\index{e2d\-Group@{e2d\-Group}!child\-Num@{child\-Num}}
 \index{child\-Num@{child\-Num}!e2dGroup@{e2d\-Group}}
 \subsubsection[{child\-Num}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf child\-Num}}}\label{structe2d_group_a0af3697c2c9df6ed0ddd340cded35d65}
-Number of children in e2d\-Group\-::child\-List\-Array \hypertarget{structe2d_group_a55bc7a3a0af41fba9e5b91f390c5928c}{\index{e2d\-Group@{e2d\-Group}!element@{element}}
+Number of children in \hyperlink{structe2d_group_a55f6dde874716dc99dcd270fc0999a01}{e2d\-Group\-::child\-List} Array \hypertarget{structe2d_group_a55bc7a3a0af41fba9e5b91f390c5928c}{\index{e2d\-Group@{e2d\-Group}!element@{element}}
 \index{element@{element}!e2dGroup@{e2d\-Group}}
 \subsubsection[{element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Element} {\bf element}}}\label{structe2d_group_a55bc7a3a0af41fba9e5b91f390c5928c}
-\hyperlink{structe2d_group}{e2d\-Group} inherits from \hyperlink{structe2d_element}{e2d\-Element}. Typecasting $<$ e2d\-Group$\ast$ to e2d\-Element$\ast$ will work. 
+\hyperlink{structe2d_group}{e2d\-Group} inherits from \hyperlink{structe2d_element}{e2d\-Element}. Typecasting e2d\-Group$\ast$ to e2d\-Element$\ast$ will work. 
 
 The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 

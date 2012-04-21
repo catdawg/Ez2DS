@@ -1,6 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node4" href="$structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="108,125,199,152"/>
-<area shape="rect" id="node2" href="$structe2d_group.html" title="The e2dStruct is used to group elements in the scene, called childs. This struct is created from the ..." alt="" coords="43,229,121,256"/>
+<area shape="rect" id="node2" href="$structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="43,229,121,256"/>
 <area shape="rect" id="node7" href="$structe2d_point.html" title="e2dPoint" alt="" coords="117,5,189,32"/>
 <area shape="rect" id="node9" href="$structe2d_matrix.html" title="e2dMatrix" alt="" coords="225,5,303,32"/>
 </map>

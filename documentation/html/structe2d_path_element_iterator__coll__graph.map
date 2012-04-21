@@ -2,7 +2,7 @@
 <area shape="rect" id="node2" href="$structe2d_path.html" title="e2dPath" alt="" coords="142,229,212,256"/>
 <area shape="rect" id="node4" href="$structe2d_path_element.html" title="e2dPathElement" alt="" coords="5,125,123,152"/>
 <area shape="rect" id="node6" href="$structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="257,125,348,152"/>
-<area shape="rect" id="node8" href="$structe2d_group.html" title="The e2dStruct is used to group elements in the scene, called childs. This struct is created from the ..." alt="" coords="279,229,357,256"/>
+<area shape="rect" id="node8" href="$structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="279,229,357,256"/>
 <area shape="rect" id="node15" href="$structe2d_scene.html" title="e2dScene" alt="" coords="324,320,404,347"/>
 <area shape="rect" id="node11" href="$structe2d_point.html" title="e2dPoint" alt="" coords="210,5,283,32"/>
 <area shape="rect" id="node13" href="$structe2d_matrix.html" title="e2dMatrix" alt="" coords="318,5,396,32"/>
