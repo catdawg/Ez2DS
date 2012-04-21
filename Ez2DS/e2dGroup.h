@@ -24,7 +24,7 @@ extern "C" {
      **/
 
     /**
-     *  @brief The e2dStruct is used to group elements in the scene, called childs.
+     *  @brief The e2dGroup struct is used to group elements in the scene.
      * This struct is created from the "g" element in SVG. It "inherits" from 
      * e2dElement by placing it as the first element in the struct, if you 
      * typecast e2dStruct* into e2dElement*, it will work thus mimicing 
@@ -33,11 +33,11 @@ extern "C" {
      **/
     struct e2dGroup {
         e2dElement element; /**< e2dGroup inherits from e2dElement. Typecasting
-                             *< e2dGroup* to e2dElement* will work.**/
-        unsigned int childNum;/**< Number of children in e2dGroup::childListArray **/
-        e2dElement** childList; /**< child list array, allocated size given by
-                                 *< e2dGroup::childListAlloc. 
-                                 *< @see e2dGroupAddChild()**/
+                             * e2dGroup* to e2dElement* will work.**/
+        unsigned int childNum;/**< Number of children in e2dGroup::childList Array **/
+        e2dElement** childList; /**< Child list array, allocated size given by
+                                 * e2dGroup::childListAlloc. 
+                                 * @see e2dGroupAddChild()**/
         unsigned int childListAlloc;/**< Allocated size of e2dGroup::childList**/
 
     };
@@ -63,7 +63,7 @@ extern "C" {
      * by e2dGroupCreate().
      *
      *
-     * @param [in] group  The e2dGroup which will have its members be initialized
+     * @param [in] group  The e2dGroup which will have its members initialized
      * @param [in] scene  The e2dScene where this group will belong to.
      * 
      * 
@@ -131,7 +131,7 @@ extern "C" {
 
     /**
      * @brief   Adds a transformation to the group which subtracts the position
-     * of the Bounding Box, and adds the position of the bounding box to all the 
+     * of the Bounding Box (offset by (tx, ty)), and adds the position of the bounding box to all the 
      * children, effectively bringing the origin of the local coordinate system
      * to the bounding box. See e2dElementCenterAtBBox() for an explanation on "tx"
      * and "ty".

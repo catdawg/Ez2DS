@@ -50,39 +50,39 @@ extern "C" {
         e2dElementType type;/**< Used for reflection **/
         char* id;/**< ID taken from SVG **/
         unsigned int unique_id; /**< unique id for this execution. 
-                                 *< (static int in e2dGroupInit() ) **/
+                                 * (static int in e2dGroupInit() ) **/
 
         e2dMatrix localTransform; /**< LocalTransform taken from SVG **/
         e2dMatrix effectiveTransform; /**< Actual transform calculated applied here.
-                                       *< @see e2dSceneCalculateEffectiveTransforms() **/
+                                       * @see e2dSceneCalculateEffectiveTransforms() **/
         e2dMatrix inverseEffectiveTransform;   /**< Useful for point transformations.
-                                                *< 
-                                                *< @see e2dElementGetLocalPosition()
-                                                *< @see e2dElementGetWorldPosition()
-                                                *< @see e2dElementGetRelativePosition()
-                                                *< @see e2dElementGetRelativePoint()**/
+                                                * 
+                                                * @see e2dElementGetLocalPosition()
+                                                * @see e2dElementGetWorldPosition()
+                                                * @see e2dElementGetRelativePosition()
+                                                * @see e2dElementGetRelativePoint()**/
         
         e2dGroup* parent;/**< parent of the element in the scene tree.**/
         
         unsigned int attributeNum;/**< Number of attributes in e2dElement::attributeNames and
-                                   *< e2dElement::attributeValues. **/
+                                   * e2dElement::attributeValues. **/
         unsigned int attributeAlloc;/**< Allocated size of e2dGroup::childList**/
         char** attributeNames;  /**< Attribute names array, allocated size given by
-                                 *< e2dGroup::attributeAlloc. 
-                                 *< @see e2dElementAddAttribute()**/
+                                 * e2dGroup::attributeAlloc. 
+                                 * @see e2dElementAddAttribute()**/
         char** attributeValues;/**< Attribute values array, allocated size given by
-                                 *< e2dGroup::attributeAlloc. 
-                                 *< @see e2dElementAddAttribute()**/
+                                 * e2dGroup::attributeAlloc. 
+                                 * @see e2dElementAddAttribute()**/
 
         float bboxWidth;/**< Bounding box width.
-                         *< @see e2dElementCalculateBoundingBox()
-                         *< @see e2dElementCenterAtBBox() **/
+                         * @see e2dElementCalculateBoundingBox()
+                         * @see e2dElementCenterAtBBox() **/
         float bboxHeight;/**< Bounding box height.
-                         *< @see e2dElementCalculateBoundingBox()
-                         *< @see e2dElementCenterAtBBox() **/
+                         * @see e2dElementCalculateBoundingBox()
+                         * @see e2dElementCenterAtBBox() **/
         e2dPoint bboxPosition;/**< Bounding box position.
-                         *< @see e2dElementCalculateBoundingBox()
-                         *< @see e2dElementCenterAtBBox() **/
+                         * @see e2dElementCalculateBoundingBox()
+                         * @see e2dElementCenterAtBBox() **/
     };
 
 
