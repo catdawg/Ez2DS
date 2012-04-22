@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node4" href="$structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="108,125,199,152"/>
-<area shape="rect" id="node2" href="$structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="43,229,121,256"/>
-<area shape="rect" id="node7" href="$structe2d_point.html" title="The e2dPoint struct which contains two floats." alt="" coords="117,5,189,32"/>
-<area shape="rect" id="node9" href="$structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="225,5,303,32"/>
-</map>
