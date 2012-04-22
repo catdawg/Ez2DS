@@ -1,0 +1,59 @@
+\hypertarget{structe2dGroup}{\section{e2d\-Group Struct Reference}
+\label{structe2dGroup}\index{e2d\-Group@{e2d\-Group}}
+}
+
+
+The \hyperlink{structe2dGroup}{e2d\-Group} struct is used to group elements in the scene. This struct is created from the \char`\"{}g\char`\"{} element in S\-V\-G. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dElement}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Struct$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++.  
+
+
+
+
+{\ttfamily \#include $<$e2d\-Group.\-h$>$}
+
+
+
+Collaboration diagram for e2d\-Group\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structe2dGroup__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structe2dElement}{e2d\-Element} \hyperlink{structe2dGroup_a55bc7a3a0af41fba9e5b91f390c5928c}{element}
+\item 
+unsigned int \hyperlink{structe2dGroup_a0af3697c2c9df6ed0ddd340cded35d65}{child\-Num}
+\item 
+\hyperlink{structe2dElement}{e2d\-Element} $\ast$$\ast$ \hyperlink{structe2dGroup_a55f6dde874716dc99dcd270fc0999a01}{child\-List}
+\item 
+unsigned int \hyperlink{structe2dGroup_a9c89d7cf35b835ef1917855c78a79cc5}{child\-List\-Alloc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{structe2dGroup}{e2d\-Group} struct is used to group elements in the scene. This struct is created from the \char`\"{}g\char`\"{} element in S\-V\-G. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dElement}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Struct$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. 
+
+\subsection{Field Documentation}
+\hypertarget{structe2dGroup_a55f6dde874716dc99dcd270fc0999a01}{\index{e2d\-Group@{e2d\-Group}!child\-List@{child\-List}}
+\index{child\-List@{child\-List}!e2dGroup@{e2d\-Group}}
+\subsubsection[{child\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Element}$\ast$$\ast$ {\bf child\-List}}}\label{structe2dGroup_a55f6dde874716dc99dcd270fc0999a01}
+Child list array, allocated size given by \hyperlink{structe2dGroup_a9c89d7cf35b835ef1917855c78a79cc5}{e2d\-Group\-::child\-List\-Alloc}. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dGroup_ga6ae76730f78ad731621e9286a3980b8a}{e2d\-Group\-Add\-Child()} 
+\end{DoxySeeAlso}
+\hypertarget{structe2dGroup_a9c89d7cf35b835ef1917855c78a79cc5}{\index{e2d\-Group@{e2d\-Group}!child\-List\-Alloc@{child\-List\-Alloc}}
+\index{child\-List\-Alloc@{child\-List\-Alloc}!e2dGroup@{e2d\-Group}}
+\subsubsection[{child\-List\-Alloc}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf child\-List\-Alloc}}}\label{structe2dGroup_a9c89d7cf35b835ef1917855c78a79cc5}
+Allocated size of \hyperlink{structe2dGroup_a55f6dde874716dc99dcd270fc0999a01}{e2d\-Group\-::child\-List} \hypertarget{structe2dGroup_a0af3697c2c9df6ed0ddd340cded35d65}{\index{e2d\-Group@{e2d\-Group}!child\-Num@{child\-Num}}
+\index{child\-Num@{child\-Num}!e2dGroup@{e2d\-Group}}
+\subsubsection[{child\-Num}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf child\-Num}}}\label{structe2dGroup_a0af3697c2c9df6ed0ddd340cded35d65}
+Number of children in \hyperlink{structe2dGroup_a55f6dde874716dc99dcd270fc0999a01}{e2d\-Group\-::child\-List} Array \hypertarget{structe2dGroup_a55bc7a3a0af41fba9e5b91f390c5928c}{\index{e2d\-Group@{e2d\-Group}!element@{element}}
+\index{element@{element}!e2dGroup@{e2d\-Group}}
+\subsubsection[{element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Element} {\bf element}}}\label{structe2dGroup_a55bc7a3a0af41fba9e5b91f390c5928c}
+\hyperlink{structe2dGroup}{e2d\-Group} inherits from \hyperlink{structe2dElement}{e2d\-Element}. Typecasting e2d\-Group$\ast$ to e2d\-Element$\ast$ will work. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{e2dGroup_8h}{e2d\-Group.\-h}\end{DoxyCompactItemize}

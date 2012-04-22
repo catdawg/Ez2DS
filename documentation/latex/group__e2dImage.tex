@@ -1,0 +1,162 @@
+\hypertarget{group__e2dImage}{\section{E2d\-Image}
+\label{group__e2dImage}\index{E2d\-Image@{E2d\-Image}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structe2dImage}{e2d\-Image}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dImage}{e2d\-Image} struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the S\-V\-G image element. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dElement}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Struct$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structe2dImage}{e2d\-Image} $\ast$ \hyperlink{group__e2dImage_gafc7e085a237f8d2f1b147b3cca8259d6}{e2d\-Image\-Create} (const \hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em This is the constructor of \hyperlink{structe2dImage}{e2d\-Image}. It returns a pointer to a new \hyperlink{structe2dImage}{e2d\-Image}. Inside it calls \hyperlink{group__e2dImage_ga11703b45867fb00d56489a3a6bc6bb9c}{e2d\-Image\-Init()} to initialize the members of the struct. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dImage_ga11703b45867fb00d56489a3a6bc6bb9c}{e2d\-Image\-Init} (\hyperlink{structe2dImage}{e2d\-Image} $\ast$image, const \hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em This method will initialize the members of the struct, i.\-e. it will zero the members, and call \hyperlink{group__e2dElement_ga8734d10ef40a380dfc51bfe1790a92a7}{e2d\-Element\-Init()}. It is called by \hyperlink{group__e2dImage_gafc7e085a237f8d2f1b147b3cca8259d6}{e2d\-Image\-Create()}. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dImage_gacf174e48578f0e23888e37f47a3ef10b}{e2d\-Image\-Destroy} (\hyperlink{structe2dImage}{e2d\-Image} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Calls \hyperlink{group__e2dImage_gaf5409c0b10e8a8d8b9bd3f08e1d5da1f}{e2d\-Image\-Free\-Members()}, \hyperlink{group__e2dElement_gae8da5104d70a09549ca74044dda8313c}{e2d\-Element\-Free\-Members()}, and then frees the pointer. \hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} will call this method. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dImage_gaf5409c0b10e8a8d8b9bd3f08e1d5da1f}{e2d\-Image\-Free\-Members} (\hyperlink{structe2dImage}{e2d\-Image} $\ast$image)
+\begin{DoxyCompactList}\small\item\em Will free all the allocated memory inside the \hyperlink{structe2dImage}{e2d\-Image} struct pointed by elem, i.\-e. it checks if \hyperlink{structe2dImage_afb14ab23ba86115c3b01ad4122943f89}{e2d\-Image\-::image\-Path} has been defined and frees the pointer. It is called by \hyperlink{group__e2dImage_gacf174e48578f0e23888e37f47a3ef10b}{e2d\-Image\-Destroy()}. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dImage_ga6df4ef2b71e130f5817b079b6b32d249}{e2d\-Image\-Calculate\-Bounding\-Box} (\hyperlink{structe2dImage}{e2d\-Image} $\ast$image)
+\begin{DoxyCompactList}\small\item\em A quite straight forward function which simply makes the \hyperlink{structe2dImage_ae426f00e82704fa09578f5446e22d915}{e2d\-Image\-::width}, \hyperlink{structe2dImage_a48083b65ac9a863566dc3e3fff09a5b4}{e2d\-Image\-::height} and \hyperlink{structe2dImage_afa8983f25fd6aa6aca18feb07d8d2249}{e2d\-Image\-::position} of the image also be the bounding box. If a \hyperlink{structe2dImage_ae426f00e82704fa09578f5446e22d915}{e2d\-Image\-::width} and \hyperlink{structe2dImage_a48083b65ac9a863566dc3e3fff09a5b4}{e2d\-Image\-::height} is not supplied, the bounding box won't be calculated. We can't check the actual image size as that would bring additional dependencies to the library, so be careful with it. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dImage_ga08652fd1ad70d4935d98bcc02a38fb69}{e2d\-Image\-Center\-At\-B\-Box} (\hyperlink{structe2dImage}{e2d\-Image} $\ast$image, float tx, float ty)
+\begin{DoxyCompactList}\small\item\em Adds a transformation to the image which subtracts the position (offset by (tx,ty)) of the Bounding Box, and adds the position of the bounding box to the image position, effectively bringing the origin of the local coordinate system to the bounding box. See \hyperlink{group__e2dElement_ga36b01a888c97163c990e16d348aff61c}{e2d\-Element\-Center\-At\-B\-Box()} for an explanation on \char`\"{}tx\char`\"{} and \char`\"{}ty\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__e2dImage_ga6df4ef2b71e130f5817b079b6b32d249}{\index{E2d\-Image@{E2d\-Image}!e2d\-Image\-Calculate\-Bounding\-Box@{e2d\-Image\-Calculate\-Bounding\-Box}}
+\index{e2d\-Image\-Calculate\-Bounding\-Box@{e2d\-Image\-Calculate\-Bounding\-Box}!E2dImage@{E2d\-Image}}
+\subsubsection[{e2d\-Image\-Calculate\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Image\-Calculate\-Bounding\-Box} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Image} $\ast$}]{image}
+\end{DoxyParamCaption}
+)}}\label{group__e2dImage_ga6df4ef2b71e130f5817b079b6b32d249}
+
+
+A quite straight forward function which simply makes the \hyperlink{structe2dImage_ae426f00e82704fa09578f5446e22d915}{e2d\-Image\-::width}, \hyperlink{structe2dImage_a48083b65ac9a863566dc3e3fff09a5b4}{e2d\-Image\-::height} and \hyperlink{structe2dImage_afa8983f25fd6aa6aca18feb07d8d2249}{e2d\-Image\-::position} of the image also be the bounding box. If a \hyperlink{structe2dImage_ae426f00e82704fa09578f5446e22d915}{e2d\-Image\-::width} and \hyperlink{structe2dImage_a48083b65ac9a863566dc3e3fff09a5b4}{e2d\-Image\-::height} is not supplied, the bounding box won't be calculated. We can't check the actual image size as that would bring additional dependencies to the library, so be careful with it. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em image} & The \hyperlink{structe2dImage}{e2d\-Image} struct where the bounding box will be calculated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dElement_ga94aa710b2da71af2091fe4d5b87ce47e}{e2d\-Element\-Calculate\-Bounding\-Box()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dImage_ga08652fd1ad70d4935d98bcc02a38fb69}{\index{E2d\-Image@{E2d\-Image}!e2d\-Image\-Center\-At\-B\-Box@{e2d\-Image\-Center\-At\-B\-Box}}
+\index{e2d\-Image\-Center\-At\-B\-Box@{e2d\-Image\-Center\-At\-B\-Box}!E2dImage@{E2d\-Image}}
+\subsubsection[{e2d\-Image\-Center\-At\-B\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Image\-Center\-At\-B\-Box} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Image} $\ast$}]{image, }
+\item[{float}]{tx, }
+\item[{float}]{ty}
+\end{DoxyParamCaption}
+)}}\label{group__e2dImage_ga08652fd1ad70d4935d98bcc02a38fb69}
+
+
+Adds a transformation to the image which subtracts the position (offset by (tx,ty)) of the Bounding Box, and adds the position of the bounding box to the image position, effectively bringing the origin of the local coordinate system to the bounding box. See \hyperlink{group__e2dElement_ga36b01a888c97163c990e16d348aff61c}{e2d\-Element\-Center\-At\-B\-Box()} for an explanation on \char`\"{}tx\char`\"{} and \char`\"{}ty\char`\"{}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em image} & The \hyperlink{structe2dImage}{e2d\-Image} struct to be centered. \\
+\hline
+\mbox{\tt in}  & {\em tx} & x offset in B\-Box width units. \\
+\hline
+\mbox{\tt in}  & {\em ty} & y offset in B\-Box height units.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dElement_ga36b01a888c97163c990e16d348aff61c}{e2d\-Element\-Center\-At\-B\-Box()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dImage_gafc7e085a237f8d2f1b147b3cca8259d6}{\index{E2d\-Image@{E2d\-Image}!e2d\-Image\-Create@{e2d\-Image\-Create}}
+\index{e2d\-Image\-Create@{e2d\-Image\-Create}!E2dImage@{E2d\-Image}}
+\subsubsection[{e2d\-Image\-Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Image}$\ast$ {\bf e2d\-Image\-Create} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)}}\label{group__e2dImage_gafc7e085a237f8d2f1b147b3cca8259d6}
+
+
+This is the constructor of \hyperlink{structe2dImage}{e2d\-Image}. It returns a pointer to a new \hyperlink{structe2dImage}{e2d\-Image}. Inside it calls \hyperlink{group__e2dImage_ga11703b45867fb00d56489a3a6bc6bb9c}{e2d\-Image\-Init()} to initialize the members of the struct. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em scene} & The \hyperlink{structe2dScene}{e2d\-Scene} where this image will belong to.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em e2d\-Image$\ast$} & A newly allocated and initialized pointer to \hyperlink{structe2dImage}{e2d\-Image}.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dImage_ga11703b45867fb00d56489a3a6bc6bb9c}{e2d\-Image\-Init()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dImage_gacf174e48578f0e23888e37f47a3ef10b}{\index{E2d\-Image@{E2d\-Image}!e2d\-Image\-Destroy@{e2d\-Image\-Destroy}}
+\index{e2d\-Image\-Destroy@{e2d\-Image\-Destroy}!E2dImage@{E2d\-Image}}
+\subsubsection[{e2d\-Image\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Image\-Destroy} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Image} $\ast$}]{image}
+\end{DoxyParamCaption}
+)}}\label{group__e2dImage_gacf174e48578f0e23888e37f47a3ef10b}
+
+
+Calls \hyperlink{group__e2dImage_gaf5409c0b10e8a8d8b9bd3f08e1d5da1f}{e2d\-Image\-Free\-Members()}, \hyperlink{group__e2dElement_gae8da5104d70a09549ca74044dda8313c}{e2d\-Element\-Free\-Members()}, and then frees the pointer. \hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} will call this method. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em image} & The \hyperlink{structe2dImage}{e2d\-Image} struct which will be destroyed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dImage_gaf5409c0b10e8a8d8b9bd3f08e1d5da1f}{e2d\-Image\-Free\-Members()} 
+
+\hyperlink{group__e2dElement_gae8da5104d70a09549ca74044dda8313c}{e2d\-Element\-Free\-Members()} 
+
+\hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dImage_gaf5409c0b10e8a8d8b9bd3f08e1d5da1f}{\index{E2d\-Image@{E2d\-Image}!e2d\-Image\-Free\-Members@{e2d\-Image\-Free\-Members}}
+\index{e2d\-Image\-Free\-Members@{e2d\-Image\-Free\-Members}!E2dImage@{E2d\-Image}}
+\subsubsection[{e2d\-Image\-Free\-Members}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Image\-Free\-Members} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Image} $\ast$}]{image}
+\end{DoxyParamCaption}
+)}}\label{group__e2dImage_gaf5409c0b10e8a8d8b9bd3f08e1d5da1f}
+
+
+Will free all the allocated memory inside the \hyperlink{structe2dImage}{e2d\-Image} struct pointed by elem, i.\-e. it checks if \hyperlink{structe2dImage_afb14ab23ba86115c3b01ad4122943f89}{e2d\-Image\-::image\-Path} has been defined and frees the pointer. It is called by \hyperlink{group__e2dImage_gacf174e48578f0e23888e37f47a3ef10b}{e2d\-Image\-Destroy()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em image} & The \hyperlink{structe2dImage}{e2d\-Image} struct where the members will be freed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dImage_gacf174e48578f0e23888e37f47a3ef10b}{e2d\-Image\-Destroy()} 
+
+\hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dImage_ga11703b45867fb00d56489a3a6bc6bb9c}{\index{E2d\-Image@{E2d\-Image}!e2d\-Image\-Init@{e2d\-Image\-Init}}
+\index{e2d\-Image\-Init@{e2d\-Image\-Init}!E2dImage@{E2d\-Image}}
+\subsubsection[{e2d\-Image\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Image\-Init} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Image} $\ast$}]{image, }
+\item[{const {\bf e2d\-Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)}}\label{group__e2dImage_ga11703b45867fb00d56489a3a6bc6bb9c}
+
+
+This method will initialize the members of the struct, i.\-e. it will zero the members, and call \hyperlink{group__e2dElement_ga8734d10ef40a380dfc51bfe1790a92a7}{e2d\-Element\-Init()}. It is called by \hyperlink{group__e2dImage_gafc7e085a237f8d2f1b147b3cca8259d6}{e2d\-Image\-Create()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em image} & The \hyperlink{structe2dImage}{e2d\-Image} which will have its members initialized. \\
+\hline
+\mbox{\tt in}  & {\em scene} & The \hyperlink{structe2dScene}{e2d\-Scene} where this group will belong to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dImage_gafc7e085a237f8d2f1b147b3cca8259d6}{e2d\-Image\-Create()} 
+
+\hyperlink{group__e2dElement_ga8734d10ef40a380dfc51bfe1790a92a7}{e2d\-Element\-Init()} 
+\end{DoxySeeAlso}
