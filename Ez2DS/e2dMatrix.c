@@ -23,15 +23,7 @@ e2dMatrixSetRow(e2dMatrix* mat,
 
 inline void
 e2dMatrixToIdent(e2dMatrix* mat) {
-    mat->vals[0][0] = 1;
-    mat->vals[1][0] = 0;
-    mat->vals[2][0] = 0;
-    mat->vals[0][1] = 0;
-    mat->vals[1][1] = 1;
-    mat->vals[2][1] = 0;
-    mat->vals[0][2] = 0;
-    mat->vals[1][2] = 0;
-    mat->vals[2][2] = 1;
+    *mat = E2D_IDENT_MATRIX;
 }
 
 inline void
@@ -102,19 +94,15 @@ e2dMatrixMultiply(const e2dMatrix* mat, const e2dMatrix* mult) {
 
 inline void
 e2dMatrixSetAsTranslation(e2dMatrix* mat, float x, float y) {
-    e2dMatrixSetCell(mat, 0, 0, 1);
-    e2dMatrixSetCell(mat, 1, 0, 0);
-    e2dMatrixSetCell(mat, 2, 0, 0);
-    e2dMatrixSetCell(mat, 0, 1, 0);
-    e2dMatrixSetCell(mat, 1, 1, 1);
-    e2dMatrixSetCell(mat, 2, 1, 0);
+    
+    e2dMatrixToIdent(mat);
     e2dMatrixSetCell(mat, 0, 2, x);
     e2dMatrixSetCell(mat, 1, 2, y);
-    e2dMatrixSetCell(mat, 2, 2, 1);
 }
 
 inline void
 e2dMatrixSetAsScale(e2dMatrix* mat, float x, float y) {
+    e2dMatrixToIdent(mat);
     e2dMatrixSetCell(mat, 0, 0, x);
     e2dMatrixSetCell(mat, 1, 0, 0);
     e2dMatrixSetCell(mat, 2, 0, 0);

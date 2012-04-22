@@ -1,8 +1,11 @@
-/* 
- * File:   e2dPoint.h
- * Author: Rui
- *
- * Created on 3 de Fevereiro de 2012, 21:52
+/**
+ * @file   e2dPoint.h
+ * 
+ * @brief  File which contains a struct definition of a point (two floats).
+ * 
+ * @author Rui (ruir2c@gmail.com)
+ * 
+ * @date   February, 2012
  */
 
 #ifndef E2DPOINT_H
@@ -14,14 +17,30 @@
 extern "C" {
 #endif
 
-    struct e2dPoint{
-        float x, y;
+    /**
+     * @defgroup e2dPoint
+     * @{
+     **/
+    
+    
+    /**
+     *  @brief The e2dPoint struct which contains two floats.
+     **/
+    struct e2dPoint {
+        float x; /**< The X coordinate of the point **/ 
+        float y; /**< The Y coordinate of the point **/ 
     };
-    
-static e2dPoint const E2DPOINT_ZERO_ZERO = { 0, 0 } ;
-    
-    
-    
+
+    /**
+     *  @brief Utility constant which defines a (0,0) point.
+     **/
+    static e2dPoint const E2DPOINT_ZERO_ZERO = {0, 0};
+
+
+
+    /**
+     * @}
+     **/
 
 
 #ifdef	__cplusplus

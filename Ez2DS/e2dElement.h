@@ -1,4 +1,3 @@
-
 /**
  * @file   e2dElement.h
  * 
