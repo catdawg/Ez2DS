@@ -115,7 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -128,15 +128,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">e2dMatrix Struct Reference</div>  </div>
+<div class="title">e2dMatrix Struct Reference<div class="ingroups"><a class="el" href="group__e2d_matrix.html">E2dMatrix</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a> struct contains the implementation of a 3x3 matrix which is row major. See <a href="http://en.wikipedia.org/wiki/Row-major_order">http://en.wikipedia.org/wiki/Row-major_order</a> if you have doubts.  
+ <a href="structe2d_matrix.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="e2d_matrix_8h_source.html">e2dMatrix.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ac06a92ccf2617d904678c51c6cf5a9bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac06a92ccf2617d904678c51c6cf5a9bb"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>vals</b> [3][3]</td></tr>
+<tr class="memitem:ac06a92ccf2617d904678c51c6cf5a9bb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2d_matrix.html#ac06a92ccf2617d904678c51c6cf5a9bb">vals</a> [3][3]</td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a> struct contains the implementation of a 3x3 matrix which is row major. See <a href="http://en.wikipedia.org/wiki/Row-major_order">http://en.wikipedia.org/wiki/Row-major_order</a> if you have doubts. </p>
+</div><hr/><h2>Field Documentation</h2>
+<a class="anchor" id="ac06a92ccf2617d904678c51c6cf5a9bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="structe2d_matrix.html#ac06a92ccf2617d904678c51c6cf5a9bb">vals</a>[3][3]</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Row major 3x3 matrix array </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>C:/Users/Rui/Desktop/Ez2DS/Ez2DS/Ez2DS/<a class="el" href="e2d_matrix_8h_source.html">e2dMatrix.h</a></li>
 </ul>
@@ -146,7 +167,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>vals</b> [3][3]</td>
     <ul>
       <li class="navelem"><a class="el" href="structe2d_matrix.html">e2dMatrix</a>      </li>
 
-    <li class="footer">Generated on Sat Apr 21 2012 01:40:24 for Ez2DS by
+    <li class="footer">Generated on Sun Apr 22 2012 02:11:30 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

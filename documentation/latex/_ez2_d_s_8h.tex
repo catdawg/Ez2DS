@@ -1,6 +1,11 @@
-\hypertarget{_ez2_d_s_8h}{\section{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/\-Ez2\-D\-S.h File Reference}
-\label{_ez2_d_s_8h}\index{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/\-Ez2\-D\-S.\-h@{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/\-Ez2\-D\-S.\-h}}
+\hypertarget{_ez2_d_s_8h}{\section{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/\-Ez2\-D\-S/\-Ez2\-D\-S.h File Reference}
+\label{_ez2_d_s_8h}\index{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/\-Ez2\-D\-S/\-Ez2\-D\-S.\-h@{C\-:/\-Users/\-Rui/\-Desktop/\-Ez2\-D\-S/\-Ez2\-D\-S/\-Ez2\-D\-S/\-Ez2\-D\-S.\-h}}
 }
+
+
+File which contains global definitions useful to be included on every other file of the library. These definitions include forward declaration of all the structs, and some utility functions.  
+
+
 This graph shows which files directly or indirectly include this file\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -12,56 +17,88 @@ This graph shows which files directly or indirectly include this file\-:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 \#define \hyperlink{_ez2_d_s_8h_a48ffc9ed217e38fc9cd7cf8f9894d63c}{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}~1.\-0e-\/6f
-\item 
+\begin{DoxyCompactList}\small\item\em Defines a value which is almost zero. \end{DoxyCompactList}\item 
 \#define \hyperlink{_ez2_d_s_8h_a5f5051e054baa41a7a7048bd205bc1e3}{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}(val)~((val) $<$ (\hyperlink{_ez2_d_s_8h_a48ffc9ed217e38fc9cd7cf8f9894d63c}{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}) \&\& (val) $>$ -\/(\hyperlink{_ez2_d_s_8h_a48ffc9ed217e38fc9cd7cf8f9894d63c}{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}))
-\item 
-\#define \hyperlink{_ez2_d_s_8h_ae6c89cca978cb0aa64dc7034b016f5cd}{E2\-D\-\_\-\-N\-U\-L\-L}~0
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if val is within the threshold defined by E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O, i.\-e. it checks if val is below E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O and above -\/ E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O. \end{DoxyCompactList}\item 
+\hypertarget{_ez2_d_s_8h_ae6c89cca978cb0aa64dc7034b016f5cd}{\#define \hyperlink{_ez2_d_s_8h_ae6c89cca978cb0aa64dc7034b016f5cd}{E2\-D\-\_\-\-N\-U\-L\-L}~0}\label{_ez2_d_s_8h_ae6c89cca978cb0aa64dc7034b016f5cd}
+
+\begin{DoxyCompactList}\small\item\em N\-U\-L\-L definition. \end{DoxyCompactList}\item 
 \#define \hyperlink{_ez2_d_s_8h_a1cd9ecc64e25100eeb04dc1b08c28fc1}{E2\-D\-\_\-\-M\-A\-X}(a, b)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the biggest number between a and b. \end{DoxyCompactList}\item 
 \#define \hyperlink{_ez2_d_s_8h_af5964c56c46211897a998a087d4c3a66}{E2\-D\-\_\-\-M\-I\-N}(a, b)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the smallest number between a and b. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
+{\bf }\par
 \begin{DoxyCompactItemize}
 \item 
-typedef struct \hyperlink{structe2d_scene}{e2d\-Scene} \hyperlink{_ez2_d_s_8h_a4663bede7d265bce67f2176cbe6d1f97}{e2d\-Scene}
+\hypertarget{_ez2_d_s_8h_a4663bede7d265bce67f2176cbe6d1f97}{typedef struct \hyperlink{structe2d_scene}{e2d\-Scene} \hyperlink{_ez2_d_s_8h_a4663bede7d265bce67f2176cbe6d1f97}{e2d\-Scene}}\label{_ez2_d_s_8h_a4663bede7d265bce67f2176cbe6d1f97}
+
+\begin{DoxyCompactList}\small\item\em Forward declarations \begin{DoxyVerb}  \end{DoxyVerb}
+. \end{DoxyCompactList}\item 
+\hypertarget{_ez2_d_s_8h_a7d730be997ced9a362d3fbde0c925029}{typedef struct \hyperlink{structe2d_element}{e2d\-Element} {\bfseries e2d\-Element}}\label{_ez2_d_s_8h_a7d730be997ced9a362d3fbde0c925029}
+
 \item 
-typedef struct \hyperlink{structe2d_element}{e2d\-Element} \hyperlink{_ez2_d_s_8h_a7d730be997ced9a362d3fbde0c925029}{e2d\-Element}
+\hypertarget{_ez2_d_s_8h_af3a345c79086b4c4a3bef68d54ec75bb}{typedef struct \hyperlink{structe2d_group}{e2d\-Group} {\bfseries e2d\-Group}}\label{_ez2_d_s_8h_af3a345c79086b4c4a3bef68d54ec75bb}
+
 \item 
-typedef struct \hyperlink{structe2d_group}{e2d\-Group} \hyperlink{_ez2_d_s_8h_af3a345c79086b4c4a3bef68d54ec75bb}{e2d\-Group}
+\hypertarget{_ez2_d_s_8h_ae4c99476350936b6317aad7ddad92e87}{typedef struct \hyperlink{structe2d_path}{e2d\-Path} {\bfseries e2d\-Path}}\label{_ez2_d_s_8h_ae4c99476350936b6317aad7ddad92e87}
+
 \item 
-typedef struct \hyperlink{structe2d_path}{e2d\-Path} \hyperlink{_ez2_d_s_8h_ae4c99476350936b6317aad7ddad92e87}{e2d\-Path}
+\hypertarget{_ez2_d_s_8h_ac6e31ed0b788ebe46ab4fe4e3f94f0e8}{typedef struct \hyperlink{structe2d_path_element}{e2d\-Path\-Element} {\bfseries e2d\-Path\-Element}}\label{_ez2_d_s_8h_ac6e31ed0b788ebe46ab4fe4e3f94f0e8}
+
 \item 
-typedef struct \hyperlink{structe2d_path_element}{e2d\-Path\-Element} \hyperlink{_ez2_d_s_8h_ac6e31ed0b788ebe46ab4fe4e3f94f0e8}{e2d\-Path\-Element}
+\hypertarget{_ez2_d_s_8h_a86cca845a62399e375916a400ce3f703}{typedef struct \hyperlink{structe2d_path_point}{e2d\-Path\-Point} {\bfseries e2d\-Path\-Point}}\label{_ez2_d_s_8h_a86cca845a62399e375916a400ce3f703}
+
 \item 
-typedef struct \hyperlink{structe2d_path_point}{e2d\-Path\-Point} \hyperlink{_ez2_d_s_8h_a86cca845a62399e375916a400ce3f703}{e2d\-Path\-Point}
+\hypertarget{_ez2_d_s_8h_a0ac56e0545e02476afb28cf4920751d9}{typedef struct \hyperlink{structe2d_path_curve}{e2d\-Path\-Curve} {\bfseries e2d\-Path\-Curve}}\label{_ez2_d_s_8h_a0ac56e0545e02476afb28cf4920751d9}
+
 \item 
-typedef struct \hyperlink{structe2d_path_curve}{e2d\-Path\-Curve} \hyperlink{_ez2_d_s_8h_a0ac56e0545e02476afb28cf4920751d9}{e2d\-Path\-Curve}
+\hypertarget{_ez2_d_s_8h_aa743382cda21581102015f44280c875e}{typedef struct \hyperlink{structe2d_image}{e2d\-Image} {\bfseries e2d\-Image}}\label{_ez2_d_s_8h_aa743382cda21581102015f44280c875e}
+
 \item 
-typedef struct \hyperlink{structe2d_image}{e2d\-Image} \hyperlink{_ez2_d_s_8h_aa743382cda21581102015f44280c875e}{e2d\-Image}
+\hypertarget{_ez2_d_s_8h_a6659ac6d13a4ebd7168ef99f8ded9201}{typedef struct \hyperlink{structe2d_point}{e2d\-Point} {\bfseries e2d\-Point}}\label{_ez2_d_s_8h_a6659ac6d13a4ebd7168ef99f8ded9201}
+
 \item 
-typedef struct \hyperlink{structe2d_point}{e2d\-Point} \hyperlink{_ez2_d_s_8h_a6659ac6d13a4ebd7168ef99f8ded9201}{e2d\-Point}
+\hypertarget{_ez2_d_s_8h_a097c8c058b4f43e8e154374d63432b3c}{typedef struct \hyperlink{structe2d_matrix}{e2d\-Matrix} {\bfseries e2d\-Matrix}}\label{_ez2_d_s_8h_a097c8c058b4f43e8e154374d63432b3c}
+
 \item 
-typedef struct \hyperlink{structe2d_matrix}{e2d\-Matrix} \hyperlink{_ez2_d_s_8h_a097c8c058b4f43e8e154374d63432b3c}{e2d\-Matrix}
+\hypertarget{_ez2_d_s_8h_a76fc6b98f46ca44dd6b09fe824160485}{typedef struct \\*
+\hyperlink{structe2d_path_element_iterator}{e2d\-Path\-Element\-Iterator} {\bfseries e2d\-Path\-Element\-Iterator}}\label{_ez2_d_s_8h_a76fc6b98f46ca44dd6b09fe824160485}
+
 \item 
-typedef struct \\*
-\hyperlink{structe2d_path_element_iterator}{e2d\-Path\-Element\-Iterator} \hyperlink{_ez2_d_s_8h_a76fc6b98f46ca44dd6b09fe824160485}{e2d\-Path\-Element\-Iterator}
-\item 
-typedef struct \hyperlink{structe2d_group_iterator}{e2d\-Group\-Iterator} \hyperlink{_ez2_d_s_8h_a271ae036141142028e18270850818134}{e2d\-Group\-Iterator}
+\hypertarget{_ez2_d_s_8h_a271ae036141142028e18270850818134}{typedef struct \hyperlink{structe2d_group_iterator}{e2d\-Group\-Iterator} {\bfseries e2d\-Group\-Iterator}}\label{_ez2_d_s_8h_a271ae036141142028e18270850818134}
+
 \end{DoxyCompactItemize}
+
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O\-O\-L} \{ \hyperlink{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8a0a38767878402b894bcd07e55ed26325}{E2\-D\-\_\-\-F\-A\-L\-S\-E}, 
-\hyperlink{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8a2e33afc31f733a3c075fb906d70e20ac}{E2\-D\-\_\-\-T\-R\-U\-E}
+enum \hyperlink{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O\-O\-L} \{ {\bfseries E2\-D\-\_\-\-F\-A\-L\-S\-E}, 
+{\bfseries E2\-D\-\_\-\-T\-R\-U\-E}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Boolean implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File which contains global definitions useful to be included on every other file of the library. These definitions include forward declaration of all the structs, and some utility functions. \begin{DoxyAuthor}{Author}
+Rui (\href{mailto:ruir2c@gmail.com}{\tt ruir2c@gmail.\-com})
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+February, 2012 
+\end{DoxyDate}
 
 
 \subsection{Define Documentation}
 \hypertarget{_ez2_d_s_8h_a48ffc9ed217e38fc9cd7cf8f9894d63c}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O@{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}}
 \index{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O@{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}!Ez2DS.h@{Ez2\-D\-S.\-h}}
 \subsubsection[{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}~1.\-0e-\/6f}}\label{_ez2_d_s_8h_a48ffc9ed217e38fc9cd7cf8f9894d63c}
+
+
+Defines a value which is almost zero. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_ez2_d_s_8h_a5f5051e054baa41a7a7048bd205bc1e3}{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O()} 
+\end{DoxySeeAlso}
 \hypertarget{_ez2_d_s_8h_a5f5051e054baa41a7a7048bd205bc1e3}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O@{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}}
 \index{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O@{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}!Ez2DS.h@{Ez2\-D\-S.\-h}}
 \subsubsection[{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}(
@@ -69,6 +106,18 @@ enum \hyperlink{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O
 \item[{}]{val}
 \end{DoxyParamCaption}
 )~((val) $<$ ({\bf E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}) \&\& (val) $>$ -\/({\bf E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}))}}\label{_ez2_d_s_8h_a5f5051e054baa41a7a7048bd205bc1e3}
+
+
+Checks if val is within the threshold defined by E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O, i.\-e. it checks if val is below E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O and above -\/ E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_ez2_d_s_8h_a48ffc9ed217e38fc9cd7cf8f9894d63c}{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}
+\end{DoxySeeAlso}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & Returns true if almost zero, else false. \\
+\hline
+\end{DoxyRetVals}
 \hypertarget{_ez2_d_s_8h_a1cd9ecc64e25100eeb04dc1b08c28fc1}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-M\-A\-X@{E2\-D\-\_\-\-M\-A\-X}}
 \index{E2\-D\-\_\-\-M\-A\-X@{E2\-D\-\_\-\-M\-A\-X}!Ez2DS.h@{Ez2\-D\-S.\-h}}
 \subsubsection[{E2\-D\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf E2\-D\-\_\-\-M\-A\-X}(
@@ -83,6 +132,15 @@ enum \hyperlink{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O
     __typeof__ (b) _b = (b); \
     _a > _b ? _a : _b; })
 \end{DoxyCode}
+
+
+Returns the biggest number between a and b. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em comparable} & The biggest. \\
+\hline
+\end{DoxyRetVals}
 \hypertarget{_ez2_d_s_8h_af5964c56c46211897a998a087d4c3a66}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-M\-I\-N@{E2\-D\-\_\-\-M\-I\-N}}
 \index{E2\-D\-\_\-\-M\-I\-N@{E2\-D\-\_\-\-M\-I\-N}!Ez2DS.h@{Ez2\-D\-S.\-h}}
 \subsubsection[{E2\-D\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf E2\-D\-\_\-\-M\-I\-N}(
@@ -97,61 +155,12 @@ enum \hyperlink{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O
     __typeof__ (b) _b = (b); \
     _a < _b ? _a : _b; })
 \end{DoxyCode}
-\hypertarget{_ez2_d_s_8h_ae6c89cca978cb0aa64dc7034b016f5cd}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-N\-U\-L\-L@{E2\-D\-\_\-\-N\-U\-L\-L}}
-\index{E2\-D\-\_\-\-N\-U\-L\-L@{E2\-D\-\_\-\-N\-U\-L\-L}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{E2\-D\-\_\-\-N\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf E2\-D\-\_\-\-N\-U\-L\-L}~0}}\label{_ez2_d_s_8h_ae6c89cca978cb0aa64dc7034b016f5cd}
 
 
-\subsection{Typedef Documentation}
-\hypertarget{_ez2_d_s_8h_a7d730be997ced9a362d3fbde0c925029}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Element@{e2d\-Element}}
-\index{e2d\-Element@{e2d\-Element}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Element}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Element} {\bf e2d\-Element}}}\label{_ez2_d_s_8h_a7d730be997ced9a362d3fbde0c925029}
-\hypertarget{_ez2_d_s_8h_af3a345c79086b4c4a3bef68d54ec75bb}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Group@{e2d\-Group}}
-\index{e2d\-Group@{e2d\-Group}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Group}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Group} {\bf e2d\-Group}}}\label{_ez2_d_s_8h_af3a345c79086b4c4a3bef68d54ec75bb}
-\hypertarget{_ez2_d_s_8h_a271ae036141142028e18270850818134}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Group\-Iterator@{e2d\-Group\-Iterator}}
-\index{e2d\-Group\-Iterator@{e2d\-Group\-Iterator}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Group\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Group\-Iterator} {\bf e2d\-Group\-Iterator}}}\label{_ez2_d_s_8h_a271ae036141142028e18270850818134}
-\hypertarget{_ez2_d_s_8h_aa743382cda21581102015f44280c875e}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Image@{e2d\-Image}}
-\index{e2d\-Image@{e2d\-Image}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Image}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Image} {\bf e2d\-Image}}}\label{_ez2_d_s_8h_aa743382cda21581102015f44280c875e}
-\hypertarget{_ez2_d_s_8h_a097c8c058b4f43e8e154374d63432b3c}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Matrix@{e2d\-Matrix}}
-\index{e2d\-Matrix@{e2d\-Matrix}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Matrix} {\bf e2d\-Matrix}}}\label{_ez2_d_s_8h_a097c8c058b4f43e8e154374d63432b3c}
-\hypertarget{_ez2_d_s_8h_ae4c99476350936b6317aad7ddad92e87}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Path@{e2d\-Path}}
-\index{e2d\-Path@{e2d\-Path}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Path}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Path} {\bf e2d\-Path}}}\label{_ez2_d_s_8h_ae4c99476350936b6317aad7ddad92e87}
-\hypertarget{_ez2_d_s_8h_a0ac56e0545e02476afb28cf4920751d9}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Path\-Curve@{e2d\-Path\-Curve}}
-\index{e2d\-Path\-Curve@{e2d\-Path\-Curve}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Path\-Curve}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Path\-Curve} {\bf e2d\-Path\-Curve}}}\label{_ez2_d_s_8h_a0ac56e0545e02476afb28cf4920751d9}
-\hypertarget{_ez2_d_s_8h_ac6e31ed0b788ebe46ab4fe4e3f94f0e8}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Path\-Element@{e2d\-Path\-Element}}
-\index{e2d\-Path\-Element@{e2d\-Path\-Element}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Path\-Element}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Path\-Element} {\bf e2d\-Path\-Element}}}\label{_ez2_d_s_8h_ac6e31ed0b788ebe46ab4fe4e3f94f0e8}
-\hypertarget{_ez2_d_s_8h_a76fc6b98f46ca44dd6b09fe824160485}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Path\-Element\-Iterator@{e2d\-Path\-Element\-Iterator}}
-\index{e2d\-Path\-Element\-Iterator@{e2d\-Path\-Element\-Iterator}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Path\-Element\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Path\-Element\-Iterator} {\bf e2d\-Path\-Element\-Iterator}}}\label{_ez2_d_s_8h_a76fc6b98f46ca44dd6b09fe824160485}
-\hypertarget{_ez2_d_s_8h_a86cca845a62399e375916a400ce3f703}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Path\-Point@{e2d\-Path\-Point}}
-\index{e2d\-Path\-Point@{e2d\-Path\-Point}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Path\-Point}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Path\-Point} {\bf e2d\-Path\-Point}}}\label{_ez2_d_s_8h_a86cca845a62399e375916a400ce3f703}
-\hypertarget{_ez2_d_s_8h_a6659ac6d13a4ebd7168ef99f8ded9201}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Point@{e2d\-Point}}
-\index{e2d\-Point@{e2d\-Point}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Point}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Point} {\bf e2d\-Point}}}\label{_ez2_d_s_8h_a6659ac6d13a4ebd7168ef99f8ded9201}
-\hypertarget{_ez2_d_s_8h_a4663bede7d265bce67f2176cbe6d1f97}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Scene@{e2d\-Scene}}
-\index{e2d\-Scene@{e2d\-Scene}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{e2d\-Scene}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Scene} {\bf e2d\-Scene}}}\label{_ez2_d_s_8h_a4663bede7d265bce67f2176cbe6d1f97}
+Returns the smallest number between a and b. 
 
 
-\subsection{Enumeration Type Documentation}
-\hypertarget{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-B\-O\-O\-L@{E2\-D\-\_\-\-B\-O\-O\-L}}
-\index{E2\-D\-\_\-\-B\-O\-O\-L@{E2\-D\-\_\-\-B\-O\-O\-L}!Ez2DS.h@{Ez2\-D\-S.\-h}}
-\subsubsection[{E2\-D\-\_\-\-B\-O\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf E2\-D\-\_\-\-B\-O\-O\-L}}}\label{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}
-\begin{Desc}
-\item[Enumerator\-: ]\par
-\begin{description}
-\index{E2\-D\-\_\-\-F\-A\-L\-S\-E@{E2\-D\-\_\-\-F\-A\-L\-S\-E}!Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}}\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-F\-A\-L\-S\-E@{E2\-D\-\_\-\-F\-A\-L\-S\-E}}\item[{\em 
-\hypertarget{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8a0a38767878402b894bcd07e55ed26325}{E2\-D\-\_\-\-F\-A\-L\-S\-E}\label{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8a0a38767878402b894bcd07e55ed26325}
-}]\index{E2\-D\-\_\-\-T\-R\-U\-E@{E2\-D\-\_\-\-T\-R\-U\-E}!Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}}\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-T\-R\-U\-E@{E2\-D\-\_\-\-T\-R\-U\-E}}\item[{\em 
-\hypertarget{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8a2e33afc31f733a3c075fb906d70e20ac}{E2\-D\-\_\-\-T\-R\-U\-E}\label{_ez2_d_s_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8a2e33afc31f733a3c075fb906d70e20ac}
-}]\end{description}
-\end{Desc}
-
+\begin{DoxyRetVals}{Return values}
+{\em comparable} & The smallest. \\
+\hline
+\end{DoxyRetVals}

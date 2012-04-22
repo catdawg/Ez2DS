@@ -5,6 +5,8 @@ var NAVTREEINDEX =
 "group__e2d_element.html":[0,0],
 "group__e2d_group.html":[0,1],
 "group__e2d_image.html":[0,2],
+"group__e2d_matrix.html":[0,3],
+"group__e2d_point.html":[0,4],
 "annotated.html":[1,0],
 "structe2d_element.html":[1,0,0],
 "structe2d_group.html":[1,0,1],
@@ -25,8 +27,12 @@ var NAVTREEINDEX =
 "e2d_element_8h.html":[2,0,0],
 "e2d_group_8h.html":[2,0,1],
 "e2d_image_8h.html":[2,0,2],
+"e2d_matrix_8h.html":[2,0,3],
+"e2d_point_8h.html":[2,0,5],
+"_ez2_d_s_8h.html":[2,0,7],
 "globals.html":[2,1,0],
 "globals_func.html":[2,1,1],
 "globals_type.html":[2,1,2],
-"globals_enum.html":[2,1,3]
+"globals_enum.html":[2,1,3],
+"globals_defs.html":[2,1,4]
 };

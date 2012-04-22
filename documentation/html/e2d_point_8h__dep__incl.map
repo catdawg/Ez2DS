@@ -1,12 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$e2d_element_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;." alt="" coords="679,80,1001,107"/>
-<area shape="rect" id="node27" href="$e2d_matrix_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dMatrix.c" alt="" coords="1026,80,1336,107"/>
-<area shape="rect" id="node5" href="$e2d_element_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dElement.c" alt="" coords="339,229,661,256"/>
-<area shape="rect" id="node7" href="$e2d_group_8h.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dGroup.h" alt="" coords="301,155,611,181"/>
-<area shape="rect" id="node12" href="$e2d_scene_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dScene.c" alt="" coords="1019,229,1329,256"/>
-<area shape="rect" id="node14" href="$e2d_image_8h.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dImage.h" alt="" coords="685,155,995,181"/>
-<area shape="rect" id="node20" href="$e2d_path_8h.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dPath.h" alt="" coords="1069,155,1371,181"/>
-<area shape="rect" id="node10" href="$e2d_group_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dGroup.c" alt="" coords="5,229,315,256"/>
-<area shape="rect" id="node17" href="$e2d_image_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dImage.c" alt="" coords="685,229,995,256"/>
-<area shape="rect" id="node23" href="$e2d_path_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dPath.c" alt="" coords="1355,229,1656,256"/>
+<area shape="rect" id="node3" href="$e2d_element_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;." alt="" coords="378,80,744,107"/>
+<area shape="rect" id="node5" href="$e2d_group_8h.html" title="File which contains the e2dGroup struct and its &quot;methods&quot;." alt="" coords="5,155,360,181"/>
+<area shape="rect" id="node7" href="$e2d_image_8h.html" title="File which contains the e2dImage struct and its &quot;methods&quot;." alt="" coords="384,155,739,181"/>
+<area shape="rect" id="node9" href="$e2d_path_8h_source.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/Ez2DS/e2dPath.h" alt="" coords="763,155,1109,181"/>
 </map>

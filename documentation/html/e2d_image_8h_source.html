@@ -114,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -129,56 +129,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="e2d_image_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00012"></a>00012 <span class="preprocessor">#ifndef E2DIMAGE_H</span>
-<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define  E2DIMAGE_H</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;Ez2ds.h&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="e2d_element_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;.">e2dElement.h</a>&quot;</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
-<a name="l00020"></a>00020 <span class="preprocessor">#endif</span>
-<a name="l00021"></a>00021 <span class="preprocessor"></span>
-<a name="l00035"></a><a class="code" href="structe2d_image.html">00035</a>     <span class="keyword">struct </span><a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a> {
-<a name="l00036"></a><a class="code" href="structe2d_image.html#a55bc7a3a0af41fba9e5b91f390c5928c">00036</a>         <a class="code" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> <a class="code" href="structe2d_image.html#a55bc7a3a0af41fba9e5b91f390c5928c">element</a>;
-<a name="l00038"></a><a class="code" href="structe2d_image.html#afa8983f25fd6aa6aca18feb07d8d2249">00038</a>         <a class="code" href="structe2d_point.html">e2dPoint</a> <a class="code" href="structe2d_image.html#afa8983f25fd6aa6aca18feb07d8d2249">position</a>;
-<a name="l00040"></a><a class="code" href="structe2d_image.html#ae426f00e82704fa09578f5446e22d915">00040</a>         <span class="keywordtype">float</span> <a class="code" href="structe2d_image.html#ae426f00e82704fa09578f5446e22d915">width</a>;
-<a name="l00041"></a><a class="code" href="structe2d_image.html#a48083b65ac9a863566dc3e3fff09a5b4">00041</a>         <span class="keywordtype">float</span> <a class="code" href="structe2d_image.html#a48083b65ac9a863566dc3e3fff09a5b4">height</a>;
-<a name="l00043"></a><a class="code" href="structe2d_image.html#afb14ab23ba86115c3b01ad4122943f89">00043</a>         <span class="keywordtype">char</span>* <a class="code" href="structe2d_image.html#afb14ab23ba86115c3b01ad4122943f89">imagePath</a>; 
-<a name="l00046"></a>00046     };
-<a name="l00047"></a>00047 
-<a name="l00060"></a>00060     <a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a>*
-<a name="l00061"></a>00061     <a class="code" href="group__e2d_image.html#gafc7e085a237f8d2f1b147b3cca8259d6" title="This is the constructor of e2dImage. It returns a pointer to a new e2dImage. Inside it calls e2dImage...">e2dImageCreate</a>(<span class="keyword">const</span> <a class="code" href="structe2d_scene.html">e2dScene</a>* scene);
-<a name="l00062"></a>00062 
-<a name="l00077"></a>00077     <span class="keywordtype">void</span>
-<a name="l00078"></a>00078     <a class="code" href="group__e2d_image.html#ga11703b45867fb00d56489a3a6bc6bb9c" title="This method will initialize the members of the struct, i.e. it will zero the members, and call e2dElementInit(). It is called by e2dImageCreate().">e2dImageInit</a>(<a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a> *image, <span class="keyword">const</span> <a class="code" href="structe2d_scene.html">e2dScene</a>* scene);
-<a name="l00079"></a>00079 
-<a name="l00090"></a>00090     <span class="keywordtype">void</span>
-<a name="l00091"></a>00091     <a class="code" href="group__e2d_image.html#gacf174e48578f0e23888e37f47a3ef10b" title="Calls e2dImageFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dImageDestroy</a>(<a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a>* image);
-<a name="l00092"></a>00092     
-<a name="l00103"></a>00103     <span class="keywordtype">void</span>
-<a name="l00104"></a>00104     <a class="code" href="group__e2d_image.html#gaf5409c0b10e8a8d8b9bd3f08e1d5da1f" title="Will free all the allocated memory inside the e2dImage struct pointed by elem, i.e. it checks if e2dImage::imagePath has been defined and frees the pointer. It is called by e2dImageDestroy().">e2dImageFreeMembers</a>(<a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a>* image);
-<a name="l00105"></a>00105 
-<a name="l00118"></a>00118     <span class="keywordtype">void</span>
-<a name="l00119"></a>00119     <a class="code" href="group__e2d_image.html#ga6df4ef2b71e130f5817b079b6b32d249" title="A quite straight forward function which simply makes the e2dImage::width, e2dImage::height and e2dIma...">e2dImageCalculateBoundingBox</a>(<a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a>* image);
-<a name="l00120"></a>00120 
-<a name="l00134"></a>00134     <span class="keywordtype">void</span>
-<a name="l00135"></a>00135     <a class="code" href="group__e2d_image.html#ga08652fd1ad70d4935d98bcc02a38fb69" title="Adds a transformation to the image which subtracts the position (offset by (tx,ty)) of the Bounding B...">e2dImageCenterAtBBox</a>(<a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a>* image, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
+<a name="l00011"></a>00011 <span class="preprocessor">#ifndef E2DIMAGE_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define  E2DIMAGE_H</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_ez2_d_s_8h.html" title="File which contains global definitions useful to be included on every other file of the library...">Ez2ds.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="e2d_element_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;.">e2dElement.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="preprocessor">#ifdef   __cplusplus</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
+<a name="l00019"></a>00019 <span class="preprocessor">#endif</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span>
+<a name="l00034"></a><a class="code" href="structe2d_image.html">00034</a>     <span class="keyword">struct </span><a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a> {
+<a name="l00035"></a><a class="code" href="structe2d_image.html#a55bc7a3a0af41fba9e5b91f390c5928c">00035</a>         <a class="code" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> <a class="code" href="structe2d_image.html#a55bc7a3a0af41fba9e5b91f390c5928c">element</a>;
+<a name="l00037"></a><a class="code" href="structe2d_image.html#afa8983f25fd6aa6aca18feb07d8d2249">00037</a>         <a class="code" href="structe2d_point.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2d_image.html#afa8983f25fd6aa6aca18feb07d8d2249">position</a>;
+<a name="l00039"></a><a class="code" href="structe2d_image.html#ae426f00e82704fa09578f5446e22d915">00039</a>         <span class="keywordtype">float</span> <a class="code" href="structe2d_image.html#ae426f00e82704fa09578f5446e22d915">width</a>;
+<a name="l00040"></a><a class="code" href="structe2d_image.html#a48083b65ac9a863566dc3e3fff09a5b4">00040</a>         <span class="keywordtype">float</span> <a class="code" href="structe2d_image.html#a48083b65ac9a863566dc3e3fff09a5b4">height</a>;
+<a name="l00042"></a><a class="code" href="structe2d_image.html#afb14ab23ba86115c3b01ad4122943f89">00042</a>         <span class="keywordtype">char</span>* <a class="code" href="structe2d_image.html#afb14ab23ba86115c3b01ad4122943f89">imagePath</a>; 
+<a name="l00045"></a>00045     };
+<a name="l00046"></a>00046 
+<a name="l00059"></a>00059     <a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a>*
+<a name="l00060"></a>00060     <a class="code" href="group__e2d_image.html#gafc7e085a237f8d2f1b147b3cca8259d6" title="This is the constructor of e2dImage. It returns a pointer to a new e2dImage. Inside it calls e2dImage...">e2dImageCreate</a>(<span class="keyword">const</span> <a class="code" href="structe2d_scene.html">e2dScene</a>* scene);
+<a name="l00061"></a>00061 
+<a name="l00076"></a>00076     <span class="keywordtype">void</span>
+<a name="l00077"></a>00077     <a class="code" href="group__e2d_image.html#ga11703b45867fb00d56489a3a6bc6bb9c" title="This method will initialize the members of the struct, i.e. it will zero the members, and call e2dElementInit(). It is called by e2dImageCreate().">e2dImageInit</a>(<a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a> *image, <span class="keyword">const</span> <a class="code" href="structe2d_scene.html">e2dScene</a>* scene);
+<a name="l00078"></a>00078 
+<a name="l00089"></a>00089     <span class="keywordtype">void</span>
+<a name="l00090"></a>00090     <a class="code" href="group__e2d_image.html#gacf174e48578f0e23888e37f47a3ef10b" title="Calls e2dImageFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dImageDestroy</a>(<a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a>* image);
+<a name="l00091"></a>00091     
+<a name="l00102"></a>00102     <span class="keywordtype">void</span>
+<a name="l00103"></a>00103     <a class="code" href="group__e2d_image.html#gaf5409c0b10e8a8d8b9bd3f08e1d5da1f" title="Will free all the allocated memory inside the e2dImage struct pointed by elem, i.e. it checks if e2dImage::imagePath has been defined and frees the pointer. It is called by e2dImageDestroy().">e2dImageFreeMembers</a>(<a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a>* image);
+<a name="l00104"></a>00104 
+<a name="l00117"></a>00117     <span class="keywordtype">void</span>
+<a name="l00118"></a>00118     <a class="code" href="group__e2d_image.html#ga6df4ef2b71e130f5817b079b6b32d249" title="A quite straight forward function which simply makes the e2dImage::width, e2dImage::height and e2dIma...">e2dImageCalculateBoundingBox</a>(<a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a>* image);
+<a name="l00119"></a>00119 
+<a name="l00133"></a>00133     <span class="keywordtype">void</span>
+<a name="l00134"></a>00134     <a class="code" href="group__e2d_image.html#ga08652fd1ad70d4935d98bcc02a38fb69" title="Adds a transformation to the image which subtracts the position (offset by (tx,ty)) of the Bounding B...">e2dImageCenterAtBBox</a>(<a class="code" href="structe2d_image.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a>* image, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
+<a name="l00135"></a>00135 
 <a name="l00136"></a>00136 
-<a name="l00137"></a>00137 
-<a name="l00142"></a>00142 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00143"></a>00143 <span class="preprocessor"></span>}
-<a name="l00144"></a>00144 <span class="preprocessor">#endif</span>
-<a name="l00145"></a>00145 <span class="preprocessor"></span>
-<a name="l00146"></a>00146 <span class="preprocessor">#endif   </span><span class="comment">/* E2DIMAGE_H */</span>
-<a name="l00147"></a>00147 
+<a name="l00141"></a>00141 <span class="preprocessor">#ifdef   __cplusplus</span>
+<a name="l00142"></a>00142 <span class="preprocessor"></span>}
+<a name="l00143"></a>00143 <span class="preprocessor">#endif</span>
+<a name="l00144"></a>00144 <span class="preprocessor"></span>
+<a name="l00145"></a>00145 <span class="preprocessor">#endif   </span><span class="comment">/* E2DIMAGE_H */</span>
+<a name="l00146"></a>00146 
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="e2d_image_8h.html">e2dImage.h</a>      </li>
 
-    <li class="footer">Generated on Sat Apr 21 2012 01:40:23 for Ez2DS by
+    <li class="footer">Generated on Sun Apr 22 2012 02:11:30 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

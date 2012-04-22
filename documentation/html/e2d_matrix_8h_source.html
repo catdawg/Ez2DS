@@ -114,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -128,86 +128,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">C:/Users/Rui/Desktop/Ez2DS/Ez2DS/Ez2DS/e2dMatrix.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/* </span>
-<a name="l00002"></a>00002 <span class="comment"> * File:   e2dMatrix.h</span>
-<a name="l00003"></a>00003 <span class="comment"> * Author: Rui</span>
-<a name="l00004"></a>00004 <span class="comment"> *</span>
-<a name="l00005"></a>00005 <span class="comment"> * Created on 3 de Fevereiro de 2012, 19:00</span>
-<a name="l00006"></a>00006 <span class="comment"> */</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#ifndef E2DMATRIX_H</span>
-<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define  E2DMATRIX_H</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;Ez2DS.h&quot;</span>
-<a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
-<a name="l00015"></a>00015 <span class="preprocessor">#endif</span>
-<a name="l00016"></a>00016 <span class="preprocessor"></span>
-<a name="l00017"></a>00017     
-<a name="l00018"></a>00018     
-<a name="l00019"></a><a class="code" href="structe2d_matrix.html">00019</a> <span class="keyword">struct </span><a class="code" href="structe2d_matrix.html">e2dMatrix</a>{
-<a name="l00020"></a>00020     <span class="keywordtype">float</span> vals[3][3]; <span class="comment">//3 rows by 3 columns</span>
-<a name="l00021"></a>00021 };
-<a name="l00022"></a>00022     
-<a name="l00023"></a>00023 <span class="keyword">static</span> <a class="code" href="structe2d_matrix.html">e2dMatrix</a> <span class="keyword">const</span> E2D_IDENT_MATRIX = { {1, 0, 0, 0, 1, 0, 0, 0, 1} } ;
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="keyword">inline</span> <span class="keywordtype">void</span> 
-<a name="l00026"></a>00026 e2dMatrixToIdent(<a class="code" href="structe2d_matrix.html">e2dMatrix</a>* mat);
-<a name="l00027"></a>00027     
-<a name="l00028"></a>00028 <span class="keyword">inline</span> <span class="keywordtype">void</span> 
-<a name="l00029"></a>00029 e2dMatrixSetCol(<a class="code" href="structe2d_matrix.html">e2dMatrix</a>* mat, 
-<a name="l00030"></a>00030                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> col, 
-<a name="l00031"></a>00031                 <span class="keywordtype">float</span> val1, <span class="keywordtype">float</span> val2, <span class="keywordtype">float</span> val3);
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="keyword">inline</span> <span class="keywordtype">void</span> 
-<a name="l00034"></a>00034 e2dMatrixSetRow(<a class="code" href="structe2d_matrix.html">e2dMatrix</a>* mat, 
-<a name="l00035"></a>00035                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row, 
-<a name="l00036"></a>00036                 <span class="keywordtype">float</span> val1, <span class="keywordtype">float</span> val2, <span class="keywordtype">float</span> val3);
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038 <span class="keyword">inline</span> <span class="keywordtype">void</span> 
-<a name="l00039"></a>00039 e2dMatrixSetRowCol(<a class="code" href="structe2d_matrix.html">e2dMatrix</a>* mat, 
-<a name="l00040"></a>00040                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row,
-<a name="l00041"></a>00041                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> col,
-<a name="l00042"></a>00042                    <span class="keywordtype">float</span> val1);
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 <span class="keyword">inline</span> <span class="keywordtype">float</span>
-<a name="l00045"></a>00045 e2dMatrixGetCell(<span class="keyword">const</span> <a class="code" href="structe2d_matrix.html">e2dMatrix</a>* mat, 
-<a name="l00046"></a>00046                  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> col,
-<a name="l00047"></a>00047                  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row);
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">inline</span> <a class="code" href="structe2d_matrix.html">e2dMatrix</a> 
-<a name="l00050"></a>00050 e2dMatrixMultiply(<span class="keyword">const</span> <a class="code" href="structe2d_matrix.html">e2dMatrix</a>* mat, <span class="keyword">const</span> <a class="code" href="structe2d_matrix.html">e2dMatrix</a>* multiplicator);
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keyword">inline</span> <span class="keywordtype">void</span>
-<a name="l00053"></a>00053 e2dMatrixSetAsTranslation(<a class="code" href="structe2d_matrix.html">e2dMatrix</a>* mat, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055 <span class="keyword">inline</span> <span class="keywordtype">void</span>
-<a name="l00056"></a>00056 e2dMatrixSetAsScale(<a class="code" href="structe2d_matrix.html">e2dMatrix</a>*mat, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">inline</span> <span class="keywordtype">void</span>
-<a name="l00059"></a>00059 e2dMatrixSetAsRotation(<a class="code" href="structe2d_matrix.html">e2dMatrix</a>* mat, <span class="keywordtype">float</span> radians);
+<a href="e2d_matrix_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00011"></a>00011 <span class="preprocessor">#ifndef E2DMATRIX_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define  E2DMATRIX_H</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_ez2_d_s_8h.html" title="File which contains global definitions useful to be included on every other file of the library...">Ez2DS.h</a>&quot;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="preprocessor">#ifdef   __cplusplus</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
+<a name="l00018"></a>00018 <span class="preprocessor">#endif</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span>
+<a name="l00030"></a><a class="code" href="structe2d_matrix.html">00030</a>     <span class="keyword">struct </span><a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a> {
+<a name="l00031"></a><a class="code" href="structe2d_matrix.html#ac06a92ccf2617d904678c51c6cf5a9bb">00031</a>         <span class="keywordtype">float</span> <a class="code" href="structe2d_matrix.html#ac06a92ccf2617d904678c51c6cf5a9bb">vals</a>[3][3]; 
+<a name="l00032"></a>00032     };
+<a name="l00036"></a>00036     <span class="keyword">static</span> <a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a> <span class="keyword">const</span> E2D_IDENT_MATRIX = {
+<a name="l00037"></a>00037         {1, 0, 0, 0, 1, 0, 0, 0, 1}
+<a name="l00038"></a>00038     };
+<a name="l00039"></a>00039 
+<a name="l00043"></a>00043     <span class="keyword">inline</span> <span class="keywordtype">void</span>
+<a name="l00044"></a>00044     <a class="code" href="group__e2d_matrix.html#gae071d0d13c408d0faa8ea81731a47746" title="Sets mat to be identity, basically assigns E2D_IDENT_MATRIX.">e2dMatrixToIdent</a>(<a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>* mat);
+<a name="l00048"></a>00048     <span class="keyword">inline</span> <span class="keywordtype">void</span>
+<a name="l00049"></a>00049     <a class="code" href="group__e2d_matrix.html#gab5e5b40fd56f6fde5ec19e09733ddb35" title="Changes the column defined by col (0 to 2) to be val1, val2 and val3.">e2dMatrixSetCol</a>(<a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>* mat,
+<a name="l00050"></a>00050             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> col,
+<a name="l00051"></a>00051             <span class="keywordtype">float</span> val1, <span class="keywordtype">float</span> val2, <span class="keywordtype">float</span> val3);
+<a name="l00052"></a>00052 
+<a name="l00056"></a>00056     <span class="keyword">inline</span> <span class="keywordtype">void</span>
+<a name="l00057"></a>00057     <a class="code" href="group__e2d_matrix.html#gaca877ffd79967e78914eb5fea731300b" title="Changes the row defined by row (0 to 2) to be val1, val2 and val3.">e2dMatrixSetRow</a>(<a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>* mat,
+<a name="l00058"></a>00058             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row,
+<a name="l00059"></a>00059             <span class="keywordtype">float</span> val1, <span class="keywordtype">float</span> val2, <span class="keywordtype">float</span> val3);
 <a name="l00060"></a>00060 
-<a name="l00061"></a>00061 <a class="code" href="structe2d_matrix.html">e2dMatrix</a>
-<a name="l00062"></a>00062 e2dMatrixGetInverse(<span class="keyword">const</span> <a class="code" href="structe2d_matrix.html">e2dMatrix</a>* mat);
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <a class="code" href="structe2d_point.html">e2dPoint</a>
-<a name="l00065"></a>00065 e2dMatrixApplyToPoint(<span class="keyword">const</span> <a class="code" href="structe2d_matrix.html">e2dMatrix</a>* mat, <span class="keyword">const</span> <a class="code" href="structe2d_point.html">e2dPoint</a>* point);
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00069"></a>00069 <span class="preprocessor"></span>}
-<a name="l00070"></a>00070 <span class="preprocessor">#endif</span>
-<a name="l00071"></a>00071 <span class="preprocessor"></span>
-<a name="l00072"></a>00072 <span class="preprocessor">#endif   </span><span class="comment">/* E2DMATRIX_H */</span>
-<a name="l00073"></a>00073 
+<a name="l00064"></a>00064     <span class="keyword">inline</span> <span class="keywordtype">void</span>
+<a name="l00065"></a>00065     <a class="code" href="group__e2d_matrix.html#ga5719742adf7b07c791323de17be257a9" title="Changes the position in row &quot;row&quot;, column &quot;col&quot; to be val1.">e2dMatrixSetRowCol</a>(<a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>* mat,
+<a name="l00066"></a>00066             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row,
+<a name="l00067"></a>00067             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> col,
+<a name="l00068"></a>00068             <span class="keywordtype">float</span> val1);
+<a name="l00069"></a>00069 
+<a name="l00075"></a>00075     <span class="keyword">inline</span> <span class="keywordtype">float</span>
+<a name="l00076"></a>00076     <a class="code" href="group__e2d_matrix.html#ga83e3deb8c27d5e63cd03a21930df0c94" title="Returns the cell in row &quot;row&quot;, column &quot;column&quot;.">e2dMatrixGetCell</a>(<span class="keyword">const</span> <a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>* mat,
+<a name="l00077"></a>00077             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row,
+<a name="l00078"></a>00078             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> col);
+<a name="l00079"></a>00079 
+<a name="l00086"></a>00086     <span class="keyword">inline</span> <a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>
+<a name="l00087"></a>00087     <a class="code" href="group__e2d_matrix.html#gabb941a9a10fba12867cf6e4047bcefcc" title="Multiplies the mat by multiplicator and returns the result in another matrix.">e2dMatrixMultiply</a>(<span class="keyword">const</span> <a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>* mat, <span class="keyword">const</span> <a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>* multiplicator);
+<a name="l00088"></a>00088 
+<a name="l00093"></a>00093     <span class="keyword">inline</span> <span class="keywordtype">void</span>
+<a name="l00094"></a>00094     <a class="code" href="group__e2d_matrix.html#ga9c4bc2c260d552037b8d183ecb5dd698" title="Places an identity matrix and sets first and second row&#39;s last cell to be x and y respectively...">e2dMatrixSetAsTranslation</a>(<a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>* mat, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);
+<a name="l00095"></a>00095 
+<a name="l00100"></a>00100     <span class="keyword">inline</span> <span class="keywordtype">void</span>
+<a name="l00101"></a>00101     <a class="code" href="group__e2d_matrix.html#ga9812a9edb91395ad042ce4475c55060f" title="Places an identity matrix and sets cell (0,0) and (1,1) to be x and y respectively.">e2dMatrixSetAsScale</a>(<a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>*mat, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);
+<a name="l00102"></a>00102 
+<a name="l00107"></a>00107     <span class="keyword">inline</span> <span class="keywordtype">void</span>
+<a name="l00108"></a>00108     <a class="code" href="group__e2d_matrix.html#ga671b90f626035724fcf0f43d352ec3ad" title="Places an identity matrix and sets a rotation according to http://en.wikipedia.org/wiki/Rotation_matr...">e2dMatrixSetAsRotation</a>(<a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>* mat, <span class="keywordtype">float</span> radians);
+<a name="l00109"></a>00109 
+<a name="l00116"></a>00116     <a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>
+<a name="l00117"></a>00117     <a class="code" href="group__e2d_matrix.html#ga86a7cb5c0d6fce078ed754195e8fe1e4" title="Inverts the matrix using Cramer&#39;s rule (see http://en.wikipedia.org/wiki/Cramer%27s_rule) and returns...">e2dMatrixGetInverse</a>(<span class="keyword">const</span> <a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>* mat);
+<a name="l00118"></a>00118 
+<a name="l00124"></a>00124     <a class="code" href="structe2d_point.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a>
+<a name="l00125"></a>00125     <a class="code" href="group__e2d_matrix.html#ga377eea18be8a4e88dcba9c62bffea97e" title="Applies the matrix to the point transforming it.">e2dMatrixApplyToPoint</a>(<span class="keyword">const</span> <a class="code" href="structe2d_matrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a>* mat, <span class="keyword">const</span> <a class="code" href="structe2d_point.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a>* point);
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127 
+<a name="l00131"></a>00131 <span class="preprocessor">#ifdef   __cplusplus</span>
+<a name="l00132"></a>00132 <span class="preprocessor"></span>}
+<a name="l00133"></a>00133 <span class="preprocessor">#endif</span>
+<a name="l00134"></a>00134 <span class="preprocessor"></span>
+<a name="l00135"></a>00135 <span class="preprocessor">#endif   </span><span class="comment">/* E2DMATRIX_H */</span>
+<a name="l00136"></a>00136 
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>e2dMatrix.h</b>      </li>
+      <li class="navelem"><a class="el" href="e2d_matrix_8h.html">e2dMatrix.h</a>      </li>
 
-    <li class="footer">Generated on Sat Apr 21 2012 01:40:23 for Ez2DS by
+    <li class="footer">Generated on Sun Apr 22 2012 02:11:30 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

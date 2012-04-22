@@ -114,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -129,79 +129,79 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="e2d_group_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00012"></a>00012 <span class="preprocessor">#ifndef E2DGROUP_H</span>
-<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define  E2DGROUP_H</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;Ez2ds.h&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="e2d_element_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;.">e2dElement.h</a>&quot;</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
-<a name="l00020"></a>00020 <span class="preprocessor">#endif</span>
-<a name="l00021"></a>00021 <span class="preprocessor"></span>
-<a name="l00034"></a><a class="code" href="structe2d_group.html">00034</a>     <span class="keyword">struct </span><a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> {
-<a name="l00035"></a><a class="code" href="structe2d_group.html#a55bc7a3a0af41fba9e5b91f390c5928c">00035</a>         <a class="code" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> <a class="code" href="structe2d_group.html#a55bc7a3a0af41fba9e5b91f390c5928c">element</a>; 
-<a name="l00037"></a><a class="code" href="structe2d_group.html#a0af3697c2c9df6ed0ddd340cded35d65">00037</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2d_group.html#a0af3697c2c9df6ed0ddd340cded35d65">childNum</a>;
-<a name="l00038"></a><a class="code" href="structe2d_group.html#a55f6dde874716dc99dcd270fc0999a01">00038</a>         <a class="code" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>** <a class="code" href="structe2d_group.html#a55f6dde874716dc99dcd270fc0999a01">childList</a>; 
-<a name="l00041"></a><a class="code" href="structe2d_group.html#a9c89d7cf35b835ef1917855c78a79cc5">00041</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2d_group.html#a9c89d7cf35b835ef1917855c78a79cc5">childListAlloc</a>;
-<a name="l00043"></a>00043     };
-<a name="l00044"></a>00044 
-<a name="l00057"></a>00057     <a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>*
-<a name="l00058"></a>00058     <a class="code" href="group__e2d_group.html#gaea870c0efafe302d65baaec0b028c6fb" title="This is the constructor of e2dGroup. It returns a pointer to a new e2dGroup. Inside it calls e2dGroup...">e2dGroupCreate</a>(<span class="keyword">const</span> <a class="code" href="structe2d_scene.html">e2dScene</a>* scene);
-<a name="l00059"></a>00059 
-<a name="l00074"></a>00074     <span class="keywordtype">void</span>
-<a name="l00075"></a>00075     <a class="code" href="group__e2d_group.html#ga25406e9ff8a7746af03833e40ccf259a" title="This method will initialize the members of the struct, i.e. it will allocate the e2dGroup::childList ...">e2dGroupInit</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> *group, <span class="keyword">const</span> <a class="code" href="structe2d_scene.html">e2dScene</a>* scene);
+<a name="l00011"></a>00011 <span class="preprocessor">#ifndef E2DGROUP_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define  E2DGROUP_H</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="_ez2_d_s_8h.html" title="File which contains global definitions useful to be included on every other file of the library...">Ez2ds.h</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="e2d_element_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;.">e2dElement.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="preprocessor">#ifdef   __cplusplus</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
+<a name="l00019"></a>00019 <span class="preprocessor">#endif</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span>
+<a name="l00033"></a><a class="code" href="structe2d_group.html">00033</a>     <span class="keyword">struct </span><a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> {
+<a name="l00034"></a><a class="code" href="structe2d_group.html#a55bc7a3a0af41fba9e5b91f390c5928c">00034</a>         <a class="code" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> <a class="code" href="structe2d_group.html#a55bc7a3a0af41fba9e5b91f390c5928c">element</a>; 
+<a name="l00036"></a><a class="code" href="structe2d_group.html#a0af3697c2c9df6ed0ddd340cded35d65">00036</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2d_group.html#a0af3697c2c9df6ed0ddd340cded35d65">childNum</a>;
+<a name="l00037"></a><a class="code" href="structe2d_group.html#a55f6dde874716dc99dcd270fc0999a01">00037</a>         <a class="code" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>** <a class="code" href="structe2d_group.html#a55f6dde874716dc99dcd270fc0999a01">childList</a>; 
+<a name="l00040"></a><a class="code" href="structe2d_group.html#a9c89d7cf35b835ef1917855c78a79cc5">00040</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2d_group.html#a9c89d7cf35b835ef1917855c78a79cc5">childListAlloc</a>;
+<a name="l00042"></a>00042     };
+<a name="l00043"></a>00043 
+<a name="l00056"></a>00056     <a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>*
+<a name="l00057"></a>00057     <a class="code" href="group__e2d_group.html#gaea870c0efafe302d65baaec0b028c6fb" title="This is the constructor of e2dGroup. It returns a pointer to a new e2dGroup. Inside it calls e2dGroup...">e2dGroupCreate</a>(<span class="keyword">const</span> <a class="code" href="structe2d_scene.html">e2dScene</a>* scene);
+<a name="l00058"></a>00058 
+<a name="l00073"></a>00073     <span class="keywordtype">void</span>
+<a name="l00074"></a>00074     <a class="code" href="group__e2d_group.html#ga25406e9ff8a7746af03833e40ccf259a" title="This method will initialize the members of the struct, i.e. it will allocate the e2dGroup::childList ...">e2dGroupInit</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> *group, <span class="keyword">const</span> <a class="code" href="structe2d_scene.html">e2dScene</a>* scene);
+<a name="l00075"></a>00075 
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077 
-<a name="l00088"></a>00088     <span class="keywordtype">void</span>
-<a name="l00089"></a>00089     <a class="code" href="group__e2d_group.html#ga545626effa0f89b72f244e56aadb05bc" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group);    
-<a name="l00090"></a>00090     
-<a name="l00102"></a>00102     <span class="keywordtype">void</span>
-<a name="l00103"></a>00103     <a class="code" href="group__e2d_group.html#ga9569da6e74703187306878ec830d52c4" title="Will free all the allocated memory inside the e2dGroup struct pointed by elem, i.e. it calls e2dElementDestroy() on all the children, and frees the e2dGroup::childList array (Warning, this might change in future versions). It is called by e2dGroupDestroy().">e2dGroupFreeMembers</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group);
-<a name="l00104"></a>00104 
-<a name="l00115"></a>00115     <span class="keywordtype">void</span>
-<a name="l00116"></a>00116     <a class="code" href="group__e2d_group.html#ga6ae76730f78ad731621e9286a3980b8a" title="Will add an element to the e2dGroup::childList array, increasing allocated space if necessary...">e2dGroupAddChild</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group, <a class="code" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* element);
-<a name="l00117"></a>00117 
-<a name="l00129"></a>00129     <span class="keywordtype">void</span>
-<a name="l00130"></a>00130     <a class="code" href="group__e2d_group.html#ga7c5f43489bbd2d36a51414aee07abf5a" title="Calculates the bounding box of the group using the bounding boxes of the children. If a child doesn&#39;t have the bounding box calculated, then e2dElementCalculateBoundingBox() is called in the child.">e2dGroupCalculateBoundingBox</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group);
-<a name="l00131"></a>00131 
-<a name="l00145"></a>00145     <span class="keywordtype">void</span>
-<a name="l00146"></a>00146     <a class="code" href="group__e2d_group.html#ga04bf94419865ca7f9d6daf30ce3fadf0" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
-<a name="l00147"></a>00147 
-<a name="l00159"></a>00159     <span class="keywordtype">void</span>
-<a name="l00160"></a>00160     <a class="code" href="group__e2d_group.html#gafa65ab615b8a0c181a2d5b88eed9fa16" title="Recursively removes all the groups which are children (directly or indirectly) and makes all the rema...">e2dGroupFlatten</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group);
+<a name="l00087"></a>00087     <span class="keywordtype">void</span>
+<a name="l00088"></a>00088     <a class="code" href="group__e2d_group.html#ga545626effa0f89b72f244e56aadb05bc" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group);    
+<a name="l00089"></a>00089     
+<a name="l00101"></a>00101     <span class="keywordtype">void</span>
+<a name="l00102"></a>00102     <a class="code" href="group__e2d_group.html#ga9569da6e74703187306878ec830d52c4" title="Will free all the allocated memory inside the e2dGroup struct pointed by elem, i.e. it calls e2dElementDestroy() on all the children, and frees the e2dGroup::childList array (Warning, this might change in future versions). It is called by e2dGroupDestroy().">e2dGroupFreeMembers</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group);
+<a name="l00103"></a>00103 
+<a name="l00114"></a>00114     <span class="keywordtype">void</span>
+<a name="l00115"></a>00115     <a class="code" href="group__e2d_group.html#ga6ae76730f78ad731621e9286a3980b8a" title="Will add an element to the e2dGroup::childList array, increasing allocated space if necessary...">e2dGroupAddChild</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group, <a class="code" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* element);
+<a name="l00116"></a>00116 
+<a name="l00128"></a>00128     <span class="keywordtype">void</span>
+<a name="l00129"></a>00129     <a class="code" href="group__e2d_group.html#ga7c5f43489bbd2d36a51414aee07abf5a" title="Calculates the bounding box of the group using the bounding boxes of the children. If a child doesn&#39;t have the bounding box calculated, then e2dElementCalculateBoundingBox() is called in the child.">e2dGroupCalculateBoundingBox</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group);
+<a name="l00130"></a>00130 
+<a name="l00144"></a>00144     <span class="keywordtype">void</span>
+<a name="l00145"></a>00145     <a class="code" href="group__e2d_group.html#ga04bf94419865ca7f9d6daf30ce3fadf0" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
+<a name="l00146"></a>00146 
+<a name="l00158"></a>00158     <span class="keywordtype">void</span>
+<a name="l00159"></a>00159     <a class="code" href="group__e2d_group.html#gafa65ab615b8a0c181a2d5b88eed9fa16" title="Recursively removes all the groups which are children (directly or indirectly) and makes all the rema...">e2dGroupFlatten</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group);
+<a name="l00160"></a>00160 
 <a name="l00161"></a>00161 
-<a name="l00162"></a>00162 
-<a name="l00167"></a><a class="code" href="structe2d_group_iterator.html">00167</a>     <span class="keyword">struct </span><a class="code" href="structe2d_group_iterator.html" title="An iterator for the children of e2dGroup.">e2dGroupIterator</a> {
-<a name="l00168"></a><a class="code" href="structe2d_group_iterator.html#a13e9c2162587f7af49d2ceb78c380444">00168</a>         <a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* <a class="code" href="structe2d_group_iterator.html#a13e9c2162587f7af49d2ceb78c380444">group</a>;
-<a name="l00169"></a><a class="code" href="structe2d_group_iterator.html#a932f59c8e81a171eb21af8d204d1c13d">00169</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2d_group_iterator.html#a932f59c8e81a171eb21af8d204d1c13d">currentIndex</a>;
-<a name="l00170"></a>00170     };
-<a name="l00171"></a>00171 
-<a name="l00172"></a>00172     
-<a name="l00182"></a>00182     <a class="code" href="structe2d_group_iterator.html" title="An iterator for the children of e2dGroup.">e2dGroupIterator</a>
-<a name="l00183"></a>00183     <a class="code" href="group__e2d_group.html#gaf5a7338c446192338b764a7ac89371d5" title="Makes an iterator to the children of the group.">e2dGroupGetChildIterator</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group);
-<a name="l00184"></a>00184 
-<a name="l00194"></a>00194     <a class="code" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>*
-<a name="l00195"></a>00195     <a class="code" href="group__e2d_group.html#gaa5ffe3eb2b83f318df4f22272f1e1189" title="Returns the current child and advances.">e2dGroupIteratorNext</a>(<a class="code" href="structe2d_group_iterator.html" title="An iterator for the children of e2dGroup.">e2dGroupIterator</a>* iter);
-<a name="l00196"></a>00196 
-<a name="l00208"></a>00208     E2D_BOOL
-<a name="l00209"></a>00209     <a class="code" href="group__e2d_group.html#ga493d54c28198410762cfa32c97d8e646" title="Checks if we have a child at current element pointer by iter, if not, we have reached the end of the ...">e2dGroupIteratorHasNext</a>(<a class="code" href="structe2d_group_iterator.html" title="An iterator for the children of e2dGroup.">e2dGroupIterator</a>* iter);
+<a name="l00166"></a><a class="code" href="structe2d_group_iterator.html">00166</a>     <span class="keyword">struct </span><a class="code" href="structe2d_group_iterator.html" title="An iterator for the children of e2dGroup.">e2dGroupIterator</a> {
+<a name="l00167"></a><a class="code" href="structe2d_group_iterator.html#a13e9c2162587f7af49d2ceb78c380444">00167</a>         <a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* <a class="code" href="structe2d_group_iterator.html#a13e9c2162587f7af49d2ceb78c380444">group</a>;
+<a name="l00168"></a><a class="code" href="structe2d_group_iterator.html#a932f59c8e81a171eb21af8d204d1c13d">00168</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2d_group_iterator.html#a932f59c8e81a171eb21af8d204d1c13d">currentIndex</a>;
+<a name="l00169"></a>00169     };
+<a name="l00170"></a>00170 
+<a name="l00171"></a>00171     
+<a name="l00181"></a>00181     <a class="code" href="structe2d_group_iterator.html" title="An iterator for the children of e2dGroup.">e2dGroupIterator</a>
+<a name="l00182"></a>00182     <a class="code" href="group__e2d_group.html#gaf5a7338c446192338b764a7ac89371d5" title="Makes an iterator to the children of the group.">e2dGroupGetChildIterator</a>(<a class="code" href="structe2d_group.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group);
+<a name="l00183"></a>00183 
+<a name="l00193"></a>00193     <a class="code" href="structe2d_element.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>*
+<a name="l00194"></a>00194     <a class="code" href="group__e2d_group.html#gaa5ffe3eb2b83f318df4f22272f1e1189" title="Returns the current child and advances.">e2dGroupIteratorNext</a>(<a class="code" href="structe2d_group_iterator.html" title="An iterator for the children of e2dGroup.">e2dGroupIterator</a>* iter);
+<a name="l00195"></a>00195 
+<a name="l00207"></a>00207     <a class="code" href="_ez2_d_s_8h.html#aac8cdc3a3bcd6b56a8c3e0bb6979cbf8" title="Boolean implementation.">E2D_BOOL</a>
+<a name="l00208"></a>00208     <a class="code" href="group__e2d_group.html#ga493d54c28198410762cfa32c97d8e646" title="Checks if we have a child at current element pointer by iter, if not, we have reached the end of the ...">e2dGroupIteratorHasNext</a>(<a class="code" href="structe2d_group_iterator.html" title="An iterator for the children of e2dGroup.">e2dGroupIterator</a>* iter);
+<a name="l00209"></a>00209 
 <a name="l00210"></a>00210 
 <a name="l00211"></a>00211 
-<a name="l00212"></a>00212 
-<a name="l00217"></a>00217 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00218"></a>00218 <span class="preprocessor"></span>}
-<a name="l00219"></a>00219 <span class="preprocessor">#endif</span>
-<a name="l00220"></a>00220 <span class="preprocessor"></span>
-<a name="l00221"></a>00221 <span class="preprocessor">#endif   </span><span class="comment">/* E2DGROUP_H */</span>
-<a name="l00222"></a>00222 
+<a name="l00216"></a>00216 <span class="preprocessor">#ifdef   __cplusplus</span>
+<a name="l00217"></a>00217 <span class="preprocessor"></span>}
+<a name="l00218"></a>00218 <span class="preprocessor">#endif</span>
+<a name="l00219"></a>00219 <span class="preprocessor"></span>
+<a name="l00220"></a>00220 <span class="preprocessor">#endif   </span><span class="comment">/* E2DGROUP_H */</span>
+<a name="l00221"></a>00221 
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="e2d_group_8h.html">e2dGroup.h</a>      </li>
 
-    <li class="footer">Generated on Sat Apr 21 2012 01:40:23 for Ez2DS by
+    <li class="footer">Generated on Sun Apr 22 2012 02:11:30 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

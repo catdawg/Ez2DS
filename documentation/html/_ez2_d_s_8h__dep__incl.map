@@ -1,15 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$e2d_element_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;." alt="" coords="811,155,1133,181"/>
-<area shape="rect" id="node7" href="$e2d_group_8h.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dGroup.h" alt="" coords="1009,229,1319,256"/>
-<area shape="rect" id="node14" href="$e2d_image_8h.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dImage.h" alt="" coords="249,229,559,256"/>
-<area shape="rect" id="node20" href="$e2d_path_8h.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dPath.h" alt="" coords="583,229,884,256"/>
-<area shape="rect" id="node27" href="$e2d_matrix_8h.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dMatrix.h" alt="" coords="803,80,1113,107"/>
-<area shape="rect" id="node32" href="$e2d_point_8h.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dPoint.h" alt="" coords="475,80,779,107"/>
-<area shape="rect" id="node39" href="$e2d_scene_8h.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dScene.h" alt="" coords="1343,229,1653,256"/>
-<area shape="rect" id="node5" href="$e2d_element_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dElement.c" alt="" coords="1000,304,1323,331"/>
-<area shape="rect" id="node12" href="$e2d_scene_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dScene.c" alt="" coords="665,304,975,331"/>
-<area shape="rect" id="node10" href="$e2d_group_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dGroup.c" alt="" coords="1347,304,1656,331"/>
-<area shape="rect" id="node17" href="$e2d_image_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dImage.c" alt="" coords="5,304,315,331"/>
-<area shape="rect" id="node23" href="$e2d_path_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dPath.c" alt="" coords="339,304,640,331"/>
-<area shape="rect" id="node30" href="$e2d_matrix_8c.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/e2dMatrix.c" alt="" coords="475,155,785,181"/>
+<area shape="rect" id="node3" href="$e2d_element_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;." alt="" coords="302,155,668,181"/>
+<area shape="rect" id="node5" href="$e2d_group_8h.html" title="File which contains the e2dGroup struct and its &quot;methods&quot;." alt="" coords="5,229,360,256"/>
+<area shape="rect" id="node7" href="$e2d_image_8h.html" title="File which contains the e2dImage struct and its &quot;methods&quot;." alt="" coords="421,229,776,256"/>
+<area shape="rect" id="node9" href="$e2d_path_8h_source.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/Ez2DS/e2dPath.h" alt="" coords="819,229,1165,256"/>
+<area shape="rect" id="node11" href="$e2d_matrix_8h.html" title="File which contains a 3x3 matrix implementation and utility methods." alt="" coords="196,80,551,107"/>
+<area shape="rect" id="node14" href="$e2d_point_8h.html" title="File which contains a struct definition of a point (two floats)." alt="" coords="575,80,924,107"/>
+<area shape="rect" id="node20" href="$e2d_scene_8h_source.html" title="C:/Users/Rui/Desktop/Ez2DS/Ez2DS/Ez2DS/e2dScene.h" alt="" coords="1050,80,1405,107"/>
 </map>
