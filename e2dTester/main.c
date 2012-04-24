@@ -133,7 +133,7 @@ int main(int argc, const char* argv[]) {
     e2dMatrix mat;
     e2dMatrixSetAsScale(&mat, 1, -1);
     ((e2dElement*)scene->root)->localTransform = e2dMatrixMultiply(&(((e2dElement*)scene->root)->localTransform), &mat);
-    e2dElementCalculateBoundingBox((e2dElement*)scene->root);
+    e2dSceneCalculateAllBBox(scene);
     e2dSceneCenterAllAtBBox(scene, 0.5, 0.5);
     e2dSceneCalculateEffectiveTransforms(scene);
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);

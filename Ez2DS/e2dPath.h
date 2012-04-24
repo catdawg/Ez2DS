@@ -8,7 +8,7 @@
 #ifndef E2DPATH_H
 #define	E2DPATH_H
 
-#include "Ez2ds.h"
+#include "Ez2DS.h"
 #include "e2dElement.h"
 
 #ifdef	__cplusplus

@@ -4,7 +4,7 @@
  * 
  * @brief  File which contains global definitions useful to be included
  * on every other file of the library. These definitions include forward
- * declaration of all the structs, and some utility functions.
+ * declaration of all the structs, and some utility functions. 
  * 
  * @author Rui (ruir2c@gmail.com)
  * 
@@ -14,7 +14,7 @@
 #ifndef EZ2DS_H
 #define	EZ2DS_H
 
-
+ 
 
 
 

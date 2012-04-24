@@ -658,3 +658,9 @@ e2dSceneCenterAllAtBBox(e2dScene* scene, float tx, float ty)  {
      _recursivelyCenterGroupAtBBox(scene->root, 
                     tx, ty);
 }
+
+
+void
+e2dSceneCalculateAllBBox(e2dScene* scene)  {
+     e2dGroupCalculateBoundingBox(scene->root);
+}
