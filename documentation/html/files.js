@@ -6,6 +6,6 @@ var files =
     [ "e2dMatrix.h", "e2dMatrix_8h.html", "e2dMatrix_8h" ],
     [ "e2dPath.h", null, null ],
     [ "e2dPoint.h", "e2dPoint_8h.html", "e2dPoint_8h" ],
-    [ "e2dScene.h", null, null ],
+    [ "e2dScene.h", "e2dScene_8h.html", "e2dScene_8h" ],
     [ "Ez2DS.h", "Ez2DS_8h.html", "Ez2DS_8h" ]
 ];

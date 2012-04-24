@@ -9,16 +9,14 @@ File which contains the \hyperlink{structe2dElement}{e2d\-Element} struct and it
 {\ttfamily \#include \char`\"{}Ez2\-D\-S.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}e2d\-Matrix.\-h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}e2d\-Point.\-h\char`\"{}}\\*
-Include dependency graph for e2d\-Element.\-h\-:
-\nopagebreak
+Include dependency graph for e2d\-Element.\-h\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=240pt]{e2dElement_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\-:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -60,11 +58,11 @@ const char $\ast$ \hyperlink{group__e2dElement_gac32ea8a33b317fc014929102d64ac15
 \hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{group__e2dElement_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position} (const \hyperlink{structe2dElement}{e2d\-Element} $\ast$elem)
 \begin{DoxyCompactList}\small\item\em Returns the position of the element, taken from the local\-Transform. \end{DoxyCompactList}\item 
 \hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{group__e2dElement_ga9b85de42e52c0d89e82f9231ea923c8c}{e2d\-Element\-Get\-World\-Position} (const \hyperlink{structe2dElement}{e2d\-Element} $\ast$elem)
-\begin{DoxyCompactList}\small\item\em U\-N\-T\-E\-S\-T\-E\-D Will get the local position (\hyperlink{group__e2dElement_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position()}) and multiply it by the inverse\-Effective\-Transform and obtain the world position. Needs effective transformations to be calculated ( e2d\-Scene\-Calculate\-Effective\-Transforms() has been called) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em U\-N\-T\-E\-S\-T\-E\-D Will get the local position (\hyperlink{group__e2dElement_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position()}) and multiply it by the inverse\-Effective\-Transform and obtain the world position. Needs effective transformations to be calculated ( \hyperlink{group__e2dScene_gac4b32991ff8bab5d5ae429fb97b4e26c}{e2d\-Scene\-Calculate\-Effective\-Transforms()} has been called) \end{DoxyCompactList}\item 
 \hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{group__e2dElement_gab4e3f4eeba31c937a946f68617c5cb06}{e2d\-Element\-Get\-Relative\-Position} (const \hyperlink{structe2dElement}{e2d\-Element} $\ast$elem, const \hyperlink{structe2dElement}{e2d\-Element} $\ast$relative\-To)
-\begin{DoxyCompactList}\small\item\em U\-N\-T\-E\-S\-T\-E\-D Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relative\-To. The multiply it with the local position of elem (\hyperlink{group__e2dElement_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position()}). Needs effective transformations to be calculated (e2d\-Scene\-Calculate\-Effective\-Transforms() has been called) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em U\-N\-T\-E\-S\-T\-E\-D Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relative\-To. The multiply it with the local position of elem (\hyperlink{group__e2dElement_ga39dd883e42f609efba3f75300a29ff31}{e2d\-Element\-Get\-Local\-Position()}). Needs effective transformations to be calculated (\hyperlink{group__e2dScene_gac4b32991ff8bab5d5ae429fb97b4e26c}{e2d\-Scene\-Calculate\-Effective\-Transforms()} has been called) \end{DoxyCompactList}\item 
 \hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{group__e2dElement_gac3ad9f8cdc0782378c9f2e93cb7da68f}{e2d\-Element\-Get\-Relative\-Point} (const \hyperlink{structe2dElement}{e2d\-Element} $\ast$elem, const \hyperlink{structe2dElement}{e2d\-Element} $\ast$relative\-To, const \hyperlink{structe2dPoint}{e2d\-Point} $\ast$point)
-\begin{DoxyCompactList}\small\item\em U\-N\-T\-E\-S\-T\-E\-D Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relative\-To. The multiply it with point. Needs effective transformations to be calculated (e2d\-Scene\-Calculate\-Effective\-Transforms() has been called). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em U\-N\-T\-E\-S\-T\-E\-D Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relative\-To. The multiply it with point. Needs effective transformations to be calculated (\hyperlink{group__e2dScene_gac4b32991ff8bab5d5ae429fb97b4e26c}{e2d\-Scene\-Calculate\-Effective\-Transforms()} has been called). \end{DoxyCompactList}\item 
 void \hyperlink{group__e2dElement_ga94aa710b2da71af2091fe4d5b87ce47e}{e2d\-Element\-Calculate\-Bounding\-Box} (\hyperlink{structe2dElement}{e2d\-Element} $\ast$elem)
 \begin{DoxyCompactList}\small\item\em Will check type and calculate the appropriate method (e.\-g. \hyperlink{group__e2dGroup_ga7c5f43489bbd2d36a51414aee07abf5a}{e2d\-Group\-Calculate\-Bounding\-Box()}) \end{DoxyCompactList}\item 
 void \hyperlink{group__e2dElement_ga36b01a888c97163c990e16d348aff61c}{e2d\-Element\-Center\-At\-B\-Box} (\hyperlink{structe2dElement}{e2d\-Element} $\ast$elem, float tx, float ty)

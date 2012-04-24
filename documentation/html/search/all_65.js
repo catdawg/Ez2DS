@@ -63,6 +63,10 @@ var searchData=
   ['e2dpoint',['e2dPoint',['../structe2dPoint.html',1,'']]],
   ['e2dpoint_2eh',['e2dPoint.h',['../e2dPoint_8h.html',1,'']]],
   ['e2dscene',['e2dScene',['../structe2dScene.html',1,'e2dScene'],['../Ez2DS_8h.html#a4663bede7d265bce67f2176cbe6d1f97',1,'e2dScene():&#160;Ez2DS.h']]],
+  ['e2dscene_2eh',['e2dScene.h',['../e2dScene_8h.html',1,'']]],
+  ['e2dscenecalculateallbbox',['e2dSceneCalculateAllBBox',['../group__e2dScene.html#ga205af7a04544273413431072ea5a22b9',1,'e2dSceneCalculateAllBBox(e2dScene *scene):&#160;e2dScene.c'],['../group__e2dScene.html#ga205af7a04544273413431072ea5a22b9',1,'e2dSceneCalculateAllBBox(e2dScene *scene):&#160;e2dScene.c']]],
+  ['e2dscenecalculateeffectivetransforms',['e2dSceneCalculateEffectiveTransforms',['../group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c',1,'e2dSceneCalculateEffectiveTransforms(e2dScene *scene):&#160;e2dScene.c'],['../group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c',1,'e2dSceneCalculateEffectiveTransforms(e2dScene *scene):&#160;e2dScene.c']]],
+  ['e2dscenecenterallatbbox',['e2dSceneCenterAllAtBBox',['../group__e2dScene.html#gab0487c3d83b8ae072a59286a9e8285c7',1,'e2dSceneCenterAllAtBBox(e2dScene *scene, float tx, float ty):&#160;e2dScene.c'],['../group__e2dScene.html#gab0487c3d83b8ae072a59286a9e8285c7',1,'e2dSceneCenterAllAtBBox(e2dScene *scene, float tx, float ty):&#160;e2dScene.c']]],
   ['effectivetransform',['effectiveTransform',['../structe2dElement.html#a6c8e26945f09b5157e2111e42f99b879',1,'e2dElement']]],
   ['element',['element',['../structe2dGroup.html#a55bc7a3a0af41fba9e5b91f390c5928c',1,'e2dGroup::element()'],['../structe2dImage.html#a55bc7a3a0af41fba9e5b91f390c5928c',1,'e2dImage::element()']]],
   ['ez2ds_2eh',['Ez2DS.h',['../Ez2DS_8h.html',1,'']]]

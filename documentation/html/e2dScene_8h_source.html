@@ -128,53 +128,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">e2dScene.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/* </span>
-<a name="l00002"></a>00002 <span class="comment"> * File:   e2dScene.h</span>
-<a name="l00003"></a>00003 <span class="comment"> * Author: Rui</span>
-<a name="l00004"></a>00004 <span class="comment"> *</span>
-<a name="l00005"></a>00005 <span class="comment"> * Created on 3 de Fevereiro de 2012, 18:12</span>
-<a name="l00006"></a>00006 <span class="comment"> */</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#ifndef E2DSCENE_H</span>
-<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define  E2DSCENE_H</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span>
-<a name="l00011"></a>00011 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
-<a name="l00013"></a>00013 <span class="preprocessor">#endif</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span>    
-<a name="l00015"></a>00015     
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="Ez2DS_8h.html" title="File which contains global definitions useful to be included on every other file of the library...">Ez2DS.h</a>&quot;</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a><a class="code" href="structe2dScene.html">00018</a>     <span class="keyword">struct </span><a class="code" href="structe2dScene.html">e2dScene</a>{
-<a name="l00019"></a>00019         <a class="code" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* root;
-<a name="l00020"></a>00020     };
-<a name="l00021"></a>00021     
-<a name="l00022"></a>00022     <span class="comment">//Assigns the effective transform (calculated by multiplying the local </span>
-<a name="l00023"></a>00023     <span class="comment">//transform with the effective transform of the parent element) to every </span>
-<a name="l00024"></a>00024     <span class="comment">//element in the scene it is useful to have this information for </span>
-<a name="l00025"></a>00025     <span class="comment">//calculating relative positions(for example, knowing world positions, or </span>
-<a name="l00026"></a>00026     <span class="comment">//positions of elements relative to other elements.</span>
-<a name="l00027"></a>00027     <span class="keywordtype">void</span> e2dSceneCalculateEffectiveTransforms(<a class="code" href="structe2dScene.html">e2dScene</a>* scene); 
-<a name="l00028"></a>00028     
-<a name="l00029"></a>00029     <span class="keywordtype">void</span> e2dSceneCenterAllAtBBox(<a class="code" href="structe2dScene.html">e2dScene</a>* scene, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031     <a class="code" href="structe2dScene.html">e2dScene</a>* createSceneFromFile(<span class="keywordtype">char</span>* file);
-<a name="l00032"></a>00032     
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00036"></a>00036 <span class="preprocessor"></span>}
-<a name="l00037"></a>00037 <span class="preprocessor">#endif</span>
-<a name="l00038"></a>00038 <span class="preprocessor"></span>
-<a name="l00039"></a>00039 <span class="preprocessor">#endif   </span><span class="comment">/* E2DSCENE_H */</span>
-<a name="l00040"></a>00040 
+<a href="e2dScene_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00011"></a>00011 <span class="preprocessor">#ifndef E2DSCENE_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define  E2DSCENE_H</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#ifdef   __cplusplus</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
+<a name="l00016"></a>00016 <span class="preprocessor">#endif</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>    
+<a name="l00018"></a>00018     
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="Ez2DS_8h.html" title="File which contains global definitions useful to be included on every other file of the library...">Ez2DS.h</a>&quot;</span>
+<a name="l00020"></a>00020 
+<a name="l00032"></a><a class="code" href="structe2dScene.html">00032</a>     <span class="keyword">struct </span><a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>{
+<a name="l00033"></a><a class="code" href="structe2dScene.html#aa5444ac46bf18449921a4094bcadde1c">00033</a>         <a class="code" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* <a class="code" href="structe2dScene.html#aa5444ac46bf18449921a4094bcadde1c">root</a>; 
+<a name="l00034"></a>00034     };
+<a name="l00035"></a>00035     
+<a name="l00054"></a>00054     <span class="keywordtype">void</span> <a class="code" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms</a>(<a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* scene); 
+<a name="l00055"></a>00055     
+<a name="l00068"></a>00068     <span class="keywordtype">void</span> <a class="code" href="group__e2dScene.html#gab0487c3d83b8ae072a59286a9e8285c7" title="Calls e2dElementCenterAtBBox on all the elements in the scene. Needs Bounding Boxes to have been calc...">e2dSceneCenterAllAtBBox</a>(<a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* scene, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
+<a name="l00069"></a>00069     
+<a name="l00070"></a>00070     
+<a name="l00079"></a>00079     <span class="keywordtype">void</span> <a class="code" href="group__e2dScene.html#ga205af7a04544273413431072ea5a22b9" title="Calls e2dGroupCalculateBBox() on the root of the scene.">e2dSceneCalculateAllBBox</a>(<a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* scene);
+<a name="l00080"></a>00080     
+<a name="l00081"></a>00081     
+<a name="l00082"></a>00082 
+<a name="l00092"></a>00092     <a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* <a class="code" href="group__e2dScene.html#gaa0d6ded282c46461357e619f04636416" title="Reads the SVG in the path &quot;file&quot; using MiniXML (http://minixml.org/) and creates a e2dScene struct wh...">createSceneFromFile</a>(<span class="keywordtype">char</span>* file);
+<a name="l00093"></a>00093     
+<a name="l00094"></a>00094 
+<a name="l00099"></a>00099 <span class="preprocessor">#ifdef   __cplusplus</span>
+<a name="l00100"></a>00100 <span class="preprocessor"></span>}
+<a name="l00101"></a>00101 <span class="preprocessor">#endif</span>
+<a name="l00102"></a>00102 <span class="preprocessor"></span>
+<a name="l00103"></a>00103 <span class="preprocessor">#endif   </span><span class="comment">/* E2DSCENE_H */</span>
+<a name="l00104"></a>00104 
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>e2dScene.h</b>      </li>
+      <li class="navelem"><a class="el" href="e2dScene_8h.html">e2dScene.h</a>      </li>
 
-    <li class="footer">Generated on Sun Apr 22 2012 02:59:27 for Ez2DS by
+    <li class="footer">Generated on Wed Apr 25 2012 00:15:04 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

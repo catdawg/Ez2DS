@@ -1,0 +1,42 @@
+\hypertarget{e2dScene_8h}{\section{e2d\-Scene.\-h File Reference}
+\label{e2dScene_8h}\index{e2d\-Scene.\-h@{e2d\-Scene.\-h}}
+}
+
+
+File which contains the \hyperlink{structe2dScene}{e2d\-Scene} struct and its \char`\"{}methods\char`\"{}.  
+
+
+{\ttfamily \#include \char`\"{}Ez2\-D\-S.\-h\char`\"{}}\\*
+Include dependency graph for e2d\-Scene.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{e2dScene_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structe2dScene}{e2d\-Scene}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dScene}{e2d\-Scene} struct defines a scene obtained from an S\-V\-G file. The struct contains the root under which all the objects in the scene can be accessed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__e2dScene_gac4b32991ff8bab5d5ae429fb97b4e26c}{e2d\-Scene\-Calculate\-Effective\-Transforms} (\hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Assigns the effective transform (calculated by multiplying the local transform with the effective transform of the parent element) to every element in the scene. It is useful to have this information for calculating relative positions(for example, knowing world positions, or positions of elements relative to other elements. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dScene_gab0487c3d83b8ae072a59286a9e8285c7}{e2d\-Scene\-Center\-All\-At\-B\-Box} (\hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene, float tx, float ty)
+\begin{DoxyCompactList}\small\item\em Calls e2d\-Element\-Center\-At\-B\-Box on all the elements in the scene. Needs Bounding Boxes to have been calculated. See \hyperlink{group__e2dGroup_ga04bf94419865ca7f9d6daf30ce3fadf0}{e2d\-Group\-Center\-At\-B\-Box()} for an explanation on the tx and ty parameters. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dScene_ga205af7a04544273413431072ea5a22b9}{e2d\-Scene\-Calculate\-All\-B\-Box} (\hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Calls e2d\-Group\-Calculate\-B\-Box() on the root of the scene. \end{DoxyCompactList}\item 
+\hyperlink{structe2dScene}{e2d\-Scene} $\ast$ \hyperlink{group__e2dScene_gaa0d6ded282c46461357e619f04636416}{create\-Scene\-From\-File} (char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Reads the S\-V\-G in the path \char`\"{}file\char`\"{} using Mini\-X\-M\-L (\href{http://minixml.org/}{\tt http\-://minixml.\-org/}) and creates a \hyperlink{structe2dScene}{e2d\-Scene} struct which is returned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File which contains the \hyperlink{structe2dScene}{e2d\-Scene} struct and its \char`\"{}methods\char`\"{}. \begin{DoxyAuthor}{Author}
+Rui (\href{mailto:ruir2c@gmail.com}{\tt ruir2c@gmail.\-com})
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+February, 2012 
+\end{DoxyDate}

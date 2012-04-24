@@ -149,7 +149,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ga04bf94419865ca7f9d6daf30ce3fadf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga04bf94419865ca7f9d6daf30ce3fadf0">e2dGroupCenterAtBBox</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group, float tx, float ty)</td></tr>
 <tr class="memdesc:ga04bf94419865ca7f9d6daf30ce3fadf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx, ty)), and adds the position of the bounding box to all the children, effectively bringing the origin of the local coordinate system to the bounding box. See <a class="el" href="group__e2dElement.html#ga36b01a888c97163c990e16d348aff61c" title="Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e...">e2dElementCenterAtBBox()</a> for an explanation on "tx" and "ty".  <a href="#ga04bf94419865ca7f9d6daf30ce3fadf0"></a><br/></td></tr>
 <tr class="memitem:gafa65ab615b8a0c181a2d5b88eed9fa16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#gafa65ab615b8a0c181a2d5b88eed9fa16">e2dGroupFlatten</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group)</td></tr>
-<tr class="memdesc:gafa65ab615b8a0c181a2d5b88eed9fa16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively removes all the groups which are children (directly or indirectly) and makes all the remaining elements have a <a class="el" href="structe2dElement.html#a52bda732df714953f93c1e6f5f7c7c93">e2dElement::localTransform</a> which yields a transformation equal to if there were groups. I.e., it flattens the group, making it have only one level. Calling this on the e2dScene::root will make "group" be the only in the tree. !!Warning!! custom (and non custom) tags written in groups are lost!  <a href="#gafa65ab615b8a0c181a2d5b88eed9fa16"></a><br/></td></tr>
+<tr class="memdesc:gafa65ab615b8a0c181a2d5b88eed9fa16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively removes all the groups which are children (directly or indirectly) and makes all the remaining elements have a <a class="el" href="structe2dElement.html#a52bda732df714953f93c1e6f5f7c7c93">e2dElement::localTransform</a> which yields a transformation equal to if there were groups. I.e., it flattens the group, making it have only one level. Calling this on the <a class="el" href="structe2dScene.html#aa5444ac46bf18449921a4094bcadde1c">e2dScene::root</a> will make "group" be the only in the tree. !!Warning!! custom (and non custom) tags written in groups are lost!  <a href="#gafa65ab615b8a0c181a2d5b88eed9fa16"></a><br/></td></tr>
 <tr class="memitem:gaf5a7338c446192338b764a7ac89371d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dGroupIterator.html">e2dGroupIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#gaf5a7338c446192338b764a7ac89371d5">e2dGroupGetChildIterator</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group)</td></tr>
 <tr class="memdesc:gaf5a7338c446192338b764a7ac89371d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes an iterator to the children of the group.  <a href="#gaf5a7338c446192338b764a7ac89371d5"></a><br/></td></tr>
 <tr class="memitem:gaa5ffe3eb2b83f318df4f22272f1e1189"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#gaa5ffe3eb2b83f318df4f22272f1e1189">e2dGroupIteratorNext</a> (<a class="el" href="structe2dGroupIterator.html">e2dGroupIterator</a> *iter)</td></tr>
@@ -282,7 +282,7 @@ Functions</h2></td></tr>
 <p>This is the constructor of <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>. It returns a pointer to a new <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>. Inside it calls <a class="el" href="group__e2dGroup.html#ga25406e9ff8a7746af03833e40ccf259a" title="This method will initialize the members of the struct, i.e. it will allocate the e2dGroup::childList ...">e2dGroupInit()</a> to initialize the members of the struct. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>The <a class="el" href="structe2dScene.html">e2dScene</a> where this group will belong to.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>The <a class="el" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a> where this group will belong to.</td></tr>
   </table>
   </dd>
 </dl>
@@ -341,7 +341,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Recursively removes all the groups which are children (directly or indirectly) and makes all the remaining elements have a <a class="el" href="structe2dElement.html#a52bda732df714953f93c1e6f5f7c7c93">e2dElement::localTransform</a> which yields a transformation equal to if there were groups. I.e., it flattens the group, making it have only one level. Calling this on the e2dScene::root will make "group" be the only in the tree. !!Warning!! custom (and non custom) tags written in groups are lost! </p>
+<p>Recursively removes all the groups which are children (directly or indirectly) and makes all the remaining elements have a <a class="el" href="structe2dElement.html#a52bda732df714953f93c1e6f5f7c7c93">e2dElement::localTransform</a> which yields a transformation equal to if there were groups. I.e., it flattens the group, making it have only one level. Calling this on the <a class="el" href="structe2dScene.html#aa5444ac46bf18449921a4094bcadde1c">e2dScene::root</a> will make "group" be the only in the tree. !!Warning!! custom (and non custom) tags written in groups are lost! </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">group</td><td>The <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> to be flattened. </td></tr>
@@ -439,7 +439,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">group</td><td>The <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> which will have its members initialized </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>The <a class="el" href="structe2dScene.html">e2dScene</a> where this group will belong to.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>The <a class="el" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a> where this group will belong to.</td></tr>
   </table>
   </dd>
 </dl>
@@ -516,7 +516,7 @@ Functions</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Sun Apr 22 2012 02:59:27 for Ez2DS by
+    <li class="footer">Generated on Wed Apr 25 2012 00:15:08 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>
