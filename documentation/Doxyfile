@@ -38,14 +38,14 @@ PROJECT_NUMBER         = "In Development"
 # for a project that appears at the top of each page and should give viewer 
 # a quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "Easy 2D Scene (Ez2DS), is a library for transforming an SVG file into a 2D scene tree with an API. In essence, the library provides the means for applications to quickly have a 2D editor (Any SVG editor)."
+PROJECT_BRIEF          = "Easy 2D Scene (Ez2DS), is a library for transforming an SVG file into a 2D scene tree with an API."
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is 
 # included in the documentation. The maximum height of the logo should not 
 # exceed 55 pixels and the maximum width should not exceed 200 pixels. 
 # Doxygen will copy the logo to the output directory.
 
-PROJECT_LOGO           = 
+PROJECT_LOGO           = C:/Users/Rui/Desktop/Ez2DS/gh-pages/images/logo_s.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) 
 # base path where the generated documentation will be put. 
@@ -976,7 +976,7 @@ HTML_COLORSTYLE_SAT    = 100
 # so 80 represents a gamma of 0.8, The value 220 represents a gamma of 2.2, 
 # and 100 does not change the gamma.
 
-HTML_COLORSTYLE_GAMMA  = 80
+HTML_COLORSTYLE_GAMMA  = 74
 
 # If the HTML_TIMESTAMP tag is set to YES then the footer of each generated HTML 
 # page will contain the date and time when the page was generated. Setting 

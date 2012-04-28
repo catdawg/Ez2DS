@@ -852,8 +852,9 @@ dl.section dd {
 #projectlogo
 {
 	text-align: center;
-	vertical-align: bottom;
 	border-collapse: separate;
+    width:186px;
+    height:64px;
 }
  
 #projectlogo img
