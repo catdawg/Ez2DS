@@ -241,12 +241,6 @@ e2dPathCenterAtBBox(e2dPath* path, float tx, float ty) {
     path->element.bboxPosition.y -= offset.y;
 }
 
-e2dPathElement*
-e2dPathElementCreate() {
-    e2dPathElement* elem = (e2dPathElement*) malloc(sizeof (e2dPathElement));
-    e2dPathElementInit(elem, E2D_PATHELEMENT);
-    return elem;
-}
 
 void
 e2dPathElementInit(e2dPathElement* elem, e2dPathElementType type) {

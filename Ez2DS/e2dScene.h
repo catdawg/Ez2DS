@@ -19,7 +19,7 @@ extern "C" {
 #include "Ez2DS.h"
 
     /**
-     * @defgroup e2dScene
+     * @defgroup e2dScene e2dScene
      * @{
      **/
 

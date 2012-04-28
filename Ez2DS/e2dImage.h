@@ -19,7 +19,7 @@ extern "C" {
 #endif
 
     /**
-     * @defgroup e2dImage
+     * @defgroup e2dImage e2dImage
      * @{
      **/
 
@@ -27,7 +27,7 @@ extern "C" {
      *  @brief The e2dImage struct is used for holding the paths to images and 
      * their size and position. The struct is composed directly from the contents
      * of the SVG image element. It "inherits" from e2dElement by placing it as 
-     * the first element in the struct, if you typecast e2dStruct* into 
+     * the first element in the struct, if you typecast e2dImage* into 
      * e2dElement*, it will work thus mimicing inheritance in e.g. C++.
      * 
      **/
@@ -90,7 +90,7 @@ extern "C" {
     e2dImageDestroy(e2dImage* image);
     
     /**
-     * @brief   Will free all the allocated memory inside the e2dImage struct
+     * @brief   Will free all the dynamically allocated memory inside the e2dImage struct
      * pointed by elem, i.e. it checks if e2dImage::imagePath has been defined and frees
      * the pointer. It is called by e2dImageDestroy().
      *

@@ -20,7 +20,7 @@ extern "C" {
 #include "e2dPoint.h"
 
     /**
-     * @defgroup e2dElement
+     * @defgroup e2dElement e2dElement
      * @{
      **/
 
@@ -121,7 +121,7 @@ extern "C" {
     e2dElementDestroy(e2dElement* elem);
 
     /**
-     * @brief   Will free all the allocated memory inside the e2dElement struct
+     * @brief   Will free all the dynamically allocated memory inside the e2dElement struct
      * pointed by elem.
      *
      * @param [in] elem  The e2dElement struct where the members will be freed.
@@ -212,6 +212,7 @@ extern "C" {
      *
      * @param [in] elem  The e2dElement where the position will be requested.
      * @param [in] relativeTo  The result will be relative to this e2dElement.
+     * @param [in] point  The point to be transformed.
      * 
      * @retval e2dPoint The position.
      * 

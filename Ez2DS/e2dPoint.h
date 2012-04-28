@@ -18,7 +18,7 @@ extern "C" {
 #endif
 
     /**
-     * @defgroup e2dPoint
+     * @defgroup e2dPoint e2dPoint
      * @{
      **/
     

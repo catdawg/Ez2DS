@@ -23,6 +23,7 @@
 extern "C" {
 #endif
 
+    
     /**
      *  @brief Boolean implementation
      **/
@@ -31,26 +32,18 @@ extern "C" {
     } E2D_BOOL;
 
 
-    /**
-     *  @brief Forward declarations
-     *  @{
-     **/
-    typedef struct e2dScene e2dScene;
-    typedef struct e2dElement e2dElement;
-    typedef struct e2dGroup e2dGroup;
-    typedef struct e2dPath e2dPath;
-    typedef struct e2dPathElement e2dPathElement;
-    typedef struct e2dPathPoint e2dPathPoint;
-    typedef struct e2dPathCurve e2dPathCurve;
-    typedef struct e2dImage e2dImage;
-    typedef struct e2dPoint e2dPoint;
-    typedef struct e2dMatrix e2dMatrix;
-    typedef struct e2dPathElementIterator e2dPathElementIterator;
-    typedef struct e2dGroupIterator e2dGroupIterator;
-    /**
-     *  @}
-     **/
-
+    typedef struct e2dScene e2dScene; /**< Forward declaration **/
+    typedef struct e2dElement e2dElement; /**< Forward declaration **/
+    typedef struct e2dGroup e2dGroup; /**< Forward declaration **/
+    typedef struct e2dPath e2dPath; /**< Forward declaration **/
+    typedef struct e2dPathElement e2dPathElement; /**< Forward declaration **/
+    typedef struct e2dPathPoint e2dPathPoint; /**< Forward declaration **/
+    typedef struct e2dPathCurve e2dPathCurve; /**< Forward declaration **/
+    typedef struct e2dImage e2dImage; /**< Forward declaration **/
+    typedef struct e2dPoint e2dPoint; /**< Forward declaration **/
+    typedef struct e2dMatrix e2dMatrix; /**< Forward declaration **/
+    typedef struct e2dPathElementIterator e2dPathElementIterator; /**< Forward declaration **/
+    typedef struct e2dGroupIterator e2dGroupIterator; /**< Forward declaration **/
 
 
     /**

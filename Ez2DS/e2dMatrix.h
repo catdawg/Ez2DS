@@ -18,7 +18,7 @@ extern "C" {
 #endif
 
     /**
-     * @defgroup e2dMatrix
+     * @defgroup e2dMatrix e2dMatrix
      * @{
      **/
 

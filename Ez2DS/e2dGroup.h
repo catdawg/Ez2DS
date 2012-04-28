@@ -18,7 +18,7 @@
 extern "C" {
 #endif
     /**
-     * @defgroup e2dGroup
+     * @defgroup e2dGroup e2dGroup
      * @{
      **/
 
@@ -26,7 +26,7 @@ extern "C" {
      *  @brief The e2dGroup struct is used to group elements in the scene.
      * This struct is created from the "g" element in SVG. It "inherits" from 
      * e2dElement by placing it as the first element in the struct, if you 
-     * typecast e2dStruct* into e2dElement*, it will work thus mimicing 
+     * typecast e2dGroup* into e2dElement*, it will work thus mimicing 
      * inheritance in e.g. C++.
      * 
      **/
@@ -88,7 +88,7 @@ extern "C" {
     e2dGroupDestroy(e2dGroup* group);    
     
     /**
-     * @brief   Will free all the allocated memory inside the e2dGroup struct
+     * @brief   Will free all the dynamically allocated memory inside the e2dGroup struct
      * pointed by elem, i.e. it calls e2dElementDestroy() on all the children,
      * and frees the e2dGroup::childList array (Warning, this might change in future versions).
      * It is called by e2dGroupDestroy().
@@ -186,7 +186,8 @@ extern "C" {
      * 
      * @param [in] iter The group iterator. 
      * 
-     * @retval e2dElement* The child.
+     * @retval e2dElement* The child. Remember that you can cast this pointer
+     * to the actual element type by checking e2dElement::type.
      * 
      *
      **/
@@ -194,7 +195,7 @@ extern "C" {
     e2dGroupIteratorNext(e2dGroupIterator* iter);
 
     /**
-     * @brief   Checks if we have a child at current element pointer by iter,
+     * @brief   Checks if we have a child at current element pointed by iter,
      * if not, we have reached the end of the child list.
      * 
      * @param [in] iter The group iterator. 
