@@ -3,6 +3,15 @@
 }
 
 
+This struct represents a curve in the path. It is a cubic bezier curve, having two control points. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dPathElement}{e2d\-Path\-Element} by placing it as the first element in the struct, if you typecast e2d\-Path\-Point$\ast$ into e2d\-Path\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++.  
+
+
+
+
+{\ttfamily \#include $<$e2d\-Path.\-h$>$}
+
+
+
 Collaboration diagram for e2d\-Path\-Curve\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -13,23 +22,39 @@ Collaboration diagram for e2d\-Path\-Curve\-:\nopagebreak
 \subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{structe2dPathCurve_a88e514266530010a1a3b08198b3cc763}{\hyperlink{structe2dPathElement}{e2d\-Path\-Element} {\bfseries element}}\label{structe2dPathCurve_a88e514266530010a1a3b08198b3cc763}
-
+\hyperlink{structe2dPathElement}{e2d\-Path\-Element} \hyperlink{structe2dPathCurve_a88e514266530010a1a3b08198b3cc763}{element}
 \item 
-\hypertarget{structe2dPathCurve_a96868a222a14861eb6e64214328c6159}{\hyperlink{structe2dPoint}{e2d\-Point} {\bfseries start\-Point}}\label{structe2dPathCurve_a96868a222a14861eb6e64214328c6159}
-
+\hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{structe2dPathCurve_a96868a222a14861eb6e64214328c6159}{start\-Point}
 \item 
-\hypertarget{structe2dPathCurve_a5fe58a06185a33704c2cc77c8a58fb0d}{\hyperlink{structe2dPoint}{e2d\-Point} {\bfseries control\-Point1}}\label{structe2dPathCurve_a5fe58a06185a33704c2cc77c8a58fb0d}
-
+\hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{structe2dPathCurve_a5fe58a06185a33704c2cc77c8a58fb0d}{control\-Point1}
 \item 
-\hypertarget{structe2dPathCurve_a929324aa1e3527d71e312e5f80cb24db}{\hyperlink{structe2dPoint}{e2d\-Point} {\bfseries control\-Point2}}\label{structe2dPathCurve_a929324aa1e3527d71e312e5f80cb24db}
-
+\hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{structe2dPathCurve_a929324aa1e3527d71e312e5f80cb24db}{control\-Point2}
 \item 
-\hypertarget{structe2dPathCurve_a0ae59a21d141722d36c0ebc740587f9d}{\hyperlink{structe2dPoint}{e2d\-Point} {\bfseries end\-Point}}\label{structe2dPathCurve_a0ae59a21d141722d36c0ebc740587f9d}
-
+\hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{structe2dPathCurve_a0ae59a21d141722d36c0ebc740587f9d}{end\-Point}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+This struct represents a curve in the path. It is a cubic bezier curve, having two control points. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dPathElement}{e2d\-Path\-Element} by placing it as the first element in the struct, if you typecast e2d\-Path\-Point$\ast$ into e2d\-Path\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. 
+
+\subsection{Field Documentation}
+\hypertarget{structe2dPathCurve_a5fe58a06185a33704c2cc77c8a58fb0d}{\index{e2d\-Path\-Curve@{e2d\-Path\-Curve}!control\-Point1@{control\-Point1}}
+\index{control\-Point1@{control\-Point1}!e2dPathCurve@{e2d\-Path\-Curve}}
+\subsubsection[{control\-Point1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf control\-Point1}}}\label{structe2dPathCurve_a5fe58a06185a33704c2cc77c8a58fb0d}
+The first control point of the curve. \hypertarget{structe2dPathCurve_a929324aa1e3527d71e312e5f80cb24db}{\index{e2d\-Path\-Curve@{e2d\-Path\-Curve}!control\-Point2@{control\-Point2}}
+\index{control\-Point2@{control\-Point2}!e2dPathCurve@{e2d\-Path\-Curve}}
+\subsubsection[{control\-Point2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf control\-Point2}}}\label{structe2dPathCurve_a929324aa1e3527d71e312e5f80cb24db}
+The second control point of the curve. \hypertarget{structe2dPathCurve_a88e514266530010a1a3b08198b3cc763}{\index{e2d\-Path\-Curve@{e2d\-Path\-Curve}!element@{element}}
+\index{element@{element}!e2dPathCurve@{e2d\-Path\-Curve}}
+\subsubsection[{element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Path\-Element} {\bf element}}}\label{structe2dPathCurve_a88e514266530010a1a3b08198b3cc763}
+\hyperlink{structe2dPathCurve}{e2d\-Path\-Curve} inherits from \hyperlink{structe2dPathElement}{e2d\-Path\-Element}. Typecasting e2d\-Path\-Curve$\ast$ to e2d\-Path\-Element$\ast$ will work. \hypertarget{structe2dPathCurve_a0ae59a21d141722d36c0ebc740587f9d}{\index{e2d\-Path\-Curve@{e2d\-Path\-Curve}!end\-Point@{end\-Point}}
+\index{end\-Point@{end\-Point}!e2dPathCurve@{e2d\-Path\-Curve}}
+\subsubsection[{end\-Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf end\-Point}}}\label{structe2dPathCurve_a0ae59a21d141722d36c0ebc740587f9d}
+The end point the curve. \hypertarget{structe2dPathCurve_a96868a222a14861eb6e64214328c6159}{\index{e2d\-Path\-Curve@{e2d\-Path\-Curve}!start\-Point@{start\-Point}}
+\index{start\-Point@{start\-Point}!e2dPathCurve@{e2d\-Path\-Curve}}
+\subsubsection[{start\-Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf start\-Point}}}\label{structe2dPathCurve_a96868a222a14861eb6e64214328c6159}
+The start point of this curve. Redundant since it's the current point in the path. Added for convenience so that we can iterate the path without keeping a state (knowing current point) which can be annoying given subpath loops and such... 
+
 The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-e2d\-Path.\-h\end{DoxyCompactItemize}
+\hyperlink{e2dPath_8h}{e2d\-Path.\-h}\end{DoxyCompactItemize}

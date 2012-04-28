@@ -1,0 +1,537 @@
+\hypertarget{group__e2dPath}{\section{e2d\-Path}
+\label{group__e2dPath}\index{e2d\-Path@{e2d\-Path}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structe2dPathElement}{e2d\-Path\-Element}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dPathElement}{e2d\-Path\-Element} is the \char`\"{}super struct\char`\"{} of all path elements in the scene. Its inheritting functionality works in much the same way as \hyperlink{structe2dElement}{e2d\-Element}, so you should look into it to understand.. \end{DoxyCompactList}\item 
+struct \hyperlink{structe2dPathPoint}{e2d\-Path\-Point}
+\begin{DoxyCompactList}\small\item\em This struct represents a point in the path. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dPathElement}{e2d\-Path\-Element} by placing it as the first element in the struct, if you typecast e2d\-Path\-Point$\ast$ into e2d\-Path\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. \end{DoxyCompactList}\item 
+struct \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve}
+\begin{DoxyCompactList}\small\item\em This struct represents a curve in the path. It is a cubic bezier curve, having two control points. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dPathElement}{e2d\-Path\-Element} by placing it as the first element in the struct, if you typecast e2d\-Path\-Point$\ast$ into e2d\-Path\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. \end{DoxyCompactList}\item 
+struct \hyperlink{structe2dPath}{e2d\-Path}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dPath}{e2d\-Path} struct is used for holding the information of path. The struct is composed directly from the contents of the S\-V\-G path element. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dElement}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Path$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. \end{DoxyCompactList}\item 
+struct \hyperlink{structe2dPathElementIterator}{e2d\-Path\-Element\-Iterator}
+\begin{DoxyCompactList}\small\item\em An iterator for the path elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__e2dPath_gaa09c0421dbddd84d49f51a8027690c14}{typedef enum \hyperlink{group__e2dPath_gabecf8438085bebe6b28b4a8fb69b1507}{e2d\-Path\-Element\-Type} \hyperlink{group__e2dPath_gaa09c0421dbddd84d49f51a8027690c14}{e2d\-Path\-Element\-Type}}\label{group__e2dPath_gaa09c0421dbddd84d49f51a8027690c14}
+
+\begin{DoxyCompactList}\small\item\em The e2d\-Path\-Element\-Type enum defines the possible \char`\"{}substructs\char`\"{} of \hyperlink{structe2dPathElement}{e2d\-Path\-Element}. This is used for reflection. \end{DoxyCompactList}\item 
+\hypertarget{group__e2dPath_ga0d3a24fb02801eaea46759b37779650e}{typedef enum \hyperlink{group__e2dPath_ga0983472830124df9cdd854f7be1b6a06}{e2d\-Path\-Control} \hyperlink{group__e2dPath_ga0d3a24fb02801eaea46759b37779650e}{e2d\-Path\-Control}}\label{group__e2dPath_ga0d3a24fb02801eaea46759b37779650e}
+
+\begin{DoxyCompactList}\small\item\em The e2d\-Path\-Element\-Type enum defines the possible control types that each \hyperlink{structe2dPathElement}{e2d\-Path\-Element} can be. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__e2dPath_gabecf8438085bebe6b28b4a8fb69b1507}{e2d\-Path\-Element\-Type} \{ {\bfseries E2\-D\-\_\-\-P\-A\-T\-H\-P\-O\-I\-N\-T}, 
+{\bfseries E2\-D\-\_\-\-P\-A\-T\-H\-C\-U\-R\-V\-E}
+ \}
+\begin{DoxyCompactList}\small\item\em The e2d\-Path\-Element\-Type enum defines the possible \char`\"{}substructs\char`\"{} of \hyperlink{structe2dPathElement}{e2d\-Path\-Element}. This is used for reflection. \end{DoxyCompactList}\item 
+enum \hyperlink{group__e2dPath_ga0983472830124df9cdd854f7be1b6a06}{e2d\-Path\-Control} \{ {\bfseries E2\-D\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-U\-B\-P\-A\-T\-H}, 
+{\bfseries E2\-D\-\_\-\-E\-N\-D\-\_\-\-S\-U\-B\-P\-A\-T\-H}, 
+{\bfseries E2\-D\-\_\-\-E\-N\-D\-\_\-\-S\-U\-B\-P\-A\-T\-H\-\_\-\-L\-O\-O\-P}, 
+{\bfseries E2\-D\-\_\-\-N\-O\-C\-O\-N\-T\-R\-O\-L}
+ \}
+\begin{DoxyCompactList}\small\item\em The e2d\-Path\-Element\-Type enum defines the possible control types that each \hyperlink{structe2dPathElement}{e2d\-Path\-Element} can be. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structe2dPath}{e2d\-Path} $\ast$ \hyperlink{group__e2dPath_ga6f81c71700ebf86964ea7e4b28dea4fb}{e2d\-Path\-Create} (const \hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em This is the constructor of \hyperlink{structe2dPath}{e2d\-Path}. It returns a pointer to a new \hyperlink{structe2dPath}{e2d\-Path}. Inside it calls \hyperlink{group__e2dPath_ga18e88821996913d4304096af0dda07e8}{e2d\-Path\-Init()} to initialize the members of the struct. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga18e88821996913d4304096af0dda07e8}{e2d\-Path\-Init} (\hyperlink{structe2dPath}{e2d\-Path} $\ast$path, const \hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em This method will initialize the members of the struct, i.\-e. it will allocate the \hyperlink{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}{e2d\-Path\-::path\-Elements} array, and call \hyperlink{group__e2dElement_ga8734d10ef40a380dfc51bfe1790a92a7}{e2d\-Element\-Init()}. It is called by \hyperlink{group__e2dPath_ga6f81c71700ebf86964ea7e4b28dea4fb}{e2d\-Path\-Create()}. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga92e9e63b2307a2fbe9cfa564852e98a7}{e2d\-Path\-Destroy} (\hyperlink{structe2dPath}{e2d\-Path} $\ast$path)
+\begin{DoxyCompactList}\small\item\em Calls \hyperlink{group__e2dPath_gad6343de48f1c4ee1ce2bf1a1562dda88}{e2d\-Path\-Free\-Members()}, \hyperlink{group__e2dElement_gae8da5104d70a09549ca74044dda8313c}{e2d\-Element\-Free\-Members()}, and then frees the pointer. \hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} will call this method. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_gad6343de48f1c4ee1ce2bf1a1562dda88}{e2d\-Path\-Free\-Members} (\hyperlink{structe2dPath}{e2d\-Path} $\ast$path)
+\begin{DoxyCompactList}\small\item\em Will free all the dynamically allocated memory inside the \hyperlink{structe2dPath}{e2d\-Path} struct pointed by elem, i.\-e. it calls free on \hyperlink{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}{e2d\-Path\-::path\-Elements}. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga9d46085324faa70a4bc9134c5bb6f5ad}{e2d\-Path\-Element\-Init} (\hyperlink{structe2dPathElement}{e2d\-Path\-Element} $\ast$elem, \hyperlink{group__e2dPath_gabecf8438085bebe6b28b4a8fb69b1507}{e2d\-Path\-Element\-Type} type)
+\begin{DoxyCompactList}\small\item\em Called by the create methods of structs which inherit \hyperlink{structe2dPathElement}{e2d\-Path\-Element} (e.\-g. e2d\-Point\-Create) This method will initialize the members of the struct, i.\-e. it will assign type to \hyperlink{structe2dPathElement_acb2ed01d1856b82777314d8eb8f66b01}{e2d\-Path\-Element\-::type}. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga2432949311d4f4a1df98e24d28814fee}{e2d\-Path\-Element\-Destroy} (\hyperlink{structe2dPathElement}{e2d\-Path\-Element} $\ast$elem)
+\begin{DoxyCompactList}\small\item\em Will check the type member of elem and call the appropriate destructor (e.\-g. e2d\-Point\-Destroy()) \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga38c8b4fad1e211dc5ecf36e04835edb4}{e2d\-Path\-Element\-Free\-Members} (\hyperlink{structe2dPathElement}{e2d\-Path\-Element} $\ast$elem)
+\begin{DoxyCompactList}\small\item\em Will free all the dynamically allocated memory inside the \hyperlink{structe2dPathElement}{e2d\-Path\-Element} struct pointed by elem. Which is isn't actually any memory, but still it's important to have this method for consistency. \end{DoxyCompactList}\item 
+\hyperlink{structe2dPathPoint}{e2d\-Path\-Point} $\ast$ \hyperlink{group__e2dPath_gaca8c21a10fb406bdbe1ac9ac827a9fc1}{e2d\-Path\-Point\-Create} ()
+\begin{DoxyCompactList}\small\item\em This is the constructor of \hyperlink{structe2dPathPoint}{e2d\-Path\-Point}. It returns a pointer to a new \hyperlink{structe2dPathPoint}{e2d\-Path\-Point}. Inside it calls \hyperlink{group__e2dPath_ga482d1c32fa683b06711b1789fab97c3f}{e2d\-Path\-Point\-Init()} to initialize the members of the struct. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga482d1c32fa683b06711b1789fab97c3f}{e2d\-Path\-Point\-Init} (\hyperlink{structe2dPathPoint}{e2d\-Path\-Point} $\ast$point)
+\begin{DoxyCompactList}\small\item\em This method will initialize the members of the struct, i.\-e. it will place a (0,0) point on the \hyperlink{structe2dPathPoint_afff60c971a4d4728af80b4753d30c5bf}{e2d\-Path\-Point\-::point}, and call \hyperlink{group__e2dPath_ga9d46085324faa70a4bc9134c5bb6f5ad}{e2d\-Path\-Element\-Init()}. It is called by \hyperlink{group__e2dPath_gaca8c21a10fb406bdbe1ac9ac827a9fc1}{e2d\-Path\-Point\-Create()}. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga7206672fa712fddc0ef584d9edac87fe}{e2d\-Path\-Point\-Destroy} (\hyperlink{structe2dPathPoint}{e2d\-Path\-Point} $\ast$point)
+\begin{DoxyCompactList}\small\item\em Calls \hyperlink{group__e2dPath_ga7171c6c129e8817316bb209b8f1a1bb5}{e2d\-Path\-Point\-Free\-Members()}, \hyperlink{group__e2dPath_ga38c8b4fad1e211dc5ecf36e04835edb4}{e2d\-Path\-Element\-Free\-Members()}, and then frees the pointer. \hyperlink{group__e2dPath_ga2432949311d4f4a1df98e24d28814fee}{e2d\-Path\-Element\-Destroy()} will call this method. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga7171c6c129e8817316bb209b8f1a1bb5}{e2d\-Path\-Point\-Free\-Members} (\hyperlink{structe2dPathPoint}{e2d\-Path\-Point} $\ast$point)
+\begin{DoxyCompactList}\small\item\em Will free all the dynamically allocated memory inside the \hyperlink{structe2dPathPoint}{e2d\-Path\-Point} struct pointed by point, which is actually none, but is kept here for consistency. Called by \hyperlink{group__e2dPath_ga7206672fa712fddc0ef584d9edac87fe}{e2d\-Path\-Point\-Destroy()};. \end{DoxyCompactList}\item 
+\hyperlink{structe2dPathCurve}{e2d\-Path\-Curve} $\ast$ \hyperlink{group__e2dPath_ga2f7a9487dd9b3b90537bfb0a462c72b1}{e2d\-Path\-Curve\-Create} ()
+\begin{DoxyCompactList}\small\item\em This is the constructor of \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve}. It returns a pointer to a new \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve}. Inside it calls \hyperlink{group__e2dPath_gaabc13050ca8ad5b9b6d0a4a320ddfab0}{e2d\-Path\-Curve\-Init()} to initialize the members of the struct. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_gaabc13050ca8ad5b9b6d0a4a320ddfab0}{e2d\-Path\-Curve\-Init} (\hyperlink{structe2dPathCurve}{e2d\-Path\-Curve} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em This method will initialize the members of the struct, i.\-e. it will place a (0,0) point on the points of the struct, and call \hyperlink{group__e2dPath_ga9d46085324faa70a4bc9134c5bb6f5ad}{e2d\-Path\-Element\-Init()}. It is called by \hyperlink{group__e2dPath_ga2f7a9487dd9b3b90537bfb0a462c72b1}{e2d\-Path\-Curve\-Create()}. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga2ccac0ccd19b344623ad4872a961cb55}{e2d\-Path\-Curve\-Destroy} (\hyperlink{structe2dPathCurve}{e2d\-Path\-Curve} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em Calls \hyperlink{group__e2dPath_gaaa9cd20bddad2ac1e3607e864c547d31}{e2d\-Path\-Curve\-Free\-Members()}, \hyperlink{group__e2dPath_ga38c8b4fad1e211dc5ecf36e04835edb4}{e2d\-Path\-Element\-Free\-Members()}, and then frees the pointer. \hyperlink{group__e2dPath_ga2432949311d4f4a1df98e24d28814fee}{e2d\-Path\-Element\-Destroy()} will call this method. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_gaaa9cd20bddad2ac1e3607e864c547d31}{e2d\-Path\-Curve\-Free\-Members} (\hyperlink{structe2dPathCurve}{e2d\-Path\-Curve} $\ast$curve)
+\begin{DoxyCompactList}\small\item\em Will free all the dynamically allocated memory inside the \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve} struct pointed by curve, which is actually none, but is kept here for consistency. Called by \hyperlink{group__e2dPath_ga2ccac0ccd19b344623ad4872a961cb55}{e2d\-Path\-Curve\-Destroy()};. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga40a7b291355ce66fed4e4bcb084aa95e}{e2d\-Path\-Add\-Path\-Element} (\hyperlink{structe2dPath}{e2d\-Path} $\ast$path, \hyperlink{structe2dPathElement}{e2d\-Path\-Element} $\ast$elem)
+\begin{DoxyCompactList}\small\item\em Will add a path element to the \hyperlink{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}{e2d\-Path\-::path\-Elements} array. Increases the size of the array if necessary. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga08a839e808e78ae0f0161be63090906b}{e2d\-Path\-Calculate\-Bounding\-Box} (\hyperlink{structe2dPath}{e2d\-Path} $\ast$path)
+\begin{DoxyCompactList}\small\item\em Calculates the bounding box of the path using by checking the space occupied ball the elements in the path. For the curves, it uses an algorithm taken from here \href{http://processingjs.nihongoresources.com/decasteljau/}{\tt http\-://processingjs.\-nihongoresources.\-com/decasteljau/}. \end{DoxyCompactList}\item 
+void \hyperlink{group__e2dPath_ga17ec56804be674223581dc4c56849a7c}{e2d\-Path\-Center\-At\-B\-Box} (\hyperlink{structe2dPath}{e2d\-Path} $\ast$path, float tx, float ty)
+\begin{DoxyCompactList}\small\item\em Adds a transformation to the path which subtracts the position of the Bounding Box (offset by (tx, ty)), and adds the position of the bounding box to all the path elements, effectively bringing the origin of the local coordinate system to the bounding box. See \hyperlink{group__e2dElement_ga36b01a888c97163c990e16d348aff61c}{e2d\-Element\-Center\-At\-B\-Box()} for an explanation on \char`\"{}tx\char`\"{} and \char`\"{}ty\char`\"{}. \end{DoxyCompactList}\item 
+\hyperlink{structe2dPathElementIterator}{e2d\-Path\-Element\-Iterator} \hyperlink{group__e2dPath_ga867f0ea26a61c798f61df27aaf41d6b3}{e2d\-Path\-Get\-Element\-Iterator} (\hyperlink{structe2dPath}{e2d\-Path} $\ast$path)
+\begin{DoxyCompactList}\small\item\em Makes an iterator to the path elements of the path. \end{DoxyCompactList}\item 
+\hyperlink{structe2dPathElement}{e2d\-Path\-Element} $\ast$ \hyperlink{group__e2dPath_ga3b8113d8c26d1b29e7bfaf5cef98a05e}{e2d\-Path\-Element\-Iterator\-Next} (\hyperlink{structe2dPathElementIterator}{e2d\-Path\-Element\-Iterator} $\ast$iter)
+\begin{DoxyCompactList}\small\item\em Returns the current path element and advances. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O\-O\-L} \hyperlink{group__e2dPath_ga9b06fff11e758bd2db311efe5f90ab1e}{e2d\-Path\-Element\-Iterator\-Has\-Next} (\hyperlink{structe2dPathElementIterator}{e2d\-Path\-Element\-Iterator} $\ast$iter)
+\begin{DoxyCompactList}\small\item\em Checks if we have a path element at current path element pointed by iter, if not, we have reached the end of the path elements list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__e2dPath_ga40a7b291355ce66fed4e4bcb084aa95e}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Add\-Path\-Element@{e2d\-Path\-Add\-Path\-Element}}
+\index{e2d\-Path\-Add\-Path\-Element@{e2d\-Path\-Add\-Path\-Element}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Add\-Path\-Element}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Add\-Path\-Element} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path} $\ast$}]{path, }
+\item[{{\bf e2d\-Path\-Element} $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga40a7b291355ce66fed4e4bcb084aa95e}
+
+
+Will add a path element to the \hyperlink{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}{e2d\-Path\-::path\-Elements} array. Increases the size of the array if necessary. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The \hyperlink{structe2dPath}{e2d\-Path} where the element will be added. \\
+\hline
+\mbox{\tt in}  & {\em elem} & The new path element. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__e2dPath_ga08a839e808e78ae0f0161be63090906b}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Calculate\-Bounding\-Box@{e2d\-Path\-Calculate\-Bounding\-Box}}
+\index{e2d\-Path\-Calculate\-Bounding\-Box@{e2d\-Path\-Calculate\-Bounding\-Box}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Calculate\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Calculate\-Bounding\-Box} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path} $\ast$}]{path}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga08a839e808e78ae0f0161be63090906b}
+
+
+Calculates the bounding box of the path using by checking the space occupied ball the elements in the path. For the curves, it uses an algorithm taken from here \href{http://processingjs.nihongoresources.com/decasteljau/}{\tt http\-://processingjs.\-nihongoresources.\-com/decasteljau/}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The \hyperlink{structe2dPath}{e2d\-Path} struct where the bounding box will be calculated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dElement_ga94aa710b2da71af2091fe4d5b87ce47e}{e2d\-Element\-Calculate\-Bounding\-Box()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga17ec56804be674223581dc4c56849a7c}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Center\-At\-B\-Box@{e2d\-Path\-Center\-At\-B\-Box}}
+\index{e2d\-Path\-Center\-At\-B\-Box@{e2d\-Path\-Center\-At\-B\-Box}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Center\-At\-B\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Center\-At\-B\-Box} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path} $\ast$}]{path, }
+\item[{float}]{tx, }
+\item[{float}]{ty}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga17ec56804be674223581dc4c56849a7c}
+
+
+Adds a transformation to the path which subtracts the position of the Bounding Box (offset by (tx, ty)), and adds the position of the bounding box to all the path elements, effectively bringing the origin of the local coordinate system to the bounding box. See \hyperlink{group__e2dElement_ga36b01a888c97163c990e16d348aff61c}{e2d\-Element\-Center\-At\-B\-Box()} for an explanation on \char`\"{}tx\char`\"{} and \char`\"{}ty\char`\"{}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The \hyperlink{structe2dPath}{e2d\-Path} struct to be centered. \\
+\hline
+\mbox{\tt in}  & {\em tx} & x offset in B\-Box width units. \\
+\hline
+\mbox{\tt in}  & {\em ty} & y offset in B\-Box height units.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dElement_ga36b01a888c97163c990e16d348aff61c}{e2d\-Element\-Center\-At\-B\-Box()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga6f81c71700ebf86964ea7e4b28dea4fb}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Create@{e2d\-Path\-Create}}
+\index{e2d\-Path\-Create@{e2d\-Path\-Create}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Path}$\ast$ {\bf e2d\-Path\-Create} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga6f81c71700ebf86964ea7e4b28dea4fb}
+
+
+This is the constructor of \hyperlink{structe2dPath}{e2d\-Path}. It returns a pointer to a new \hyperlink{structe2dPath}{e2d\-Path}. Inside it calls \hyperlink{group__e2dPath_ga18e88821996913d4304096af0dda07e8}{e2d\-Path\-Init()} to initialize the members of the struct. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em scene} & The \hyperlink{structe2dScene}{e2d\-Scene} where this path will belong to.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em e2d\-Path$\ast$} & A newly allocated and initialized pointer to \hyperlink{structe2dPath}{e2d\-Path}.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_ga18e88821996913d4304096af0dda07e8}{e2d\-Path\-Init()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga2f7a9487dd9b3b90537bfb0a462c72b1}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Curve\-Create@{e2d\-Path\-Curve\-Create}}
+\index{e2d\-Path\-Curve\-Create@{e2d\-Path\-Curve\-Create}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Curve\-Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Path\-Curve}$\ast$ {\bf e2d\-Path\-Curve\-Create} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga2f7a9487dd9b3b90537bfb0a462c72b1}
+
+
+This is the constructor of \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve}. It returns a pointer to a new \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve}. Inside it calls \hyperlink{group__e2dPath_gaabc13050ca8ad5b9b6d0a4a320ddfab0}{e2d\-Path\-Curve\-Init()} to initialize the members of the struct. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em e2d\-Path\-Curve$\ast$} & A newly allocated and initialized pointer to \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve}.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_gaabc13050ca8ad5b9b6d0a4a320ddfab0}{e2d\-Path\-Curve\-Init()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga2ccac0ccd19b344623ad4872a961cb55}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Curve\-Destroy@{e2d\-Path\-Curve\-Destroy}}
+\index{e2d\-Path\-Curve\-Destroy@{e2d\-Path\-Curve\-Destroy}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Curve\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Curve\-Destroy} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path\-Curve} $\ast$}]{curve}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga2ccac0ccd19b344623ad4872a961cb55}
+
+
+Calls \hyperlink{group__e2dPath_gaaa9cd20bddad2ac1e3607e864c547d31}{e2d\-Path\-Curve\-Free\-Members()}, \hyperlink{group__e2dPath_ga38c8b4fad1e211dc5ecf36e04835edb4}{e2d\-Path\-Element\-Free\-Members()}, and then frees the pointer. \hyperlink{group__e2dPath_ga2432949311d4f4a1df98e24d28814fee}{e2d\-Path\-Element\-Destroy()} will call this method. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em curve} & The \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve} struct which will be destroyed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_gaaa9cd20bddad2ac1e3607e864c547d31}{e2d\-Path\-Curve\-Free\-Members()} 
+
+\hyperlink{group__e2dPath_ga38c8b4fad1e211dc5ecf36e04835edb4}{e2d\-Path\-Element\-Free\-Members()} 
+
+\hyperlink{group__e2dPath_ga2432949311d4f4a1df98e24d28814fee}{e2d\-Path\-Element\-Destroy()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_gaaa9cd20bddad2ac1e3607e864c547d31}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Curve\-Free\-Members@{e2d\-Path\-Curve\-Free\-Members}}
+\index{e2d\-Path\-Curve\-Free\-Members@{e2d\-Path\-Curve\-Free\-Members}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Curve\-Free\-Members}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Curve\-Free\-Members} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path\-Curve} $\ast$}]{curve}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_gaaa9cd20bddad2ac1e3607e864c547d31}
+
+
+Will free all the dynamically allocated memory inside the \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve} struct pointed by curve, which is actually none, but is kept here for consistency. Called by \hyperlink{group__e2dPath_ga2ccac0ccd19b344623ad4872a961cb55}{e2d\-Path\-Curve\-Destroy()};. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em curve} & The \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve} struct where the members will be freed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_ga2ccac0ccd19b344623ad4872a961cb55}{e2d\-Path\-Curve\-Destroy()} 
+
+\hyperlink{group__e2dPath_ga2432949311d4f4a1df98e24d28814fee}{e2d\-Path\-Element\-Destroy()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_gaabc13050ca8ad5b9b6d0a4a320ddfab0}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Curve\-Init@{e2d\-Path\-Curve\-Init}}
+\index{e2d\-Path\-Curve\-Init@{e2d\-Path\-Curve\-Init}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Curve\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Curve\-Init} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path\-Curve} $\ast$}]{curve}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_gaabc13050ca8ad5b9b6d0a4a320ddfab0}
+
+
+This method will initialize the members of the struct, i.\-e. it will place a (0,0) point on the points of the struct, and call \hyperlink{group__e2dPath_ga9d46085324faa70a4bc9134c5bb6f5ad}{e2d\-Path\-Element\-Init()}. It is called by \hyperlink{group__e2dPath_ga2f7a9487dd9b3b90537bfb0a462c72b1}{e2d\-Path\-Curve\-Create()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em curve} & The \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve} which will have its members initialized\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_ga2f7a9487dd9b3b90537bfb0a462c72b1}{e2d\-Path\-Curve\-Create()} 
+
+e2d\-Path\-Element\-Create() 
+
+\hyperlink{group__e2dPath_ga9d46085324faa70a4bc9134c5bb6f5ad}{e2d\-Path\-Element\-Init()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga92e9e63b2307a2fbe9cfa564852e98a7}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Destroy@{e2d\-Path\-Destroy}}
+\index{e2d\-Path\-Destroy@{e2d\-Path\-Destroy}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Destroy} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path} $\ast$}]{path}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga92e9e63b2307a2fbe9cfa564852e98a7}
+
+
+Calls \hyperlink{group__e2dPath_gad6343de48f1c4ee1ce2bf1a1562dda88}{e2d\-Path\-Free\-Members()}, \hyperlink{group__e2dElement_gae8da5104d70a09549ca74044dda8313c}{e2d\-Element\-Free\-Members()}, and then frees the pointer. \hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} will call this method. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The \hyperlink{structe2dPath}{e2d\-Path} struct which will be destroyed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_gad6343de48f1c4ee1ce2bf1a1562dda88}{e2d\-Path\-Free\-Members()} 
+
+\hyperlink{group__e2dElement_gae8da5104d70a09549ca74044dda8313c}{e2d\-Element\-Free\-Members()} 
+
+\hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga2432949311d4f4a1df98e24d28814fee}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Element\-Destroy@{e2d\-Path\-Element\-Destroy}}
+\index{e2d\-Path\-Element\-Destroy@{e2d\-Path\-Element\-Destroy}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Element\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Element\-Destroy} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path\-Element} $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga2432949311d4f4a1df98e24d28814fee}
+
+
+Will check the type member of elem and call the appropriate destructor (e.\-g. e2d\-Point\-Destroy()) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2dPathElement}{e2d\-Path\-Element} to be destroyed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+e2d\-Point\-Destroy() 
+
+e2d\-Curve\-Destroy() 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga38c8b4fad1e211dc5ecf36e04835edb4}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Element\-Free\-Members@{e2d\-Path\-Element\-Free\-Members}}
+\index{e2d\-Path\-Element\-Free\-Members@{e2d\-Path\-Element\-Free\-Members}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Element\-Free\-Members}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Element\-Free\-Members} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path\-Element} $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga38c8b4fad1e211dc5ecf36e04835edb4}
+
+
+Will free all the dynamically allocated memory inside the \hyperlink{structe2dPathElement}{e2d\-Path\-Element} struct pointed by elem. Which is isn't actually any memory, but still it's important to have this method for consistency. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The \hyperlink{structe2dPathElement}{e2d\-Path\-Element} struct where the members will be freed. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__e2dPath_ga9d46085324faa70a4bc9134c5bb6f5ad}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Element\-Init@{e2d\-Path\-Element\-Init}}
+\index{e2d\-Path\-Element\-Init@{e2d\-Path\-Element\-Init}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Element\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Element\-Init} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path\-Element} $\ast$}]{elem, }
+\item[{{\bf e2d\-Path\-Element\-Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga9d46085324faa70a4bc9134c5bb6f5ad}
+
+
+Called by the create methods of structs which inherit \hyperlink{structe2dPathElement}{e2d\-Path\-Element} (e.\-g. e2d\-Point\-Create) This method will initialize the members of the struct, i.\-e. it will assign type to \hyperlink{structe2dPathElement_acb2ed01d1856b82777314d8eb8f66b01}{e2d\-Path\-Element\-::type}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & \hyperlink{structe2dPathElement}{e2d\-Path\-Element} which will have its members initialized. \\
+\hline
+\mbox{\tt in}  & {\em type} & The type of the path element.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+e2d\-Point\-Create() 
+
+e2d\-Curve\-Create() 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga9b06fff11e758bd2db311efe5f90ab1e}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Element\-Iterator\-Has\-Next@{e2d\-Path\-Element\-Iterator\-Has\-Next}}
+\index{e2d\-Path\-Element\-Iterator\-Has\-Next@{e2d\-Path\-Element\-Iterator\-Has\-Next}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Element\-Iterator\-Has\-Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-B\-O\-O\-L} {\bf e2d\-Path\-Element\-Iterator\-Has\-Next} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path\-Element\-Iterator} $\ast$}]{iter}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga9b06fff11e758bd2db311efe5f90ab1e}
+
+
+Checks if we have a path element at current path element pointed by iter, if not, we have reached the end of the path elements list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iter} & The path iterator.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em E2\-D\-\_\-\-B\-O\-O\-L} & If we still have a path element, returns E2\-D\-\_\-\-T\-R\-U\-E, if not, returns E2\-D\-\_\-\-F\-A\-L\-S\-E. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__e2dPath_ga3b8113d8c26d1b29e7bfaf5cef98a05e}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Element\-Iterator\-Next@{e2d\-Path\-Element\-Iterator\-Next}}
+\index{e2d\-Path\-Element\-Iterator\-Next@{e2d\-Path\-Element\-Iterator\-Next}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Element\-Iterator\-Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Path\-Element}$\ast$ {\bf e2d\-Path\-Element\-Iterator\-Next} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path\-Element\-Iterator} $\ast$}]{iter}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga3b8113d8c26d1b29e7bfaf5cef98a05e}
+
+
+Returns the current path element and advances. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iter} & The path iterator.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em e2d\-Path\-Element$\ast$} & The path element. Remember that you can cast this pointer to the actual path element type by checking \hyperlink{structe2dPathElement_acb2ed01d1856b82777314d8eb8f66b01}{e2d\-Path\-Element\-::type}. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__e2dPath_gad6343de48f1c4ee1ce2bf1a1562dda88}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Free\-Members@{e2d\-Path\-Free\-Members}}
+\index{e2d\-Path\-Free\-Members@{e2d\-Path\-Free\-Members}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Free\-Members}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Free\-Members} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path} $\ast$}]{path}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_gad6343de48f1c4ee1ce2bf1a1562dda88}
+
+
+Will free all the dynamically allocated memory inside the \hyperlink{structe2dPath}{e2d\-Path} struct pointed by elem, i.\-e. it calls free on \hyperlink{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}{e2d\-Path\-::path\-Elements}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The \hyperlink{structe2dPath}{e2d\-Path} struct where the members will be freed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_ga92e9e63b2307a2fbe9cfa564852e98a7}{e2d\-Path\-Destroy()} 
+
+\hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga867f0ea26a61c798f61df27aaf41d6b3}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Get\-Element\-Iterator@{e2d\-Path\-Get\-Element\-Iterator}}
+\index{e2d\-Path\-Get\-Element\-Iterator@{e2d\-Path\-Get\-Element\-Iterator}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Get\-Element\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Path\-Element\-Iterator} {\bf e2d\-Path\-Get\-Element\-Iterator} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path} $\ast$}]{path}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga867f0ea26a61c798f61df27aaf41d6b3}
+
+
+Makes an iterator to the path elements of the path. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The path to be iterated.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em e2d\-Path\-Element\-Iterator$\ast$} & The iterator. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__e2dPath_ga18e88821996913d4304096af0dda07e8}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Init@{e2d\-Path\-Init}}
+\index{e2d\-Path\-Init@{e2d\-Path\-Init}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Init} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path} $\ast$}]{path, }
+\item[{const {\bf e2d\-Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga18e88821996913d4304096af0dda07e8}
+
+
+This method will initialize the members of the struct, i.\-e. it will allocate the \hyperlink{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}{e2d\-Path\-::path\-Elements} array, and call \hyperlink{group__e2dElement_ga8734d10ef40a380dfc51bfe1790a92a7}{e2d\-Element\-Init()}. It is called by \hyperlink{group__e2dPath_ga6f81c71700ebf86964ea7e4b28dea4fb}{e2d\-Path\-Create()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The \hyperlink{structe2dPath}{e2d\-Path} which will have its members initialized \\
+\hline
+\mbox{\tt in}  & {\em scene} & The \hyperlink{structe2dScene}{e2d\-Scene} where this group will belong to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_ga6f81c71700ebf86964ea7e4b28dea4fb}{e2d\-Path\-Create()} 
+
+\hyperlink{group__e2dElement_ga8734d10ef40a380dfc51bfe1790a92a7}{e2d\-Element\-Init()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_gaca8c21a10fb406bdbe1ac9ac827a9fc1}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Point\-Create@{e2d\-Path\-Point\-Create}}
+\index{e2d\-Path\-Point\-Create@{e2d\-Path\-Point\-Create}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Point\-Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Path\-Point}$\ast$ {\bf e2d\-Path\-Point\-Create} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_gaca8c21a10fb406bdbe1ac9ac827a9fc1}
+
+
+This is the constructor of \hyperlink{structe2dPathPoint}{e2d\-Path\-Point}. It returns a pointer to a new \hyperlink{structe2dPathPoint}{e2d\-Path\-Point}. Inside it calls \hyperlink{group__e2dPath_ga482d1c32fa683b06711b1789fab97c3f}{e2d\-Path\-Point\-Init()} to initialize the members of the struct. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em e2d\-Path\-Point$\ast$} & A newly allocated and initialized pointer to \hyperlink{structe2dPathPoint}{e2d\-Path\-Point}.\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_ga482d1c32fa683b06711b1789fab97c3f}{e2d\-Path\-Point\-Init()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga7206672fa712fddc0ef584d9edac87fe}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Point\-Destroy@{e2d\-Path\-Point\-Destroy}}
+\index{e2d\-Path\-Point\-Destroy@{e2d\-Path\-Point\-Destroy}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Point\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Point\-Destroy} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path\-Point} $\ast$}]{point}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga7206672fa712fddc0ef584d9edac87fe}
+
+
+Calls \hyperlink{group__e2dPath_ga7171c6c129e8817316bb209b8f1a1bb5}{e2d\-Path\-Point\-Free\-Members()}, \hyperlink{group__e2dPath_ga38c8b4fad1e211dc5ecf36e04835edb4}{e2d\-Path\-Element\-Free\-Members()}, and then frees the pointer. \hyperlink{group__e2dPath_ga2432949311d4f4a1df98e24d28814fee}{e2d\-Path\-Element\-Destroy()} will call this method. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em point} & The \hyperlink{structe2dPathPoint}{e2d\-Path\-Point} struct which will be destroyed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_ga7171c6c129e8817316bb209b8f1a1bb5}{e2d\-Path\-Point\-Free\-Members()} 
+
+\hyperlink{group__e2dPath_ga38c8b4fad1e211dc5ecf36e04835edb4}{e2d\-Path\-Element\-Free\-Members()} 
+
+\hyperlink{group__e2dPath_ga2432949311d4f4a1df98e24d28814fee}{e2d\-Path\-Element\-Destroy()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga7171c6c129e8817316bb209b8f1a1bb5}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Point\-Free\-Members@{e2d\-Path\-Point\-Free\-Members}}
+\index{e2d\-Path\-Point\-Free\-Members@{e2d\-Path\-Point\-Free\-Members}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Point\-Free\-Members}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Point\-Free\-Members} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path\-Point} $\ast$}]{point}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga7171c6c129e8817316bb209b8f1a1bb5}
+
+
+Will free all the dynamically allocated memory inside the \hyperlink{structe2dPathPoint}{e2d\-Path\-Point} struct pointed by point, which is actually none, but is kept here for consistency. Called by \hyperlink{group__e2dPath_ga7206672fa712fddc0ef584d9edac87fe}{e2d\-Path\-Point\-Destroy()};. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em point} & The \hyperlink{structe2dPathPoint}{e2d\-Path\-Point} struct where the members will be freed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_ga7206672fa712fddc0ef584d9edac87fe}{e2d\-Path\-Point\-Destroy()} 
+
+\hyperlink{group__e2dPath_ga2432949311d4f4a1df98e24d28814fee}{e2d\-Path\-Element\-Destroy()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dPath_ga482d1c32fa683b06711b1789fab97c3f}{\index{e2d\-Path@{e2d\-Path}!e2d\-Path\-Point\-Init@{e2d\-Path\-Point\-Init}}
+\index{e2d\-Path\-Point\-Init@{e2d\-Path\-Point\-Init}!e2dPath@{e2d\-Path}}
+\subsubsection[{e2d\-Path\-Point\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Path\-Point\-Init} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Path\-Point} $\ast$}]{point}
+\end{DoxyParamCaption}
+)}}\label{group__e2dPath_ga482d1c32fa683b06711b1789fab97c3f}
+
+
+This method will initialize the members of the struct, i.\-e. it will place a (0,0) point on the \hyperlink{structe2dPathPoint_afff60c971a4d4728af80b4753d30c5bf}{e2d\-Path\-Point\-::point}, and call \hyperlink{group__e2dPath_ga9d46085324faa70a4bc9134c5bb6f5ad}{e2d\-Path\-Element\-Init()}. It is called by \hyperlink{group__e2dPath_gaca8c21a10fb406bdbe1ac9ac827a9fc1}{e2d\-Path\-Point\-Create()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em point} & The \hyperlink{structe2dPathPoint}{e2d\-Path\-Point} which will have its members initialized\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dPath_gaca8c21a10fb406bdbe1ac9ac827a9fc1}{e2d\-Path\-Point\-Create()} 
+
+e2d\-Path\-Element\-Create() 
+
+\hyperlink{group__e2dPath_ga9d46085324faa70a4bc9134c5bb6f5ad}{e2d\-Path\-Element\-Init()} 
+\end{DoxySeeAlso}

@@ -1,0 +1,252 @@
+\hypertarget{group__Ez2DS}{\section{Ez2\-D\-S}
+\label{group__Ez2DS}\index{Ez2\-D\-S@{Ez2\-D\-S}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structe2dMatrix}{e2d\-Matrix}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dMatrix}{e2d\-Matrix} struct contains the implementation of a 3x3 matrix which is row major. See \href{http://en.wikipedia.org/wiki/Row-major_order}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Row-\/major\-\_\-order} if you have doubts. \end{DoxyCompactList}\item 
+struct \hyperlink{structe2dPoint}{e2d\-Point}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dPoint}{e2d\-Point} struct which contains two floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__Ez2DS_ga48ffc9ed217e38fc9cd7cf8f9894d63c}{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}~1.\-0e-\/6f
+\begin{DoxyCompactList}\small\item\em Defines a value which is almost zero. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Ez2DS_ga5f5051e054baa41a7a7048bd205bc1e3}{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}(val)~((val) $<$ (\hyperlink{group__Ez2DS_ga48ffc9ed217e38fc9cd7cf8f9894d63c}{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}) \&\& (val) $>$ -\/(\hyperlink{group__Ez2DS_ga48ffc9ed217e38fc9cd7cf8f9894d63c}{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}))
+\begin{DoxyCompactList}\small\item\em Checks if val is within the threshold defined by E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O, i.\-e. it checks if val is below E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O and above -\/ E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O. \end{DoxyCompactList}\item 
+\hypertarget{group__Ez2DS_gae6c89cca978cb0aa64dc7034b016f5cd}{\#define \hyperlink{group__Ez2DS_gae6c89cca978cb0aa64dc7034b016f5cd}{E2\-D\-\_\-\-N\-U\-L\-L}~0}\label{group__Ez2DS_gae6c89cca978cb0aa64dc7034b016f5cd}
+
+\begin{DoxyCompactList}\small\item\em N\-U\-L\-L definition. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Ez2DS_ga1cd9ecc64e25100eeb04dc1b08c28fc1}{E2\-D\-\_\-\-M\-A\-X}(a, b)
+\begin{DoxyCompactList}\small\item\em Returns the biggest number between a and b. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__Ez2DS_gaf5964c56c46211897a998a087d4c3a66}{E2\-D\-\_\-\-M\-I\-N}(a, b)
+\begin{DoxyCompactList}\small\item\em Returns the smallest number between a and b. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__Ez2DS_gaac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O\-O\-L} \{ {\bfseries E2\-D\-\_\-\-F\-A\-L\-S\-E}, 
+{\bfseries E2\-D\-\_\-\-T\-R\-U\-E}
+ \}
+\begin{DoxyCompactList}\small\item\em Boolean implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__Ez2DS_gae071d0d13c408d0faa8ea81731a47746}{void \hyperlink{group__Ez2DS_gae071d0d13c408d0faa8ea81731a47746}{e2d\-Matrix\-To\-Ident} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat)}\label{group__Ez2DS_gae071d0d13c408d0faa8ea81731a47746}
+
+\begin{DoxyCompactList}\small\item\em Sets mat to be identity, basically assigns E2\-D\-\_\-\-I\-D\-E\-N\-T\-\_\-\-M\-A\-T\-R\-I\-X. \end{DoxyCompactList}\item 
+\hypertarget{group__Ez2DS_gab5e5b40fd56f6fde5ec19e09733ddb35}{void \hyperlink{group__Ez2DS_gab5e5b40fd56f6fde5ec19e09733ddb35}{e2d\-Matrix\-Set\-Col} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, unsigned int col, float val1, float val2, float val3)}\label{group__Ez2DS_gab5e5b40fd56f6fde5ec19e09733ddb35}
+
+\begin{DoxyCompactList}\small\item\em Changes the column defined by col (0 to 2) to be val1, val2 and val3. \end{DoxyCompactList}\item 
+\hypertarget{group__Ez2DS_gaca877ffd79967e78914eb5fea731300b}{void \hyperlink{group__Ez2DS_gaca877ffd79967e78914eb5fea731300b}{e2d\-Matrix\-Set\-Row} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, unsigned int row, float val1, float val2, float val3)}\label{group__Ez2DS_gaca877ffd79967e78914eb5fea731300b}
+
+\begin{DoxyCompactList}\small\item\em Changes the row defined by row (0 to 2) to be val1, val2 and val3. \end{DoxyCompactList}\item 
+\hypertarget{group__Ez2DS_ga5719742adf7b07c791323de17be257a9}{void \hyperlink{group__Ez2DS_ga5719742adf7b07c791323de17be257a9}{e2d\-Matrix\-Set\-Row\-Col} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, unsigned int row, unsigned int col, float val1)}\label{group__Ez2DS_ga5719742adf7b07c791323de17be257a9}
+
+\begin{DoxyCompactList}\small\item\em Changes the position in row \char`\"{}row\char`\"{}, column \char`\"{}col\char`\"{} to be val1. \end{DoxyCompactList}\item 
+float \hyperlink{group__Ez2DS_ga83e3deb8c27d5e63cd03a21930df0c94}{e2d\-Matrix\-Get\-Cell} (const \hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, unsigned int row, unsigned int col)
+\begin{DoxyCompactList}\small\item\em Returns the cell in row \char`\"{}row\char`\"{}, column \char`\"{}column\char`\"{}. \end{DoxyCompactList}\item 
+\hyperlink{structe2dMatrix}{e2d\-Matrix} \hyperlink{group__Ez2DS_gabb941a9a10fba12867cf6e4047bcefcc}{e2d\-Matrix\-Multiply} (const \hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, const \hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$multiplicator)
+\begin{DoxyCompactList}\small\item\em Multiplies the mat by multiplicator and returns the result in another matrix. \end{DoxyCompactList}\item 
+\hypertarget{group__Ez2DS_ga9c4bc2c260d552037b8d183ecb5dd698}{void \hyperlink{group__Ez2DS_ga9c4bc2c260d552037b8d183ecb5dd698}{e2d\-Matrix\-Set\-As\-Translation} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, float x, float y)}\label{group__Ez2DS_ga9c4bc2c260d552037b8d183ecb5dd698}
+
+\begin{DoxyCompactList}\small\item\em Places an identity matrix and sets first and second row's last cell to be x and y respectively. \end{DoxyCompactList}\item 
+\hypertarget{group__Ez2DS_ga9812a9edb91395ad042ce4475c55060f}{void \hyperlink{group__Ez2DS_ga9812a9edb91395ad042ce4475c55060f}{e2d\-Matrix\-Set\-As\-Scale} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, float x, float y)}\label{group__Ez2DS_ga9812a9edb91395ad042ce4475c55060f}
+
+\begin{DoxyCompactList}\small\item\em Places an identity matrix and sets cell (0,0) and (1,1) to be x and y respectively. \end{DoxyCompactList}\item 
+\hypertarget{group__Ez2DS_ga671b90f626035724fcf0f43d352ec3ad}{void \hyperlink{group__Ez2DS_ga671b90f626035724fcf0f43d352ec3ad}{e2d\-Matrix\-Set\-As\-Rotation} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, float radians)}\label{group__Ez2DS_ga671b90f626035724fcf0f43d352ec3ad}
+
+\begin{DoxyCompactList}\small\item\em Places an identity matrix and sets a rotation according to \href{http://en.wikipedia.org/wiki/Rotation_matrix}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Rotation\-\_\-matrix}. \end{DoxyCompactList}\item 
+\hyperlink{structe2dMatrix}{e2d\-Matrix} \hyperlink{group__Ez2DS_ga86a7cb5c0d6fce078ed754195e8fe1e4}{e2d\-Matrix\-Get\-Inverse} (const \hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat)
+\begin{DoxyCompactList}\small\item\em Inverts the matrix using Cramer's rule (see \href{http://en.wikipedia.org/wiki/Cramer%27s_rule}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Cramer\%27s\-\_\-rule}) and returns the result. \end{DoxyCompactList}\item 
+\hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{group__Ez2DS_ga377eea18be8a4e88dcba9c62bffea97e}{e2d\-Matrix\-Apply\-To\-Point} (const \hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, const \hyperlink{structe2dPoint}{e2d\-Point} $\ast$point)
+\begin{DoxyCompactList}\small\item\em Applies the matrix to the point transforming it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__Ez2DS_ga4663bede7d265bce67f2176cbe6d1f97}{typedef struct \hyperlink{structe2dScene}{e2d\-Scene} \hyperlink{group__Ez2DS_ga4663bede7d265bce67f2176cbe6d1f97}{e2d\-Scene}}\label{group__Ez2DS_ga4663bede7d265bce67f2176cbe6d1f97}
+
+\begin{DoxyCompactList}\small\item\em Forward declarations \begin{DoxyVerb}  \end{DoxyVerb}
+. \end{DoxyCompactList}\item 
+\hypertarget{group__Ez2DS_ga7d730be997ced9a362d3fbde0c925029}{typedef struct \hyperlink{structe2dElement}{e2d\-Element} {\bfseries e2d\-Element}}\label{group__Ez2DS_ga7d730be997ced9a362d3fbde0c925029}
+
+\item 
+\hypertarget{group__Ez2DS_gaf3a345c79086b4c4a3bef68d54ec75bb}{typedef struct \hyperlink{structe2dGroup}{e2d\-Group} {\bfseries e2d\-Group}}\label{group__Ez2DS_gaf3a345c79086b4c4a3bef68d54ec75bb}
+
+\item 
+\hypertarget{group__Ez2DS_gae4c99476350936b6317aad7ddad92e87}{typedef struct \hyperlink{structe2dPath}{e2d\-Path} {\bfseries e2d\-Path}}\label{group__Ez2DS_gae4c99476350936b6317aad7ddad92e87}
+
+\item 
+\hypertarget{group__Ez2DS_gac6e31ed0b788ebe46ab4fe4e3f94f0e8}{typedef struct \hyperlink{structe2dPathElement}{e2d\-Path\-Element} {\bfseries e2d\-Path\-Element}}\label{group__Ez2DS_gac6e31ed0b788ebe46ab4fe4e3f94f0e8}
+
+\item 
+\hypertarget{group__Ez2DS_ga86cca845a62399e375916a400ce3f703}{typedef struct \hyperlink{structe2dPathPoint}{e2d\-Path\-Point} {\bfseries e2d\-Path\-Point}}\label{group__Ez2DS_ga86cca845a62399e375916a400ce3f703}
+
+\item 
+\hypertarget{group__Ez2DS_ga0ac56e0545e02476afb28cf4920751d9}{typedef struct \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve} {\bfseries e2d\-Path\-Curve}}\label{group__Ez2DS_ga0ac56e0545e02476afb28cf4920751d9}
+
+\item 
+\hypertarget{group__Ez2DS_gaa743382cda21581102015f44280c875e}{typedef struct \hyperlink{structe2dImage}{e2d\-Image} {\bfseries e2d\-Image}}\label{group__Ez2DS_gaa743382cda21581102015f44280c875e}
+
+\item 
+\hypertarget{group__Ez2DS_ga6659ac6d13a4ebd7168ef99f8ded9201}{typedef struct \hyperlink{structe2dPoint}{e2d\-Point} {\bfseries e2d\-Point}}\label{group__Ez2DS_ga6659ac6d13a4ebd7168ef99f8ded9201}
+
+\item 
+\hypertarget{group__Ez2DS_ga097c8c058b4f43e8e154374d63432b3c}{typedef struct \hyperlink{structe2dMatrix}{e2d\-Matrix} {\bfseries e2d\-Matrix}}\label{group__Ez2DS_ga097c8c058b4f43e8e154374d63432b3c}
+
+\item 
+\hypertarget{group__Ez2DS_ga76fc6b98f46ca44dd6b09fe824160485}{typedef struct \\*
+\hyperlink{structe2dPathElementIterator}{e2d\-Path\-Element\-Iterator} {\bfseries e2d\-Path\-Element\-Iterator}}\label{group__Ez2DS_ga76fc6b98f46ca44dd6b09fe824160485}
+
+\item 
+\hypertarget{group__Ez2DS_ga271ae036141142028e18270850818134}{typedef struct \hyperlink{structe2dGroupIterator}{e2d\-Group\-Iterator} {\bfseries e2d\-Group\-Iterator}}\label{group__Ez2DS_ga271ae036141142028e18270850818134}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{group__Ez2DS_ga48ffc9ed217e38fc9cd7cf8f9894d63c}{\index{Ez2\-D\-S@{Ez2\-D\-S}!E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O@{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}}
+\index{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O@{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}!Ez2DS@{Ez2\-D\-S}}
+\subsubsection[{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}~1.\-0e-\/6f}}\label{group__Ez2DS_ga48ffc9ed217e38fc9cd7cf8f9894d63c}
+
+
+Defines a value which is almost zero. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__Ez2DS_ga5f5051e054baa41a7a7048bd205bc1e3}{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O()} 
+\end{DoxySeeAlso}
+\hypertarget{group__Ez2DS_ga5f5051e054baa41a7a7048bd205bc1e3}{\index{Ez2\-D\-S@{Ez2\-D\-S}!E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O@{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}}
+\index{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O@{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}!Ez2DS@{Ez2\-D\-S}}
+\subsubsection[{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}(
+\begin{DoxyParamCaption}
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~((val) $<$ ({\bf E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}) \&\& (val) $>$ -\/({\bf E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}))}}\label{group__Ez2DS_ga5f5051e054baa41a7a7048bd205bc1e3}
+
+
+Checks if val is within the threshold defined by E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O, i.\-e. it checks if val is below E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O and above -\/ E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__Ez2DS_ga48ffc9ed217e38fc9cd7cf8f9894d63c}{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}
+\end{DoxySeeAlso}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & Returns true if almost zero, else false. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__Ez2DS_ga1cd9ecc64e25100eeb04dc1b08c28fc1}{\index{Ez2\-D\-S@{Ez2\-D\-S}!E2\-D\-\_\-\-M\-A\-X@{E2\-D\-\_\-\-M\-A\-X}}
+\index{E2\-D\-\_\-\-M\-A\-X@{E2\-D\-\_\-\-M\-A\-X}!Ez2DS@{Ez2\-D\-S}}
+\subsubsection[{E2\-D\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf E2\-D\-\_\-\-M\-A\-X}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)}}\label{group__Ez2DS_ga1cd9ecc64e25100eeb04dc1b08c28fc1}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+({ __typeof__ (a) _a = (a); \
+    __typeof__ (b) _b = (b); \
+    _a > _b ? _a : _b; })
+\end{DoxyCode}
+
+
+Returns the biggest number between a and b. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em comparable} & The biggest. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__Ez2DS_gaf5964c56c46211897a998a087d4c3a66}{\index{Ez2\-D\-S@{Ez2\-D\-S}!E2\-D\-\_\-\-M\-I\-N@{E2\-D\-\_\-\-M\-I\-N}}
+\index{E2\-D\-\_\-\-M\-I\-N@{E2\-D\-\_\-\-M\-I\-N}!Ez2DS@{Ez2\-D\-S}}
+\subsubsection[{E2\-D\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf E2\-D\-\_\-\-M\-I\-N}(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)}}\label{group__Ez2DS_gaf5964c56c46211897a998a087d4c3a66}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+({ __typeof__ (a) _a = (a); \
+    __typeof__ (b) _b = (b); \
+    _a < _b ? _a : _b; })
+\end{DoxyCode}
+
+
+Returns the smallest number between a and b. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em comparable} & The smallest. \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__Ez2DS_ga377eea18be8a4e88dcba9c62bffea97e}{\index{Ez2\-D\-S@{Ez2\-D\-S}!e2d\-Matrix\-Apply\-To\-Point@{e2d\-Matrix\-Apply\-To\-Point}}
+\index{e2d\-Matrix\-Apply\-To\-Point@{e2d\-Matrix\-Apply\-To\-Point}!Ez2DS@{Ez2\-D\-S}}
+\subsubsection[{e2d\-Matrix\-Apply\-To\-Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf e2d\-Matrix\-Apply\-To\-Point} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Matrix} $\ast$}]{mat, }
+\item[{const {\bf e2d\-Point} $\ast$}]{point}
+\end{DoxyParamCaption}
+)}}\label{group__Ez2DS_ga377eea18be8a4e88dcba9c62bffea97e}
+
+
+Applies the matrix to the point transforming it. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{structe2dPoint}{e2d\-Point}} & The altered point. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__Ez2DS_ga83e3deb8c27d5e63cd03a21930df0c94}{\index{Ez2\-D\-S@{Ez2\-D\-S}!e2d\-Matrix\-Get\-Cell@{e2d\-Matrix\-Get\-Cell}}
+\index{e2d\-Matrix\-Get\-Cell@{e2d\-Matrix\-Get\-Cell}!Ez2DS@{Ez2\-D\-S}}
+\subsubsection[{e2d\-Matrix\-Get\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf e2d\-Matrix\-Get\-Cell} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Matrix} $\ast$}]{mat, }
+\item[{unsigned int}]{row, }
+\item[{unsigned int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{group__Ez2DS_ga83e3deb8c27d5e63cd03a21930df0c94}
+
+
+Returns the cell in row \char`\"{}row\char`\"{}, column \char`\"{}column\char`\"{}. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em float} & Returns the cell value. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__Ez2DS_ga86a7cb5c0d6fce078ed754195e8fe1e4}{\index{Ez2\-D\-S@{Ez2\-D\-S}!e2d\-Matrix\-Get\-Inverse@{e2d\-Matrix\-Get\-Inverse}}
+\index{e2d\-Matrix\-Get\-Inverse@{e2d\-Matrix\-Get\-Inverse}!Ez2DS@{Ez2\-D\-S}}
+\subsubsection[{e2d\-Matrix\-Get\-Inverse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Matrix} {\bf e2d\-Matrix\-Get\-Inverse} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Matrix} $\ast$}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{group__Ez2DS_ga86a7cb5c0d6fce078ed754195e8fe1e4}
+
+
+Inverts the matrix using Cramer's rule (see \href{http://en.wikipedia.org/wiki/Cramer%27s_rule}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Cramer\%27s\-\_\-rule}) and returns the result. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{structe2dMatrix}{e2d\-Matrix}} & inverted matrix. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__Ez2DS_gabb941a9a10fba12867cf6e4047bcefcc}{\index{Ez2\-D\-S@{Ez2\-D\-S}!e2d\-Matrix\-Multiply@{e2d\-Matrix\-Multiply}}
+\index{e2d\-Matrix\-Multiply@{e2d\-Matrix\-Multiply}!Ez2DS@{Ez2\-D\-S}}
+\subsubsection[{e2d\-Matrix\-Multiply}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Matrix} {\bf e2d\-Matrix\-Multiply} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Matrix} $\ast$}]{mat, }
+\item[{const {\bf e2d\-Matrix} $\ast$}]{multiplicator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{group__Ez2DS_gabb941a9a10fba12867cf6e4047bcefcc}
+
+
+Multiplies the mat by multiplicator and returns the result in another matrix. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{structe2dMatrix}{e2d\-Matrix}} & The result of the multiplication. \\
+\hline
+\end{DoxyRetVals}

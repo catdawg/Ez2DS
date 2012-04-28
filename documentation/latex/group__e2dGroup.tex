@@ -1,11 +1,11 @@
-\hypertarget{group__e2dGroup}{\section{E2d\-Group}
-\label{group__e2dGroup}\index{E2d\-Group@{E2d\-Group}}
+\hypertarget{group__e2dGroup}{\section{e2d\-Group}
+\label{group__e2dGroup}\index{e2d\-Group@{e2d\-Group}}
 }
 \subsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structe2dGroup}{e2d\-Group}
-\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dGroup}{e2d\-Group} struct is used to group elements in the scene. This struct is created from the \char`\"{}g\char`\"{} element in S\-V\-G. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dElement}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Struct$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dGroup}{e2d\-Group} struct is used to group elements in the scene. This struct is created from the \char`\"{}g\char`\"{} element in S\-V\-G. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dElement}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Group$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. \end{DoxyCompactList}\item 
 struct \hyperlink{structe2dGroupIterator}{e2d\-Group\-Iterator}
 \begin{DoxyCompactList}\small\item\em An iterator for the children of \hyperlink{structe2dGroup}{e2d\-Group}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -18,7 +18,7 @@ void \hyperlink{group__e2dGroup_ga25406e9ff8a7746af03833e40ccf259a}{e2d\-Group\-
 void \hyperlink{group__e2dGroup_ga545626effa0f89b72f244e56aadb05bc}{e2d\-Group\-Destroy} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group)
 \begin{DoxyCompactList}\small\item\em Calls \hyperlink{group__e2dGroup_ga9569da6e74703187306878ec830d52c4}{e2d\-Group\-Free\-Members()}, \hyperlink{group__e2dElement_gae8da5104d70a09549ca74044dda8313c}{e2d\-Element\-Free\-Members()}, and then frees the pointer. \hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} will call this method. \end{DoxyCompactList}\item 
 void \hyperlink{group__e2dGroup_ga9569da6e74703187306878ec830d52c4}{e2d\-Group\-Free\-Members} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group)
-\begin{DoxyCompactList}\small\item\em Will free all the allocated memory inside the \hyperlink{structe2dGroup}{e2d\-Group} struct pointed by elem, i.\-e. it calls \hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} on all the children, and frees the \hyperlink{structe2dGroup_a55f6dde874716dc99dcd270fc0999a01}{e2d\-Group\-::child\-List} array (Warning, this might change in future versions). It is called by \hyperlink{group__e2dGroup_ga545626effa0f89b72f244e56aadb05bc}{e2d\-Group\-Destroy()}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Will free all the dynamically allocated memory inside the \hyperlink{structe2dGroup}{e2d\-Group} struct pointed by elem, i.\-e. it calls \hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} on all the children, and frees the \hyperlink{structe2dGroup_a55f6dde874716dc99dcd270fc0999a01}{e2d\-Group\-::child\-List} array (Warning, this might change in future versions). It is called by \hyperlink{group__e2dGroup_ga545626effa0f89b72f244e56aadb05bc}{e2d\-Group\-Destroy()}. \end{DoxyCompactList}\item 
 void \hyperlink{group__e2dGroup_ga6ae76730f78ad731621e9286a3980b8a}{e2d\-Group\-Add\-Child} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group, \hyperlink{structe2dElement}{e2d\-Element} $\ast$element)
 \begin{DoxyCompactList}\small\item\em Will add an element to the \hyperlink{structe2dGroup_a55f6dde874716dc99dcd270fc0999a01}{e2d\-Group\-::child\-List} array, increasing allocated space if necessary. Also sets \hyperlink{structe2dElement_a3e62eb2fbf1d6bc6d6fe549096a6cee9}{e2d\-Element\-::parent} in \char`\"{}element\char`\"{} to be \char`\"{}group\char`\"{}. \end{DoxyCompactList}\item 
 void \hyperlink{group__e2dGroup_ga7c5f43489bbd2d36a51414aee07abf5a}{e2d\-Group\-Calculate\-Bounding\-Box} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group)
@@ -32,12 +32,12 @@ void \hyperlink{group__e2dGroup_gafa65ab615b8a0c181a2d5b88eed9fa16}{e2d\-Group\-
 \hyperlink{structe2dElement}{e2d\-Element} $\ast$ \hyperlink{group__e2dGroup_gaa5ffe3eb2b83f318df4f22272f1e1189}{e2d\-Group\-Iterator\-Next} (\hyperlink{structe2dGroupIterator}{e2d\-Group\-Iterator} $\ast$iter)
 \begin{DoxyCompactList}\small\item\em Returns the current child and advances. \end{DoxyCompactList}\item 
 \hyperlink{Ez2DS_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O\-O\-L} \hyperlink{group__e2dGroup_ga493d54c28198410762cfa32c97d8e646}{e2d\-Group\-Iterator\-Has\-Next} (\hyperlink{structe2dGroupIterator}{e2d\-Group\-Iterator} $\ast$iter)
-\begin{DoxyCompactList}\small\item\em Checks if we have a child at current element pointer by iter, if not, we have reached the end of the child list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if we have a child at current element pointed by iter, if not, we have reached the end of the child list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{group__e2dGroup_ga6ae76730f78ad731621e9286a3980b8a}{\index{E2d\-Group@{E2d\-Group}!e2d\-Group\-Add\-Child@{e2d\-Group\-Add\-Child}}
-\index{e2d\-Group\-Add\-Child@{e2d\-Group\-Add\-Child}!E2dGroup@{E2d\-Group}}
+\hypertarget{group__e2dGroup_ga6ae76730f78ad731621e9286a3980b8a}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Add\-Child@{e2d\-Group\-Add\-Child}}
+\index{e2d\-Group\-Add\-Child@{e2d\-Group\-Add\-Child}!e2dGroup@{e2d\-Group}}
 \subsubsection[{e2d\-Group\-Add\-Child}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Add\-Child} (
 \begin{DoxyParamCaption}
 \item[{{\bf e2d\-Group} $\ast$}]{group, }
@@ -55,8 +55,8 @@ Will add an element to the \hyperlink{structe2dGroup_a55f6dde874716dc99dcd270fc0
 \mbox{\tt in}  & {\em element} & The new child. \\
 \hline
 \end{DoxyParams}
-\hypertarget{group__e2dGroup_ga7c5f43489bbd2d36a51414aee07abf5a}{\index{E2d\-Group@{E2d\-Group}!e2d\-Group\-Calculate\-Bounding\-Box@{e2d\-Group\-Calculate\-Bounding\-Box}}
-\index{e2d\-Group\-Calculate\-Bounding\-Box@{e2d\-Group\-Calculate\-Bounding\-Box}!E2dGroup@{E2d\-Group}}
+\hypertarget{group__e2dGroup_ga7c5f43489bbd2d36a51414aee07abf5a}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Calculate\-Bounding\-Box@{e2d\-Group\-Calculate\-Bounding\-Box}}
+\index{e2d\-Group\-Calculate\-Bounding\-Box@{e2d\-Group\-Calculate\-Bounding\-Box}!e2dGroup@{e2d\-Group}}
 \subsubsection[{e2d\-Group\-Calculate\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Calculate\-Bounding\-Box} (
 \begin{DoxyParamCaption}
 \item[{{\bf e2d\-Group} $\ast$}]{group}
@@ -74,8 +74,8 @@ Calculates the bounding box of the group using the bounding boxes of the childre
 \begin{DoxySeeAlso}{See also}
 \hyperlink{group__e2dElement_ga94aa710b2da71af2091fe4d5b87ce47e}{e2d\-Element\-Calculate\-Bounding\-Box()} 
 \end{DoxySeeAlso}
-\hypertarget{group__e2dGroup_ga04bf94419865ca7f9d6daf30ce3fadf0}{\index{E2d\-Group@{E2d\-Group}!e2d\-Group\-Center\-At\-B\-Box@{e2d\-Group\-Center\-At\-B\-Box}}
-\index{e2d\-Group\-Center\-At\-B\-Box@{e2d\-Group\-Center\-At\-B\-Box}!E2dGroup@{E2d\-Group}}
+\hypertarget{group__e2dGroup_ga04bf94419865ca7f9d6daf30ce3fadf0}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Center\-At\-B\-Box@{e2d\-Group\-Center\-At\-B\-Box}}
+\index{e2d\-Group\-Center\-At\-B\-Box@{e2d\-Group\-Center\-At\-B\-Box}!e2dGroup@{e2d\-Group}}
 \subsubsection[{e2d\-Group\-Center\-At\-B\-Box}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Center\-At\-B\-Box} (
 \begin{DoxyParamCaption}
 \item[{{\bf e2d\-Group} $\ast$}]{group, }
@@ -99,8 +99,8 @@ Adds a transformation to the group which subtracts the position of the Bounding 
 \begin{DoxySeeAlso}{See also}
 \hyperlink{group__e2dElement_ga36b01a888c97163c990e16d348aff61c}{e2d\-Element\-Center\-At\-B\-Box()} 
 \end{DoxySeeAlso}
-\hypertarget{group__e2dGroup_gaea870c0efafe302d65baaec0b028c6fb}{\index{E2d\-Group@{E2d\-Group}!e2d\-Group\-Create@{e2d\-Group\-Create}}
-\index{e2d\-Group\-Create@{e2d\-Group\-Create}!E2dGroup@{E2d\-Group}}
+\hypertarget{group__e2dGroup_gaea870c0efafe302d65baaec0b028c6fb}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Create@{e2d\-Group\-Create}}
+\index{e2d\-Group\-Create@{e2d\-Group\-Create}!e2dGroup@{e2d\-Group}}
 \subsubsection[{e2d\-Group\-Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Group}$\ast$ {\bf e2d\-Group\-Create} (
 \begin{DoxyParamCaption}
 \item[{const {\bf e2d\-Scene} $\ast$}]{scene}
@@ -123,8 +123,8 @@ This is the constructor of \hyperlink{structe2dGroup}{e2d\-Group}. It returns a 
 \begin{DoxySeeAlso}{See also}
 \hyperlink{group__e2dGroup_ga25406e9ff8a7746af03833e40ccf259a}{e2d\-Group\-Init()} 
 \end{DoxySeeAlso}
-\hypertarget{group__e2dGroup_ga545626effa0f89b72f244e56aadb05bc}{\index{E2d\-Group@{E2d\-Group}!e2d\-Group\-Destroy@{e2d\-Group\-Destroy}}
-\index{e2d\-Group\-Destroy@{e2d\-Group\-Destroy}!E2dGroup@{E2d\-Group}}
+\hypertarget{group__e2dGroup_ga545626effa0f89b72f244e56aadb05bc}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Destroy@{e2d\-Group\-Destroy}}
+\index{e2d\-Group\-Destroy@{e2d\-Group\-Destroy}!e2dGroup@{e2d\-Group}}
 \subsubsection[{e2d\-Group\-Destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Destroy} (
 \begin{DoxyParamCaption}
 \item[{{\bf e2d\-Group} $\ast$}]{group}
@@ -146,8 +146,8 @@ Calls \hyperlink{group__e2dGroup_ga9569da6e74703187306878ec830d52c4}{e2d\-Group\
 
 \hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} 
 \end{DoxySeeAlso}
-\hypertarget{group__e2dGroup_gafa65ab615b8a0c181a2d5b88eed9fa16}{\index{E2d\-Group@{E2d\-Group}!e2d\-Group\-Flatten@{e2d\-Group\-Flatten}}
-\index{e2d\-Group\-Flatten@{e2d\-Group\-Flatten}!E2dGroup@{E2d\-Group}}
+\hypertarget{group__e2dGroup_gafa65ab615b8a0c181a2d5b88eed9fa16}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Flatten@{e2d\-Group\-Flatten}}
+\index{e2d\-Group\-Flatten@{e2d\-Group\-Flatten}!e2dGroup@{e2d\-Group}}
 \subsubsection[{e2d\-Group\-Flatten}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Flatten} (
 \begin{DoxyParamCaption}
 \item[{{\bf e2d\-Group} $\ast$}]{group}
@@ -162,8 +162,8 @@ Recursively removes all the groups which are children (directly or indirectly) a
 \mbox{\tt in}  & {\em group} & The \hyperlink{structe2dGroup}{e2d\-Group} to be flattened. \\
 \hline
 \end{DoxyParams}
-\hypertarget{group__e2dGroup_ga9569da6e74703187306878ec830d52c4}{\index{E2d\-Group@{E2d\-Group}!e2d\-Group\-Free\-Members@{e2d\-Group\-Free\-Members}}
-\index{e2d\-Group\-Free\-Members@{e2d\-Group\-Free\-Members}!E2dGroup@{E2d\-Group}}
+\hypertarget{group__e2dGroup_ga9569da6e74703187306878ec830d52c4}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Free\-Members@{e2d\-Group\-Free\-Members}}
+\index{e2d\-Group\-Free\-Members@{e2d\-Group\-Free\-Members}!e2dGroup@{e2d\-Group}}
 \subsubsection[{e2d\-Group\-Free\-Members}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Free\-Members} (
 \begin{DoxyParamCaption}
 \item[{{\bf e2d\-Group} $\ast$}]{group}
@@ -171,7 +171,7 @@ Recursively removes all the groups which are children (directly or indirectly) a
 )}}\label{group__e2dGroup_ga9569da6e74703187306878ec830d52c4}
 
 
-Will free all the allocated memory inside the \hyperlink{structe2dGroup}{e2d\-Group} struct pointed by elem, i.\-e. it calls \hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} on all the children, and frees the \hyperlink{structe2dGroup_a55f6dde874716dc99dcd270fc0999a01}{e2d\-Group\-::child\-List} array (Warning, this might change in future versions). It is called by \hyperlink{group__e2dGroup_ga545626effa0f89b72f244e56aadb05bc}{e2d\-Group\-Destroy()}. 
+Will free all the dynamically allocated memory inside the \hyperlink{structe2dGroup}{e2d\-Group} struct pointed by elem, i.\-e. it calls \hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} on all the children, and frees the \hyperlink{structe2dGroup_a55f6dde874716dc99dcd270fc0999a01}{e2d\-Group\-::child\-List} array (Warning, this might change in future versions). It is called by \hyperlink{group__e2dGroup_ga545626effa0f89b72f244e56aadb05bc}{e2d\-Group\-Destroy()}. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -183,8 +183,8 @@ Will free all the allocated memory inside the \hyperlink{structe2dGroup}{e2d\-Gr
 
 \hyperlink{group__e2dElement_ga214c437a16fe6f3fc795539f851a2019}{e2d\-Element\-Destroy()} 
 \end{DoxySeeAlso}
-\hypertarget{group__e2dGroup_gaf5a7338c446192338b764a7ac89371d5}{\index{E2d\-Group@{E2d\-Group}!e2d\-Group\-Get\-Child\-Iterator@{e2d\-Group\-Get\-Child\-Iterator}}
-\index{e2d\-Group\-Get\-Child\-Iterator@{e2d\-Group\-Get\-Child\-Iterator}!E2dGroup@{E2d\-Group}}
+\hypertarget{group__e2dGroup_gaf5a7338c446192338b764a7ac89371d5}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Get\-Child\-Iterator@{e2d\-Group\-Get\-Child\-Iterator}}
+\index{e2d\-Group\-Get\-Child\-Iterator@{e2d\-Group\-Get\-Child\-Iterator}!e2dGroup@{e2d\-Group}}
 \subsubsection[{e2d\-Group\-Get\-Child\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Group\-Iterator} {\bf e2d\-Group\-Get\-Child\-Iterator} (
 \begin{DoxyParamCaption}
 \item[{{\bf e2d\-Group} $\ast$}]{group}
@@ -204,8 +204,8 @@ Makes an iterator to the children of the group.
 {\em e2d\-Group\-Iterator$\ast$} & The iterator. \\
 \hline
 \end{DoxyRetVals}
-\hypertarget{group__e2dGroup_ga25406e9ff8a7746af03833e40ccf259a}{\index{E2d\-Group@{E2d\-Group}!e2d\-Group\-Init@{e2d\-Group\-Init}}
-\index{e2d\-Group\-Init@{e2d\-Group\-Init}!E2dGroup@{E2d\-Group}}
+\hypertarget{group__e2dGroup_ga25406e9ff8a7746af03833e40ccf259a}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Init@{e2d\-Group\-Init}}
+\index{e2d\-Group\-Init@{e2d\-Group\-Init}!e2dGroup@{e2d\-Group}}
 \subsubsection[{e2d\-Group\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf e2d\-Group\-Init} (
 \begin{DoxyParamCaption}
 \item[{{\bf e2d\-Group} $\ast$}]{group, }
@@ -228,8 +228,8 @@ This method will initialize the members of the struct, i.\-e. it will allocate t
 
 \hyperlink{group__e2dElement_ga8734d10ef40a380dfc51bfe1790a92a7}{e2d\-Element\-Init()} 
 \end{DoxySeeAlso}
-\hypertarget{group__e2dGroup_ga493d54c28198410762cfa32c97d8e646}{\index{E2d\-Group@{E2d\-Group}!e2d\-Group\-Iterator\-Has\-Next@{e2d\-Group\-Iterator\-Has\-Next}}
-\index{e2d\-Group\-Iterator\-Has\-Next@{e2d\-Group\-Iterator\-Has\-Next}!E2dGroup@{E2d\-Group}}
+\hypertarget{group__e2dGroup_ga493d54c28198410762cfa32c97d8e646}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Iterator\-Has\-Next@{e2d\-Group\-Iterator\-Has\-Next}}
+\index{e2d\-Group\-Iterator\-Has\-Next@{e2d\-Group\-Iterator\-Has\-Next}!e2dGroup@{e2d\-Group}}
 \subsubsection[{e2d\-Group\-Iterator\-Has\-Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-B\-O\-O\-L} {\bf e2d\-Group\-Iterator\-Has\-Next} (
 \begin{DoxyParamCaption}
 \item[{{\bf e2d\-Group\-Iterator} $\ast$}]{iter}
@@ -237,7 +237,7 @@ This method will initialize the members of the struct, i.\-e. it will allocate t
 )}}\label{group__e2dGroup_ga493d54c28198410762cfa32c97d8e646}
 
 
-Checks if we have a child at current element pointer by iter, if not, we have reached the end of the child list. 
+Checks if we have a child at current element pointed by iter, if not, we have reached the end of the child list. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -249,8 +249,8 @@ Checks if we have a child at current element pointer by iter, if not, we have re
 {\em E2\-D\-\_\-\-B\-O\-O\-L} & If we still have a child, returns E2\-D\-\_\-\-T\-R\-U\-E, if not, returns E2\-D\-\_\-\-F\-A\-L\-S\-E. \\
 \hline
 \end{DoxyRetVals}
-\hypertarget{group__e2dGroup_gaa5ffe3eb2b83f318df4f22272f1e1189}{\index{E2d\-Group@{E2d\-Group}!e2d\-Group\-Iterator\-Next@{e2d\-Group\-Iterator\-Next}}
-\index{e2d\-Group\-Iterator\-Next@{e2d\-Group\-Iterator\-Next}!E2dGroup@{E2d\-Group}}
+\hypertarget{group__e2dGroup_gaa5ffe3eb2b83f318df4f22272f1e1189}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Iterator\-Next@{e2d\-Group\-Iterator\-Next}}
+\index{e2d\-Group\-Iterator\-Next@{e2d\-Group\-Iterator\-Next}!e2dGroup@{e2d\-Group}}
 \subsubsection[{e2d\-Group\-Iterator\-Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Element}$\ast$ {\bf e2d\-Group\-Iterator\-Next} (
 \begin{DoxyParamCaption}
 \item[{{\bf e2d\-Group\-Iterator} $\ast$}]{iter}
@@ -267,6 +267,6 @@ Returns the current child and advances.
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{Return values}
-{\em e2d\-Element$\ast$} & The child. \\
+{\em e2d\-Element$\ast$} & The child. Remember that you can cast this pointer to the actual element type by checking \hyperlink{structe2dElement_a7df43d7f6c23b61b843acb56eb3ca19a}{e2d\-Element\-::type}. \\
 \hline
 \end{DoxyRetVals}

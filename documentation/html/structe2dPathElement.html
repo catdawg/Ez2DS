@@ -128,17 +128,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">e2dPathElement Struct Reference</div>  </div>
+<div class="title">e2dPathElement Struct Reference<div class="ingroups"><a class="el" href="group__e2dPath.html">e2dPath</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> is the "super struct" of all path elements in the scene. Its inheritting functionality works in much the same way as <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>, so you should look into it to understand..  
+ <a href="structe2dPathElement.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="e2dPath_8h_source.html">e2dPath.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:acb2ed01d1856b82777314d8eb8f66b01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb2ed01d1856b82777314d8eb8f66b01"></a>
-e2dPathElementType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
-<tr class="memitem:a88af317c0c6d0deb1aacb6cc1acd441d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88af317c0c6d0deb1aacb6cc1acd441d"></a>
-e2dPathControl&#160;</td><td class="memItemRight" valign="bottom"><b>controlType</b></td></tr>
+<tr class="memitem:acb2ed01d1856b82777314d8eb8f66b01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507">e2dPathElementType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dPathElement.html#acb2ed01d1856b82777314d8eb8f66b01">type</a></td></tr>
+<tr class="memitem:a88af317c0c6d0deb1aacb6cc1acd441d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__e2dPath.html#ga0983472830124df9cdd854f7be1b6a06">e2dPathControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dPathElement.html#a88af317c0c6d0deb1aacb6cc1acd441d">controlType</a></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> is the "super struct" of all path elements in the scene. Its inheritting functionality works in much the same way as <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>, so you should look into it to understand.. </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> </dd></dl>
+</div><hr/><h2>Field Documentation</h2>
+<a class="anchor" id="a88af317c0c6d0deb1aacb6cc1acd441d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__e2dPath.html#ga0983472830124df9cdd854f7be1b6a06">e2dPathControl</a> <a class="el" href="structe2dPathElement.html#a88af317c0c6d0deb1aacb6cc1acd441d">controlType</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>With this element you can know if you should for example, close the sub path by looping to the begginning(E2D_END_SUBPATH_LOOP) or not(E2D_END_SUBPATH), or even do nothing (E2D_NOCONTROL). </p>
+
+</div>
+</div>
+<a class="anchor" id="acb2ed01d1856b82777314d8eb8f66b01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507">e2dPathElementType</a> <a class="el" href="structe2dPathElement.html#acb2ed01d1856b82777314d8eb8f66b01">type</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Used for reflection, so that if you receive a pointer to <a class="el" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>, you can cast it to either <a class="el" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a> or <a class="el" href="structe2dPathCurve.html" title="This struct represents a curve in the path. It is a cubic bezier curve, having two control points...">e2dPathCurve</a>. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="e2dPath_8h_source.html">e2dPath.h</a></li>
 </ul>
@@ -148,7 +183,7 @@ e2dPathControl&#160;</td><td class="memItemRight" valign="bottom"><b>controlType
     <ul>
       <li class="navelem"><a class="el" href="structe2dPathElement.html">e2dPathElement</a>      </li>
 
-    <li class="footer">Generated on Wed Apr 25 2012 00:15:09 for Ez2DS by
+    <li class="footer">Generated on Sat Apr 28 2012 20:58:01 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

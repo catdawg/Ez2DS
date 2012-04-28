@@ -128,28 +128,88 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">e2dPath Struct Reference</div>  </div>
+<div class="title">e2dPath Struct Reference<div class="ingroups"><a class="el" href="group__e2dPath.html">e2dPath</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a> struct is used for holding the information of path. The struct is composed directly from the contents of the SVG path element. It "inherits" from <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> by placing it as the first element in the struct, if you typecast e2dPath* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.  
+ <a href="structe2dPath.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="e2dPath_8h_source.html">e2dPath.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for e2dPath:</div>
 <div class="dyncontent">
 <div class="center"><img src="structe2dPath__coll__graph.png" border="0" usemap="#e2dPath_coll__map" alt="Collaboration graph"/></div>
 <map name="e2dPath_coll__map" id="e2dPath_coll__map">
-<area shape="rect" id="node2" href="structe2dPathElement.html" title="e2dPathElement" alt="" coords="5,125,123,152"/><area shape="rect" id="node4" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="257,125,348,152"/><area shape="rect" id="node6" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="279,229,357,256"/><area shape="rect" id="node13" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi..." alt="" coords="333,320,413,347"/><area shape="rect" id="node9" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="210,5,283,32"/><area shape="rect" id="node11" href="structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="318,5,396,32"/></map>
+<area shape="rect" id="node2" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona..." alt="" coords="5,125,123,152"/><area shape="rect" id="node4" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="257,125,348,152"/><area shape="rect" id="node6" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="279,229,357,256"/><area shape="rect" id="node13" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi..." alt="" coords="333,320,413,347"/><area shape="rect" id="node9" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="210,5,283,32"/><area shape="rect" id="node11" href="structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="318,5,396,32"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a55bc7a3a0af41fba9e5b91f390c5928c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55bc7a3a0af41fba9e5b91f390c5928c"></a>
-<a class="el" href="structe2dElement.html">e2dElement</a>&#160;</td><td class="memItemRight" valign="bottom"><b>element</b></td></tr>
-<tr class="memitem:a225f71916c061d0c977a1e5fae371a99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a225f71916c061d0c977a1e5fae371a99"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>pathElementsNum</b></td></tr>
-<tr class="memitem:ac0c8a45ff4f8d02e557fb33887743439"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0c8a45ff4f8d02e557fb33887743439"></a>
-<a class="el" href="structe2dPathElement.html">e2dPathElement</a> **&#160;</td><td class="memItemRight" valign="bottom"><b>pathElements</b></td></tr>
-<tr class="memitem:a0922122c6ccf006fad850c6b30ae5328"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0922122c6ccf006fad850c6b30ae5328"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>pathElementsAlloc</b></td></tr>
+<tr class="memitem:a55bc7a3a0af41fba9e5b91f390c5928c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dElement.html">e2dElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dPath.html#a55bc7a3a0af41fba9e5b91f390c5928c">element</a></td></tr>
+<tr class="memitem:a225f71916c061d0c977a1e5fae371a99"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dPath.html#a225f71916c061d0c977a1e5fae371a99">pathElementsNum</a></td></tr>
+<tr class="memitem:ac0c8a45ff4f8d02e557fb33887743439"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dPathElement.html">e2dPathElement</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dPath.html#ac0c8a45ff4f8d02e557fb33887743439">pathElements</a></td></tr>
+<tr class="memitem:a0922122c6ccf006fad850c6b30ae5328"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dPath.html#a0922122c6ccf006fad850c6b30ae5328">pathElementsAlloc</a></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a> struct is used for holding the information of path. The struct is composed directly from the contents of the SVG path element. It "inherits" from <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> by placing it as the first element in the struct, if you typecast e2dPath* into e2dElement*, it will work thus mimicing inheritance in e.g. C++. </p>
+</div><hr/><h2>Field Documentation</h2>
+<a class="anchor" id="a55bc7a3a0af41fba9e5b91f390c5928c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe2dElement.html">e2dElement</a> <a class="el" href="structe2dPath.html#a55bc7a3a0af41fba9e5b91f390c5928c">element</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a> inherits from <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>. Typecasting e2dPath* to e2dElement* will work. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac0c8a45ff4f8d02e557fb33887743439"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe2dPathElement.html">e2dPathElement</a>** <a class="el" href="structe2dPath.html#ac0c8a45ff4f8d02e557fb33887743439">pathElements</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Array containing the path elements </p>
+
+</div>
+</div>
+<a class="anchor" id="a0922122c6ccf006fad850c6b30ae5328"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="structe2dPath.html#a0922122c6ccf006fad850c6b30ae5328">pathElementsAlloc</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Currently allocated memory in the <a class="el" href="structe2dPath.html#ac0c8a45ff4f8d02e557fb33887743439">e2dPath::pathElements</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a225f71916c061d0c977a1e5fae371a99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="structe2dPath.html#a225f71916c061d0c977a1e5fae371a99">pathElementsNum</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Number of elements in <a class="el" href="structe2dPath.html#ac0c8a45ff4f8d02e557fb33887743439">e2dPath::pathElements</a> Array </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="e2dPath_8h_source.html">e2dPath.h</a></li>
 </ul>
@@ -159,7 +219,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>pathElementsA
     <ul>
       <li class="navelem"><a class="el" href="structe2dPath.html">e2dPath</a>      </li>
 
-    <li class="footer">Generated on Wed Apr 25 2012 00:15:09 for Ez2DS by
+    <li class="footer">Generated on Sat Apr 28 2012 20:58:01 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

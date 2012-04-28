@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Ez2DS: E2dGroup</title>
+<title>Ez2DS: e2dGroup</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="style.css" rel="stylesheet" type="text/css" />
@@ -122,14 +122,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">E2dGroup</div>  </div>
+<div class="title">e2dGroup</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dGroup.html">e2dGroup</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct is used to group elements in the scene. This struct is created from the "g" element in SVG. It "inherits" from <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> by placing it as the first element in the struct, if you typecast e2dStruct* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.  <a href="structe2dGroup.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct is used to group elements in the scene. This struct is created from the "g" element in SVG. It "inherits" from <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> by placing it as the first element in the struct, if you typecast e2dGroup* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.  <a href="structe2dGroup.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dGroupIterator.html">e2dGroupIterator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An iterator for the children of <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>.  <a href="structe2dGroupIterator.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
@@ -139,9 +139,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga25406e9ff8a7746af03833e40ccf259a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga25406e9ff8a7746af03833e40ccf259a">e2dGroupInit</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group, const <a class="el" href="structe2dScene.html">e2dScene</a> *scene)</td></tr>
 <tr class="memdesc:ga25406e9ff8a7746af03833e40ccf259a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will initialize the members of the struct, i.e. it will allocate the <a class="el" href="structe2dGroup.html#a55f6dde874716dc99dcd270fc0999a01">e2dGroup::childList</a> array, and call <a class="el" href="group__e2dElement.html#ga8734d10ef40a380dfc51bfe1790a92a7" title="Called by the create methods of structs which inherit e2dElement (e.g. e2dGroupCreate). Will initialize all members of the struct with the parameters of this method and with default values on everything else.">e2dElementInit()</a>. It is called by <a class="el" href="group__e2dGroup.html#gaea870c0efafe302d65baaec0b028c6fb" title="This is the constructor of e2dGroup. It returns a pointer to a new e2dGroup. Inside it calls e2dGroup...">e2dGroupCreate()</a>.  <a href="#ga25406e9ff8a7746af03833e40ccf259a"></a><br/></td></tr>
 <tr class="memitem:ga545626effa0f89b72f244e56aadb05bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga545626effa0f89b72f244e56aadb05bc">e2dGroupDestroy</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group)</td></tr>
-<tr class="memdesc:ga545626effa0f89b72f244e56aadb05bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <a class="el" href="group__e2dGroup.html#ga9569da6e74703187306878ec830d52c4" title="Will free all the allocated memory inside the e2dGroup struct pointed by elem, i.e. it calls e2dElementDestroy() on all the children, and frees the e2dGroup::childList array (Warning, this might change in future versions). It is called by e2dGroupDestroy().">e2dGroupFreeMembers()</a>, <a class="el" href="group__e2dElement.html#gae8da5104d70a09549ca74044dda8313c" title="Will free all the allocated memory inside the e2dElement struct pointed by elem.">e2dElementFreeMembers()</a>, and then frees the pointer. <a class="el" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy()</a> will call this method.  <a href="#ga545626effa0f89b72f244e56aadb05bc"></a><br/></td></tr>
+<tr class="memdesc:ga545626effa0f89b72f244e56aadb05bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <a class="el" href="group__e2dGroup.html#ga9569da6e74703187306878ec830d52c4" title="Will free all the dynamically allocated memory inside the e2dGroup struct pointed by elem...">e2dGroupFreeMembers()</a>, <a class="el" href="group__e2dElement.html#gae8da5104d70a09549ca74044dda8313c" title="Will free all the dynamically allocated memory inside the e2dElement struct pointed by elem...">e2dElementFreeMembers()</a>, and then frees the pointer. <a class="el" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy()</a> will call this method.  <a href="#ga545626effa0f89b72f244e56aadb05bc"></a><br/></td></tr>
 <tr class="memitem:ga9569da6e74703187306878ec830d52c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga9569da6e74703187306878ec830d52c4">e2dGroupFreeMembers</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group)</td></tr>
-<tr class="memdesc:ga9569da6e74703187306878ec830d52c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will free all the allocated memory inside the <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct pointed by elem, i.e. it calls <a class="el" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy()</a> on all the children, and frees the <a class="el" href="structe2dGroup.html#a55f6dde874716dc99dcd270fc0999a01">e2dGroup::childList</a> array (Warning, this might change in future versions). It is called by <a class="el" href="group__e2dGroup.html#ga545626effa0f89b72f244e56aadb05bc" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy()</a>.  <a href="#ga9569da6e74703187306878ec830d52c4"></a><br/></td></tr>
+<tr class="memdesc:ga9569da6e74703187306878ec830d52c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will free all the dynamically allocated memory inside the <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct pointed by elem, i.e. it calls <a class="el" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy()</a> on all the children, and frees the <a class="el" href="structe2dGroup.html#a55f6dde874716dc99dcd270fc0999a01">e2dGroup::childList</a> array (Warning, this might change in future versions). It is called by <a class="el" href="group__e2dGroup.html#ga545626effa0f89b72f244e56aadb05bc" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy()</a>.  <a href="#ga9569da6e74703187306878ec830d52c4"></a><br/></td></tr>
 <tr class="memitem:ga6ae76730f78ad731621e9286a3980b8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga6ae76730f78ad731621e9286a3980b8a">e2dGroupAddChild</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group, <a class="el" href="structe2dElement.html">e2dElement</a> *element)</td></tr>
 <tr class="memdesc:ga6ae76730f78ad731621e9286a3980b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will add an element to the <a class="el" href="structe2dGroup.html#a55f6dde874716dc99dcd270fc0999a01">e2dGroup::childList</a> array, increasing allocated space if necessary. Also sets <a class="el" href="structe2dElement.html#a3e62eb2fbf1d6bc6d6fe549096a6cee9">e2dElement::parent</a> in "element" to be "group".  <a href="#ga6ae76730f78ad731621e9286a3980b8a"></a><br/></td></tr>
 <tr class="memitem:ga7c5f43489bbd2d36a51414aee07abf5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga7c5f43489bbd2d36a51414aee07abf5a">e2dGroupCalculateBoundingBox</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group)</td></tr>
@@ -155,7 +155,7 @@ Functions</h2></td></tr>
 <tr class="memitem:gaa5ffe3eb2b83f318df4f22272f1e1189"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#gaa5ffe3eb2b83f318df4f22272f1e1189">e2dGroupIteratorNext</a> (<a class="el" href="structe2dGroupIterator.html">e2dGroupIterator</a> *iter)</td></tr>
 <tr class="memdesc:gaa5ffe3eb2b83f318df4f22272f1e1189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current child and advances.  <a href="#gaa5ffe3eb2b83f318df4f22272f1e1189"></a><br/></td></tr>
 <tr class="memitem:ga493d54c28198410762cfa32c97d8e646"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#aac8cdc3a3bcd6b56a8c3e0bb6979cbf8">E2D_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga493d54c28198410762cfa32c97d8e646">e2dGroupIteratorHasNext</a> (<a class="el" href="structe2dGroupIterator.html">e2dGroupIterator</a> *iter)</td></tr>
-<tr class="memdesc:ga493d54c28198410762cfa32c97d8e646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if we have a child at current element pointer by iter, if not, we have reached the end of the child list.  <a href="#ga493d54c28198410762cfa32c97d8e646"></a><br/></td></tr>
+<tr class="memdesc:ga493d54c28198410762cfa32c97d8e646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if we have a child at current element pointed by iter, if not, we have reached the end of the child list.  <a href="#ga493d54c28198410762cfa32c97d8e646"></a><br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="ga6ae76730f78ad731621e9286a3980b8a"></a>
@@ -311,16 +311,16 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Calls <a class="el" href="group__e2dGroup.html#ga9569da6e74703187306878ec830d52c4" title="Will free all the allocated memory inside the e2dGroup struct pointed by elem, i.e. it calls e2dElementDestroy() on all the children, and frees the e2dGroup::childList array (Warning, this might change in future versions). It is called by e2dGroupDestroy().">e2dGroupFreeMembers()</a>, <a class="el" href="group__e2dElement.html#gae8da5104d70a09549ca74044dda8313c" title="Will free all the allocated memory inside the e2dElement struct pointed by elem.">e2dElementFreeMembers()</a>, and then frees the pointer. <a class="el" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy()</a> will call this method. </p>
+<p>Calls <a class="el" href="group__e2dGroup.html#ga9569da6e74703187306878ec830d52c4" title="Will free all the dynamically allocated memory inside the e2dGroup struct pointed by elem...">e2dGroupFreeMembers()</a>, <a class="el" href="group__e2dElement.html#gae8da5104d70a09549ca74044dda8313c" title="Will free all the dynamically allocated memory inside the e2dElement struct pointed by elem...">e2dElementFreeMembers()</a>, and then frees the pointer. <a class="el" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy()</a> will call this method. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">group</td><td>The <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct which will be destroyed.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#ga9569da6e74703187306878ec830d52c4" title="Will free all the allocated memory inside the e2dGroup struct pointed by elem, i.e. it calls e2dElementDestroy() on all the children, and frees the e2dGroup::childList array (Warning, this might change in future versions). It is called by e2dGroupDestroy().">e2dGroupFreeMembers()</a> </dd>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#ga9569da6e74703187306878ec830d52c4" title="Will free all the dynamically allocated memory inside the e2dGroup struct pointed by elem...">e2dGroupFreeMembers()</a> </dd>
 <dd>
-<a class="el" href="group__e2dElement.html#gae8da5104d70a09549ca74044dda8313c" title="Will free all the allocated memory inside the e2dElement struct pointed by elem.">e2dElementFreeMembers()</a> </dd>
+<a class="el" href="group__e2dElement.html#gae8da5104d70a09549ca74044dda8313c" title="Will free all the dynamically allocated memory inside the e2dElement struct pointed by elem...">e2dElementFreeMembers()</a> </dd>
 <dd>
 <a class="el" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy()</a> </dd></dl>
 
@@ -366,7 +366,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Will free all the allocated memory inside the <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct pointed by elem, i.e. it calls <a class="el" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy()</a> on all the children, and frees the <a class="el" href="structe2dGroup.html#a55f6dde874716dc99dcd270fc0999a01">e2dGroup::childList</a> array (Warning, this might change in future versions). It is called by <a class="el" href="group__e2dGroup.html#ga545626effa0f89b72f244e56aadb05bc" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy()</a>. </p>
+<p>Will free all the dynamically allocated memory inside the <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct pointed by elem, i.e. it calls <a class="el" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy()</a> on all the children, and frees the <a class="el" href="structe2dGroup.html#a55f6dde874716dc99dcd270fc0999a01">e2dGroup::childList</a> array (Warning, this might change in future versions). It is called by <a class="el" href="group__e2dGroup.html#ga545626effa0f89b72f244e56aadb05bc" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy()</a>. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">group</td><td>The <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct where the members will be freed.</td></tr>
@@ -464,7 +464,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Checks if we have a child at current element pointer by iter, if not, we have reached the end of the child list. </p>
+<p>Checks if we have a child at current element pointed by iter, if not, we have reached the end of the child list. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">iter</td><td>The group iterator.</td></tr>
@@ -504,7 +504,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt><b>Return values:</b></dt><dd>
   <table class="retval">
-    <tr><td class="paramname">e2dElement*</td><td>The child. </td></tr>
+    <tr><td class="paramname">e2dElement*</td><td>The child. Remember that you can cast this pointer to the actual element type by checking <a class="el" href="structe2dElement.html#a7df43d7f6c23b61b843acb56eb3ca19a">e2dElement::type</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -516,7 +516,7 @@ Functions</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Wed Apr 25 2012 00:15:08 for Ez2DS by
+    <li class="footer">Generated on Sat Apr 28 2012 20:58:00 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

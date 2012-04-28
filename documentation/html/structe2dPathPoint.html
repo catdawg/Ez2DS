@@ -128,24 +128,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">e2dPathPoint Struct Reference</div>  </div>
+<div class="title">e2dPathPoint Struct Reference<div class="ingroups"><a class="el" href="group__e2dPath.html">e2dPath</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This struct represents a point in the path. It "inherits" from <a class="el" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> by placing it as the first element in the struct, if you typecast e2dPathPoint* into e2dPathElement*, it will work thus mimicing inheritance in e.g. C++.  
+ <a href="structe2dPathPoint.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="e2dPath_8h_source.html">e2dPath.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for e2dPathPoint:</div>
 <div class="dyncontent">
 <div class="center"><img src="structe2dPathPoint__coll__graph.png" border="0" usemap="#e2dPathPoint_coll__map" alt="Collaboration graph"/></div>
 <map name="e2dPathPoint_coll__map" id="e2dPathPoint_coll__map">
-<area shape="rect" id="node2" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="5,5,77,32"/><area shape="rect" id="node4" href="structe2dPathElement.html" title="e2dPathElement" alt="" coords="102,5,220,32"/></map>
+<area shape="rect" id="node2" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="5,5,77,32"/><area shape="rect" id="node4" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona..." alt="" coords="102,5,220,32"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a88e514266530010a1a3b08198b3cc763"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88e514266530010a1a3b08198b3cc763"></a>
-<a class="el" href="structe2dPathElement.html">e2dPathElement</a>&#160;</td><td class="memItemRight" valign="bottom"><b>element</b></td></tr>
-<tr class="memitem:afff60c971a4d4728af80b4753d30c5bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afff60c971a4d4728af80b4753d30c5bf"></a>
-<a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>point</b></td></tr>
+<tr class="memitem:a88e514266530010a1a3b08198b3cc763"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dPathElement.html">e2dPathElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dPathPoint.html#a88e514266530010a1a3b08198b3cc763">element</a></td></tr>
+<tr class="memitem:afff60c971a4d4728af80b4753d30c5bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dPathPoint.html#afff60c971a4d4728af80b4753d30c5bf">point</a></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>This struct represents a point in the path. It "inherits" from <a class="el" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> by placing it as the first element in the struct, if you typecast e2dPathPoint* into e2dPathElement*, it will work thus mimicing inheritance in e.g. C++. </p>
+</div><hr/><h2>Field Documentation</h2>
+<a class="anchor" id="a88e514266530010a1a3b08198b3cc763"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe2dPathElement.html">e2dPathElement</a> <a class="el" href="structe2dPathPoint.html#a88e514266530010a1a3b08198b3cc763">element</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a> inherits from <a class="el" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>. Typecasting e2dPathPoint* to e2dPathElement* will work. </p>
+
+</div>
+</div>
+<a class="anchor" id="afff60c971a4d4728af80b4753d30c5bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe2dPoint.html">e2dPoint</a> <a class="el" href="structe2dPathPoint.html#afff60c971a4d4728af80b4753d30c5bf">point</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>The point of this path element. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="e2dPath_8h_source.html">e2dPath.h</a></li>
 </ul>
@@ -155,7 +189,7 @@ Data Fields</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="structe2dPathPoint.html">e2dPathPoint</a>      </li>
 
-    <li class="footer">Generated on Wed Apr 25 2012 00:15:09 for Ez2DS by
+    <li class="footer">Generated on Sat Apr 28 2012 20:58:01 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

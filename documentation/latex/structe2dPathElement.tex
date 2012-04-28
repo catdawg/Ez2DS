@@ -1,17 +1,41 @@
 \hypertarget{structe2dPathElement}{\section{e2d\-Path\-Element Struct Reference}
 \label{structe2dPathElement}\index{e2d\-Path\-Element@{e2d\-Path\-Element}}
 }
+
+
+The \hyperlink{structe2dPathElement}{e2d\-Path\-Element} is the \char`\"{}super struct\char`\"{} of all path elements in the scene. Its inheritting functionality works in much the same way as \hyperlink{structe2dElement}{e2d\-Element}, so you should look into it to understand..  
+
+
+
+
+{\ttfamily \#include $<$e2d\-Path.\-h$>$}
+
 \subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{structe2dPathElement_acb2ed01d1856b82777314d8eb8f66b01}{e2d\-Path\-Element\-Type {\bfseries type}}\label{structe2dPathElement_acb2ed01d1856b82777314d8eb8f66b01}
-
+\hyperlink{group__e2dPath_gabecf8438085bebe6b28b4a8fb69b1507}{e2d\-Path\-Element\-Type} \hyperlink{structe2dPathElement_acb2ed01d1856b82777314d8eb8f66b01}{type}
 \item 
-\hypertarget{structe2dPathElement_a88af317c0c6d0deb1aacb6cc1acd441d}{e2d\-Path\-Control {\bfseries control\-Type}}\label{structe2dPathElement_a88af317c0c6d0deb1aacb6cc1acd441d}
-
+\hyperlink{group__e2dPath_ga0983472830124df9cdd854f7be1b6a06}{e2d\-Path\-Control} \hyperlink{structe2dPathElement_a88af317c0c6d0deb1aacb6cc1acd441d}{control\-Type}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+The \hyperlink{structe2dPathElement}{e2d\-Path\-Element} is the \char`\"{}super struct\char`\"{} of all path elements in the scene. Its inheritting functionality works in much the same way as \hyperlink{structe2dElement}{e2d\-Element}, so you should look into it to understand.. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structe2dElement}{e2d\-Element} 
+\end{DoxySeeAlso}
+
+
+\subsection{Field Documentation}
+\hypertarget{structe2dPathElement_a88af317c0c6d0deb1aacb6cc1acd441d}{\index{e2d\-Path\-Element@{e2d\-Path\-Element}!control\-Type@{control\-Type}}
+\index{control\-Type@{control\-Type}!e2dPathElement@{e2d\-Path\-Element}}
+\subsubsection[{control\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Path\-Control} {\bf control\-Type}}}\label{structe2dPathElement_a88af317c0c6d0deb1aacb6cc1acd441d}
+With this element you can know if you should for example, close the sub path by looping to the begginning(\-E2\-D\-\_\-\-E\-N\-D\-\_\-\-S\-U\-B\-P\-A\-T\-H\-\_\-\-L\-O\-O\-P) or not(\-E2\-D\-\_\-\-E\-N\-D\-\_\-\-S\-U\-B\-P\-A\-T\-H), or even do nothing (E2\-D\-\_\-\-N\-O\-C\-O\-N\-T\-R\-O\-L). \hypertarget{structe2dPathElement_acb2ed01d1856b82777314d8eb8f66b01}{\index{e2d\-Path\-Element@{e2d\-Path\-Element}!type@{type}}
+\index{type@{type}!e2dPathElement@{e2d\-Path\-Element}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Path\-Element\-Type} {\bf type}}}\label{structe2dPathElement_acb2ed01d1856b82777314d8eb8f66b01}
+Used for reflection, so that if you receive a pointer to \hyperlink{structe2dPathElement}{e2d\-Path\-Element}, you can cast it to either \hyperlink{structe2dPathPoint}{e2d\-Path\-Point} or \hyperlink{structe2dPathCurve}{e2d\-Path\-Curve}. 
+
 The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-e2d\-Path.\-h\end{DoxyCompactItemize}
+\hyperlink{e2dPath_8h}{e2d\-Path.\-h}\end{DoxyCompactItemize}

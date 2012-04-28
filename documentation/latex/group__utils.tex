@@ -1,0 +1,111 @@
+\hypertarget{group__utils}{\section{utils}
+\label{group__utils}\index{utils@{utils}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structe2dMatrix}{e2d\-Matrix}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dMatrix}{e2d\-Matrix} struct contains the implementation of a 3x3 matrix which is row major. See \href{http://en.wikipedia.org/wiki/Row-major_order}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Row-\/major\-\_\-order} if you have doubts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__utils_gae071d0d13c408d0faa8ea81731a47746}{void \hyperlink{group__utils_gae071d0d13c408d0faa8ea81731a47746}{e2d\-Matrix\-To\-Ident} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat)}\label{group__utils_gae071d0d13c408d0faa8ea81731a47746}
+
+\begin{DoxyCompactList}\small\item\em Sets mat to be identity, basically assigns E2\-D\-\_\-\-I\-D\-E\-N\-T\-\_\-\-M\-A\-T\-R\-I\-X. \end{DoxyCompactList}\item 
+\hypertarget{group__utils_gab5e5b40fd56f6fde5ec19e09733ddb35}{void \hyperlink{group__utils_gab5e5b40fd56f6fde5ec19e09733ddb35}{e2d\-Matrix\-Set\-Col} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, unsigned int col, float val1, float val2, float val3)}\label{group__utils_gab5e5b40fd56f6fde5ec19e09733ddb35}
+
+\begin{DoxyCompactList}\small\item\em Changes the column defined by col (0 to 2) to be val1, val2 and val3. \end{DoxyCompactList}\item 
+\hypertarget{group__utils_gaca877ffd79967e78914eb5fea731300b}{void \hyperlink{group__utils_gaca877ffd79967e78914eb5fea731300b}{e2d\-Matrix\-Set\-Row} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, unsigned int row, float val1, float val2, float val3)}\label{group__utils_gaca877ffd79967e78914eb5fea731300b}
+
+\begin{DoxyCompactList}\small\item\em Changes the row defined by row (0 to 2) to be val1, val2 and val3. \end{DoxyCompactList}\item 
+\hypertarget{group__utils_ga5719742adf7b07c791323de17be257a9}{void \hyperlink{group__utils_ga5719742adf7b07c791323de17be257a9}{e2d\-Matrix\-Set\-Row\-Col} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, unsigned int row, unsigned int col, float val1)}\label{group__utils_ga5719742adf7b07c791323de17be257a9}
+
+\begin{DoxyCompactList}\small\item\em Changes the position in row \char`\"{}row\char`\"{}, column \char`\"{}col\char`\"{} to be val1. \end{DoxyCompactList}\item 
+float \hyperlink{group__utils_ga83e3deb8c27d5e63cd03a21930df0c94}{e2d\-Matrix\-Get\-Cell} (const \hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, unsigned int row, unsigned int col)
+\begin{DoxyCompactList}\small\item\em Returns the cell in row \char`\"{}row\char`\"{}, column \char`\"{}column\char`\"{}. \end{DoxyCompactList}\item 
+\hyperlink{structe2dMatrix}{e2d\-Matrix} \hyperlink{group__utils_gabb941a9a10fba12867cf6e4047bcefcc}{e2d\-Matrix\-Multiply} (const \hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, const \hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$multiplicator)
+\begin{DoxyCompactList}\small\item\em Multiplies the mat by multiplicator and returns the result in another matrix. \end{DoxyCompactList}\item 
+\hypertarget{group__utils_ga9c4bc2c260d552037b8d183ecb5dd698}{void \hyperlink{group__utils_ga9c4bc2c260d552037b8d183ecb5dd698}{e2d\-Matrix\-Set\-As\-Translation} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, float x, float y)}\label{group__utils_ga9c4bc2c260d552037b8d183ecb5dd698}
+
+\begin{DoxyCompactList}\small\item\em Places an identity matrix and sets first and second row's last cell to be x and y respectively. \end{DoxyCompactList}\item 
+\hypertarget{group__utils_ga9812a9edb91395ad042ce4475c55060f}{void \hyperlink{group__utils_ga9812a9edb91395ad042ce4475c55060f}{e2d\-Matrix\-Set\-As\-Scale} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, float x, float y)}\label{group__utils_ga9812a9edb91395ad042ce4475c55060f}
+
+\begin{DoxyCompactList}\small\item\em Places an identity matrix and sets cell (0,0) and (1,1) to be x and y respectively. \end{DoxyCompactList}\item 
+\hypertarget{group__utils_ga671b90f626035724fcf0f43d352ec3ad}{void \hyperlink{group__utils_ga671b90f626035724fcf0f43d352ec3ad}{e2d\-Matrix\-Set\-As\-Rotation} (\hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, float radians)}\label{group__utils_ga671b90f626035724fcf0f43d352ec3ad}
+
+\begin{DoxyCompactList}\small\item\em Places an identity matrix and sets a rotation according to \href{http://en.wikipedia.org/wiki/Rotation_matrix}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Rotation\-\_\-matrix}. \end{DoxyCompactList}\item 
+\hyperlink{structe2dMatrix}{e2d\-Matrix} \hyperlink{group__utils_ga86a7cb5c0d6fce078ed754195e8fe1e4}{e2d\-Matrix\-Get\-Inverse} (const \hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat)
+\begin{DoxyCompactList}\small\item\em Inverts the matrix using Cramer's rule (see \href{http://en.wikipedia.org/wiki/Cramer%27s_rule}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Cramer\%27s\-\_\-rule}) and returns the result. \end{DoxyCompactList}\item 
+\hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{group__utils_ga377eea18be8a4e88dcba9c62bffea97e}{e2d\-Matrix\-Apply\-To\-Point} (const \hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$mat, const \hyperlink{structe2dPoint}{e2d\-Point} $\ast$point)
+\begin{DoxyCompactList}\small\item\em Applies the matrix to the point transforming it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__utils_ga377eea18be8a4e88dcba9c62bffea97e}{\index{utils@{utils}!e2d\-Matrix\-Apply\-To\-Point@{e2d\-Matrix\-Apply\-To\-Point}}
+\index{e2d\-Matrix\-Apply\-To\-Point@{e2d\-Matrix\-Apply\-To\-Point}!utils@{utils}}
+\subsubsection[{e2d\-Matrix\-Apply\-To\-Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf e2d\-Matrix\-Apply\-To\-Point} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Matrix} $\ast$}]{mat, }
+\item[{const {\bf e2d\-Point} $\ast$}]{point}
+\end{DoxyParamCaption}
+)}}\label{group__utils_ga377eea18be8a4e88dcba9c62bffea97e}
+
+
+Applies the matrix to the point transforming it. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{structe2dPoint}{e2d\-Point}} & The altered point. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__utils_ga83e3deb8c27d5e63cd03a21930df0c94}{\index{utils@{utils}!e2d\-Matrix\-Get\-Cell@{e2d\-Matrix\-Get\-Cell}}
+\index{e2d\-Matrix\-Get\-Cell@{e2d\-Matrix\-Get\-Cell}!utils@{utils}}
+\subsubsection[{e2d\-Matrix\-Get\-Cell}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf e2d\-Matrix\-Get\-Cell} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Matrix} $\ast$}]{mat, }
+\item[{unsigned int}]{row, }
+\item[{unsigned int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{group__utils_ga83e3deb8c27d5e63cd03a21930df0c94}
+
+
+Returns the cell in row \char`\"{}row\char`\"{}, column \char`\"{}column\char`\"{}. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em float} & Returns the cell value. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__utils_ga86a7cb5c0d6fce078ed754195e8fe1e4}{\index{utils@{utils}!e2d\-Matrix\-Get\-Inverse@{e2d\-Matrix\-Get\-Inverse}}
+\index{e2d\-Matrix\-Get\-Inverse@{e2d\-Matrix\-Get\-Inverse}!utils@{utils}}
+\subsubsection[{e2d\-Matrix\-Get\-Inverse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Matrix} {\bf e2d\-Matrix\-Get\-Inverse} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Matrix} $\ast$}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{group__utils_ga86a7cb5c0d6fce078ed754195e8fe1e4}
+
+
+Inverts the matrix using Cramer's rule (see \href{http://en.wikipedia.org/wiki/Cramer%27s_rule}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Cramer\%27s\-\_\-rule}) and returns the result. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{structe2dMatrix}{e2d\-Matrix}} & inverted matrix. \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{group__utils_gabb941a9a10fba12867cf6e4047bcefcc}{\index{utils@{utils}!e2d\-Matrix\-Multiply@{e2d\-Matrix\-Multiply}}
+\index{e2d\-Matrix\-Multiply@{e2d\-Matrix\-Multiply}!utils@{utils}}
+\subsubsection[{e2d\-Matrix\-Multiply}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Matrix} {\bf e2d\-Matrix\-Multiply} (
+\begin{DoxyParamCaption}
+\item[{const {\bf e2d\-Matrix} $\ast$}]{mat, }
+\item[{const {\bf e2d\-Matrix} $\ast$}]{multiplicator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{group__utils_gabb941a9a10fba12867cf6e4047bcefcc}
+
+
+Multiplies the mat by multiplicator and returns the result in another matrix. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{structe2dMatrix}{e2d\-Matrix}} & The result of the multiplication. \\
+\hline
+\end{DoxyRetVals}

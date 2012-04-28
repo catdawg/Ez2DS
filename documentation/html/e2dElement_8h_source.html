@@ -172,7 +172,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00121"></a>00121     <a class="code" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
 <a name="l00122"></a>00122 
 <a name="l00129"></a>00129     <span class="keywordtype">void</span>
-<a name="l00130"></a>00130     <a class="code" href="group__e2dElement.html#gae8da5104d70a09549ca74044dda8313c" title="Will free all the allocated memory inside the e2dElement struct pointed by elem.">e2dElementFreeMembers</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
+<a name="l00130"></a>00130     <a class="code" href="group__e2dElement.html#gae8da5104d70a09549ca74044dda8313c" title="Will free all the dynamically allocated memory inside the e2dElement struct pointed by elem...">e2dElementFreeMembers</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
 <a name="l00131"></a>00131 
 <a name="l00141"></a>00141     <span class="keywordtype">void</span>
 <a name="l00142"></a>00142     <a class="code" href="group__e2dElement.html#ga5cfa0a343d3dd1a30b0addc4ec6e7f88" title="Will add an attribute to the element. Increases the size of the array if necessary.">e2dElementAddAttribute</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
@@ -195,31 +195,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00203"></a>00203     <a class="code" href="group__e2dElement.html#gab4e3f4eeba31c937a946f68617c5cb06" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePosition</a>(<span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
 <a name="l00204"></a>00204             <span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* relativeTo);
 <a name="l00205"></a>00205 
-<a name="l00221"></a>00221     <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a>
-<a name="l00222"></a>00222     <a class="code" href="group__e2dElement.html#gac3ad9f8cdc0782378c9f2e93cb7da68f" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePoint</a>(<span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
-<a name="l00223"></a>00223             <span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* relativeTo, <span class="keyword">const</span> <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> *point);
-<a name="l00224"></a>00224 
-<a name="l00236"></a>00236     <span class="keywordtype">void</span>
-<a name="l00237"></a>00237     <a class="code" href="group__e2dElement.html#ga94aa710b2da71af2091fe4d5b87ce47e" title="Will check type and calculate the appropriate method (e.g. e2dGroupCalculateBoundingBox())">e2dElementCalculateBoundingBox</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
-<a name="l00238"></a>00238     
-<a name="l00256"></a>00256     <span class="keywordtype">void</span>
-<a name="l00257"></a>00257     <a class="code" href="group__e2dElement.html#ga36b01a888c97163c990e16d348aff61c" title="Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e...">e2dElementCenterAtBBox</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
-<a name="l00258"></a>00258 
+<a name="l00222"></a>00222     <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a>
+<a name="l00223"></a>00223     <a class="code" href="group__e2dElement.html#gac3ad9f8cdc0782378c9f2e93cb7da68f" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePoint</a>(<span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
+<a name="l00224"></a>00224             <span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* relativeTo, <span class="keyword">const</span> <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> *point);
+<a name="l00225"></a>00225 
+<a name="l00237"></a>00237     <span class="keywordtype">void</span>
+<a name="l00238"></a>00238     <a class="code" href="group__e2dElement.html#ga94aa710b2da71af2091fe4d5b87ce47e" title="Will check type and calculate the appropriate method (e.g. e2dGroupCalculateBoundingBox())">e2dElementCalculateBoundingBox</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
+<a name="l00239"></a>00239     
+<a name="l00257"></a>00257     <span class="keywordtype">void</span>
+<a name="l00258"></a>00258     <a class="code" href="group__e2dElement.html#ga36b01a888c97163c990e16d348aff61c" title="Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e...">e2dElementCenterAtBBox</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
 <a name="l00259"></a>00259 
 <a name="l00260"></a>00260 
-<a name="l00265"></a>00265 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00266"></a>00266 <span class="preprocessor"></span>}
-<a name="l00267"></a>00267 <span class="preprocessor">#endif</span>
-<a name="l00268"></a>00268 <span class="preprocessor"></span>
-<a name="l00269"></a>00269 <span class="preprocessor">#endif   </span><span class="comment">/* E2DELEMENT_H */</span>
-<a name="l00270"></a>00270 
+<a name="l00261"></a>00261 
+<a name="l00266"></a>00266 <span class="preprocessor">#ifdef   __cplusplus</span>
+<a name="l00267"></a>00267 <span class="preprocessor"></span>}
+<a name="l00268"></a>00268 <span class="preprocessor">#endif</span>
+<a name="l00269"></a>00269 <span class="preprocessor"></span>
+<a name="l00270"></a>00270 <span class="preprocessor">#endif   </span><span class="comment">/* E2DELEMENT_H */</span>
+<a name="l00271"></a>00271 
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="e2dElement_8h.html">e2dElement.h</a>      </li>
 
-    <li class="footer">Generated on Wed Apr 25 2012 00:15:04 for Ez2DS by
+    <li class="footer">Generated on Sat Apr 28 2012 20:57:59 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

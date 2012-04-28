@@ -3,8 +3,16 @@
 }
 
 
-Collaboration diagram for e2d\-Path\-:
-\nopagebreak
+The \hyperlink{structe2dPath}{e2d\-Path} struct is used for holding the information of path. The struct is composed directly from the contents of the S\-V\-G path element. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dElement}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Path$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++.  
+
+
+
+
+{\ttfamily \#include $<$e2d\-Path.\-h$>$}
+
+
+
+Collaboration diagram for e2d\-Path\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,20 +22,34 @@ Collaboration diagram for e2d\-Path\-:
 \subsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{structe2dPath_a55bc7a3a0af41fba9e5b91f390c5928c}{\hyperlink{structe2dElement}{e2d\-Element} {\bfseries element}}\label{structe2dPath_a55bc7a3a0af41fba9e5b91f390c5928c}
-
+\hyperlink{structe2dElement}{e2d\-Element} \hyperlink{structe2dPath_a55bc7a3a0af41fba9e5b91f390c5928c}{element}
 \item 
-\hypertarget{structe2dPath_a225f71916c061d0c977a1e5fae371a99}{unsigned int {\bfseries path\-Elements\-Num}}\label{structe2dPath_a225f71916c061d0c977a1e5fae371a99}
-
+unsigned int \hyperlink{structe2dPath_a225f71916c061d0c977a1e5fae371a99}{path\-Elements\-Num}
 \item 
-\hypertarget{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}{\hyperlink{structe2dPathElement}{e2d\-Path\-Element} $\ast$$\ast$ {\bfseries path\-Elements}}\label{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}
-
+\hyperlink{structe2dPathElement}{e2d\-Path\-Element} $\ast$$\ast$ \hyperlink{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}{path\-Elements}
 \item 
-\hypertarget{structe2dPath_a0922122c6ccf006fad850c6b30ae5328}{unsigned int {\bfseries path\-Elements\-Alloc}}\label{structe2dPath_a0922122c6ccf006fad850c6b30ae5328}
-
+unsigned int \hyperlink{structe2dPath_a0922122c6ccf006fad850c6b30ae5328}{path\-Elements\-Alloc}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+The \hyperlink{structe2dPath}{e2d\-Path} struct is used for holding the information of path. The struct is composed directly from the contents of the S\-V\-G path element. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dElement}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Path$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. 
+
+\subsection{Field Documentation}
+\hypertarget{structe2dPath_a55bc7a3a0af41fba9e5b91f390c5928c}{\index{e2d\-Path@{e2d\-Path}!element@{element}}
+\index{element@{element}!e2dPath@{e2d\-Path}}
+\subsubsection[{element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Element} {\bf element}}}\label{structe2dPath_a55bc7a3a0af41fba9e5b91f390c5928c}
+\hyperlink{structe2dPath}{e2d\-Path} inherits from \hyperlink{structe2dElement}{e2d\-Element}. Typecasting e2d\-Path$\ast$ to e2d\-Element$\ast$ will work. \hypertarget{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}{\index{e2d\-Path@{e2d\-Path}!path\-Elements@{path\-Elements}}
+\index{path\-Elements@{path\-Elements}!e2dPath@{e2d\-Path}}
+\subsubsection[{path\-Elements}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Path\-Element}$\ast$$\ast$ {\bf path\-Elements}}}\label{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}
+Array containing the path elements \hypertarget{structe2dPath_a0922122c6ccf006fad850c6b30ae5328}{\index{e2d\-Path@{e2d\-Path}!path\-Elements\-Alloc@{path\-Elements\-Alloc}}
+\index{path\-Elements\-Alloc@{path\-Elements\-Alloc}!e2dPath@{e2d\-Path}}
+\subsubsection[{path\-Elements\-Alloc}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf path\-Elements\-Alloc}}}\label{structe2dPath_a0922122c6ccf006fad850c6b30ae5328}
+Currently allocated memory in the \hyperlink{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}{e2d\-Path\-::path\-Elements} \hypertarget{structe2dPath_a225f71916c061d0c977a1e5fae371a99}{\index{e2d\-Path@{e2d\-Path}!path\-Elements\-Num@{path\-Elements\-Num}}
+\index{path\-Elements\-Num@{path\-Elements\-Num}!e2dPath@{e2d\-Path}}
+\subsubsection[{path\-Elements\-Num}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf path\-Elements\-Num}}}\label{structe2dPath_a225f71916c061d0c977a1e5fae371a99}
+Number of elements in \hyperlink{structe2dPath_ac0c8a45ff4f8d02e557fb33887743439}{e2d\-Path\-::path\-Elements} Array 
+
 The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-e2d\-Path.\-h\end{DoxyCompactItemize}
+\hyperlink{e2dPath_8h}{e2d\-Path.\-h}\end{DoxyCompactItemize}
