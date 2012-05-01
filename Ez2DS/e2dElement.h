@@ -11,9 +11,6 @@
 #ifndef E2DELEMENT_H
 #define	E2DELEMENT_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
 
 #include "Ez2DS.h"
 #include "e2dMatrix.h"
@@ -263,9 +260,6 @@ extern "C" {
      * @}
      **/
 
-#ifdef	__cplusplus
-}
-#endif
 
 #endif	/* E2DELEMENT_H */
 

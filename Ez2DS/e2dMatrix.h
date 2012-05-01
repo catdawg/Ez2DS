@@ -13,9 +13,6 @@
 
 #include "Ez2DS.h"
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
 
     /**
      * @defgroup e2dMatrix e2dMatrix
@@ -128,9 +125,6 @@ extern "C" {
     /**
      * @}
      **/
-#ifdef	__cplusplus
-}
-#endif
 
 #endif	/* E2DMATRIX_H */
 

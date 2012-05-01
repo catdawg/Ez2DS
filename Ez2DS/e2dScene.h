@@ -11,10 +11,6 @@
 #ifndef E2DSCENE_H
 #define	E2DSCENE_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
-    
     
 #include "Ez2DS.h"
 
@@ -95,10 +91,6 @@ extern "C" {
     /**
      * @}
      **/
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif	/* E2DSCENE_H */
 

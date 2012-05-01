@@ -14,10 +14,6 @@
 #include "Ez2DS.h"
 #include "e2dElement.h"
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
     /**
      * @defgroup e2dImage e2dImage
      * @{
@@ -137,10 +133,6 @@ extern "C" {
     /**
      * @}
      **/
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif	/* E2DIMAGE_H */
 

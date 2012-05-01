@@ -16,13 +16,6 @@
 
  
 
-
-
-
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
     
     /**
      *  @brief Boolean implementation
@@ -69,26 +62,27 @@ extern "C" {
      * 
      * @retval comparable The biggest.
      **/
-#define E2D_MAX(a,b) \
-({ __typeof__ (a) _a = (a); \
-    __typeof__ (b) _b = (b); \
-    _a > _b ? _a : _b; })
 
+	
+#define E2D_MAX(X,Y) ((X) > (Y) ?  (X) : (Y))
     /**
      * @brief Returns the smallest number between a and b.
      * @retval comparable The smallest.
      **/
+#define E2D_MIN(X,Y) ((X) < (Y) ?  (X) : (Y))
+
+/* Here lie  very cool macroS that didn't work in msvc ;_;
 #define E2D_MIN(a,b) \
 ({ __typeof__ (a) _a = (a); \
     __typeof__ (b) _b = (b); \
     _a < _b ? _a : _b; })
 
+	#define E2D_MAX(a,b) \
+({ __typeof__ (a) _a = (a); \
+    __typeof__ (b) _b = (b); \
+    _a > _b ? _a : _b; })
+	*/
 
-
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif	/* EZ2DS_H */
 

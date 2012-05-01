@@ -14,9 +14,6 @@
 #include "Ez2DS.h"
 #include "e2dElement.h"
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
     /**
      * @defgroup e2dGroup e2dGroup
      * @{
@@ -213,10 +210,6 @@ extern "C" {
     /**
      * @}
      **/
-
-#ifdef	__cplusplus
-}
-#endif
 
 #endif	/* E2DGROUP_H */
 
