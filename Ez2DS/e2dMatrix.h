@@ -62,7 +62,7 @@ extern "C" {
      *  @brief Changes the position in row "row", column "col" to be val1.
      **/
     inline void
-    e2dMatrixSetRowCol(e2dMatrix* mat,
+    e2dMatrixSetCell(e2dMatrix* mat,
             unsigned int row,
             unsigned int col,
             float val1);
