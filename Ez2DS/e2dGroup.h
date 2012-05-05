@@ -50,7 +50,7 @@
      * @see e2dGroupInit()
      *
      **/
-    e2dGroup*
+    E2D_EXPORT e2dGroup*
     e2dGroupCreate(const e2dScene* scene);
 
     /**
@@ -67,7 +67,7 @@
      * @see e2dElementInit()
      *
      **/
-    void
+    E2D_EXPORT void
     e2dGroupInit(e2dGroup *group, const e2dScene* scene);
 
 
@@ -81,7 +81,7 @@
      * @see e2dElementFreeMembers()
      * @see e2dElementDestroy()
      **/
-    void
+    E2D_EXPORT void
     e2dGroupDestroy(e2dGroup* group);    
     
     /**
@@ -95,7 +95,7 @@
      * @see e2dGroupDestroy()
      * @see e2dElementDestroy()
      **/
-    void
+    E2D_EXPORT void
     e2dGroupFreeMembers(e2dGroup* group);
 
     /**
@@ -108,7 +108,7 @@
      * 
      * 
      **/
-    void
+    E2D_EXPORT void 
     e2dGroupAddChild(e2dGroup* group, e2dElement* element);
 
     /**
@@ -122,7 +122,7 @@
      * 
      * @see e2dElementCalculateBoundingBox()
      **/
-    void
+    E2D_EXPORT void
     e2dGroupCalculateBoundingBox(e2dGroup* group);
 
     /**
@@ -138,7 +138,7 @@
      * 
      * @see e2dElementCenterAtBBox()
      **/
-    void
+    E2D_EXPORT void
     e2dGroupCenterAtBBox(e2dGroup* group, float tx, float ty);
 
     /**
@@ -152,7 +152,7 @@
      * @param [in] group  The e2dGroup to be flattened.
      * 
      **/
-    void
+    E2D_EXPORT void
     e2dGroupFlatten(e2dGroup* group);
 
 
@@ -175,7 +175,7 @@
      * 
      *
      **/
-    e2dGroupIterator
+    E2D_EXPORT e2dGroupIterator
     e2dGroupGetChildIterator(e2dGroup* group);
 
     /**
@@ -188,7 +188,7 @@
      * 
      *
      **/
-    e2dElement*
+    E2D_EXPORT e2dElement* 
     e2dGroupIteratorNext(e2dGroupIterator* iter);
 
     /**
@@ -202,7 +202,7 @@
      * 
      *
      **/
-    E2D_BOOL
+    E2D_EXPORT E2D_BOOL
     e2dGroupIteratorHasNext(e2dGroupIterator* iter);
 
 

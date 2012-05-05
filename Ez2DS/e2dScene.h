@@ -25,7 +25,7 @@
      * can be accessed.
      * 
      **/
-    struct e2dScene{
+    struct e2dScene {
         e2dGroup* root; /**< The root of the scene **/
     };
     
@@ -47,7 +47,8 @@
      * @see e2dElementGetRelativePoint()
      *
      **/
-    void e2dSceneCalculateEffectiveTransforms(e2dScene* scene); 
+    E2D_EXPORT void 
+    e2dSceneCalculateEffectiveTransforms(e2dScene* scene); 
     
     /**
      * @brief   Calls e2dElementCenterAtBBox on all the elements in the scene. Needs
@@ -61,7 +62,8 @@
      * @see e2dGroupCenterAtBBox()
      * @see e2dSceneCalculateAllBBox()
      **/
-    void e2dSceneCenterAllAtBBox(e2dScene* scene, float tx, float ty);
+    E2D_EXPORT void 
+    e2dSceneCenterAllAtBBox(e2dScene* scene, float tx, float ty);
     
     
     /**
@@ -72,7 +74,8 @@
      * 
      * @see e2dGroupCenterAtBBox()
      **/
-    void e2dSceneCalculateAllBBox(e2dScene* scene);
+    E2D_EXPORT void 
+    e2dSceneCalculateAllBBox(e2dScene* scene);
     
     
 
@@ -85,7 +88,8 @@
      * @retval e2dScene The newly created scene.
      * 
      **/
-    e2dScene* createSceneFromFile(char* file);
+    E2D_EXPORT e2dScene* 
+    createSceneFromFile(char* file);
     
 
     /**

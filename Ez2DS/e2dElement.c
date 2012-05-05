@@ -11,8 +11,8 @@
 #define INITIAL_ATTRIBUTE_ALLOC 4
 
 void
-e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene* scene)  {
-    
+e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene* scene) {
+
     e2dMatrixToIdent(&(element->localTransform));
     e2dMatrixToIdent(&(element->effectiveTransform));
     element->type = type;
@@ -20,13 +20,13 @@ e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene* scene) 
     static int id = 0;
     element->unique_id = id++;
     element->id = 0;
-    
-    
+
+
     element->attributeNum = 0;
-    element->attributeNames = (char**) malloc(sizeof (char*)*INITIAL_ATTRIBUTE_ALLOC);
-    element->attributeValues = (char**) malloc(sizeof (char*)*INITIAL_ATTRIBUTE_ALLOC);
+    element->attributeNames = (char**) malloc(sizeof (char*) *INITIAL_ATTRIBUTE_ALLOC);
+    element->attributeValues = (char**) malloc(sizeof (char*) *INITIAL_ATTRIBUTE_ALLOC);
     element->attributeAlloc = INITIAL_ATTRIBUTE_ALLOC;
-    
+
     element->parent = 0;
 
     element->bboxHeight = -1;
@@ -36,17 +36,16 @@ e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene* scene) 
 
 }
 
-void 
-e2dElementFreeMembers(e2dElement* elem)  {
-    int i;
-    for(i = 0; i < elem->attributeNum; ++i)
-    {
+void
+e2dElementFreeMembers(e2dElement* elem) {
+    unsigned int i;
+    for (i = 0; i < elem->attributeNum; ++i) {
         free(elem->attributeNames[i]);
         free(elem->attributeValues[i]);
     }
     free(elem->attributeNames);
     free(elem->attributeValues);
-    if(elem->id)
+    if (elem->id)
         free(elem->id);
 }
 
@@ -67,42 +66,44 @@ e2dElementDestroy(e2dElement* elem) {
     }
 }
 
-static void 
+static void
 e2dElementIncreaseAttributeSpace(e2dElement* element) {
     element->attributeAlloc *= 2;
     element->attributeNames = (char**) realloc(element->attributeNames, element->attributeAlloc * sizeof (char*));
     element->attributeValues = (char**) realloc(element->attributeValues, element->attributeAlloc * sizeof (char*));
 }
 
-void 
-e2dElementAddAttribute(e2dElement* element, const char* name, const char* value)  {
+void
+e2dElementAddAttribute(e2dElement* element, const char* name, const char* value) {
     if (element->attributeNum + 1 > element->attributeAlloc)
         e2dElementIncreaseAttributeSpace(element);
-    
-    element->attributeNames[element->attributeNum] = 
-            (char*)malloc(sizeof(char)*(strlen(name) + 1));
+
+    unsigned int size = strlen(name);
+    element->attributeNames[element->attributeNum] =
+            (char*) malloc(sizeof (char) *(size + 1));
     strcpy(element->attributeNames[element->attributeNum], name);
-    
-    element->attributeValues[element->attributeNum] = 
-            (char*)malloc(sizeof(char)*(strlen(value) + 1));
+
+    size = strlen(value);
+    element->attributeValues[element->attributeNum] =
+            (char*) malloc(sizeof (char) *(size + 1));
     strcpy(element->attributeValues[element->attributeNum], value);
-    
+
     element->attributeNum++;
 }
 
 const char*
-e2dElementGetAttribute(e2dElement* element, 
-        const char* name)  {
-    int i;
+e2dElementGetAttribute(e2dElement* element,
+        const char* name) {
+    unsigned int i;
     const char* n1;
     const char* n2;
-    for(i = 0; i < element->attributeNum; ++i)
-    {
+    for (i = 0; i < element->attributeNum; ++i) {
         n1 = name;
         n2 = element->attributeNames[i];
-        if(!strcmp(name, element->attributeNames[i]))
+        if (!strcmp(name, element->attributeNames[i]))
             return element->attributeNames[i];
     }
+    return E2D_NULL;
 }
 
 e2dPoint
@@ -121,18 +122,18 @@ e2dElementGetWorldPosition(const e2dElement* elem) {
     return e2dMatrixApplyToPoint(&mat, &localP);
 }
 
-e2dPoint 
-e2dElementGetRelativePosition(const e2dElement* elem, 
-        const e2dElement* relativeTo)   {
+e2dPoint
+e2dElementGetRelativePosition(const e2dElement* elem,
+        const e2dElement* relativeTo) {
     e2dMatrix mat = e2dMatrixMultiply(&(relativeTo->effectiveTransform),
             &(elem->inverseEffectiveTransform));
     e2dPoint localP = e2dElementGetLocalPosition(elem);
     return e2dMatrixApplyToPoint(&mat, &localP);
 }
 
-e2dPoint 
-e2dElementGetRelativePoint(const e2dElement* elem, 
-        const e2dElement* relativeTo, const e2dPoint *point)  {
+e2dPoint
+e2dElementGetRelativePoint(const e2dElement* elem,
+        const e2dElement* relativeTo, const e2dPoint *point) {
     e2dMatrix mat = e2dMatrixMultiply(&(relativeTo->effectiveTransform),
             &(elem->inverseEffectiveTransform));
     return e2dMatrixApplyToPoint(&mat, point);

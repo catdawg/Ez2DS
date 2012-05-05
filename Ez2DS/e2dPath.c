@@ -30,7 +30,7 @@ e2dPathDestroy(e2dPath* path) {
 void
 e2dPathFreeMembers(e2dPath* path) {
 
-    int i;
+    unsigned int i;
     for (i = 0; i < path->pathElementsNum; ++i)
         e2dPathElementDestroy(path->pathElements[i]);
     free(path->pathElements);
@@ -82,7 +82,7 @@ e2dPathCurveCalculateBBox(e2dPathCurve* curve, float* min_x, float* min_y, float
         float b = dcx1;
         float c = dcx2;
         if (a + c != 2 * b) {
-            b += 0.01;
+            b += 0.01f;
         }
 
         float numerator = 2 * (a - b);
@@ -123,7 +123,7 @@ e2dPathCurveCalculateBBox(e2dPathCurve* curve, float* min_x, float* min_y, float
         float b = dcy1;
         float c = dcy2;
         if (a + c != 2 * b) {
-            b += 0.01;
+            b += 0.01f;
         }
 
         float numerator = 2 * (a - b);
@@ -167,7 +167,7 @@ e2dPathCalculateBoundingBox(e2dPath* path) {
     float min_y = FLT_MAX;
     float max_y = -FLT_MAX;
 
-    int i;
+    unsigned int i;
     e2dPathElement* pathElem;
     for (i = 0; i < path->pathElementsNum; ++i) {
         pathElem = path->pathElements[i];
@@ -215,7 +215,7 @@ e2dPathCenterAtBBox(e2dPath* path, float tx, float ty) {
     path->element.localTransform =
             e2dMatrixMultiply(&path->element.localTransform, &mat);
 
-    int i;
+    unsigned int i;
     e2dPathElement* pathElem;
     for (i = 0; i < path->pathElementsNum; ++i) {
         pathElem = path->pathElements[i];

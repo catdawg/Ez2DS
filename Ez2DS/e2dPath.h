@@ -121,7 +121,7 @@
      * @see e2dPathInit()
      *
      **/
-    e2dPath*
+    E2D_EXPORT e2dPath* 
     e2dPathCreate(const e2dScene* scene);
     
     /**
@@ -138,7 +138,7 @@
      * @see e2dElementInit()
      *
      **/
-    void
+    E2D_EXPORT void 
     e2dPathInit(e2dPath *path, const e2dScene* scene);
 
     /**
@@ -151,7 +151,7 @@
      * @see e2dElementFreeMembers()
      * @see e2dElementDestroy()
      **/
-    void
+    E2D_EXPORT void 
     e2dPathDestroy(e2dPath* path);
 
     /**
@@ -163,7 +163,7 @@
      * @see e2dPathDestroy()
      * @see e2dElementDestroy()
      **/
-    void
+    E2D_EXPORT void 
     e2dPathFreeMembers(e2dPath* path);
 
     /**
@@ -180,7 +180,7 @@
      * @see e2dCurveCreate()
      *
      **/
-    void
+    E2D_EXPORT void 
     e2dPathElementInit(e2dPathElement* elem, e2dPathElementType type);
 
     /**
@@ -192,7 +192,7 @@
      * @see e2dPointDestroy()
      * @see e2dCurveDestroy()
      **/
-    void
+    E2D_EXPORT void 
     e2dPathElementDestroy(e2dPathElement* elem);
 
     /**
@@ -202,7 +202,7 @@
      *
      * @param [in] elem  The e2dPathElement struct where the members will be freed.
      **/
-    void
+    E2D_EXPORT void 
     e2dPathElementFreeMembers(e2dPathElement* elem);
 
     /**
@@ -215,7 +215,7 @@
      * @see e2dPathPointInit()
      *
      **/
-    e2dPathPoint*
+    E2D_EXPORT e2dPathPoint* 
     e2dPathPointCreate();
 
     /**
@@ -232,7 +232,7 @@
      * @see e2dPathElementInit()
      *
      **/
-    void
+    E2D_EXPORT void 
     e2dPathPointInit(e2dPathPoint* point);
 
     /**
@@ -245,7 +245,7 @@
      * @see e2dPathElementFreeMembers()
      * @see e2dPathElementDestroy()
      **/
-    void
+    E2D_EXPORT void 
     e2dPathPointDestroy(e2dPathPoint* point);
 
     /**
@@ -258,7 +258,7 @@
      * @see e2dPathPointDestroy()
      * @see e2dPathElementDestroy()
      **/
-    void
+    E2D_EXPORT void 
     e2dPathPointFreeMembers(e2dPathPoint* point);
 
     /**
@@ -271,7 +271,7 @@
      * @see e2dPathCurveInit()
      *
      **/
-    e2dPathCurve*
+    E2D_EXPORT e2dPathCurve* 
     e2dPathCurveCreate();
     
     /**
@@ -288,7 +288,7 @@
      * @see e2dPathElementInit()
      *
      **/
-    void
+    E2D_EXPORT void 
     e2dPathCurveInit(e2dPathCurve* curve);
 
     /**
@@ -301,7 +301,7 @@
      * @see e2dPathElementFreeMembers()
      * @see e2dPathElementDestroy()
      **/
-    void
+    E2D_EXPORT void 
     e2dPathCurveDestroy(e2dPathCurve* curve);
 
     /**
@@ -314,7 +314,7 @@
      * @see e2dPathCurveDestroy()
      * @see e2dPathElementDestroy()
      **/
-    void
+    E2D_EXPORT void 
     e2dPathCurveFreeMembers(e2dPathCurve* curve);
     
     /**
@@ -325,7 +325,7 @@
     * @param [in] elem  The new path element.
     * 
     */
-    void
+    E2D_EXPORT void 
     e2dPathAddPathElement(e2dPath* path, e2dPathElement *elem);
     
     /**
@@ -338,7 +338,7 @@
      * 
      * @see e2dElementCalculateBoundingBox()
      **/
-    void
+    E2D_EXPORT void 
     e2dPathCalculateBoundingBox(e2dPath* path);
 
         /**
@@ -354,7 +354,7 @@
      * 
      * @see e2dElementCenterAtBBox()
      **/
-    void
+    E2D_EXPORT void 
     e2dPathCenterAtBBox(e2dPath* path, float tx, float ty);
 
     /**
@@ -374,7 +374,7 @@
      * 
      *
      **/
-    e2dPathElementIterator
+    E2D_EXPORT e2dPathElementIterator 
     e2dPathGetElementIterator(e2dPath* path);
     
     /**
@@ -387,7 +387,7 @@
      * 
      *
      **/
-    e2dPathElement*
+    E2D_EXPORT e2dPathElement* 
     e2dPathElementIteratorNext(e2dPathElementIterator* iter);
     
     /**
@@ -401,7 +401,7 @@
      * 
      *
      **/
-    E2D_BOOL
+    E2D_EXPORT E2D_BOOL 
     e2dPathElementIteratorHasNext(e2dPathElementIterator* iter);
 
     /**

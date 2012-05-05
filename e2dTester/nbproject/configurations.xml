@@ -44,6 +44,7 @@
             <pElem>dependencies/gl/include</pElem>
             <pElem>dependencies/IL/include</pElem>
           </incDir>
+          <commandLine>-Wall</commandLine>
         </cTool>
         <linkerTool>
           <linkerAddLib>

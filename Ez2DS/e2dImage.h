@@ -52,7 +52,7 @@
      * @see e2dImageInit()
      *
      **/
-    e2dImage*
+    E2D_EXPORT e2dImage* 
     e2dImageCreate(const e2dScene* scene);
 
     /**
@@ -69,7 +69,7 @@
      * @see e2dElementInit()
      *
      **/
-    void
+    E2D_EXPORT void 
     e2dImageInit(e2dImage *image, const e2dScene* scene);
 
     /**
@@ -82,7 +82,7 @@
      * @see e2dElementFreeMembers()
      * @see e2dElementDestroy()
      **/
-    void
+    void E2D_EXPORT 
     e2dImageDestroy(e2dImage* image);
     
     /**
@@ -95,7 +95,7 @@
      * @see e2dImageDestroy()
      * @see e2dElementDestroy()
      **/
-    void
+    E2D_EXPORT void 
     e2dImageFreeMembers(e2dImage* image);
 
     /**
@@ -110,7 +110,7 @@
      * 
      * @see e2dElementCalculateBoundingBox()
      **/
-    void
+    E2D_EXPORT void 
     e2dImageCalculateBoundingBox(e2dImage* image);
 
     /**
@@ -126,7 +126,7 @@
      * 
      * @see e2dElementCenterAtBBox()
      **/
-    void
+    E2D_EXPORT void 
     e2dImageCenterAtBBox(e2dImage* image, float tx, float ty);
 
 

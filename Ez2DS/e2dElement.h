@@ -41,7 +41,7 @@
      *  meant to be "substructs" of it.
      * 
      **/
-    struct e2dElement {
+     struct e2dElement {
         e2dScene* scene;/**< Belongs to this scene **/
         e2dElementType type;/**< Used for reflection **/
         char* id;/**< ID taken from SVG **/
@@ -114,7 +114,7 @@
      * @see e2dImageDestroy()
      * @see e2dPathDestroy()
      **/
-    void
+    void E2D_EXPORT 
     e2dElementDestroy(e2dElement* elem);
 
     /**
@@ -123,7 +123,7 @@
      *
      * @param [in] elem  The e2dElement struct where the members will be freed.
      **/
-    void
+    void E2D_EXPORT 
     e2dElementFreeMembers(e2dElement* elem);
 
     /**
@@ -135,7 +135,7 @@
     * @param [in] value The value of the attribute.
     * 
     */
-    void
+    E2D_EXPORT void 
     e2dElementAddAttribute(e2dElement* elem,
             const char* name, const char* value);
 
@@ -151,7 +151,7 @@
     * @retval const char* The value of the name. Null if not found.
     * 
     */
-    const char*
+    E2D_EXPORT const char*
     e2dElementGetAttribute(e2dElement* elem,
             const char* name);
 
@@ -162,7 +162,7 @@
     * 
     * @retval e2dPoint The position.
     **/
-    e2dPoint
+    E2D_EXPORT e2dPoint 
     e2dElementGetLocalPosition(const e2dElement* elem);
 
     /**
@@ -178,7 +178,7 @@
      * @see e2dElementGetLocalPosition()
      * @see e2dSceneCalculateEffectiveTransforms()
     **/
-    e2dPoint
+    E2D_EXPORT e2dPoint 
     e2dElementGetWorldPosition(const e2dElement* elem);
     
     /**
@@ -196,7 +196,7 @@
      * @see e2dElementGetLocalPosition()
      * @see e2dSceneCalculateEffectiveTransforms()
     **/
-    e2dPoint
+    E2D_EXPORT e2dPoint 
     e2dElementGetRelativePosition(const e2dElement* elem,
             const e2dElement* relativeTo);
 
@@ -216,7 +216,7 @@
      * @see e2dElementGetLocalPosition()
      * @see e2dSceneCalculateEffectiveTransforms()
     **/
-    e2dPoint
+    E2D_EXPORT e2dPoint 
     e2dElementGetRelativePoint(const e2dElement* elem,
             const e2dElement* relativeTo, const e2dPoint *point);
 
@@ -231,7 +231,7 @@
      * @see e2dPathCalculateBoundingBox()
      * 
     **/
-    void
+    E2D_EXPORT void
     e2dElementCalculateBoundingBox(e2dElement* elem);
     
     /**
@@ -251,7 +251,7 @@
      * @see e2dImageCenterAtBBox()
      * @see e2dPathCenterAtBBox()
     **/
-    void
+    E2D_EXPORT void 
     e2dElementCenterAtBBox(e2dElement* elem, float tx, float ty);
 
 

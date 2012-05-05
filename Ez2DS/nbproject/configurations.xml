@@ -52,6 +52,7 @@
           <incDir>
             <pElem>dependencies/mxml-2.7/include</pElem>
           </incDir>
+          <commandLine>-Wall</commandLine>
         </cTool>
         <linkerTool>
           <linkerAddLib>

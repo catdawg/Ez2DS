@@ -2,7 +2,7 @@
  * File:   Ez2DSDebugDraw.h
  * Author: Rui
  *
- * Created on 6 de Fevereiro de 2012, 22:30
+ * Created on 6 de Fevereiro de 2012, 22:30 
  */
 
 #ifndef EZ2DSDEBUGDRAW_H

@@ -74,8 +74,6 @@ e2dGroupCalculateBoundingBox(e2dGroup* group) {
     e2dPoint nextBBoxPoint1, nextBBoxPoint2, nextBBoxPoint3, nextBBoxPoint4;
     float min_x, min_y, max_x, max_y;
     
-    e2dMatrix mat;
-
     e2dGroupIterator iter = e2dGroupGetChildIterator(group);
     e2dElement* elem;
     while(e2dGroupIteratorHasNext(&iter))  {
@@ -161,7 +159,7 @@ e2dGroupCenterAtBBox(e2dGroup* group, float tx, float ty) {
 void _e2dGroupFlatten(e2dGroup* destination, e2dElement** childList, 
         unsigned int childNum, e2dMatrix currentTransform)  {
     
-    int i;
+    unsigned int i;
     e2dElement* elem;
     e2dMatrix nextTransform;
     for(i = 0; i < childNum; i++)  {

@@ -29,7 +29,7 @@ parseTransform(mxml_node_t* node)  {
     char* val;
     
     //copy everything for use with strtok, plus 1 for \0
-    char* values_copied = calloc(strlen(values) + 1, sizeof(char)); 
+    char* values_copied = (char*)calloc(strlen(values) + 1, sizeof(char)); 
     memcpy(values_copied, values, strlen(values));
 
     //read the values and convert them to floats
@@ -38,7 +38,7 @@ parseTransform(mxml_node_t* node)  {
     val = strtok(values_copied, ",");
     while(val != E2D_NULL)
     {
-        f[i] = atof(val);
+        f[i] = (float)atof(val);
         val = strtok(E2D_NULL, ",");
         ++i;
     }
@@ -92,19 +92,19 @@ e2dImage* parseImage(mxml_node_t* node, e2dScene* scene)  {
     
     const char* value = mxmlElementGetAttr(node, "x");
     if(value != NULL)
-        image->position.x = atof(value);
+        image->position.x = (float)atof(value);
     
     value = mxmlElementGetAttr(node, "y");
     if(value != NULL)
-        image->position.y = atof(value);
+        image->position.y = (float)atof(value);
     
     value = mxmlElementGetAttr(node, "width");
     if(value != NULL)
-        image->width = atof(value);
+        image->width = (float)atof(value);
     
     value = mxmlElementGetAttr(node, "height");
     if(value != NULL)
-        image->height = atof(value);
+        image->height = (float)atof(value);
    
     value = mxmlElementGetAttr(node, "xlink:href");
     if(value != NULL)
@@ -126,7 +126,7 @@ parseNumber(const char** points)  {
     
     points_aux++;
     
-    double num = atof(*points);
+    float num = (float)atof(*points);
     *points = points_aux;
     return num;
 }
@@ -427,7 +427,7 @@ parsePathElements(e2dPath* path, const char* points)  {
         {
             relative = !isupper(*points);
             //remove the command
-            *points++;
+            points++;
             parseVerticalTo(path, &points, &currentPoint, relative);
             continue;
         }
@@ -545,19 +545,19 @@ parseGroup(mxml_node_t* node, e2dScene* scene)  {
     {
         const char* value = mxmlElementGetAttr(node, "x");
         if(value != NULL)
-            group->element.bboxPosition.x = atof(value);
+            group->element.bboxPosition.x = (float)atof(value);
 
         value = mxmlElementGetAttr(node, "y");
         if(value != NULL)
-            group->element.bboxPosition.y = atof(value);
+            group->element.bboxPosition.y = (float)atof(value);
 
         value = mxmlElementGetAttr(node, "width");
         if(value != NULL)
-            group->element.bboxWidth = atof(value);
+            group->element.bboxWidth = (float)atof(value);
 
         value = mxmlElementGetAttr(node, "height");
         if(value != NULL)
-            group->element.bboxHeight = atof(value);
+            group->element.bboxHeight = (float)atof(value);
     }
     parseChildElements(node, scene, group);
     return group;
