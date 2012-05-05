@@ -13,12 +13,13 @@ If you want to work on the lib I strongly recommend using Netbeans with MinGW. J
 
 If you want to compile it for production use, you can use [CMake](http://www.cmake.org/cmake/help/runningcmake.html).  I'm currently working on this, here is the status:
 
-#####Main library (Ez2DS):
+#####Main library (Ez2DS)
 
-**Dependencies**:
+Dependencies:
+
 Included in the project for both Unix and Win32 (only mxml anyway)
 
-**CMake**:
+CMake:
 
 MinGW - Works
 
@@ -28,11 +29,11 @@ Unix and OSx - Not tested, but should work if MinGW works. Just make sure you ha
 
 #####Test program (e2dTester)
 
-**Dependencies**:
+Dependencies:
 
-Dependencies are only included for Win32 (since they work on MinGW and MSVC). Unix users will have to install the dependencies. They are Glut (OpenGL also but it should be already there and DevIL.
+Only included for Win32 (since they work on MinGW and MSVC). Unix users will have to install the dependencies. They are Glut (OpenGL also but it should be already there and DevIL.
 
-**CMake**:
+CMake:
 
 MinGW - Compiles on Netbeans, but not on CMake yet
 
