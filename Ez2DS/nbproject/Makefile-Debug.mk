@@ -14,11 +14,11 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=gcc
-CCC=g++
-CXX=g++
-FC=gfortran
-AS=as
+CC=gcc.exe
+CCC=g++.exe
+CXX=g++.exe
+FC=gfortran.exe
+AS=as.exe
 
 # Macros
 CND_PLATFORM=MinGW-Windows
@@ -57,15 +57,15 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Ldependencies/mxml-2.7/lib -lmxml
+LDLIBSOPTIONS=-Ldependencies/mxml-2.7/libunix -lmxml1
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libEz2DS.dll
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS_d.dll
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libEz2DS.dll: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS_d.dll: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -shared -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libEz2DS.dll ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.c} -shared -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS_d.dll ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/e2dImage.o: e2dImage.c 
 	${MKDIR} -p ${OBJECTDIR}
@@ -108,7 +108,7 @@ ${OBJECTDIR}/e2dScene.o: e2dScene.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libEz2DS.dll
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS_d.dll
 
 # Subprojects
 .clean-subprojects:

@@ -9,16 +9,16 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=MinGW-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW-Windows
-CND_ARTIFACT_NAME_Debug=libEz2DS.dll
-CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/libEz2DS.dll
+CND_ARTIFACT_NAME_Debug=Ez2DS_d.dll
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/Ez2DS_d.dll
 CND_PACKAGE_DIR_Debug=dist/Debug/MinGW-Windows/package
 CND_PACKAGE_NAME_Debug=libEz2DS.dll.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/libEz2DS.dll.tar
 # Release configuration
 CND_PLATFORM_Release=MinGW-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/MinGW-Windows
-CND_ARTIFACT_NAME_Release=libEz2DS.dll
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/libEz2DS.dll
+CND_ARTIFACT_NAME_Release=Ez2DS.dll
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/Ez2DS.dll
 CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
 CND_PACKAGE_NAME_Release=libEz2DS.dll.tar
 CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/libEz2DS.dll.tar

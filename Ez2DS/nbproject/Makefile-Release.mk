@@ -14,11 +14,11 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=gcc
-CCC=g++
-CXX=g++
-FC=gfortran
-AS=as
+CC=gcc.exe
+CCC=g++.exe
+CXX=g++.exe
+FC=gfortran.exe
+AS=as.exe
 
 # Macros
 CND_PLATFORM=MinGW-Windows
@@ -44,7 +44,7 @@ OBJECTFILES= \
 
 
 # C Compiler Flags
-CFLAGS=
+CFLAGS=-Wall
 
 # CC Compiler Flags
 CCFLAGS=
@@ -57,50 +57,50 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-Ldependencies/mxml-2.7/libunix -lmxml1
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libEz2DS.dll
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS.dll
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libEz2DS.dll: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS.dll: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -shared -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libEz2DS.dll ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.c} -shared -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS.dll ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/e2dImage.o: e2dImage.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dImage.o e2dImage.c
+	$(COMPILE.c) -O2 -Idependencies/mxml-2.7/include  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dImage.o e2dImage.c
 
 ${OBJECTDIR}/e2dMatrix.o: e2dMatrix.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dMatrix.o e2dMatrix.c
+	$(COMPILE.c) -O2 -Idependencies/mxml-2.7/include  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dMatrix.o e2dMatrix.c
 
 ${OBJECTDIR}/e2dPath.o: e2dPath.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dPath.o e2dPath.c
+	$(COMPILE.c) -O2 -Idependencies/mxml-2.7/include  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dPath.o e2dPath.c
 
 ${OBJECTDIR}/e2dPoint.o: e2dPoint.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dPoint.o e2dPoint.c
+	$(COMPILE.c) -O2 -Idependencies/mxml-2.7/include  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dPoint.o e2dPoint.c
 
 ${OBJECTDIR}/e2dElement.o: e2dElement.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dElement.o e2dElement.c
+	$(COMPILE.c) -O2 -Idependencies/mxml-2.7/include  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dElement.o e2dElement.c
 
 ${OBJECTDIR}/e2dGroup.o: e2dGroup.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dGroup.o e2dGroup.c
+	$(COMPILE.c) -O2 -Idependencies/mxml-2.7/include  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dGroup.o e2dGroup.c
 
 ${OBJECTDIR}/e2dScene.o: e2dScene.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dScene.o e2dScene.c
+	$(COMPILE.c) -O2 -Idependencies/mxml-2.7/include  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dScene.o e2dScene.c
 
 # Subprojects
 .build-subprojects:
@@ -108,7 +108,7 @@ ${OBJECTDIR}/e2dScene.o: e2dScene.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libEz2DS.dll
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS.dll
 
 # Subprojects
 .clean-subprojects:

@@ -14,11 +14,11 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=gcc
-CCC=g++
-CXX=g++
-FC=gfortran
-AS=as
+CC=gcc.exe
+CCC=g++.exe
+CXX=g++.exe
+FC=gfortran.exe
+AS=as.exe
 
 # Macros
 CND_PLATFORM=MinGW-Windows
@@ -39,7 +39,7 @@ OBJECTFILES= \
 
 
 # C Compiler Flags
-CFLAGS=
+CFLAGS=-Wall
 
 # CC Compiler Flags
 CCFLAGS=
@@ -52,11 +52,13 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-Ldependencies/gl/lib -Ldependencies/IL/lib -lglu32 -lopengl32 -lDevIL -lILU -lILUT -lglut32 ../msvc/Bin/Release/Ez2DS.dll
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe: ../msvc/Bin/Release/Ez2DS.dll
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
@@ -65,12 +67,12 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe: ${OBJECTFILES}
 ${OBJECTDIR}/Ez2DSDebugDraw.o: Ez2DSDebugDraw.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Ez2DSDebugDraw.o Ez2DSDebugDraw.c
+	$(COMPILE.c) -O2 -I../Ez2DS -Idependencies/gl/include -Idependencies/IL/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/Ez2DSDebugDraw.o Ez2DSDebugDraw.c
 
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -O2 -I../Ez2DS -Idependencies/gl/include -Idependencies/IL/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
 
 # Subprojects
 .build-subprojects:

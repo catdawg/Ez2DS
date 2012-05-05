@@ -39,12 +39,12 @@ typedef struct e2dGroupIterator e2dGroupIterator; /**< Forward declaration **/
 /**
 *  @brief Cross platform shared library exporting
 **/
-#if defined (_MSC_VER) 
+#if defined (_MSC_VER)
   #if defined(Ez2DS_EXPORTS)
-    #define  E2D_EXPORT __declspec(dllexport)
+    #define E2D_EXPORT __declspec(dllexport)
   #else
-    #define  E2D_EXPORT __declspec(dllimport)
-  #endif /* MyLibrary_EXPORTS */
+    #define E2D_EXPORT __declspec(dllimport)
+  #endif /* Ez2DS_EXPORTS */
 #else /* defined (_MSC_VER) */
  #define E2D_EXPORT
 #endif

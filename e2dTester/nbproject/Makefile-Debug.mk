@@ -14,11 +14,11 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=gcc
-CCC=g++
-CXX=g++
-FC=gfortran
-AS=as
+CC=gcc.exe
+CCC=g++.exe
+CXX=g++.exe
+FC=gfortran.exe
+AS=as.exe
 
 # Macros
 CND_PLATFORM=MinGW-Windows
@@ -52,17 +52,17 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Ldependencies/gl/lib -Ldependencies/IL/lib -L../Ez2DS/dist/Debug/MinGW-Windows -lEz2DS -lglu32 -lopengl32 -lglut32 -lDevIL -lILU -lILUT
+LDLIBSOPTIONS=-Ldependencies/gl/lib -Ldependencies/IL/lib -L../Ez2DS/dist/Debug/MinGW-Windows -lEz2DS_d -lglu32 -lopengl32 -lglut32 -lDevIL -lILU -lILUT
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester_d.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe: ../Ez2DS/dist/Debug/MinGW-Windows/libEz2DS.dll
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester_d.exe: ../Ez2DS/dist/Debug/MinGW-Windows/Ez2DS_d.dll
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester_d.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	gcc -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	gcc -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester_d ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/Ez2DSDebugDraw.o: Ez2DSDebugDraw.c 
 	${MKDIR} -p ${OBJECTDIR}
@@ -82,7 +82,7 @@ ${OBJECTDIR}/main.o: main.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester_d.exe
 
 # Subprojects
 .clean-subprojects:

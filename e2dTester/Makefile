@@ -60,8 +60,12 @@ build: .build-post
 # Add your post 'build' code here...
 
 copyDLL:
-	echo "copying dll"
-	CP ../Ez2DS/dist/Debug/MinGW-Windows/libEz2DS.dll $(CND_DISTDIR)/Debug/MinGW-Windows/
+	echo copying dll
+#ifeq ($(CONF), Debug)
+#	CP ../Ez2DS/dist/$(CONF)/MinGW-Windows/Ez2DS_d.dll $(CND_DISTDIR)/Debug/MinGW-Windows/
+#else
+#	CP ../Ez2DS/dist/$(CONF)/MinGW-Windows/Ez2DS.dll $(CND_DISTDIR)/Debug/MinGW-Windows/
+#endif
 
 
 

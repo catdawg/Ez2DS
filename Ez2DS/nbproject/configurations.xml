@@ -55,11 +55,12 @@
           <commandLine>-Wall</commandLine>
         </cTool>
         <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS_d.dll</output>
           <linkerAddLib>
-            <pElem>dependencies/mxml-2.7/lib</pElem>
+            <pElem>dependencies/mxml-2.7/libunix</pElem>
           </linkerAddLib>
           <linkerLibItems>
-            <linkerLibLibItem>mxml</linkerLibLibItem>
+            <linkerLibLibItem>mxml1</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
@@ -72,6 +73,10 @@
       <compileType>
         <cTool>
           <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>dependencies/mxml-2.7/include</pElem>
+          </incDir>
+          <commandLine>-Wall</commandLine>
         </cTool>
         <ccTool>
           <developmentMode>5</developmentMode>
@@ -82,6 +87,15 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS.dll</output>
+          <linkerAddLib>
+            <pElem>dependencies/mxml-2.7/libunix</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>mxml1</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
     </conf>
   </confs>

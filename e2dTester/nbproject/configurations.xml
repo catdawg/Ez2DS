@@ -35,7 +35,7 @@
     <conf name="Debug" type="1">
       <toolsSet>
         <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
-        <compilerSet>default</compilerSet>
+        <compilerSet>MinGW|MinGW</compilerSet>
       </toolsSet>
       <compileType>
         <cTool>
@@ -47,6 +47,7 @@
           <commandLine>-Wall</commandLine>
         </cTool>
         <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester_d</output>
           <linkerAddLib>
             <pElem>dependencies/gl/lib</pElem>
             <pElem>dependencies/IL/lib</pElem>
@@ -62,7 +63,7 @@
                             WD="../Ez2DS"
                             BC="${MAKE}  -f Makefile CONF=Debug"
                             CC="${MAKE}  -f Makefile CONF=Debug clean"
-                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libEz2DS.dll">
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS_d.dll">
               </makeArtifact>
             </linkerLibProjectItem>
             <linkerLibLibItem>glu32</linkerLibLibItem>
@@ -95,6 +96,12 @@
       <compileType>
         <cTool>
           <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>../Ez2DS</pElem>
+            <pElem>dependencies/gl/include</pElem>
+            <pElem>dependencies/IL/include</pElem>
+          </incDir>
+          <commandLine>-Wall</commandLine>
         </cTool>
         <ccTool>
           <developmentMode>5</developmentMode>
@@ -105,6 +112,21 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>dependencies/gl/lib</pElem>
+            <pElem>dependencies/IL/lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>glu32</linkerLibLibItem>
+            <linkerLibLibItem>opengl32</linkerLibLibItem>
+            <linkerLibLibItem>DevIL</linkerLibLibItem>
+            <linkerLibLibItem>ILU</linkerLibLibItem>
+            <linkerLibLibItem>ILUT</linkerLibLibItem>
+            <linkerLibLibItem>glut32</linkerLibLibItem>
+            <linkerLibFileItem>../msvc/Bin/Release/Ez2DS.dll</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
     </conf>
   </confs>
