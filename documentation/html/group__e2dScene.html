@@ -132,24 +132,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dScene.html">e2dScene</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a> struct defines a scene obtained from an SVG file. The struct contains the root under which all the objects in the scene can be accessed.  <a href="structe2dScene.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dSceneSearchResult.html">e2dSceneSearchResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct represents the results returns by e2dSceneSearch. You should always destroy the result with <a class="el" href="group__e2dScene.html#ga0eedd7c50a3d65e91abd54fcee3de39d" title="Destroys the search result struct. Call on the results of e2dSceneSearch() when you are done with the...">e2dSceneSearchResultDestroy()</a>.  <a href="structe2dSceneSearchResult.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gac4b32991ff8bab5d5ae429fb97b4e26c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c">e2dSceneCalculateEffectiveTransforms</a> (<a class="el" href="structe2dScene.html">e2dScene</a> *scene)</td></tr>
-<tr class="memdesc:gac4b32991ff8bab5d5ae429fb97b4e26c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the effective transform (calculated by multiplying the local transform with the effective transform of the parent element) to every element in the scene. It is useful to have this information for calculating relative positions(for example, knowing world positions, or positions of elements relative to other elements.  <a href="#gac4b32991ff8bab5d5ae429fb97b4e26c"></a><br/></td></tr>
-<tr class="memitem:gab0487c3d83b8ae072a59286a9e8285c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#gab0487c3d83b8ae072a59286a9e8285c7">e2dSceneCenterAllAtBBox</a> (<a class="el" href="structe2dScene.html">e2dScene</a> *scene, float tx, float ty)</td></tr>
-<tr class="memdesc:gab0487c3d83b8ae072a59286a9e8285c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls e2dElementCenterAtBBox on all the elements in the scene. Needs Bounding Boxes to have been calculated. See <a class="el" href="group__e2dGroup.html#ga04bf94419865ca7f9d6daf30ce3fadf0" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a> for an explanation on the tx and ty parameters.  <a href="#gab0487c3d83b8ae072a59286a9e8285c7"></a><br/></td></tr>
-<tr class="memitem:ga205af7a04544273413431072ea5a22b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#ga205af7a04544273413431072ea5a22b9">e2dSceneCalculateAllBBox</a> (<a class="el" href="structe2dScene.html">e2dScene</a> *scene)</td></tr>
-<tr class="memdesc:ga205af7a04544273413431072ea5a22b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls e2dGroupCalculateBBox() on the root of the scene.  <a href="#ga205af7a04544273413431072ea5a22b9"></a><br/></td></tr>
-<tr class="memitem:gaa0d6ded282c46461357e619f04636416"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dScene.html">e2dScene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#gaa0d6ded282c46461357e619f04636416">createSceneFromFile</a> (char *file)</td></tr>
-<tr class="memdesc:gaa0d6ded282c46461357e619f04636416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the SVG in the path "file" using MiniXML (<a href="http://minixml.org/">http://minixml.org/</a>) and creates a <a class="el" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a> struct which is returned.  <a href="#gaa0d6ded282c46461357e619f04636416"></a><br/></td></tr>
+<tr class="memitem:ga6981f2448904c96723449cb84ffb4d8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#ga6981f2448904c96723449cb84ffb4d8a">e2dSceneCalculateEffectiveTransforms</a> (<a class="el" href="structe2dScene.html">e2dScene</a> *scene)</td></tr>
+<tr class="memdesc:ga6981f2448904c96723449cb84ffb4d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the effective transform (calculated by multiplying the local transform with the effective transform of the parent element) to every element in the scene. It is useful to have this information for calculating relative positions(for example, knowing world positions, or positions of elements relative to other elements.  <a href="#ga6981f2448904c96723449cb84ffb4d8a"></a><br/></td></tr>
+<tr class="memitem:ga1d33ba7ce041a68b061cfa6b0291b886"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#ga1d33ba7ce041a68b061cfa6b0291b886">e2dSceneCenterAllAtBBox</a> (<a class="el" href="structe2dScene.html">e2dScene</a> *scene, float tx, float ty)</td></tr>
+<tr class="memdesc:ga1d33ba7ce041a68b061cfa6b0291b886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls e2dElementCenterAtBBox on all the elements in the scene. Needs Bounding Boxes to have been calculated. See <a class="el" href="group__e2dGroup.html#ga2800a7dc3827e8753e2f2c6ef2e05eb9" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a> for an explanation on the tx and ty parameters.  <a href="#ga1d33ba7ce041a68b061cfa6b0291b886"></a><br/></td></tr>
+<tr class="memitem:gaa202610ee0b2e5c47bded576b365c195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#gaa202610ee0b2e5c47bded576b365c195">e2dSceneCalculateAllBBox</a> (<a class="el" href="structe2dScene.html">e2dScene</a> *scene)</td></tr>
+<tr class="memdesc:gaa202610ee0b2e5c47bded576b365c195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls e2dGroupCalculateBBox() on the root of the scene.  <a href="#gaa202610ee0b2e5c47bded576b365c195"></a><br/></td></tr>
+<tr class="memitem:ga9994e9f2692c5007b91d02c19350cd1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dScene.html">e2dScene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#ga9994e9f2692c5007b91d02c19350cd1b">createSceneFromFile</a> (char *file)</td></tr>
+<tr class="memdesc:ga9994e9f2692c5007b91d02c19350cd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the SVG in the path "file" using MiniXML (<a href="http://minixml.org/">http://minixml.org/</a>) and creates a <a class="el" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a> struct which is returned.  <a href="#ga9994e9f2692c5007b91d02c19350cd1b"></a><br/></td></tr>
+<tr class="memitem:ga222c136346e92572235795d05c259e72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga222c136346e92572235795d05c259e72"></a>
+<a class="el" href="structe2dSceneSearchResult.html">e2dSceneSearchResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#ga222c136346e92572235795d05c259e72">e2dSceneSearch</a> (<a class="el" href="structe2dScene.html">e2dScene</a> *scene, char *searchString)</td></tr>
+<tr class="memdesc:ga222c136346e92572235795d05c259e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently searches the tree for an element with an ID equal to searchString. Features planned are for searching by type or by attribute and value combination, all with using a path. For example, the search string '**\=tag+image' will return all the images which are children of an element with a tag attribute. <br/></td></tr>
+<tr class="memitem:ga0eedd7c50a3d65e91abd54fcee3de39d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0eedd7c50a3d65e91abd54fcee3de39d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#ga0eedd7c50a3d65e91abd54fcee3de39d">e2dSceneSearchResultDestroy</a> (<a class="el" href="structe2dSceneSearchResult.html">e2dSceneSearchResult</a> *ssr)</td></tr>
+<tr class="memdesc:ga0eedd7c50a3d65e91abd54fcee3de39d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the search result struct. Call on the results of <a class="el" href="group__e2dScene.html#ga222c136346e92572235795d05c259e72" title="Currently searches the tree for an element with an ID equal to searchString. Features planned are for...">e2dSceneSearch()</a> when you are done with them. <br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="gaa0d6ded282c46461357e619f04636416"></a>
+<a class="anchor" id="ga9994e9f2692c5007b91d02c19350cd1b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structe2dScene.html">e2dScene</a>* <a class="el" href="group__e2dScene.html#gaa0d6ded282c46461357e619f04636416">createSceneFromFile</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dScene.html">e2dScene</a>* <a class="el" href="group__e2dScene.html#ga9994e9f2692c5007b91d02c19350cd1b">createSceneFromFile</a> </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>file</em></td><td>)</td>
@@ -175,12 +183,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga205af7a04544273413431072ea5a22b9"></a>
+<a class="anchor" id="gaa202610ee0b2e5c47bded576b365c195"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="group__e2dScene.html#ga205af7a04544273413431072ea5a22b9">e2dSceneCalculateAllBBox</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void <a class="el" href="group__e2dScene.html#gaa202610ee0b2e5c47bded576b365c195">e2dSceneCalculateAllBBox</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structe2dScene.html">e2dScene</a> *&#160;</td>
           <td class="paramname"><em>scene</em></td><td>)</td>
@@ -197,16 +205,16 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#ga04bf94419865ca7f9d6daf30ce3fadf0" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a> </dd></dl>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#ga2800a7dc3827e8753e2f2c6ef2e05eb9" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gac4b32991ff8bab5d5ae429fb97b4e26c"></a>
+<a class="anchor" id="ga6981f2448904c96723449cb84ffb4d8a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c">e2dSceneCalculateEffectiveTransforms</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void <a class="el" href="group__e2dScene.html#ga6981f2448904c96723449cb84ffb4d8a">e2dSceneCalculateEffectiveTransforms</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structe2dScene.html">e2dScene</a> *&#160;</td>
           <td class="paramname"><em>scene</em></td><td>)</td>
@@ -223,22 +231,22 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga39dd883e42f609efba3f75300a29ff31" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a> </dd>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga9e3e35d789556a05a4bd439b8cae01f2" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a> </dd>
 <dd>
-<a class="el" href="group__e2dElement.html#ga9b85de42e52c0d89e82f9231ea923c8c" title="UNTESTED Will get the local position (e2dElementGetLocalPosition()) and multiply it by the inverseEff...">e2dElementGetWorldPosition()</a> </dd>
+<a class="el" href="group__e2dElement.html#ga542b7ae5370bd59e118ed656588d3029" title="UNTESTED Will get the local position (e2dElementGetLocalPosition()) and multiply it by the inverseEff...">e2dElementGetWorldPosition()</a> </dd>
 <dd>
-<a class="el" href="group__e2dElement.html#gab4e3f4eeba31c937a946f68617c5cb06" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePosition()</a> </dd>
+<a class="el" href="group__e2dElement.html#gaa00ae93ed9fb9d27db2513e3f05a0827" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePosition()</a> </dd>
 <dd>
-<a class="el" href="group__e2dElement.html#gac3ad9f8cdc0782378c9f2e93cb7da68f" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePoint()</a> </dd></dl>
+<a class="el" href="group__e2dElement.html#gae6b6f57ac5505ef9181289197d419536" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePoint()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gab0487c3d83b8ae072a59286a9e8285c7"></a>
+<a class="anchor" id="ga1d33ba7ce041a68b061cfa6b0291b886"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="group__e2dScene.html#gab0487c3d83b8ae072a59286a9e8285c7">e2dSceneCenterAllAtBBox</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void <a class="el" href="group__e2dScene.html#ga1d33ba7ce041a68b061cfa6b0291b886">e2dSceneCenterAllAtBBox</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structe2dScene.html">e2dScene</a> *&#160;</td>
           <td class="paramname"><em>scene</em>, </td>
@@ -264,7 +272,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Calls e2dElementCenterAtBBox on all the elements in the scene. Needs Bounding Boxes to have been calculated. See <a class="el" href="group__e2dGroup.html#ga04bf94419865ca7f9d6daf30ce3fadf0" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a> for an explanation on the tx and ty parameters. </p>
+<p>Calls e2dElementCenterAtBBox on all the elements in the scene. Needs Bounding Boxes to have been calculated. See <a class="el" href="group__e2dGroup.html#ga2800a7dc3827e8753e2f2c6ef2e05eb9" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a> for an explanation on the tx and ty parameters. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>The <a class="el" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a> to have its elements centered. </td></tr>
@@ -273,9 +281,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#ga04bf94419865ca7f9d6daf30ce3fadf0" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a> </dd>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#ga2800a7dc3827e8753e2f2c6ef2e05eb9" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a> </dd>
 <dd>
-<a class="el" href="group__e2dScene.html#ga205af7a04544273413431072ea5a22b9" title="Calls e2dGroupCalculateBBox() on the root of the scene.">e2dSceneCalculateAllBBox()</a> </dd></dl>
+<a class="el" href="group__e2dScene.html#gaa202610ee0b2e5c47bded576b365c195" title="Calls e2dGroupCalculateBBox() on the root of the scene.">e2dSceneCalculateAllBBox()</a> </dd></dl>
 
 </div>
 </div>
@@ -284,7 +292,7 @@ Functions</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Sat Apr 28 2012 23:59:29 for Ez2DS by
+    <li class="footer">Generated on Fri May 11 2012 03:28:13 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

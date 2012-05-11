@@ -137,127 +137,119 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="Ez2DS_8h.html" title="File which contains global definitions useful to be included on every other file of the library...">Ez2DS.h</a>&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="e2dElement_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;.">e2dElement.h</a>&quot;</span>
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
-<a name="l00019"></a>00019 <span class="preprocessor">#endif</span>
-<a name="l00020"></a>00020 <span class="preprocessor"></span>
-<a name="l00029"></a><a class="code" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507">00029</a>     <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507" title="The e2dPathElementType enum defines the possible &quot;substructs&quot; of e2dPathElement. This is used for ref...">e2dPathElementType</a> {
-<a name="l00030"></a>00030         E2D_PATHPOINT,
-<a name="l00031"></a>00031         E2D_PATHCURVE
-<a name="l00032"></a>00032     } <a class="code" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507" title="The e2dPathElementType enum defines the possible &quot;substructs&quot; of e2dPathElement. This is used for ref...">e2dPathElementType</a>;
-<a name="l00033"></a>00033 
-<a name="l00038"></a><a class="code" href="group__e2dPath.html#ga0983472830124df9cdd854f7be1b6a06">00038</a>     <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__e2dPath.html#ga0983472830124df9cdd854f7be1b6a06" title="The e2dPathElementType enum defines the possible control types that each e2dPathElement can be...">e2dPathControl</a> {
-<a name="l00039"></a>00039         E2D_START_SUBPATH,
-<a name="l00040"></a>00040         E2D_END_SUBPATH,
-<a name="l00041"></a>00041         E2D_END_SUBPATH_LOOP,
-<a name="l00042"></a>00042         E2D_NOCONTROL
-<a name="l00043"></a>00043     } <a class="code" href="group__e2dPath.html#ga0983472830124df9cdd854f7be1b6a06" title="The e2dPathElementType enum defines the possible control types that each e2dPathElement can be...">e2dPathControl</a>;
-<a name="l00044"></a>00044 
-<a name="l00053"></a><a class="code" href="structe2dPathElement.html">00053</a>     <span class="keyword">struct </span><a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> {
-<a name="l00054"></a><a class="code" href="structe2dPathElement.html#acb2ed01d1856b82777314d8eb8f66b01">00054</a>         <a class="code" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507" title="The e2dPathElementType enum defines the possible &quot;substructs&quot; of e2dPathElement. This is used for ref...">e2dPathElementType</a> <a class="code" href="structe2dPathElement.html#acb2ed01d1856b82777314d8eb8f66b01">type</a>; 
-<a name="l00058"></a><a class="code" href="structe2dPathElement.html#a88af317c0c6d0deb1aacb6cc1acd441d">00058</a>         <a class="code" href="group__e2dPath.html#ga0983472830124df9cdd854f7be1b6a06" title="The e2dPathElementType enum defines the possible control types that each e2dPathElement can be...">e2dPathControl</a> <a class="code" href="structe2dPathElement.html#a88af317c0c6d0deb1aacb6cc1acd441d">controlType</a>; 
-<a name="l00062"></a>00062     };
-<a name="l00063"></a>00063 
-<a name="l00071"></a><a class="code" href="structe2dPathPoint.html">00071</a>     <span class="keyword">struct </span><a class="code" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a> {
-<a name="l00072"></a><a class="code" href="structe2dPathPoint.html#a88e514266530010a1a3b08198b3cc763">00072</a>         <a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> <a class="code" href="structe2dPathPoint.html#a88e514266530010a1a3b08198b3cc763">element</a>; 
-<a name="l00075"></a><a class="code" href="structe2dPathPoint.html#afff60c971a4d4728af80b4753d30c5bf">00075</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dPathPoint.html#afff60c971a4d4728af80b4753d30c5bf">point</a>; 
-<a name="l00076"></a>00076     };
-<a name="l00077"></a>00077 
-<a name="l00085"></a><a class="code" href="structe2dPathCurve.html">00085</a>     <span class="keyword">struct </span><a class="code" href="structe2dPathCurve.html" title="This struct represents a curve in the path. It is a cubic bezier curve, having two control points...">e2dPathCurve</a> {
-<a name="l00086"></a><a class="code" href="structe2dPathCurve.html#a88e514266530010a1a3b08198b3cc763">00086</a>         <a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> <a class="code" href="structe2dPathCurve.html#a88e514266530010a1a3b08198b3cc763">element</a>; 
-<a name="l00089"></a><a class="code" href="structe2dPathCurve.html#a96868a222a14861eb6e64214328c6159">00089</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dPathCurve.html#a96868a222a14861eb6e64214328c6159">startPoint</a>; 
-<a name="l00094"></a><a class="code" href="structe2dPathCurve.html#a5fe58a06185a33704c2cc77c8a58fb0d">00094</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dPathCurve.html#a5fe58a06185a33704c2cc77c8a58fb0d">controlPoint1</a>; 
-<a name="l00095"></a><a class="code" href="structe2dPathCurve.html#a929324aa1e3527d71e312e5f80cb24db">00095</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dPathCurve.html#a929324aa1e3527d71e312e5f80cb24db">controlPoint2</a>; 
-<a name="l00096"></a><a class="code" href="structe2dPathCurve.html#a0ae59a21d141722d36c0ebc740587f9d">00096</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dPathCurve.html#a0ae59a21d141722d36c0ebc740587f9d">endPoint</a>; 
-<a name="l00097"></a>00097     };
-<a name="l00098"></a>00098 
-<a name="l00106"></a><a class="code" href="structe2dPath.html">00106</a>     <span class="keyword">struct </span><a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a> {
-<a name="l00107"></a><a class="code" href="structe2dPath.html#a55bc7a3a0af41fba9e5b91f390c5928c">00107</a>         <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> <a class="code" href="structe2dPath.html#a55bc7a3a0af41fba9e5b91f390c5928c">element</a>;
-<a name="l00110"></a><a class="code" href="structe2dPath.html#a225f71916c061d0c977a1e5fae371a99">00110</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dPath.html#a225f71916c061d0c977a1e5fae371a99">pathElementsNum</a>;
-<a name="l00111"></a><a class="code" href="structe2dPath.html#ac0c8a45ff4f8d02e557fb33887743439">00111</a>         <a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>** <a class="code" href="structe2dPath.html#ac0c8a45ff4f8d02e557fb33887743439">pathElements</a>;
-<a name="l00112"></a><a class="code" href="structe2dPath.html#a0922122c6ccf006fad850c6b30ae5328">00112</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dPath.html#a0922122c6ccf006fad850c6b30ae5328">pathElementsAlloc</a>;
-<a name="l00113"></a>00113     };
-<a name="l00114"></a>00114 
-<a name="l00127"></a>00127     <a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>*
-<a name="l00128"></a>00128     <a class="code" href="group__e2dPath.html#ga6f81c71700ebf86964ea7e4b28dea4fb" title="This is the constructor of e2dPath. It returns a pointer to a new e2dPath. Inside it calls e2dPathIni...">e2dPathCreate</a>(<span class="keyword">const</span> <a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* scene);
-<a name="l00129"></a>00129     
-<a name="l00144"></a>00144     <span class="keywordtype">void</span>
-<a name="l00145"></a>00145     <a class="code" href="group__e2dPath.html#ga18e88821996913d4304096af0dda07e8" title="This method will initialize the members of the struct, i.e. it will allocate the e2dPath::pathElement...">e2dPathInit</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a> *path, <span class="keyword">const</span> <a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* scene);
-<a name="l00146"></a>00146 
-<a name="l00157"></a>00157     <span class="keywordtype">void</span>
-<a name="l00158"></a>00158     <a class="code" href="group__e2dPath.html#ga92e9e63b2307a2fbe9cfa564852e98a7" title="Calls e2dPathFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy() ...">e2dPathDestroy</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path);
-<a name="l00159"></a>00159 
-<a name="l00169"></a>00169     <span class="keywordtype">void</span>
-<a name="l00170"></a>00170     <a class="code" href="group__e2dPath.html#gad6343de48f1c4ee1ce2bf1a1562dda88" title="Will free all the dynamically allocated memory inside the e2dPath struct pointed by elem...">e2dPathFreeMembers</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path);
-<a name="l00171"></a>00171 
-<a name="l00186"></a>00186     <span class="keywordtype">void</span>
-<a name="l00187"></a>00187     <a class="code" href="group__e2dPath.html#ga9d46085324faa70a4bc9134c5bb6f5ad" title="Called by the create methods of structs which inherit e2dPathElement (e.g. e2dPointCreate) This metho...">e2dPathElementInit</a>(<a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>* elem, <a class="code" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507" title="The e2dPathElementType enum defines the possible &quot;substructs&quot; of e2dPathElement. This is used for ref...">e2dPathElementType</a> type);
-<a name="l00188"></a>00188 
-<a name="l00198"></a>00198     <span class="keywordtype">void</span>
-<a name="l00199"></a>00199     <a class="code" href="group__e2dPath.html#ga2432949311d4f4a1df98e24d28814fee" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dPointDestroy())">e2dPathElementDestroy</a>(<a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>* elem);
-<a name="l00200"></a>00200 
-<a name="l00208"></a>00208     <span class="keywordtype">void</span>
-<a name="l00209"></a>00209     <a class="code" href="group__e2dPath.html#ga38c8b4fad1e211dc5ecf36e04835edb4" title="Will free all the dynamically allocated memory inside the e2dPathElement struct pointed by elem...">e2dPathElementFreeMembers</a>(<a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>* elem);
-<a name="l00210"></a>00210 
-<a name="l00221"></a>00221     <a class="code" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a>*
-<a name="l00222"></a>00222     <a class="code" href="group__e2dPath.html#gaca8c21a10fb406bdbe1ac9ac827a9fc1" title="This is the constructor of e2dPathPoint. It returns a pointer to a new e2dPathPoint. Inside it calls e2dPathPointInit() to initialize the members of the struct.">e2dPathPointCreate</a>();
-<a name="l00223"></a>00223 
-<a name="l00238"></a>00238     <span class="keywordtype">void</span>
-<a name="l00239"></a>00239     <a class="code" href="group__e2dPath.html#ga482d1c32fa683b06711b1789fab97c3f" title="This method will initialize the members of the struct, i.e. it will place a (0,0) point on the e2dPat...">e2dPathPointInit</a>(<a class="code" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a>* point);
-<a name="l00240"></a>00240 
-<a name="l00251"></a>00251     <span class="keywordtype">void</span>
-<a name="l00252"></a>00252     <a class="code" href="group__e2dPath.html#ga7206672fa712fddc0ef584d9edac87fe" title="Calls e2dPathPointFreeMembers(), e2dPathElementFreeMembers(), and then frees the pointer. e2dPathElementDestroy() will call this method.">e2dPathPointDestroy</a>(<a class="code" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a>* point);
-<a name="l00253"></a>00253 
-<a name="l00264"></a>00264     <span class="keywordtype">void</span>
-<a name="l00265"></a>00265     <a class="code" href="group__e2dPath.html#ga7171c6c129e8817316bb209b8f1a1bb5" title="Will free all the dynamically allocated memory inside the e2dPathPoint struct pointed by point...">e2dPathPointFreeMembers</a>(<a class="code" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a>* point);
-<a name="l00266"></a>00266 
-<a name="l00277"></a>00277     <a class="code" href="structe2dPathCurve.html" title="This struct represents a curve in the path. It is a cubic bezier curve, having two control points...">e2dPathCurve</a>*
-<a name="l00278"></a>00278     <a class="code" href="group__e2dPath.html#ga2f7a9487dd9b3b90537bfb0a462c72b1" title="This is the constructor of e2dPathCurve. It returns a pointer to a new e2dPathCurve. Inside it calls e2dPathCurveInit() to initialize the members of the struct.">e2dPathCurveCreate</a>();
-<a name="l00279"></a>00279     
-<a name="l00294"></a>00294     <span class="keywordtype">void</span>
-<a name="l00295"></a>00295     <a class="code" href="group__e2dPath.html#gaabc13050ca8ad5b9b6d0a4a320ddfab0" title="This method will initialize the members of the struct, i.e. it will place a (0,0) point on the points...">e2dPathCurveInit</a>(<a class="code" href="structe2dPathCurve.html" title="This struct represents a curve in the path. It is a cubic bezier curve, having two control points...">e2dPathCurve</a>* curve);
-<a name="l00296"></a>00296 
-<a name="l00307"></a>00307     <span class="keywordtype">void</span>
-<a name="l00308"></a>00308     <a class="code" href="group__e2dPath.html#ga2ccac0ccd19b344623ad4872a961cb55" title="Calls e2dPathCurveFreeMembers(), e2dPathElementFreeMembers(), and then frees the pointer. e2dPathElementDestroy() will call this method.">e2dPathCurveDestroy</a>(<a class="code" href="structe2dPathCurve.html" title="This struct represents a curve in the path. It is a cubic bezier curve, having two control points...">e2dPathCurve</a>* curve);
-<a name="l00309"></a>00309 
-<a name="l00320"></a>00320     <span class="keywordtype">void</span>
-<a name="l00321"></a>00321     <a class="code" href="group__e2dPath.html#gaaa9cd20bddad2ac1e3607e864c547d31" title="Will free all the dynamically allocated memory inside the e2dPathCurve struct pointed by curve...">e2dPathCurveFreeMembers</a>(<a class="code" href="structe2dPathCurve.html" title="This struct represents a curve in the path. It is a cubic bezier curve, having two control points...">e2dPathCurve</a>* curve);
-<a name="l00322"></a>00322     
-<a name="l00331"></a>00331     <span class="keywordtype">void</span>
-<a name="l00332"></a>00332     <a class="code" href="group__e2dPath.html#ga40a7b291355ce66fed4e4bcb084aa95e" title="Will add a path element to the e2dPath::pathElements array. Increases the size of the array if necess...">e2dPathAddPathElement</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path, <a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> *elem);
-<a name="l00333"></a>00333     
-<a name="l00344"></a>00344     <span class="keywordtype">void</span>
-<a name="l00345"></a>00345     <a class="code" href="group__e2dPath.html#ga08a839e808e78ae0f0161be63090906b" title="Calculates the bounding box of the path using by checking the space occupied ball the elements in the...">e2dPathCalculateBoundingBox</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path);
-<a name="l00346"></a>00346 
-<a name="l00360"></a>00360     <span class="keywordtype">void</span>
-<a name="l00361"></a>00361     <a class="code" href="group__e2dPath.html#ga17ec56804be674223581dc4c56849a7c" title="Adds a transformation to the path which subtracts the position of the Bounding Box (offset by (tx...">e2dPathCenterAtBBox</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
-<a name="l00362"></a>00362 
-<a name="l00367"></a><a class="code" href="structe2dPathElementIterator.html">00367</a>     <span class="keyword">struct </span><a class="code" href="structe2dPathElementIterator.html" title="An iterator for the path elements.">e2dPathElementIterator</a> {
-<a name="l00368"></a><a class="code" href="structe2dPathElementIterator.html#a318773d3a24970f193ecb5e2fcdce1a7">00368</a>         <a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* <a class="code" href="structe2dPathElementIterator.html#a318773d3a24970f193ecb5e2fcdce1a7">path</a>; 
-<a name="l00369"></a><a class="code" href="structe2dPathElementIterator.html#a932f59c8e81a171eb21af8d204d1c13d">00369</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dPathElementIterator.html#a932f59c8e81a171eb21af8d204d1c13d">currentIndex</a>; 
-<a name="l00370"></a>00370     };
-<a name="l00380"></a>00380     <a class="code" href="structe2dPathElementIterator.html" title="An iterator for the path elements.">e2dPathElementIterator</a>
-<a name="l00381"></a>00381     <a class="code" href="group__e2dPath.html#ga867f0ea26a61c798f61df27aaf41d6b3" title="Makes an iterator to the path elements of the path.">e2dPathGetElementIterator</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path);
-<a name="l00382"></a>00382     
-<a name="l00393"></a>00393     <a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>*
-<a name="l00394"></a>00394     <a class="code" href="group__e2dPath.html#ga3b8113d8c26d1b29e7bfaf5cef98a05e" title="Returns the current path element and advances.">e2dPathElementIteratorNext</a>(<a class="code" href="structe2dPathElementIterator.html" title="An iterator for the path elements.">e2dPathElementIterator</a>* iter);
-<a name="l00395"></a>00395     
-<a name="l00407"></a>00407     <a class="code" href="Ez2DS_8h.html#aac8cdc3a3bcd6b56a8c3e0bb6979cbf8" title="Boolean implementation.">E2D_BOOL</a>
-<a name="l00408"></a>00408     <a class="code" href="group__e2dPath.html#ga9b06fff11e758bd2db311efe5f90ab1e" title="Checks if we have a path element at current path element pointed by iter, if not, we have reached the...">e2dPathElementIteratorHasNext</a>(<a class="code" href="structe2dPathElementIterator.html" title="An iterator for the path elements.">e2dPathElementIterator</a>* iter);
-<a name="l00409"></a>00409 
-<a name="l00414"></a>00414 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00415"></a>00415 <span class="preprocessor"></span>}
-<a name="l00416"></a>00416 <span class="preprocessor">#endif</span>
-<a name="l00417"></a>00417 <span class="preprocessor"></span>
-<a name="l00418"></a>00418 <span class="preprocessor">#endif   </span><span class="comment">/* E2DPATH_H */</span>
-<a name="l00419"></a>00419 
+<a name="l00026"></a><a class="code" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507">00026</a>     <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507" title="The e2dPathElementType enum defines the possible &quot;substructs&quot; of e2dPathElement. This is used for ref...">e2dPathElementType</a> {
+<a name="l00027"></a>00027         E2D_PATHPOINT,
+<a name="l00028"></a>00028         E2D_PATHCURVE
+<a name="l00029"></a>00029     } <a class="code" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507" title="The e2dPathElementType enum defines the possible &quot;substructs&quot; of e2dPathElement. This is used for ref...">e2dPathElementType</a>;
+<a name="l00030"></a>00030 
+<a name="l00035"></a><a class="code" href="group__e2dPath.html#ga0983472830124df9cdd854f7be1b6a06">00035</a>     <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__e2dPath.html#ga0983472830124df9cdd854f7be1b6a06" title="The e2dPathElementType enum defines the possible control types that each e2dPathElement can be...">e2dPathControl</a> {
+<a name="l00036"></a>00036         E2D_START_SUBPATH,
+<a name="l00037"></a>00037         E2D_END_SUBPATH,
+<a name="l00038"></a>00038         E2D_END_SUBPATH_LOOP,
+<a name="l00039"></a>00039         E2D_NOCONTROL
+<a name="l00040"></a>00040     } <a class="code" href="group__e2dPath.html#ga0983472830124df9cdd854f7be1b6a06" title="The e2dPathElementType enum defines the possible control types that each e2dPathElement can be...">e2dPathControl</a>;
+<a name="l00041"></a>00041 
+<a name="l00050"></a><a class="code" href="structe2dPathElement.html">00050</a>     <span class="keyword">struct </span><a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> {
+<a name="l00051"></a><a class="code" href="structe2dPathElement.html#acb2ed01d1856b82777314d8eb8f66b01">00051</a>         <a class="code" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507" title="The e2dPathElementType enum defines the possible &quot;substructs&quot; of e2dPathElement. This is used for ref...">e2dPathElementType</a> <a class="code" href="structe2dPathElement.html#acb2ed01d1856b82777314d8eb8f66b01">type</a>; 
+<a name="l00055"></a><a class="code" href="structe2dPathElement.html#a88af317c0c6d0deb1aacb6cc1acd441d">00055</a>         <a class="code" href="group__e2dPath.html#ga0983472830124df9cdd854f7be1b6a06" title="The e2dPathElementType enum defines the possible control types that each e2dPathElement can be...">e2dPathControl</a> <a class="code" href="structe2dPathElement.html#a88af317c0c6d0deb1aacb6cc1acd441d">controlType</a>; 
+<a name="l00059"></a>00059     };
+<a name="l00060"></a>00060 
+<a name="l00068"></a><a class="code" href="structe2dPathPoint.html">00068</a>     <span class="keyword">struct </span><a class="code" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a> {
+<a name="l00069"></a><a class="code" href="structe2dPathPoint.html#a88e514266530010a1a3b08198b3cc763">00069</a>         <a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> <a class="code" href="structe2dPathPoint.html#a88e514266530010a1a3b08198b3cc763">element</a>; 
+<a name="l00072"></a><a class="code" href="structe2dPathPoint.html#afff60c971a4d4728af80b4753d30c5bf">00072</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dPathPoint.html#afff60c971a4d4728af80b4753d30c5bf">point</a>; 
+<a name="l00073"></a>00073     };
+<a name="l00074"></a>00074 
+<a name="l00082"></a><a class="code" href="structe2dPathCurve.html">00082</a>     <span class="keyword">struct </span><a class="code" href="structe2dPathCurve.html" title="This struct represents a curve in the path. It is a cubic bezier curve, having two control points...">e2dPathCurve</a> {
+<a name="l00083"></a><a class="code" href="structe2dPathCurve.html#a88e514266530010a1a3b08198b3cc763">00083</a>         <a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> <a class="code" href="structe2dPathCurve.html#a88e514266530010a1a3b08198b3cc763">element</a>; 
+<a name="l00086"></a><a class="code" href="structe2dPathCurve.html#a96868a222a14861eb6e64214328c6159">00086</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dPathCurve.html#a96868a222a14861eb6e64214328c6159">startPoint</a>; 
+<a name="l00091"></a><a class="code" href="structe2dPathCurve.html#a5fe58a06185a33704c2cc77c8a58fb0d">00091</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dPathCurve.html#a5fe58a06185a33704c2cc77c8a58fb0d">controlPoint1</a>; 
+<a name="l00092"></a><a class="code" href="structe2dPathCurve.html#a929324aa1e3527d71e312e5f80cb24db">00092</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dPathCurve.html#a929324aa1e3527d71e312e5f80cb24db">controlPoint2</a>; 
+<a name="l00093"></a><a class="code" href="structe2dPathCurve.html#a0ae59a21d141722d36c0ebc740587f9d">00093</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dPathCurve.html#a0ae59a21d141722d36c0ebc740587f9d">endPoint</a>; 
+<a name="l00094"></a>00094     };
+<a name="l00095"></a>00095 
+<a name="l00103"></a><a class="code" href="structe2dPath.html">00103</a>     <span class="keyword">struct </span><a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a> {
+<a name="l00104"></a><a class="code" href="structe2dPath.html#a55bc7a3a0af41fba9e5b91f390c5928c">00104</a>         <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> <a class="code" href="structe2dPath.html#a55bc7a3a0af41fba9e5b91f390c5928c">element</a>;
+<a name="l00107"></a><a class="code" href="structe2dPath.html#a225f71916c061d0c977a1e5fae371a99">00107</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dPath.html#a225f71916c061d0c977a1e5fae371a99">pathElementsNum</a>;
+<a name="l00108"></a><a class="code" href="structe2dPath.html#ac0c8a45ff4f8d02e557fb33887743439">00108</a>         <a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>** <a class="code" href="structe2dPath.html#ac0c8a45ff4f8d02e557fb33887743439">pathElements</a>;
+<a name="l00109"></a><a class="code" href="structe2dPath.html#a0922122c6ccf006fad850c6b30ae5328">00109</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dPath.html#a0922122c6ccf006fad850c6b30ae5328">pathElementsAlloc</a>;
+<a name="l00110"></a>00110     };
+<a name="l00111"></a>00111 
+<a name="l00124"></a>00124     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* 
+<a name="l00125"></a>00125     <a class="code" href="group__e2dPath.html#gaceacae85646a55f26e71461fe1bf657e" title="This is the constructor of e2dPath. It returns a pointer to a new e2dPath. Inside it calls e2dPathIni...">e2dPathCreate</a>(<span class="keyword">const</span> <a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* scene);
+<a name="l00126"></a>00126     
+<a name="l00141"></a>00141     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00142"></a>00142     <a class="code" href="group__e2dPath.html#ga0198f755666444a1b37ce5ed7c34cb1e" title="This method will initialize the members of the struct, i.e. it will allocate the e2dPath::pathElement...">e2dPathInit</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a> *path, <span class="keyword">const</span> <a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* scene);
+<a name="l00143"></a>00143 
+<a name="l00154"></a>00154     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00155"></a>00155     <a class="code" href="group__e2dPath.html#ga96b9669138ff5e22422e5e1fa29d41d1" title="Calls e2dPathFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy() ...">e2dPathDestroy</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path);
+<a name="l00156"></a>00156 
+<a name="l00166"></a>00166     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00167"></a>00167     <a class="code" href="group__e2dPath.html#ga4df45661b4e01f38925a541f91ede422" title="Will free all the dynamically allocated memory inside the e2dPath struct pointed by elem...">e2dPathFreeMembers</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path);
+<a name="l00168"></a>00168 
+<a name="l00183"></a>00183     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00184"></a>00184     <a class="code" href="group__e2dPath.html#gab17d15f04aabeec94a923839aaf5a49e" title="Called by the create methods of structs which inherit e2dPathElement (e.g. e2dPointCreate) This metho...">e2dPathElementInit</a>(<a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>* elem, <a class="code" href="group__e2dPath.html#gabecf8438085bebe6b28b4a8fb69b1507" title="The e2dPathElementType enum defines the possible &quot;substructs&quot; of e2dPathElement. This is used for ref...">e2dPathElementType</a> type);
+<a name="l00185"></a>00185 
+<a name="l00195"></a>00195     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00196"></a>00196     <a class="code" href="group__e2dPath.html#ga334ce1c6b0f6c3868ab2d546c0e67c14" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dPointDestroy())">e2dPathElementDestroy</a>(<a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>* elem);
+<a name="l00197"></a>00197 
+<a name="l00205"></a>00205     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00206"></a>00206     <a class="code" href="group__e2dPath.html#gad2a7aabaa1ebd19138bd24ad5ec0a97e" title="Will free all the dynamically allocated memory inside the e2dPathElement struct pointed by elem...">e2dPathElementFreeMembers</a>(<a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>* elem);
+<a name="l00207"></a>00207 
+<a name="l00218"></a>00218     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a>* 
+<a name="l00219"></a>00219     <a class="code" href="group__e2dPath.html#ga06cfb3bcd4b491bf0904c10d3a798250" title="This is the constructor of e2dPathPoint. It returns a pointer to a new e2dPathPoint. Inside it calls e2dPathPointInit() to initialize the members of the struct.">e2dPathPointCreate</a>();
+<a name="l00220"></a>00220 
+<a name="l00235"></a>00235     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00236"></a>00236     <a class="code" href="group__e2dPath.html#gace705eabfb6e28ba6733f474a1330b65" title="This method will initialize the members of the struct, i.e. it will place a (0,0) point on the e2dPat...">e2dPathPointInit</a>(<a class="code" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a>* point);
+<a name="l00237"></a>00237 
+<a name="l00248"></a>00248     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00249"></a>00249     <a class="code" href="group__e2dPath.html#ga62b1763b895dc904ccfdc690ea8eb602" title="Calls e2dPathPointFreeMembers(), e2dPathElementFreeMembers(), and then frees the pointer. e2dPathElementDestroy() will call this method.">e2dPathPointDestroy</a>(<a class="code" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a>* point);
+<a name="l00250"></a>00250 
+<a name="l00261"></a>00261     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00262"></a>00262     <a class="code" href="group__e2dPath.html#gaf05c3dc1682b4b801364273b8d99165f" title="Will free all the dynamically allocated memory inside the e2dPathPoint struct pointed by point...">e2dPathPointFreeMembers</a>(<a class="code" href="structe2dPathPoint.html" title="This struct represents a point in the path. It &quot;inherits&quot; from e2dPathElement by placing it as the fi...">e2dPathPoint</a>* point);
+<a name="l00263"></a>00263 
+<a name="l00274"></a>00274     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="structe2dPathCurve.html" title="This struct represents a curve in the path. It is a cubic bezier curve, having two control points...">e2dPathCurve</a>* 
+<a name="l00275"></a>00275     <a class="code" href="group__e2dPath.html#gaae6768f9ef3a8ffba141c0d758c7ad6a" title="This is the constructor of e2dPathCurve. It returns a pointer to a new e2dPathCurve. Inside it calls e2dPathCurveInit() to initialize the members of the struct.">e2dPathCurveCreate</a>();
+<a name="l00276"></a>00276     
+<a name="l00291"></a>00291     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00292"></a>00292     <a class="code" href="group__e2dPath.html#ga86e0a9130ed6f05da4dff05c401e661b" title="This method will initialize the members of the struct, i.e. it will place a (0,0) point on the points...">e2dPathCurveInit</a>(<a class="code" href="structe2dPathCurve.html" title="This struct represents a curve in the path. It is a cubic bezier curve, having two control points...">e2dPathCurve</a>* curve);
+<a name="l00293"></a>00293 
+<a name="l00304"></a>00304     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00305"></a>00305     <a class="code" href="group__e2dPath.html#ga4d40d3c3d9a67d0af8581725f59cf2e4" title="Calls e2dPathCurveFreeMembers(), e2dPathElementFreeMembers(), and then frees the pointer. e2dPathElementDestroy() will call this method.">e2dPathCurveDestroy</a>(<a class="code" href="structe2dPathCurve.html" title="This struct represents a curve in the path. It is a cubic bezier curve, having two control points...">e2dPathCurve</a>* curve);
+<a name="l00306"></a>00306 
+<a name="l00317"></a>00317     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00318"></a>00318     <a class="code" href="group__e2dPath.html#ga16c606e0d0d346f8aa4ba8dd0d79b08f" title="Will free all the dynamically allocated memory inside the e2dPathCurve struct pointed by curve...">e2dPathCurveFreeMembers</a>(<a class="code" href="structe2dPathCurve.html" title="This struct represents a curve in the path. It is a cubic bezier curve, having two control points...">e2dPathCurve</a>* curve);
+<a name="l00319"></a>00319     
+<a name="l00328"></a>00328     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00329"></a>00329     <a class="code" href="group__e2dPath.html#ga06c48ed80102a26db2f8d6ae41484eef" title="Will add a path element to the e2dPath::pathElements array. Increases the size of the array if necess...">e2dPathAddPathElement</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path, <a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a> *elem);
+<a name="l00330"></a>00330     
+<a name="l00341"></a>00341     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00342"></a>00342     <a class="code" href="group__e2dPath.html#gadb195df30ba2615862bb9f1d1e27a27b" title="Calculates the bounding box of the path using by checking the space occupied ball the elements in the...">e2dPathCalculateBoundingBox</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path);
+<a name="l00343"></a>00343 
+<a name="l00357"></a>00357     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00358"></a>00358     <a class="code" href="group__e2dPath.html#ga352905c23188fdac9caf89018feee20c" title="Adds a transformation to the path which subtracts the position of the Bounding Box (offset by (tx...">e2dPathCenterAtBBox</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
+<a name="l00359"></a>00359 
+<a name="l00364"></a><a class="code" href="structe2dPathElementIterator.html">00364</a>     <span class="keyword">struct </span><a class="code" href="structe2dPathElementIterator.html" title="An iterator for the path elements.">e2dPathElementIterator</a> {
+<a name="l00365"></a><a class="code" href="structe2dPathElementIterator.html#a318773d3a24970f193ecb5e2fcdce1a7">00365</a>         <a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* <a class="code" href="structe2dPathElementIterator.html#a318773d3a24970f193ecb5e2fcdce1a7">path</a>; 
+<a name="l00366"></a><a class="code" href="structe2dPathElementIterator.html#a932f59c8e81a171eb21af8d204d1c13d">00366</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dPathElementIterator.html#a932f59c8e81a171eb21af8d204d1c13d">currentIndex</a>; 
+<a name="l00367"></a>00367     };
+<a name="l00377"></a>00377     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="structe2dPathElementIterator.html" title="An iterator for the path elements.">e2dPathElementIterator</a> 
+<a name="l00378"></a>00378     <a class="code" href="group__e2dPath.html#ga277b3e8a7a236783da27b37791b68147" title="Makes an iterator to the path elements of the path.">e2dPathGetElementIterator</a>(<a class="code" href="structe2dPath.html" title="The e2dPath struct is used for holding the information of path. The struct is composed directly from ...">e2dPath</a>* path);
+<a name="l00379"></a>00379     
+<a name="l00390"></a>00390     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="structe2dPathElement.html" title="The e2dPathElement is the &quot;super struct&quot; of all path elements in the scene. Its inheritting functiona...">e2dPathElement</a>* 
+<a name="l00391"></a>00391     <a class="code" href="group__e2dPath.html#gad4c40a67bda1907af39ce2b5b59b20fd" title="Returns the current path element and advances.">e2dPathElementIteratorNext</a>(<a class="code" href="structe2dPathElementIterator.html" title="An iterator for the path elements.">e2dPathElementIterator</a>* iter);
+<a name="l00392"></a>00392     
+<a name="l00404"></a>00404     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="Ez2DS_8h.html#aac8cdc3a3bcd6b56a8c3e0bb6979cbf8" title="Boolean implementation.">E2D_BOOL</a> 
+<a name="l00405"></a>00405     <a class="code" href="group__e2dPath.html#ga9ac0893b0e7f81ebb01d252e9c56d967" title="Checks if we have a path element at current path element pointed by iter, if not, we have reached the...">e2dPathElementIteratorHasNext</a>(<a class="code" href="structe2dPathElementIterator.html" title="An iterator for the path elements.">e2dPathElementIterator</a>* iter);
+<a name="l00406"></a>00406 
+<a name="l00411"></a>00411 <span class="preprocessor">#endif   </span><span class="comment">/* E2DPATH_H */</span>
+<a name="l00412"></a>00412 
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="e2dPath_8h.html">e2dPath.h</a>      </li>
 
-    <li class="footer">Generated on Sat Apr 28 2012 23:59:28 for Ez2DS by
+    <li class="footer">Generated on Fri May 11 2012 03:28:12 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

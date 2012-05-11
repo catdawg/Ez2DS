@@ -22,6 +22,7 @@ var NAVTREEINDEX =
 "structe2dPathPoint.html":[1,0,9],
 "structe2dPoint.html":[1,0,10],
 "structe2dScene.html":[1,0,11],
+"structe2dSceneSearchResult.html":[1,0,12],
 "classes.html":[1,1],
 "functions.html":[1,2,0],
 "functions_vars.html":[1,2,1],

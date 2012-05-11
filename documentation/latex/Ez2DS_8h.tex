@@ -16,6 +16,9 @@ This graph shows which files directly or indirectly include this file\-:\nopageb
 \subsection*{Defines}
 \begin{DoxyCompactItemize}
 \item 
+\hypertarget{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{\#define \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T}}\label{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}
+
+\begin{DoxyCompactList}\small\item\em Cross platform shared library exporting. \end{DoxyCompactList}\item 
 \#define \hyperlink{Ez2DS_8h_a48ffc9ed217e38fc9cd7cf8f9894d63c}{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}~1.\-0e-\/6f
 \begin{DoxyCompactList}\small\item\em Defines a value which is almost zero. \end{DoxyCompactList}\item 
 \#define \hyperlink{Ez2DS_8h_a5f5051e054baa41a7a7048bd205bc1e3}{E2\-D\-\_\-\-I\-S\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}(val)~((val) $<$ (\hyperlink{Ez2DS_8h_a48ffc9ed217e38fc9cd7cf8f9894d63c}{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}) \&\& (val) $>$ -\/(\hyperlink{Ez2DS_8h_a48ffc9ed217e38fc9cd7cf8f9894d63c}{E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-\_\-\-Z\-E\-R\-O}))
@@ -23,9 +26,9 @@ This graph shows which files directly or indirectly include this file\-:\nopageb
 \hypertarget{Ez2DS_8h_ae6c89cca978cb0aa64dc7034b016f5cd}{\#define \hyperlink{Ez2DS_8h_ae6c89cca978cb0aa64dc7034b016f5cd}{E2\-D\-\_\-\-N\-U\-L\-L}~0}\label{Ez2DS_8h_ae6c89cca978cb0aa64dc7034b016f5cd}
 
 \begin{DoxyCompactList}\small\item\em N\-U\-L\-L definition. \end{DoxyCompactList}\item 
-\#define \hyperlink{Ez2DS_8h_a1cd9ecc64e25100eeb04dc1b08c28fc1}{E2\-D\-\_\-\-M\-A\-X}(a, b)
+\#define \hyperlink{Ez2DS_8h_ad83dd4bb9cfe5f1bad4afe517f2d2e22}{E2\-D\-\_\-\-M\-A\-X}(X, Y)~((X) $>$ (Y) ?  (X) \-: (Y))
 \begin{DoxyCompactList}\small\item\em Returns the biggest number between a and b. \end{DoxyCompactList}\item 
-\#define \hyperlink{Ez2DS_8h_af5964c56c46211897a998a087d4c3a66}{E2\-D\-\_\-\-M\-I\-N}(a, b)
+\#define \hyperlink{Ez2DS_8h_afac575ed72392fbb218c777b548f328d}{E2\-D\-\_\-\-M\-I\-N}(X, Y)~((X) $<$ (Y) ?  (X) \-: (Y))
 \begin{DoxyCompactList}\small\item\em Returns the smallest number between a and b. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -54,6 +57,8 @@ typedef struct \\*
 \hyperlink{structe2dPathElementIterator}{e2d\-Path\-Element\-Iterator} \hyperlink{Ez2DS_8h_a76fc6b98f46ca44dd6b09fe824160485}{e2d\-Path\-Element\-Iterator}
 \item 
 typedef struct \hyperlink{structe2dGroupIterator}{e2d\-Group\-Iterator} \hyperlink{Ez2DS_8h_a271ae036141142028e18270850818134}{e2d\-Group\-Iterator}
+\item 
+typedef struct \hyperlink{structe2dSceneSearchResult}{e2d\-Scene\-Search\-Result} \hyperlink{Ez2DS_8h_a701bd9f0fb7810bdc3715b6a83274d4c}{e2d\-Scene\-Search\-Result}
 \end{DoxyCompactItemize}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -103,20 +108,14 @@ Checks if val is within the threshold defined by E2\-D\-\_\-\-A\-L\-M\-O\-S\-T\-
 {\em bool} & Returns true if almost zero, else false. \\
 \hline
 \end{DoxyRetVals}
-\hypertarget{Ez2DS_8h_a1cd9ecc64e25100eeb04dc1b08c28fc1}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-M\-A\-X@{E2\-D\-\_\-\-M\-A\-X}}
+\hypertarget{Ez2DS_8h_ad83dd4bb9cfe5f1bad4afe517f2d2e22}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-M\-A\-X@{E2\-D\-\_\-\-M\-A\-X}}
 \index{E2\-D\-\_\-\-M\-A\-X@{E2\-D\-\_\-\-M\-A\-X}!Ez2DS.h@{Ez2\-D\-S.\-h}}
 \subsubsection[{E2\-D\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf E2\-D\-\_\-\-M\-A\-X}(
 \begin{DoxyParamCaption}
-\item[{}]{a, }
-\item[{}]{b}
+\item[{}]{X, }
+\item[{}]{Y}
 \end{DoxyParamCaption}
-)}}\label{Ez2DS_8h_a1cd9ecc64e25100eeb04dc1b08c28fc1}
-{\bfseries Value\-:}
-\begin{DoxyCode}
-({ __typeof__ (a) _a = (a); \
-    __typeof__ (b) _b = (b); \
-    _a > _b ? _a : _b; })
-\end{DoxyCode}
+)~((X) $>$ (Y) ?  (X) \-: (Y))}}\label{Ez2DS_8h_ad83dd4bb9cfe5f1bad4afe517f2d2e22}
 
 
 Returns the biggest number between a and b. 
@@ -126,20 +125,14 @@ Returns the biggest number between a and b.
 {\em comparable} & The biggest. \\
 \hline
 \end{DoxyRetVals}
-\hypertarget{Ez2DS_8h_af5964c56c46211897a998a087d4c3a66}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-M\-I\-N@{E2\-D\-\_\-\-M\-I\-N}}
+\hypertarget{Ez2DS_8h_afac575ed72392fbb218c777b548f328d}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!E2\-D\-\_\-\-M\-I\-N@{E2\-D\-\_\-\-M\-I\-N}}
 \index{E2\-D\-\_\-\-M\-I\-N@{E2\-D\-\_\-\-M\-I\-N}!Ez2DS.h@{Ez2\-D\-S.\-h}}
 \subsubsection[{E2\-D\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf E2\-D\-\_\-\-M\-I\-N}(
 \begin{DoxyParamCaption}
-\item[{}]{a, }
-\item[{}]{b}
+\item[{}]{X, }
+\item[{}]{Y}
 \end{DoxyParamCaption}
-)}}\label{Ez2DS_8h_af5964c56c46211897a998a087d4c3a66}
-{\bfseries Value\-:}
-\begin{DoxyCode}
-({ __typeof__ (a) _a = (a); \
-    __typeof__ (b) _b = (b); \
-    _a < _b ? _a : _b; })
-\end{DoxyCode}
+)~((X) $<$ (Y) ?  (X) \-: (Y))}}\label{Ez2DS_8h_afac575ed72392fbb218c777b548f328d}
 
 
 Returns the smallest number between a and b. 
@@ -188,4 +181,7 @@ Forward declaration \hypertarget{Ez2DS_8h_a6659ac6d13a4ebd7168ef99f8ded9201}{\in
 Forward declaration \hypertarget{Ez2DS_8h_a4663bede7d265bce67f2176cbe6d1f97}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Scene@{e2d\-Scene}}
 \index{e2d\-Scene@{e2d\-Scene}!Ez2DS.h@{Ez2\-D\-S.\-h}}
 \subsubsection[{e2d\-Scene}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Scene} {\bf e2d\-Scene}}}\label{Ez2DS_8h_a4663bede7d265bce67f2176cbe6d1f97}
+Forward declaration \hypertarget{Ez2DS_8h_a701bd9f0fb7810bdc3715b6a83274d4c}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!e2d\-Scene\-Search\-Result@{e2d\-Scene\-Search\-Result}}
+\index{e2d\-Scene\-Search\-Result@{e2d\-Scene\-Search\-Result}!Ez2DS.h@{Ez2\-D\-S.\-h}}
+\subsubsection[{e2d\-Scene\-Search\-Result}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Scene\-Search\-Result} {\bf e2d\-Scene\-Search\-Result}}}\label{Ez2DS_8h_a701bd9f0fb7810bdc3715b6a83274d4c}
 Forward declaration 

@@ -150,34 +150,34 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ga8734d10ef40a380dfc51bfe1790a92a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga8734d10ef40a380dfc51bfe1790a92a7">e2dElementInit</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *element, <a class="el" href="group__e2dElement.html#ga9bc8cfdec08c7e9069fc707ee456fd38">e2dElementType</a> type, const <a class="el" href="structe2dScene.html">e2dScene</a> *scene)</td></tr>
 <tr class="memdesc:ga8734d10ef40a380dfc51bfe1790a92a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the create methods of structs which inherit <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> (e.g. e2dGroupCreate). Will initialize all members of the struct with the parameters of this method and with default values on everything else.  <a href="#ga8734d10ef40a380dfc51bfe1790a92a7"></a><br/></td></tr>
-<tr class="memitem:ga214c437a16fe6f3fc795539f851a2019"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019">e2dElementDestroy</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem)</td></tr>
-<tr class="memdesc:ga214c437a16fe6f3fc795539f851a2019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will check the type member of elem and call the appropriate destructor (e.g. <a class="el" href="group__e2dGroup.html#ga545626effa0f89b72f244e56aadb05bc" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy()</a>)  <a href="#ga214c437a16fe6f3fc795539f851a2019"></a><br/></td></tr>
-<tr class="memitem:gae8da5104d70a09549ca74044dda8313c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#gae8da5104d70a09549ca74044dda8313c">e2dElementFreeMembers</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem)</td></tr>
-<tr class="memdesc:gae8da5104d70a09549ca74044dda8313c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will free all the dynamically allocated memory inside the <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct pointed by elem.  <a href="#gae8da5104d70a09549ca74044dda8313c"></a><br/></td></tr>
-<tr class="memitem:ga5cfa0a343d3dd1a30b0addc4ec6e7f88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga5cfa0a343d3dd1a30b0addc4ec6e7f88">e2dElementAddAttribute</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem, const char *name, const char *value)</td></tr>
-<tr class="memdesc:ga5cfa0a343d3dd1a30b0addc4ec6e7f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will add an attribute to the element. Increases the size of the array if necessary.  <a href="#ga5cfa0a343d3dd1a30b0addc4ec6e7f88"></a><br/></td></tr>
-<tr class="memitem:gac32ea8a33b317fc014929102d64ac157"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#gac32ea8a33b317fc014929102d64ac157">e2dElementGetAttribute</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem, const char *name)</td></tr>
-<tr class="memdesc:gac32ea8a33b317fc014929102d64ac157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of an attribute with a given name.  <a href="#gac32ea8a33b317fc014929102d64ac157"></a><br/></td></tr>
-<tr class="memitem:ga39dd883e42f609efba3f75300a29ff31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga39dd883e42f609efba3f75300a29ff31">e2dElementGetLocalPosition</a> (const <a class="el" href="structe2dElement.html">e2dElement</a> *elem)</td></tr>
-<tr class="memdesc:ga39dd883e42f609efba3f75300a29ff31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of the element, taken from the localTransform.  <a href="#ga39dd883e42f609efba3f75300a29ff31"></a><br/></td></tr>
-<tr class="memitem:ga9b85de42e52c0d89e82f9231ea923c8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga9b85de42e52c0d89e82f9231ea923c8c">e2dElementGetWorldPosition</a> (const <a class="el" href="structe2dElement.html">e2dElement</a> *elem)</td></tr>
-<tr class="memdesc:ga9b85de42e52c0d89e82f9231ea923c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNTESTED Will get the local position (<a class="el" href="group__e2dElement.html#ga39dd883e42f609efba3f75300a29ff31" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a>) and multiply it by the inverseEffectiveTransform and obtain the world position. Needs effective transformations to be calculated ( <a class="el" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called)  <a href="#ga9b85de42e52c0d89e82f9231ea923c8c"></a><br/></td></tr>
-<tr class="memitem:gab4e3f4eeba31c937a946f68617c5cb06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#gab4e3f4eeba31c937a946f68617c5cb06">e2dElementGetRelativePosition</a> (const <a class="el" href="structe2dElement.html">e2dElement</a> *elem, const <a class="el" href="structe2dElement.html">e2dElement</a> *relativeTo)</td></tr>
-<tr class="memdesc:gab4e3f4eeba31c937a946f68617c5cb06"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relativeTo. The multiply it with the local position of elem (<a class="el" href="group__e2dElement.html#ga39dd883e42f609efba3f75300a29ff31" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a>). Needs effective transformations to be calculated (<a class="el" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called)  <a href="#gab4e3f4eeba31c937a946f68617c5cb06"></a><br/></td></tr>
-<tr class="memitem:gac3ad9f8cdc0782378c9f2e93cb7da68f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#gac3ad9f8cdc0782378c9f2e93cb7da68f">e2dElementGetRelativePoint</a> (const <a class="el" href="structe2dElement.html">e2dElement</a> *elem, const <a class="el" href="structe2dElement.html">e2dElement</a> *relativeTo, const <a class="el" href="structe2dPoint.html">e2dPoint</a> *point)</td></tr>
-<tr class="memdesc:gac3ad9f8cdc0782378c9f2e93cb7da68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relativeTo. The multiply it with point. Needs effective transformations to be calculated (<a class="el" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called).  <a href="#gac3ad9f8cdc0782378c9f2e93cb7da68f"></a><br/></td></tr>
-<tr class="memitem:ga94aa710b2da71af2091fe4d5b87ce47e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga94aa710b2da71af2091fe4d5b87ce47e">e2dElementCalculateBoundingBox</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem)</td></tr>
-<tr class="memdesc:ga94aa710b2da71af2091fe4d5b87ce47e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will check type and calculate the appropriate method (e.g. <a class="el" href="group__e2dGroup.html#ga7c5f43489bbd2d36a51414aee07abf5a" title="Calculates the bounding box of the group using the bounding boxes of the children. If a child doesn&#39;t have the bounding box calculated, then e2dElementCalculateBoundingBox() is called in the child.">e2dGroupCalculateBoundingBox()</a>)  <a href="#ga94aa710b2da71af2091fe4d5b87ce47e"></a><br/></td></tr>
-<tr class="memitem:ga36b01a888c97163c990e16d348aff61c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga36b01a888c97163c990e16d348aff61c">e2dElementCenterAtBBox</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem, float tx, float ty)</td></tr>
-<tr class="memdesc:ga36b01a888c97163c990e16d348aff61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e.g. <a class="el" href="group__e2dGroup.html#ga04bf94419865ca7f9d6daf30ce3fadf0" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a>). (tx, ty) will define where in the bounding box, the element will be centered, e.g. (0,0, will center on the top left corner, (0.5, 0.5) will center on the center of the bbox.  <a href="#ga36b01a888c97163c990e16d348aff61c"></a><br/></td></tr>
+<tr class="memitem:ga2fdc3435e0e1ac9d1e1f0b330d9539fa"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga2fdc3435e0e1ac9d1e1f0b330d9539fa">e2dElementDestroy</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem)</td></tr>
+<tr class="memdesc:ga2fdc3435e0e1ac9d1e1f0b330d9539fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will check the type member of elem and call the appropriate destructor (e.g. <a class="el" href="group__e2dGroup.html#gae2d96b65c911168dd57442f75c632063" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy()</a>)  <a href="#ga2fdc3435e0e1ac9d1e1f0b330d9539fa"></a><br/></td></tr>
+<tr class="memitem:ga5c3a7d29f41609686a3a455bad6ef7c9"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga5c3a7d29f41609686a3a455bad6ef7c9">e2dElementFreeMembers</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem)</td></tr>
+<tr class="memdesc:ga5c3a7d29f41609686a3a455bad6ef7c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will free all the dynamically allocated memory inside the <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct pointed by elem.  <a href="#ga5c3a7d29f41609686a3a455bad6ef7c9"></a><br/></td></tr>
+<tr class="memitem:ga8a9021ff786f5fe61536d1c25ff0e377"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga8a9021ff786f5fe61536d1c25ff0e377">e2dElementAddAttribute</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem, const char *name, const char *value)</td></tr>
+<tr class="memdesc:ga8a9021ff786f5fe61536d1c25ff0e377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will add an attribute to the element. Increases the size of the array if necessary.  <a href="#ga8a9021ff786f5fe61536d1c25ff0e377"></a><br/></td></tr>
+<tr class="memitem:ga7ed2b8668a43316418c8da8b9248a1af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga7ed2b8668a43316418c8da8b9248a1af">e2dElementGetAttribute</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem, const char *name)</td></tr>
+<tr class="memdesc:ga7ed2b8668a43316418c8da8b9248a1af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of an attribute with a given name.  <a href="#ga7ed2b8668a43316418c8da8b9248a1af"></a><br/></td></tr>
+<tr class="memitem:ga9e3e35d789556a05a4bd439b8cae01f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga9e3e35d789556a05a4bd439b8cae01f2">e2dElementGetLocalPosition</a> (const <a class="el" href="structe2dElement.html">e2dElement</a> *elem)</td></tr>
+<tr class="memdesc:ga9e3e35d789556a05a4bd439b8cae01f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of the element, taken from the localTransform.  <a href="#ga9e3e35d789556a05a4bd439b8cae01f2"></a><br/></td></tr>
+<tr class="memitem:ga542b7ae5370bd59e118ed656588d3029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga542b7ae5370bd59e118ed656588d3029">e2dElementGetWorldPosition</a> (const <a class="el" href="structe2dElement.html">e2dElement</a> *elem)</td></tr>
+<tr class="memdesc:ga542b7ae5370bd59e118ed656588d3029"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNTESTED Will get the local position (<a class="el" href="group__e2dElement.html#ga9e3e35d789556a05a4bd439b8cae01f2" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a>) and multiply it by the inverseEffectiveTransform and obtain the world position. Needs effective transformations to be calculated ( <a class="el" href="group__e2dScene.html#ga6981f2448904c96723449cb84ffb4d8a" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called)  <a href="#ga542b7ae5370bd59e118ed656588d3029"></a><br/></td></tr>
+<tr class="memitem:gaa00ae93ed9fb9d27db2513e3f05a0827"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#gaa00ae93ed9fb9d27db2513e3f05a0827">e2dElementGetRelativePosition</a> (const <a class="el" href="structe2dElement.html">e2dElement</a> *elem, const <a class="el" href="structe2dElement.html">e2dElement</a> *relativeTo)</td></tr>
+<tr class="memdesc:gaa00ae93ed9fb9d27db2513e3f05a0827"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relativeTo. The multiply it with the local position of elem (<a class="el" href="group__e2dElement.html#ga9e3e35d789556a05a4bd439b8cae01f2" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a>). Needs effective transformations to be calculated (<a class="el" href="group__e2dScene.html#ga6981f2448904c96723449cb84ffb4d8a" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called)  <a href="#gaa00ae93ed9fb9d27db2513e3f05a0827"></a><br/></td></tr>
+<tr class="memitem:gae6b6f57ac5505ef9181289197d419536"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#gae6b6f57ac5505ef9181289197d419536">e2dElementGetRelativePoint</a> (const <a class="el" href="structe2dElement.html">e2dElement</a> *elem, const <a class="el" href="structe2dElement.html">e2dElement</a> *relativeTo, const <a class="el" href="structe2dPoint.html">e2dPoint</a> *point)</td></tr>
+<tr class="memdesc:gae6b6f57ac5505ef9181289197d419536"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relativeTo. The multiply it with point. Needs effective transformations to be calculated (<a class="el" href="group__e2dScene.html#ga6981f2448904c96723449cb84ffb4d8a" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called).  <a href="#gae6b6f57ac5505ef9181289197d419536"></a><br/></td></tr>
+<tr class="memitem:ga575c7363927670f1ea8c52b7ea23fcd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#ga575c7363927670f1ea8c52b7ea23fcd5">e2dElementCalculateBoundingBox</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem)</td></tr>
+<tr class="memdesc:ga575c7363927670f1ea8c52b7ea23fcd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will check type and calculate the appropriate method (e.g. <a class="el" href="group__e2dGroup.html#gacf5659083b312e030456721b2560d4f4" title="Calculates the bounding box of the group using the bounding boxes of the children. If a child doesn&#39;t have the bounding box calculated, then e2dElementCalculateBoundingBox() is called in the child.">e2dGroupCalculateBoundingBox()</a>)  <a href="#ga575c7363927670f1ea8c52b7ea23fcd5"></a><br/></td></tr>
+<tr class="memitem:gab829b280fa22a3509c40425fc84b5061"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dElement.html#gab829b280fa22a3509c40425fc84b5061">e2dElementCenterAtBBox</a> (<a class="el" href="structe2dElement.html">e2dElement</a> *elem, float tx, float ty)</td></tr>
+<tr class="memdesc:gab829b280fa22a3509c40425fc84b5061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e.g. <a class="el" href="group__e2dGroup.html#ga2800a7dc3827e8753e2f2c6ef2e05eb9" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a>). (tx, ty) will define where in the bounding box, the element will be centered, e.g. (0,0, will center on the top left corner, (0.5, 0.5) will center on the center of the bbox.  <a href="#gab829b280fa22a3509c40425fc84b5061"></a><br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="ga5cfa0a343d3dd1a30b0addc4ec6e7f88"></a>
+<a class="anchor" id="ga8a9021ff786f5fe61536d1c25ff0e377"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="group__e2dElement.html#ga5cfa0a343d3dd1a30b0addc4ec6e7f88">e2dElementAddAttribute</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void <a class="el" href="group__e2dElement.html#ga8a9021ff786f5fe61536d1c25ff0e377">e2dElementAddAttribute</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td>
           <td class="paramname"><em>elem</em>, </td>
@@ -215,12 +215,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga94aa710b2da71af2091fe4d5b87ce47e"></a>
+<a class="anchor" id="ga575c7363927670f1ea8c52b7ea23fcd5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="group__e2dElement.html#ga94aa710b2da71af2091fe4d5b87ce47e">e2dElementCalculateBoundingBox</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void <a class="el" href="group__e2dElement.html#ga575c7363927670f1ea8c52b7ea23fcd5">e2dElementCalculateBoundingBox</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td>
           <td class="paramname"><em>elem</em></td><td>)</td>
@@ -230,27 +230,27 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Will check type and calculate the appropriate method (e.g. <a class="el" href="group__e2dGroup.html#ga7c5f43489bbd2d36a51414aee07abf5a" title="Calculates the bounding box of the group using the bounding boxes of the children. If a child doesn&#39;t have the bounding box calculated, then e2dElementCalculateBoundingBox() is called in the child.">e2dGroupCalculateBoundingBox()</a>) </p>
+<p>Will check type and calculate the appropriate method (e.g. <a class="el" href="group__e2dGroup.html#gacf5659083b312e030456721b2560d4f4" title="Calculates the bounding box of the group using the bounding boxes of the children. If a child doesn&#39;t have the bounding box calculated, then e2dElementCalculateBoundingBox() is called in the child.">e2dGroupCalculateBoundingBox()</a>) </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">elem</td><td>The <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> to calculate.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#ga7c5f43489bbd2d36a51414aee07abf5a" title="Calculates the bounding box of the group using the bounding boxes of the children. If a child doesn&#39;t have the bounding box calculated, then e2dElementCalculateBoundingBox() is called in the child.">e2dGroupCalculateBoundingBox()</a> </dd>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#gacf5659083b312e030456721b2560d4f4" title="Calculates the bounding box of the group using the bounding boxes of the children. If a child doesn&#39;t have the bounding box calculated, then e2dElementCalculateBoundingBox() is called in the child.">e2dGroupCalculateBoundingBox()</a> </dd>
 <dd>
-<a class="el" href="group__e2dImage.html#ga6df4ef2b71e130f5817b079b6b32d249" title="A quite straight forward function which simply makes the e2dImage::width, e2dImage::height and e2dIma...">e2dImageCalculateBoundingBox()</a> </dd>
+<a class="el" href="group__e2dImage.html#ga3d4d1b561c5283284969e2f66f2799f7" title="A quite straight forward function which simply makes the e2dImage::width, e2dImage::height and e2dIma...">e2dImageCalculateBoundingBox()</a> </dd>
 <dd>
-<a class="el" href="group__e2dPath.html#ga08a839e808e78ae0f0161be63090906b" title="Calculates the bounding box of the path using by checking the space occupied ball the elements in the...">e2dPathCalculateBoundingBox()</a> </dd></dl>
+<a class="el" href="group__e2dPath.html#gadb195df30ba2615862bb9f1d1e27a27b" title="Calculates the bounding box of the path using by checking the space occupied ball the elements in the...">e2dPathCalculateBoundingBox()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga36b01a888c97163c990e16d348aff61c"></a>
+<a class="anchor" id="gab829b280fa22a3509c40425fc84b5061"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="group__e2dElement.html#ga36b01a888c97163c990e16d348aff61c">e2dElementCenterAtBBox</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void <a class="el" href="group__e2dElement.html#gab829b280fa22a3509c40425fc84b5061">e2dElementCenterAtBBox</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td>
           <td class="paramname"><em>elem</em>, </td>
@@ -276,7 +276,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e.g. <a class="el" href="group__e2dGroup.html#ga04bf94419865ca7f9d6daf30ce3fadf0" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a>). (tx, ty) will define where in the bounding box, the element will be centered, e.g. (0,0, will center on the top left corner, (0.5, 0.5) will center on the center of the bbox. </p>
+<p>Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e.g. <a class="el" href="group__e2dGroup.html#ga2800a7dc3827e8753e2f2c6ef2e05eb9" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a>). (tx, ty) will define where in the bounding box, the element will be centered, e.g. (0,0, will center on the top left corner, (0.5, 0.5) will center on the center of the bbox. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">elem</td><td>The <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> to center. </td></tr>
@@ -285,22 +285,22 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga94aa710b2da71af2091fe4d5b87ce47e" title="Will check type and calculate the appropriate method (e.g. e2dGroupCalculateBoundingBox())">e2dElementCalculateBoundingBox()</a> </dd>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga575c7363927670f1ea8c52b7ea23fcd5" title="Will check type and calculate the appropriate method (e.g. e2dGroupCalculateBoundingBox())">e2dElementCalculateBoundingBox()</a> </dd>
 <dd>
-<a class="el" href="group__e2dGroup.html#ga04bf94419865ca7f9d6daf30ce3fadf0" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a> </dd>
+<a class="el" href="group__e2dGroup.html#ga2800a7dc3827e8753e2f2c6ef2e05eb9" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a> </dd>
 <dd>
-<a class="el" href="group__e2dImage.html#ga08652fd1ad70d4935d98bcc02a38fb69" title="Adds a transformation to the image which subtracts the position (offset by (tx,ty)) of the Bounding B...">e2dImageCenterAtBBox()</a> </dd>
+<a class="el" href="group__e2dImage.html#ga67e9b08dc9eb45b38af991d4d739a860" title="Adds a transformation to the image which subtracts the position (offset by (tx,ty)) of the Bounding B...">e2dImageCenterAtBBox()</a> </dd>
 <dd>
-<a class="el" href="group__e2dPath.html#ga17ec56804be674223581dc4c56849a7c" title="Adds a transformation to the path which subtracts the position of the Bounding Box (offset by (tx...">e2dPathCenterAtBBox()</a> </dd></dl>
+<a class="el" href="group__e2dPath.html#ga352905c23188fdac9caf89018feee20c" title="Adds a transformation to the path which subtracts the position of the Bounding Box (offset by (tx...">e2dPathCenterAtBBox()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga214c437a16fe6f3fc795539f851a2019"></a>
+<a class="anchor" id="ga2fdc3435e0e1ac9d1e1f0b330d9539fa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019">e2dElementDestroy</a> </td>
+          <td class="memname">void <a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="group__e2dElement.html#ga2fdc3435e0e1ac9d1e1f0b330d9539fa">e2dElementDestroy</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td>
           <td class="paramname"><em>elem</em></td><td>)</td>
@@ -310,27 +310,27 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Will check the type member of elem and call the appropriate destructor (e.g. <a class="el" href="group__e2dGroup.html#ga545626effa0f89b72f244e56aadb05bc" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy()</a>) </p>
+<p>Will check the type member of elem and call the appropriate destructor (e.g. <a class="el" href="group__e2dGroup.html#gae2d96b65c911168dd57442f75c632063" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy()</a>) </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">elem</td><td>The <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> to be destroyed.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#ga545626effa0f89b72f244e56aadb05bc" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy()</a> </dd>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#gae2d96b65c911168dd57442f75c632063" title="Calls e2dGroupFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dGroupDestroy()</a> </dd>
 <dd>
-<a class="el" href="group__e2dImage.html#gacf174e48578f0e23888e37f47a3ef10b" title="Calls e2dImageFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dImageDestroy()</a> </dd>
+<a class="el" href="group__e2dImage.html#ga0cf5299cb1479f855966613374a7968a" title="Calls e2dImageFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy()...">e2dImageDestroy()</a> </dd>
 <dd>
-<a class="el" href="group__e2dPath.html#ga92e9e63b2307a2fbe9cfa564852e98a7" title="Calls e2dPathFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy() ...">e2dPathDestroy()</a> </dd></dl>
+<a class="el" href="group__e2dPath.html#ga96b9669138ff5e22422e5e1fa29d41d1" title="Calls e2dPathFreeMembers(), e2dElementFreeMembers(), and then frees the pointer. e2dElementDestroy() ...">e2dPathDestroy()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gae8da5104d70a09549ca74044dda8313c"></a>
+<a class="anchor" id="ga5c3a7d29f41609686a3a455bad6ef7c9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="group__e2dElement.html#gae8da5104d70a09549ca74044dda8313c">e2dElementFreeMembers</a> </td>
+          <td class="memname">void <a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="group__e2dElement.html#ga5c3a7d29f41609686a3a455bad6ef7c9">e2dElementFreeMembers</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td>
           <td class="paramname"><em>elem</em></td><td>)</td>
@@ -350,12 +350,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gac32ea8a33b317fc014929102d64ac157"></a>
+<a class="anchor" id="ga7ed2b8668a43316418c8da8b9248a1af"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char* <a class="el" href="group__e2dElement.html#gac32ea8a33b317fc014929102d64ac157">e2dElementGetAttribute</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> const char* <a class="el" href="group__e2dElement.html#ga7ed2b8668a43316418c8da8b9248a1af">e2dElementGetAttribute</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td>
           <td class="paramname"><em>elem</em>, </td>
@@ -392,12 +392,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga39dd883e42f609efba3f75300a29ff31"></a>
+<a class="anchor" id="ga9e3e35d789556a05a4bd439b8cae01f2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structe2dPoint.html">e2dPoint</a> <a class="el" href="group__e2dElement.html#ga39dd883e42f609efba3f75300a29ff31">e2dElementGetLocalPosition</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dPoint.html">e2dPoint</a> <a class="el" href="group__e2dElement.html#ga9e3e35d789556a05a4bd439b8cae01f2">e2dElementGetLocalPosition</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td>
           <td class="paramname"><em>elem</em></td><td>)</td>
@@ -423,12 +423,12 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gac3ad9f8cdc0782378c9f2e93cb7da68f"></a>
+<a class="anchor" id="gae6b6f57ac5505ef9181289197d419536"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structe2dPoint.html">e2dPoint</a> <a class="el" href="group__e2dElement.html#gac3ad9f8cdc0782378c9f2e93cb7da68f">e2dElementGetRelativePoint</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dPoint.html">e2dPoint</a> <a class="el" href="group__e2dElement.html#gae6b6f57ac5505ef9181289197d419536">e2dElementGetRelativePoint</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td>
           <td class="paramname"><em>elem</em>, </td>
@@ -454,7 +454,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relativeTo. The multiply it with point. Needs effective transformations to be calculated (<a class="el" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called). </p>
+<p>UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relativeTo. The multiply it with point. Needs effective transformations to be calculated (<a class="el" href="group__e2dScene.html#ga6981f2448904c96723449cb84ffb4d8a" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called). </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">elem</td><td>The <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> where the position will be requested. </td></tr>
@@ -469,18 +469,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga39dd883e42f609efba3f75300a29ff31" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a> </dd>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga9e3e35d789556a05a4bd439b8cae01f2" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a> </dd>
 <dd>
-<a class="el" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> </dd></dl>
+<a class="el" href="group__e2dScene.html#ga6981f2448904c96723449cb84ffb4d8a" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gab4e3f4eeba31c937a946f68617c5cb06"></a>
+<a class="anchor" id="gaa00ae93ed9fb9d27db2513e3f05a0827"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structe2dPoint.html">e2dPoint</a> <a class="el" href="group__e2dElement.html#gab4e3f4eeba31c937a946f68617c5cb06">e2dElementGetRelativePosition</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dPoint.html">e2dPoint</a> <a class="el" href="group__e2dElement.html#gaa00ae93ed9fb9d27db2513e3f05a0827">e2dElementGetRelativePosition</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td>
           <td class="paramname"><em>elem</em>, </td>
@@ -500,7 +500,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relativeTo. The multiply it with the local position of elem (<a class="el" href="group__e2dElement.html#ga39dd883e42f609efba3f75300a29ff31" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a>). Needs effective transformations to be calculated (<a class="el" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called) </p>
+<p>UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the inverse effective transform of relativeTo. The multiply it with the local position of elem (<a class="el" href="group__e2dElement.html#ga9e3e35d789556a05a4bd439b8cae01f2" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a>). Needs effective transformations to be calculated (<a class="el" href="group__e2dScene.html#ga6981f2448904c96723449cb84ffb4d8a" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called) </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">elem</td><td>The <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> where the position will be requested. </td></tr>
@@ -514,18 +514,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga39dd883e42f609efba3f75300a29ff31" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a> </dd>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga9e3e35d789556a05a4bd439b8cae01f2" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a> </dd>
 <dd>
-<a class="el" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> </dd></dl>
+<a class="el" href="group__e2dScene.html#ga6981f2448904c96723449cb84ffb4d8a" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga9b85de42e52c0d89e82f9231ea923c8c"></a>
+<a class="anchor" id="ga542b7ae5370bd59e118ed656588d3029"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structe2dPoint.html">e2dPoint</a> <a class="el" href="group__e2dElement.html#ga9b85de42e52c0d89e82f9231ea923c8c">e2dElementGetWorldPosition</a> </td>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dPoint.html">e2dPoint</a> <a class="el" href="group__e2dElement.html#ga542b7ae5370bd59e118ed656588d3029">e2dElementGetWorldPosition</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structe2dElement.html">e2dElement</a> *&#160;</td>
           <td class="paramname"><em>elem</em></td><td>)</td>
@@ -535,7 +535,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>UNTESTED Will get the local position (<a class="el" href="group__e2dElement.html#ga39dd883e42f609efba3f75300a29ff31" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a>) and multiply it by the inverseEffectiveTransform and obtain the world position. Needs effective transformations to be calculated ( <a class="el" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called) </p>
+<p>UNTESTED Will get the local position (<a class="el" href="group__e2dElement.html#ga9e3e35d789556a05a4bd439b8cae01f2" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a>) and multiply it by the inverseEffectiveTransform and obtain the world position. Needs effective transformations to be calculated ( <a class="el" href="group__e2dScene.html#ga6981f2448904c96723449cb84ffb4d8a" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> has been called) </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">elem</td><td>The <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> where the position will be requested.</td></tr>
@@ -548,9 +548,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga39dd883e42f609efba3f75300a29ff31" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a> </dd>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga9e3e35d789556a05a4bd439b8cae01f2" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition()</a> </dd>
 <dd>
-<a class="el" href="group__e2dScene.html#gac4b32991ff8bab5d5ae429fb97b4e26c" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> </dd></dl>
+<a class="el" href="group__e2dScene.html#ga6981f2448904c96723449cb84ffb4d8a" title="Assigns the effective transform (calculated by multiplying the local transform with the effective tra...">e2dSceneCalculateEffectiveTransforms()</a> </dd></dl>
 
 </div>
 </div>
@@ -594,11 +594,11 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#gaea870c0efafe302d65baaec0b028c6fb" title="This is the constructor of e2dGroup. It returns a pointer to a new e2dGroup. Inside it calls e2dGroup...">e2dGroupCreate()</a> </dd>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#ga3c7f6acf28180141c87806a9d260f3f9" title="This is the constructor of e2dGroup. It returns a pointer to a new e2dGroup. Inside it calls e2dGroup...">e2dGroupCreate()</a> </dd>
 <dd>
-<a class="el" href="group__e2dImage.html#gafc7e085a237f8d2f1b147b3cca8259d6" title="This is the constructor of e2dImage. It returns a pointer to a new e2dImage. Inside it calls e2dImage...">e2dImageCreate()</a> </dd>
+<a class="el" href="group__e2dImage.html#gad7713253bd08e8ca835df5bbd1d0e483" title="This is the constructor of e2dImage. It returns a pointer to a new e2dImage. Inside it calls e2dImage...">e2dImageCreate()</a> </dd>
 <dd>
-<a class="el" href="group__e2dPath.html#ga6f81c71700ebf86964ea7e4b28dea4fb" title="This is the constructor of e2dPath. It returns a pointer to a new e2dPath. Inside it calls e2dPathIni...">e2dPathCreate()</a> </dd></dl>
+<a class="el" href="group__e2dPath.html#gaceacae85646a55f26e71461fe1bf657e" title="This is the constructor of e2dPath. It returns a pointer to a new e2dPath. Inside it calls e2dPathIni...">e2dPathCreate()</a> </dd></dl>
 
 </div>
 </div>
@@ -607,7 +607,7 @@ Functions</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Sat Apr 28 2012 23:59:29 for Ez2DS by
+    <li class="footer">Generated on Fri May 11 2012 03:28:13 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

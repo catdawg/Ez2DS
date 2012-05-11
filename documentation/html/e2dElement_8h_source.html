@@ -134,94 +134,87 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00011"></a>00011 <span class="preprocessor">#ifndef E2DELEMENT_H</span>
 <a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define  E2DELEMENT_H</span>
 <a name="l00013"></a>00013 <span class="preprocessor"></span>
-<a name="l00014"></a>00014 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
-<a name="l00016"></a>00016 <span class="preprocessor">#endif</span>
-<a name="l00017"></a>00017 <span class="preprocessor"></span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="Ez2DS_8h.html" title="File which contains global definitions useful to be included on every other file of the library...">Ez2DS.h</a>&quot;</span>
-<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="e2dMatrix_8h.html" title="File which contains a 3x3 matrix implementation and utility methods.">e2dMatrix.h</a>&quot;</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="e2dPoint_8h.html" title="File which contains a struct definition of a point (two floats).">e2dPoint.h</a>&quot;</span>
-<a name="l00021"></a>00021 
-<a name="l00031"></a><a class="code" href="group__e2dElement.html#ga9bc8cfdec08c7e9069fc707ee456fd38">00031</a>     <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__e2dElement.html#ga9bc8cfdec08c7e9069fc707ee456fd38" title="The e2dElementType enum defines the possible &quot;substructs&quot; of e2dElement. This is used for reflection...">e2dElementType</a> {
-<a name="l00032"></a>00032         E2D_GROUP,
-<a name="l00033"></a>00033         E2D_PATH,
-<a name="l00034"></a>00034         E2D_IMAGE
-<a name="l00035"></a>00035     } <a class="code" href="group__e2dElement.html#ga9bc8cfdec08c7e9069fc707ee456fd38" title="The e2dElementType enum defines the possible &quot;substructs&quot; of e2dElement. This is used for reflection...">e2dElementType</a>;
-<a name="l00036"></a>00036 
-<a name="l00047"></a><a class="code" href="structe2dElement.html">00047</a>     <span class="keyword">struct </span><a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> {
-<a name="l00048"></a><a class="code" href="structe2dElement.html#a0ebd8fae058dd45496c86a2ca317ca9c">00048</a>         <a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* <a class="code" href="structe2dElement.html#a0ebd8fae058dd45496c86a2ca317ca9c">scene</a>;
-<a name="l00049"></a><a class="code" href="structe2dElement.html#a7df43d7f6c23b61b843acb56eb3ca19a">00049</a>         <a class="code" href="group__e2dElement.html#ga9bc8cfdec08c7e9069fc707ee456fd38" title="The e2dElementType enum defines the possible &quot;substructs&quot; of e2dElement. This is used for reflection...">e2dElementType</a> <a class="code" href="structe2dElement.html#a7df43d7f6c23b61b843acb56eb3ca19a">type</a>;
-<a name="l00050"></a><a class="code" href="structe2dElement.html#aecb3b0d045ada529257a2fbf8f829599">00050</a>         <span class="keywordtype">char</span>* <a class="code" href="structe2dElement.html#aecb3b0d045ada529257a2fbf8f829599">id</a>;
-<a name="l00051"></a><a class="code" href="structe2dElement.html#a300bb6cf5b184e200523e9bce8346dc4">00051</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dElement.html#a300bb6cf5b184e200523e9bce8346dc4">unique_id</a>; 
-<a name="l00054"></a><a class="code" href="structe2dElement.html#a52bda732df714953f93c1e6f5f7c7c93">00054</a>         <a class="code" href="structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a> <a class="code" href="structe2dElement.html#a52bda732df714953f93c1e6f5f7c7c93">localTransform</a>; 
-<a name="l00055"></a><a class="code" href="structe2dElement.html#a6c8e26945f09b5157e2111e42f99b879">00055</a>         <a class="code" href="structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a> <a class="code" href="structe2dElement.html#a6c8e26945f09b5157e2111e42f99b879">effectiveTransform</a>; 
-<a name="l00057"></a><a class="code" href="structe2dElement.html#a5e6d7341f2dbef1923b0a3fcc13781c6">00057</a>         <a class="code" href="structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a> <a class="code" href="structe2dElement.html#a5e6d7341f2dbef1923b0a3fcc13781c6">inverseEffectiveTransform</a>;   
-<a name="l00064"></a><a class="code" href="structe2dElement.html#a3e62eb2fbf1d6bc6d6fe549096a6cee9">00064</a>         <a class="code" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* <a class="code" href="structe2dElement.html#a3e62eb2fbf1d6bc6d6fe549096a6cee9">parent</a>;
-<a name="l00066"></a><a class="code" href="structe2dElement.html#a836181401227a3ca42da026a8d35e730">00066</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dElement.html#a836181401227a3ca42da026a8d35e730">attributeNum</a>;
-<a name="l00068"></a><a class="code" href="structe2dElement.html#a70d94929e3789bf7c019c939b0084985">00068</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dElement.html#a70d94929e3789bf7c019c939b0084985">attributeAlloc</a>;
-<a name="l00069"></a><a class="code" href="structe2dElement.html#af9b5d9dbbf270b6f92a3ee66ce1b47ac">00069</a>         <span class="keywordtype">char</span>** <a class="code" href="structe2dElement.html#af9b5d9dbbf270b6f92a3ee66ce1b47ac">attributeNames</a>;  
-<a name="l00072"></a><a class="code" href="structe2dElement.html#ae8591ff93c366b4d66817a70f2d9f33e">00072</a>         <span class="keywordtype">char</span>** <a class="code" href="structe2dElement.html#ae8591ff93c366b4d66817a70f2d9f33e">attributeValues</a>;
-<a name="l00076"></a><a class="code" href="structe2dElement.html#a6a1d9b223870deeaec7f5e8b23ca4b22">00076</a>         <span class="keywordtype">float</span> <a class="code" href="structe2dElement.html#a6a1d9b223870deeaec7f5e8b23ca4b22">bboxWidth</a>;
-<a name="l00079"></a><a class="code" href="structe2dElement.html#a680d0d4219ac8720005c46b55a9676ae">00079</a>         <span class="keywordtype">float</span> <a class="code" href="structe2dElement.html#a680d0d4219ac8720005c46b55a9676ae">bboxHeight</a>;
-<a name="l00082"></a><a class="code" href="structe2dElement.html#ac2c17ce4cba805b594b314a77923cbf5">00082</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dElement.html#ac2c17ce4cba805b594b314a77923cbf5">bboxPosition</a>;
-<a name="l00085"></a>00085     };
-<a name="l00086"></a>00086 
-<a name="l00087"></a>00087 
-<a name="l00107"></a>00107     <span class="keywordtype">void</span>
-<a name="l00108"></a>00108     <a class="code" href="group__e2dElement.html#ga8734d10ef40a380dfc51bfe1790a92a7" title="Called by the create methods of structs which inherit e2dElement (e.g. e2dGroupCreate). Will initialize all members of the struct with the parameters of this method and with default values on everything else.">e2dElementInit</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> *element, <a class="code" href="group__e2dElement.html#ga9bc8cfdec08c7e9069fc707ee456fd38" title="The e2dElementType enum defines the possible &quot;substructs&quot; of e2dElement. This is used for reflection...">e2dElementType</a> type, <span class="keyword">const</span> <a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* scene);
-<a name="l00109"></a>00109 
-<a name="l00120"></a>00120     <span class="keywordtype">void</span>
-<a name="l00121"></a>00121     <a class="code" href="group__e2dElement.html#ga214c437a16fe6f3fc795539f851a2019" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
-<a name="l00122"></a>00122 
-<a name="l00129"></a>00129     <span class="keywordtype">void</span>
-<a name="l00130"></a>00130     <a class="code" href="group__e2dElement.html#gae8da5104d70a09549ca74044dda8313c" title="Will free all the dynamically allocated memory inside the e2dElement struct pointed by elem...">e2dElementFreeMembers</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
-<a name="l00131"></a>00131 
-<a name="l00141"></a>00141     <span class="keywordtype">void</span>
-<a name="l00142"></a>00142     <a class="code" href="group__e2dElement.html#ga5cfa0a343d3dd1a30b0addc4ec6e7f88" title="Will add an attribute to the element. Increases the size of the array if necessary.">e2dElementAddAttribute</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
-<a name="l00143"></a>00143             <span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <span class="keywordtype">char</span>* value);
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="Ez2DS_8h.html" title="File which contains global definitions useful to be included on every other file of the library...">Ez2DS.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="e2dMatrix_8h.html" title="File which contains a 3x3 matrix implementation and utility methods.">e2dMatrix.h</a>&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="e2dPoint_8h.html" title="File which contains a struct definition of a point (two floats).">e2dPoint.h</a>&quot;</span>
+<a name="l00018"></a>00018 
+<a name="l00028"></a><a class="code" href="group__e2dElement.html#ga9bc8cfdec08c7e9069fc707ee456fd38">00028</a>     <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__e2dElement.html#ga9bc8cfdec08c7e9069fc707ee456fd38" title="The e2dElementType enum defines the possible &quot;substructs&quot; of e2dElement. This is used for reflection...">e2dElementType</a> {
+<a name="l00029"></a>00029         E2D_GROUP,
+<a name="l00030"></a>00030         E2D_PATH,
+<a name="l00031"></a>00031         E2D_IMAGE
+<a name="l00032"></a>00032     } <a class="code" href="group__e2dElement.html#ga9bc8cfdec08c7e9069fc707ee456fd38" title="The e2dElementType enum defines the possible &quot;substructs&quot; of e2dElement. This is used for reflection...">e2dElementType</a>;
+<a name="l00033"></a>00033 
+<a name="l00044"></a><a class="code" href="structe2dElement.html">00044</a>      <span class="keyword">struct </span><a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> {
+<a name="l00045"></a><a class="code" href="structe2dElement.html#a0ebd8fae058dd45496c86a2ca317ca9c">00045</a>         <a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* <a class="code" href="structe2dElement.html#a0ebd8fae058dd45496c86a2ca317ca9c">scene</a>;
+<a name="l00046"></a><a class="code" href="structe2dElement.html#a7df43d7f6c23b61b843acb56eb3ca19a">00046</a>         <a class="code" href="group__e2dElement.html#ga9bc8cfdec08c7e9069fc707ee456fd38" title="The e2dElementType enum defines the possible &quot;substructs&quot; of e2dElement. This is used for reflection...">e2dElementType</a> <a class="code" href="structe2dElement.html#a7df43d7f6c23b61b843acb56eb3ca19a">type</a>;
+<a name="l00047"></a><a class="code" href="structe2dElement.html#aecb3b0d045ada529257a2fbf8f829599">00047</a>         <span class="keywordtype">char</span>* <a class="code" href="structe2dElement.html#aecb3b0d045ada529257a2fbf8f829599">id</a>;
+<a name="l00048"></a><a class="code" href="structe2dElement.html#a300bb6cf5b184e200523e9bce8346dc4">00048</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dElement.html#a300bb6cf5b184e200523e9bce8346dc4">unique_id</a>; 
+<a name="l00051"></a><a class="code" href="structe2dElement.html#a52bda732df714953f93c1e6f5f7c7c93">00051</a>         <a class="code" href="structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a> <a class="code" href="structe2dElement.html#a52bda732df714953f93c1e6f5f7c7c93">localTransform</a>; 
+<a name="l00052"></a><a class="code" href="structe2dElement.html#a6c8e26945f09b5157e2111e42f99b879">00052</a>         <a class="code" href="structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a> <a class="code" href="structe2dElement.html#a6c8e26945f09b5157e2111e42f99b879">effectiveTransform</a>; 
+<a name="l00054"></a><a class="code" href="structe2dElement.html#a5e6d7341f2dbef1923b0a3fcc13781c6">00054</a>         <a class="code" href="structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row-major_order if you have doubts.">e2dMatrix</a> <a class="code" href="structe2dElement.html#a5e6d7341f2dbef1923b0a3fcc13781c6">inverseEffectiveTransform</a>;   
+<a name="l00061"></a><a class="code" href="structe2dElement.html#a3e62eb2fbf1d6bc6d6fe549096a6cee9">00061</a>         <a class="code" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* <a class="code" href="structe2dElement.html#a3e62eb2fbf1d6bc6d6fe549096a6cee9">parent</a>;
+<a name="l00063"></a><a class="code" href="structe2dElement.html#a836181401227a3ca42da026a8d35e730">00063</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dElement.html#a836181401227a3ca42da026a8d35e730">attributeNum</a>;
+<a name="l00065"></a><a class="code" href="structe2dElement.html#a70d94929e3789bf7c019c939b0084985">00065</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dElement.html#a70d94929e3789bf7c019c939b0084985">attributeAlloc</a>;
+<a name="l00066"></a><a class="code" href="structe2dElement.html#af9b5d9dbbf270b6f92a3ee66ce1b47ac">00066</a>         <span class="keywordtype">char</span>** <a class="code" href="structe2dElement.html#af9b5d9dbbf270b6f92a3ee66ce1b47ac">attributeNames</a>;  
+<a name="l00069"></a><a class="code" href="structe2dElement.html#ae8591ff93c366b4d66817a70f2d9f33e">00069</a>         <span class="keywordtype">char</span>** <a class="code" href="structe2dElement.html#ae8591ff93c366b4d66817a70f2d9f33e">attributeValues</a>;
+<a name="l00073"></a><a class="code" href="structe2dElement.html#a6a1d9b223870deeaec7f5e8b23ca4b22">00073</a>         <span class="keywordtype">float</span> <a class="code" href="structe2dElement.html#a6a1d9b223870deeaec7f5e8b23ca4b22">bboxWidth</a>;
+<a name="l00076"></a><a class="code" href="structe2dElement.html#a680d0d4219ac8720005c46b55a9676ae">00076</a>         <span class="keywordtype">float</span> <a class="code" href="structe2dElement.html#a680d0d4219ac8720005c46b55a9676ae">bboxHeight</a>;
+<a name="l00079"></a><a class="code" href="structe2dElement.html#ac2c17ce4cba805b594b314a77923cbf5">00079</a>         <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> <a class="code" href="structe2dElement.html#ac2c17ce4cba805b594b314a77923cbf5">bboxPosition</a>;
+<a name="l00082"></a>00082     };
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 
+<a name="l00104"></a>00104     <span class="keywordtype">void</span>
+<a name="l00105"></a>00105     <a class="code" href="group__e2dElement.html#ga8734d10ef40a380dfc51bfe1790a92a7" title="Called by the create methods of structs which inherit e2dElement (e.g. e2dGroupCreate). Will initialize all members of the struct with the parameters of this method and with default values on everything else.">e2dElementInit</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> *element, <a class="code" href="group__e2dElement.html#ga9bc8cfdec08c7e9069fc707ee456fd38" title="The e2dElementType enum defines the possible &quot;substructs&quot; of e2dElement. This is used for reflection...">e2dElementType</a> type, <span class="keyword">const</span> <a class="code" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a>* scene);
+<a name="l00106"></a>00106 
+<a name="l00117"></a>00117     <span class="keywordtype">void</span> <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> 
+<a name="l00118"></a>00118     <a class="code" href="group__e2dElement.html#ga2fdc3435e0e1ac9d1e1f0b330d9539fa" title="Will check the type member of elem and call the appropriate destructor (e.g. e2dGroupDestroy())">e2dElementDestroy</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
+<a name="l00119"></a>00119 
+<a name="l00126"></a>00126     <span class="keywordtype">void</span> <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> 
+<a name="l00127"></a>00127     <a class="code" href="group__e2dElement.html#ga5c3a7d29f41609686a3a455bad6ef7c9" title="Will free all the dynamically allocated memory inside the e2dElement struct pointed by elem...">e2dElementFreeMembers</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
+<a name="l00128"></a>00128 
+<a name="l00138"></a>00138     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00139"></a>00139     <a class="code" href="group__e2dElement.html#ga8a9021ff786f5fe61536d1c25ff0e377" title="Will add an attribute to the element. Increases the size of the array if necessary.">e2dElementAddAttribute</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
+<a name="l00140"></a>00140             <span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <span class="keywordtype">char</span>* value);
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142     
+<a name="l00143"></a>00143     
 <a name="l00144"></a>00144 
-<a name="l00145"></a>00145     
-<a name="l00146"></a>00146     
-<a name="l00147"></a>00147 
-<a name="l00157"></a>00157     <span class="keyword">const</span> <span class="keywordtype">char</span>*
-<a name="l00158"></a>00158     <a class="code" href="group__e2dElement.html#gac32ea8a33b317fc014929102d64ac157" title="Returns the value of an attribute with a given name.">e2dElementGetAttribute</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
-<a name="l00159"></a>00159             <span class="keyword">const</span> <span class="keywordtype">char</span>* name);
-<a name="l00160"></a>00160 
-<a name="l00168"></a>00168     <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a>
-<a name="l00169"></a>00169     <a class="code" href="group__e2dElement.html#ga39dd883e42f609efba3f75300a29ff31" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition</a>(<span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
-<a name="l00170"></a>00170 
-<a name="l00184"></a>00184     <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a>
-<a name="l00185"></a>00185     <a class="code" href="group__e2dElement.html#ga9b85de42e52c0d89e82f9231ea923c8c" title="UNTESTED Will get the local position (e2dElementGetLocalPosition()) and multiply it by the inverseEff...">e2dElementGetWorldPosition</a>(<span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
-<a name="l00186"></a>00186     
-<a name="l00202"></a>00202     <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a>
-<a name="l00203"></a>00203     <a class="code" href="group__e2dElement.html#gab4e3f4eeba31c937a946f68617c5cb06" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePosition</a>(<span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
-<a name="l00204"></a>00204             <span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* relativeTo);
-<a name="l00205"></a>00205 
-<a name="l00222"></a>00222     <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a>
-<a name="l00223"></a>00223     <a class="code" href="group__e2dElement.html#gac3ad9f8cdc0782378c9f2e93cb7da68f" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePoint</a>(<span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
-<a name="l00224"></a>00224             <span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* relativeTo, <span class="keyword">const</span> <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> *point);
-<a name="l00225"></a>00225 
-<a name="l00237"></a>00237     <span class="keywordtype">void</span>
-<a name="l00238"></a>00238     <a class="code" href="group__e2dElement.html#ga94aa710b2da71af2091fe4d5b87ce47e" title="Will check type and calculate the appropriate method (e.g. e2dGroupCalculateBoundingBox())">e2dElementCalculateBoundingBox</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
-<a name="l00239"></a>00239     
-<a name="l00257"></a>00257     <span class="keywordtype">void</span>
-<a name="l00258"></a>00258     <a class="code" href="group__e2dElement.html#ga36b01a888c97163c990e16d348aff61c" title="Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e...">e2dElementCenterAtBBox</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
-<a name="l00259"></a>00259 
-<a name="l00260"></a>00260 
-<a name="l00261"></a>00261 
-<a name="l00266"></a>00266 <span class="preprocessor">#ifdef   __cplusplus</span>
-<a name="l00267"></a>00267 <span class="preprocessor"></span>}
-<a name="l00268"></a>00268 <span class="preprocessor">#endif</span>
-<a name="l00269"></a>00269 <span class="preprocessor"></span>
-<a name="l00270"></a>00270 <span class="preprocessor">#endif   </span><span class="comment">/* E2DELEMENT_H */</span>
-<a name="l00271"></a>00271 
+<a name="l00154"></a>00154     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keyword">const</span> <span class="keywordtype">char</span>*
+<a name="l00155"></a>00155     <a class="code" href="group__e2dElement.html#ga7ed2b8668a43316418c8da8b9248a1af" title="Returns the value of an attribute with a given name.">e2dElementGetAttribute</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
+<a name="l00156"></a>00156             <span class="keyword">const</span> <span class="keywordtype">char</span>* name);
+<a name="l00157"></a>00157 
+<a name="l00165"></a>00165     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> 
+<a name="l00166"></a>00166     <a class="code" href="group__e2dElement.html#ga9e3e35d789556a05a4bd439b8cae01f2" title="Returns the position of the element, taken from the localTransform.">e2dElementGetLocalPosition</a>(<span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
+<a name="l00167"></a>00167 
+<a name="l00181"></a>00181     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> 
+<a name="l00182"></a>00182     <a class="code" href="group__e2dElement.html#ga542b7ae5370bd59e118ed656588d3029" title="UNTESTED Will get the local position (e2dElementGetLocalPosition()) and multiply it by the inverseEff...">e2dElementGetWorldPosition</a>(<span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
+<a name="l00183"></a>00183     
+<a name="l00199"></a>00199     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> 
+<a name="l00200"></a>00200     <a class="code" href="group__e2dElement.html#gaa00ae93ed9fb9d27db2513e3f05a0827" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePosition</a>(<span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
+<a name="l00201"></a>00201             <span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* relativeTo);
+<a name="l00202"></a>00202 
+<a name="l00219"></a>00219     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> 
+<a name="l00220"></a>00220     <a class="code" href="group__e2dElement.html#gae6b6f57ac5505ef9181289197d419536" title="UNTESTED Will get the relative transformation by multiplying the effective transform of elem with the...">e2dElementGetRelativePoint</a>(<span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem,
+<a name="l00221"></a>00221             <span class="keyword">const</span> <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* relativeTo, <span class="keyword">const</span> <a class="code" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> *point);
+<a name="l00222"></a>00222 
+<a name="l00234"></a>00234     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span>
+<a name="l00235"></a>00235     <a class="code" href="group__e2dElement.html#ga575c7363927670f1ea8c52b7ea23fcd5" title="Will check type and calculate the appropriate method (e.g. e2dGroupCalculateBoundingBox())">e2dElementCalculateBoundingBox</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem);
+<a name="l00236"></a>00236     
+<a name="l00254"></a>00254     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00255"></a>00255     <a class="code" href="group__e2dElement.html#gab829b280fa22a3509c40425fc84b5061" title="Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e...">e2dElementCenterAtBBox</a>(<a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>* elem, <span class="keywordtype">float</span> tx, <span class="keywordtype">float</span> ty);
+<a name="l00256"></a>00256 
+<a name="l00257"></a>00257 
+<a name="l00258"></a>00258 
+<a name="l00264"></a>00264 <span class="preprocessor">#endif   </span><span class="comment">/* E2DELEMENT_H */</span>
+<a name="l00265"></a>00265 
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="e2dElement_8h.html">e2dElement.h</a>      </li>
 
-    <li class="footer">Generated on Sat Apr 28 2012 23:59:28 for Ez2DS by
+    <li class="footer">Generated on Fri May 11 2012 03:28:12 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

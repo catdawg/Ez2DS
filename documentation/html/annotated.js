@@ -11,5 +11,6 @@ var annotated =
     [ "e2dPathElementIterator", "structe2dPathElementIterator.html", "structe2dPathElementIterator" ],
     [ "e2dPathPoint", "structe2dPathPoint.html", "structe2dPathPoint" ],
     [ "e2dPoint", "structe2dPoint.html", "structe2dPoint" ],
-    [ "e2dScene", "structe2dScene.html", "structe2dScene" ]
+    [ "e2dScene", "structe2dScene.html", "structe2dScene" ],
+    [ "e2dSceneSearchResult", "structe2dSceneSearchResult.html", "structe2dSceneSearchResult" ]
 ];

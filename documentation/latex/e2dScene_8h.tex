@@ -18,18 +18,26 @@ Include dependency graph for e2d\-Scene.\-h\-:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structe2dScene}{e2d\-Scene}
-\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dScene}{e2d\-Scene} struct defines a scene obtained from an S\-V\-G file. The struct contains the root under which all the objects in the scene can be accessed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dScene}{e2d\-Scene} struct defines a scene obtained from an S\-V\-G file. The struct contains the root under which all the objects in the scene can be accessed. \end{DoxyCompactList}\item 
+struct \hyperlink{structe2dSceneSearchResult}{e2d\-Scene\-Search\-Result}
+\begin{DoxyCompactList}\small\item\em This struct represents the results returns by e2d\-Scene\-Search. You should always destroy the result with \hyperlink{group__e2dScene_ga0eedd7c50a3d65e91abd54fcee3de39d}{e2d\-Scene\-Search\-Result\-Destroy()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{group__e2dScene_gac4b32991ff8bab5d5ae429fb97b4e26c}{e2d\-Scene\-Calculate\-Effective\-Transforms} (\hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dScene_ga6981f2448904c96723449cb84ffb4d8a}{e2d\-Scene\-Calculate\-Effective\-Transforms} (\hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
 \begin{DoxyCompactList}\small\item\em Assigns the effective transform (calculated by multiplying the local transform with the effective transform of the parent element) to every element in the scene. It is useful to have this information for calculating relative positions(for example, knowing world positions, or positions of elements relative to other elements. \end{DoxyCompactList}\item 
-void \hyperlink{group__e2dScene_gab0487c3d83b8ae072a59286a9e8285c7}{e2d\-Scene\-Center\-All\-At\-B\-Box} (\hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene, float tx, float ty)
-\begin{DoxyCompactList}\small\item\em Calls e2d\-Element\-Center\-At\-B\-Box on all the elements in the scene. Needs Bounding Boxes to have been calculated. See \hyperlink{group__e2dGroup_ga04bf94419865ca7f9d6daf30ce3fadf0}{e2d\-Group\-Center\-At\-B\-Box()} for an explanation on the tx and ty parameters. \end{DoxyCompactList}\item 
-void \hyperlink{group__e2dScene_ga205af7a04544273413431072ea5a22b9}{e2d\-Scene\-Calculate\-All\-B\-Box} (\hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dScene_ga1d33ba7ce041a68b061cfa6b0291b886}{e2d\-Scene\-Center\-All\-At\-B\-Box} (\hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene, float tx, float ty)
+\begin{DoxyCompactList}\small\item\em Calls e2d\-Element\-Center\-At\-B\-Box on all the elements in the scene. Needs Bounding Boxes to have been calculated. See \hyperlink{group__e2dGroup_ga2800a7dc3827e8753e2f2c6ef2e05eb9}{e2d\-Group\-Center\-At\-B\-Box()} for an explanation on the tx and ty parameters. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dScene_gaa202610ee0b2e5c47bded576b365c195}{e2d\-Scene\-Calculate\-All\-B\-Box} (\hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
 \begin{DoxyCompactList}\small\item\em Calls e2d\-Group\-Calculate\-B\-Box() on the root of the scene. \end{DoxyCompactList}\item 
-\hyperlink{structe2dScene}{e2d\-Scene} $\ast$ \hyperlink{group__e2dScene_gaa0d6ded282c46461357e619f04636416}{create\-Scene\-From\-File} (char $\ast$file)
-\begin{DoxyCompactList}\small\item\em Reads the S\-V\-G in the path \char`\"{}file\char`\"{} using Mini\-X\-M\-L (\href{http://minixml.org/}{\tt http\-://minixml.\-org/}) and creates a \hyperlink{structe2dScene}{e2d\-Scene} struct which is returned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dScene}{e2d\-Scene} $\ast$ \hyperlink{group__e2dScene_ga9994e9f2692c5007b91d02c19350cd1b}{create\-Scene\-From\-File} (char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Reads the S\-V\-G in the path \char`\"{}file\char`\"{} using Mini\-X\-M\-L (\href{http://minixml.org/}{\tt http\-://minixml.\-org/}) and creates a \hyperlink{structe2dScene}{e2d\-Scene} struct which is returned. \end{DoxyCompactList}\item 
+\hypertarget{group__e2dScene_ga222c136346e92572235795d05c259e72}{\hyperlink{structe2dSceneSearchResult}{e2d\-Scene\-Search\-Result} $\ast$ \hyperlink{group__e2dScene_ga222c136346e92572235795d05c259e72}{e2d\-Scene\-Search} (\hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene, char $\ast$search\-String)}\label{group__e2dScene_ga222c136346e92572235795d05c259e72}
+
+\begin{DoxyCompactList}\small\item\em Currently searches the tree for an element with an I\-D equal to search\-String. Features planned are for searching by type or by attribute and value combination, all with using a path. For example, the search string '$\ast$$\ast$$\backslash$=tag+image' will return all the images which are children of an element with a tag attribute. \end{DoxyCompactList}\item 
+\hypertarget{group__e2dScene_ga0eedd7c50a3d65e91abd54fcee3de39d}{void \hyperlink{group__e2dScene_ga0eedd7c50a3d65e91abd54fcee3de39d}{e2d\-Scene\-Search\-Result\-Destroy} (\hyperlink{structe2dSceneSearchResult}{e2d\-Scene\-Search\-Result} $\ast$ssr)}\label{group__e2dScene_ga0eedd7c50a3d65e91abd54fcee3de39d}
+
+\begin{DoxyCompactList}\small\item\em Destroys the search result struct. Call on the results of \hyperlink{group__e2dScene_ga222c136346e92572235795d05c259e72}{e2d\-Scene\-Search()} when you are done with them. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
