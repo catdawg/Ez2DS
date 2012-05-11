@@ -124,7 +124,18 @@
             <linkerLibLibItem>ILU</linkerLibLibItem>
             <linkerLibLibItem>ILUT</linkerLibLibItem>
             <linkerLibLibItem>glut32</linkerLibLibItem>
-            <linkerLibFileItem>../msvc/Bin/Release/Ez2DS.dll</linkerLibFileItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../Ez2DS"
+                            CT="2"
+                            CN="Release"
+                            AC="false"
+                            BL="true"
+                            WD="../Ez2DS"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/Ez2DS.dll">
+              </makeArtifact>
+            </linkerLibProjectItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

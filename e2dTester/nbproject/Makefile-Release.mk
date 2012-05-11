@@ -52,13 +52,13 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Ldependencies/gl/lib -Ldependencies/IL/lib -lglu32 -lopengl32 -lDevIL -lILU -lILUT -lglut32 ../msvc/Bin/Release/Ez2DS.dll
+LDLIBSOPTIONS=-Ldependencies/gl/lib -Ldependencies/IL/lib -lglu32 -lopengl32 -lDevIL -lILU -lILUT -lglut32 -L../Ez2DS/dist/Release/MinGW-Windows -lEz2DS
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe: ../msvc/Bin/Release/Ez2DS.dll
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe: ../Ez2DS/dist/Release/MinGW-Windows/Ez2DS.dll
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/e2dtester.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
@@ -76,6 +76,7 @@ ${OBJECTDIR}/main.o: main.c
 
 # Subprojects
 .build-subprojects:
+	cd ../Ez2DS && ${MAKE}  -f Makefile CONF=Release
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
@@ -84,6 +85,7 @@ ${OBJECTDIR}/main.o: main.c
 
 # Subprojects
 .clean-subprojects:
+	cd ../Ez2DS && ${MAKE}  -f Makefile CONF=Release clean
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl

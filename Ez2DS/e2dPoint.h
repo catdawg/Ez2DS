@@ -33,6 +33,9 @@
      **/
     static e2dPoint const E2DPOINT_ZERO_ZERO = {0, 0};
 
+    /**
+     * @}
+     **/
 
 #endif	/* E2DPOINT_H */
 

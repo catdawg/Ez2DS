@@ -25,6 +25,7 @@
 #include "e2dScene.h"
 #include "e2dMatrix.h"
 #include "e2dElement.h"
+#include "e2dGroup.h"
 #include <math.h>
 #include "Ez2DSDebugDraw.h"
 
@@ -136,6 +137,9 @@ int main(int argc, const char* argv[]) {
     e2dSceneCalculateAllBBox(scene);
     e2dSceneCenterAllAtBBox(scene, 0.5, 0.5);
     e2dSceneCalculateEffectiveTransforms(scene);
+    
+    e2dSceneSearch(scene, "path3176-8");
+    
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     
     initDebugDraw();

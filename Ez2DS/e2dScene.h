@@ -91,6 +91,41 @@
     E2D_EXPORT e2dScene* 
     createSceneFromFile(char* file);
     
+    /**
+     *  @brief This struct represents the results returns by e2dSceneSearch. You should
+     * always destroy the result with e2dSceneSearchResultDestroy().
+     * 
+     * @see e2dSceneSearch()
+     * @see e2dSceneSearchResultDestroy() 
+     * 
+     **/
+    struct e2dSceneSearchResult {
+        
+        unsigned int resultListNum;/**< Number of elements in e2dSceneSearchResult::resultList Array **/
+        e2dElement** resultList;/**< Array containing the resulting elements **/
+        unsigned int resultListAlloc;/**< Currently allocated memory in e2dSceneSearchResult::resultList **/
+    };
+    
+    /**
+     *  @brief Currently searches the tree for an element with an ID equal to searchString.
+     * Features planned are for searching by type or by attribute and value combination, all with using
+     * a path. For example, the search string '**\=tag\+image' will return all the images which are children
+     * of an element with a tag attribute.
+     **/
+    e2dSceneSearchResult* 
+    e2dSceneSearch(e2dScene* scene, char * searchString);
+    
+    /**
+     *  @brief Destroys the search result struct. Call on the results of e2dSceneSearch()
+     * when you are done with them.
+     * 
+     **/
+    void 
+    e2dSceneSearchResultDestroy(e2dSceneSearchResult* ssr);
+    
+    
+    
+    
 
     /**
      * @}

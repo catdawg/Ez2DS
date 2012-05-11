@@ -61,11 +61,11 @@ build: .build-post
 
 copyDLL:
 	echo copying dll
-#ifeq ($(CONF), Debug)
-#	CP ../Ez2DS/dist/$(CONF)/MinGW-Windows/Ez2DS_d.dll $(CND_DISTDIR)/Debug/MinGW-Windows/
-#else
-#	CP ../Ez2DS/dist/$(CONF)/MinGW-Windows/Ez2DS.dll $(CND_DISTDIR)/Debug/MinGW-Windows/
-#endif
+ifeq ($(CONF), Debug)
+	CP ../Ez2DS/dist/$(CONF)/MinGW-Windows/Ez2DS_d.dll $(CND_DISTDIR)/$(CONF)/MinGW-Windows/
+else
+	CP ../Ez2DS/dist/$(CONF)/MinGW-Windows/Ez2DS.dll $(CND_DISTDIR)/$(CONF)/MinGW-Windows/
+endif
 
 
 
