@@ -214,3 +214,106 @@ e2dGroupIteratorHasNext(e2dGroupIterator* iter)  {
             && 
            iter->currentIndex >= 0;
 }
+
+void 
+e2dSearchResultIncreaseResultAlloc(e2dSearchResult* ssr) {
+    ssr->resultListAlloc *= 2;
+    ssr->resultList = (e2dElement**) realloc(ssr->resultList, ssr->resultListAlloc * sizeof (e2dElement*));
+}
+
+void
+e2dSearchResultAddResult(e2dSearchResult* ssr, e2dElement* elem) {
+    if(ssr->resultListAlloc < ssr->resultListNum + 1)
+        e2dSearchResultIncreaseResultAlloc(ssr);
+    ssr->resultList[ssr->resultListNum] = elem;
+    ssr->resultListNum++;
+}
+
+void
+e2dSearchResultDestroy(e2dSearchResult* ssr) {
+    free(ssr->resultList);
+    free(ssr);
+}
+
+E2D_BOOL
+_e2dGroupSearchByID(e2dGroup* group, e2dSearchResult* ssr, const char* id_str)
+{
+    
+    if(group->element.id && (strcmp(id_str, group->element.id) == 0)) {
+        e2dSearchResultAddResult(ssr, (e2dElement*)group);
+        return E2D_TRUE;
+    }
+    
+    e2dElement* elem;
+    e2dGroupIterator iter = e2dGroupGetChildIterator(group);
+    while(e2dGroupIteratorHasNext(&iter))  {
+        elem = e2dGroupIteratorNext(&iter);
+        if(elem->id && (strcmp(id_str, elem->id) == 0)) {
+            e2dSearchResultAddResult(ssr, elem);
+            return E2D_TRUE;
+        }
+        if(elem->type == E2D_GROUP) {
+            if(_e2dGroupSearchByID((e2dGroup*)elem, ssr, id_str))
+                return E2D_TRUE;
+        }
+    }
+    return E2D_FALSE;
+}
+
+e2dSearchResult*
+e2dGroupSearchByID(e2dGroup* group, const char * id_str) {
+    e2dSearchResult* ssr = 
+            (e2dSearchResult*)malloc(sizeof(e2dSearchResult));
+    ssr->resultListAlloc = 1;
+    ssr->resultListNum = 0;
+    ssr->resultList = (e2dElement**)malloc(sizeof(e2dElement*)*ssr->resultListAlloc);
+    
+    if(strlen(id_str) == 0)
+        return ssr;
+    
+    _e2dGroupSearchByID(group, ssr, id_str);
+    return ssr;
+}
+
+
+
+void
+_e2dGroupSearchByAttribute(e2dGroup* group, e2dSearchResult* ssr, const char* attr_str)
+{
+    e2dElement* elem;
+    const char* attribute_value;
+    e2dGroupIterator iter = e2dGroupGetChildIterator(group);
+    while(e2dGroupIteratorHasNext(&iter))  {
+        elem = e2dGroupIteratorNext(&iter);
+        attribute_value = e2dElementGetAttribute(elem, attr_str);
+        if(attribute_value) {
+            e2dSearchResultAddResult(ssr, elem);
+        }
+        if(elem->type == E2D_GROUP) {
+            _e2dGroupSearchByAttribute((e2dGroup*)elem, ssr, attr_str);
+        }
+    }
+    return E2D_NULL;
+}
+
+
+e2dSearchResult* 
+e2dGroupSearchByAttribute(e2dGroup* group, const char * attr_str) {
+    
+    e2dSearchResult* ssr = 
+            (e2dSearchResult*)malloc(sizeof(e2dSearchResult));
+    ssr->resultListAlloc = 1;
+    ssr->resultListNum = 0;
+    ssr->resultList = (e2dElement**)malloc(sizeof(e2dElement*)*ssr->resultListAlloc);
+    
+    if(strlen(attr_str) == 0)
+        return ssr;
+    
+    
+    const char* attribute_value = e2dElementGetAttribute((e2dElement*)group, attr_str);
+    if(attribute_value) {
+        e2dSearchResultAddResult(ssr, (e2dElement*)group);
+    }
+    _e2dGroupSearchByAttribute(group, ssr, attr_str);
+    return ssr;
+}

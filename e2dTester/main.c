@@ -138,7 +138,12 @@ int main(int argc, const char* argv[]) {
     e2dSceneCenterAllAtBBox(scene, 0.5, 0.5);
     e2dSceneCalculateEffectiveTransforms(scene);
     
-    e2dSceneSearch(scene, "path3176-8");
+    e2dSearchResult* ssr = e2dGroupSearchByAttribute(scene->root, "id");
+    if(ssr->resultListNum > 0)
+    {
+        printf("found it\n");
+    }
+    e2dSearchResultDestroy(ssr);
     
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     

@@ -205,7 +205,50 @@
     E2D_EXPORT E2D_BOOL
     e2dGroupIteratorHasNext(e2dGroupIterator* iter);
 
+    
+    /**
+     *  @brief This struct represents the results returns by search methods in the e2dGroup struct. You should
+     * always destroy it with e2dSearchResultDestroy().
+     * 
+     * @see e2dGroupSearchByID()
+     * @see e2dSearchResultDestroy() 
+     * 
+     **/
+    struct e2dSearchResult {
+        
+        unsigned int resultListNum;/**< Number of elements in e2dSearchResult::resultList Array **/
+        e2dElement** resultList;/**< Array containing the resulting elements **/
+        unsigned int resultListAlloc;/**< Currently allocated memory in e2dSearchResult::resultList **/
+    };
+    
 
+    
+    /**
+     *  @brief Destroys the search result struct. Call on the results of search methods
+     * when you are done with them.
+     * 
+     **/
+    E2D_EXPORT void 
+    e2dSearchResultDestroy(e2dSearchResult* ssr);
+    
+    /**
+     *  @brief Searches the group for an element with an ID equal to id_str. You should
+     * always destroy the result with e2dSceneSearchResultDestroy()
+     * 
+     * @see e2dSceneSearchResultDestroy() 
+     **/
+    E2D_EXPORT e2dSearchResult* 
+    e2dGroupSearchByID(e2dGroup* group, const char * id_str);
+    
+    
+    /**
+     *  @brief Searches the group for an element with an attribute equal to attr_str.You should
+     * always destroy the result with e2dSceneSearchResultDestroy()
+     * 
+     * @see e2dSceneSearchResultDestroy() 
+     **/
+    E2D_EXPORT e2dSearchResult* 
+    e2dGroupSearchByAttribute(e2dGroup* group, const char * attr_str);
 
     /**
      * @}

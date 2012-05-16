@@ -622,78 +622,8 @@ e2dSceneCalculateAllBBox(e2dScene* scene) {
     e2dGroupCalculateBoundingBox(scene->root);
 }
 
-void 
-e2dSceneSearchResultIncreaseResultAlloc(e2dSceneSearchResult* ssr) {
-    ssr->resultListAlloc *= 2;
-    ssr->resultList = (e2dElement**) realloc(ssr->resultList, ssr->resultListAlloc * sizeof (e2dElement*));
-}
 
-void
-e2dSceneSearchResultAddResult(e2dSceneSearchResult* ssr, e2dElement* elem) {
-    if(ssr->resultListAlloc < ssr->resultListNum + 1)
-        e2dSceneSearchResultIncreaseResultAlloc(ssr);
-    ssr->resultList[ssr->resultListNum] = elem;
-    ssr->resultListNum++;
-}
 
-E2D_BOOL
-_e2dSceneSearchInGroup(e2dSceneSearchResult* ssr, e2dGroup* group, char* searchString)
-{
-    
-    char* str = searchString;
-    
-    /*
-    E2D_BOOL isSearchingID = E2D_TRUE;
-    E2D_BOOL isSearchingType = E2D_FALSE;
-    if(searchString[0] == '+')
-    {
-        isSearchingID = E2D_FALSE;
-        isSearchingType = E2D_TRUE;
-        str++;
-    }
-    E2D_BOOL isSearchingAttr = E2D_FALSE;
-    if(searchString[0] == '=')
-    {
-        isSearchingID = E2D_FALSE;
-        isSearchingAttr = E2D_TRUE;
-        str++;
-    }
-    */
-    
-    e2dElement* elem;
-    e2dGroupIterator iter = e2dGroupGetChildIterator(group);
-    while(e2dGroupIteratorHasNext(&iter))  {
-        elem = e2dGroupIteratorNext(&iter);
-        if(elem->id && (strcmp(str, elem->id) == 0)) {
-            e2dSceneSearchResultAddResult(ssr, elem);
-            return E2D_TRUE;
-        }
-        if(elem->type == E2D_GROUP) {
-            if(_e2dSceneSearchInGroup(ssr, (e2dGroup*)elem, str))
-                return E2D_TRUE;
-        }
-            
-    }
-    return E2D_FALSE;
-}
 
-e2dSceneSearchResult*
-e2dSceneSearch(e2dScene* scene, char * searchString) {
-    e2dSceneSearchResult* ssr = 
-            (e2dSceneSearchResult*)malloc(sizeof(e2dSceneSearchResult));
-    ssr->resultListAlloc = 1;
-    ssr->resultListNum = 0;
-    ssr->resultList = (e2dElement**)malloc(sizeof(e2dElement*)*ssr->resultListAlloc);
-    
-    if(strlen(searchString) == 0)
-        return ssr;
-    
-    _e2dSceneSearchInGroup(ssr, scene->root, searchString);
-    return ssr;
-}
 
-void
-e2dSceneSearchResultDestroy(e2dSceneSearchResult* ssr) {
-    free(ssr->resultList);
-    free(ssr);
-}
+

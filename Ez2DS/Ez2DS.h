@@ -31,7 +31,7 @@ typedef struct e2dPoint e2dPoint; /**< Forward declaration **/
 typedef struct e2dMatrix e2dMatrix; /**< Forward declaration **/
 typedef struct e2dPathElementIterator e2dPathElementIterator; /**< Forward declaration **/
 typedef struct e2dGroupIterator e2dGroupIterator; /**< Forward declaration **/
-typedef struct e2dSceneSearchResult e2dSceneSearchResult; /**< Forward declaration **/
+typedef struct e2dSearchResult e2dSearchResult; /**< Forward declaration **/
 
 
 
