@@ -12,5 +12,5 @@ var searchData=
   ['e2dpathpoint',['e2dPathPoint',['../structe2dPathPoint.html',1,'']]],
   ['e2dpoint',['e2dPoint',['../structe2dPoint.html',1,'']]],
   ['e2dscene',['e2dScene',['../structe2dScene.html',1,'']]],
-  ['e2dscenesearchresult',['e2dSceneSearchResult',['../structe2dSceneSearchResult.html',1,'']]]
+  ['e2dsearchresult',['e2dSearchResult',['../structe2dSearchResult.html',1,'']]]
 ];

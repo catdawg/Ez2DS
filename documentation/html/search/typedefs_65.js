@@ -15,5 +15,5 @@ var searchData=
   ['e2dpathpoint',['e2dPathPoint',['../Ez2DS_8h.html#a86cca845a62399e375916a400ce3f703',1,'Ez2DS.h']]],
   ['e2dpoint',['e2dPoint',['../Ez2DS_8h.html#a6659ac6d13a4ebd7168ef99f8ded9201',1,'Ez2DS.h']]],
   ['e2dscene',['e2dScene',['../Ez2DS_8h.html#a4663bede7d265bce67f2176cbe6d1f97',1,'Ez2DS.h']]],
-  ['e2dscenesearchresult',['e2dSceneSearchResult',['../Ez2DS_8h.html#a701bd9f0fb7810bdc3715b6a83274d4c',1,'Ez2DS.h']]]
+  ['e2dsearchresult',['e2dSearchResult',['../Ez2DS_8h.html#a02fa66f06ed7ece0b89f08926aca2d35',1,'Ez2DS.h']]]
 ];

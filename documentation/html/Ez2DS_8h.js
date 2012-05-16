@@ -18,6 +18,6 @@ var Ez2DS_8h =
     [ "e2dPathPoint", "Ez2DS_8h.html#a86cca845a62399e375916a400ce3f703", null ],
     [ "e2dPoint", "Ez2DS_8h.html#a6659ac6d13a4ebd7168ef99f8ded9201", null ],
     [ "e2dScene", "Ez2DS_8h.html#a4663bede7d265bce67f2176cbe6d1f97", null ],
-    [ "e2dSceneSearchResult", "Ez2DS_8h.html#a701bd9f0fb7810bdc3715b6a83274d4c", null ],
+    [ "e2dSearchResult", "Ez2DS_8h.html#a02fa66f06ed7ece0b89f08926aca2d35", null ],
     [ "E2D_BOOL", "Ez2DS_8h.html#aac8cdc3a3bcd6b56a8c3e0bb6979cbf8", null ]
 ];

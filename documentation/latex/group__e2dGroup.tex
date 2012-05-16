@@ -7,7 +7,9 @@
 struct \hyperlink{structe2dGroup}{e2d\-Group}
 \begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dGroup}{e2d\-Group} struct is used to group elements in the scene. This struct is created from the \char`\"{}g\char`\"{} element in S\-V\-G. It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dElement}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Group$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. \end{DoxyCompactList}\item 
 struct \hyperlink{structe2dGroupIterator}{e2d\-Group\-Iterator}
-\begin{DoxyCompactList}\small\item\em An iterator for the children of \hyperlink{structe2dGroup}{e2d\-Group}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em An iterator for the children of \hyperlink{structe2dGroup}{e2d\-Group}. \end{DoxyCompactList}\item 
+struct \hyperlink{structe2dSearchResult}{e2d\-Search\-Result}
+\begin{DoxyCompactList}\small\item\em This struct represents the results returns by search methods in the \hyperlink{structe2dGroup}{e2d\-Group} struct. You should always destroy it with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,7 +34,14 @@ struct \hyperlink{structe2dGroupIterator}{e2d\-Group\-Iterator}
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dElement}{e2d\-Element} $\ast$ \hyperlink{group__e2dGroup_ga5a20617c4666d240ab6c0efdde72d23f}{e2d\-Group\-Iterator\-Next} (\hyperlink{structe2dGroupIterator}{e2d\-Group\-Iterator} $\ast$iter)
 \begin{DoxyCompactList}\small\item\em Returns the current child and advances. \end{DoxyCompactList}\item 
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{Ez2DS_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O\-O\-L} \hyperlink{group__e2dGroup_ga2e74310ea432fa45cea8b03da8fc29ef}{e2d\-Group\-Iterator\-Has\-Next} (\hyperlink{structe2dGroupIterator}{e2d\-Group\-Iterator} $\ast$iter)
-\begin{DoxyCompactList}\small\item\em Checks if we have a child at current element pointed by iter, if not, we have reached the end of the child list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if we have a child at current element pointed by iter, if not, we have reached the end of the child list. \end{DoxyCompactList}\item 
+\hypertarget{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy} (\hyperlink{structe2dSearchResult}{e2d\-Search\-Result} $\ast$ssr)}\label{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}
+
+\begin{DoxyCompactList}\small\item\em Destroys the search result struct. Call on the results of search methods when you are done with them. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dSearchResult}{e2d\-Search\-Result} $\ast$ \hyperlink{group__e2dGroup_ga0c495948b5e2e14d004d1daacf4811af}{e2d\-Group\-Search\-By\-I\-D} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group, const char $\ast$id\-\_\-str)
+\begin{DoxyCompactList}\small\item\em Searches the group for an element with an I\-D equal to id\-\_\-str. You should always destroy the result with e2d\-Scene\-Search\-Result\-Destroy() \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dSearchResult}{e2d\-Search\-Result} $\ast$ \hyperlink{group__e2dGroup_gab4ce5d4021112416fecd57eea234dfc9}{e2d\-Group\-Search\-By\-Attribute} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group, const char $\ast$attr\-\_\-str)
+\begin{DoxyCompactList}\small\item\em Searches the group for an element with an attribute equal to attr\-\_\-str.\-You should always destroy the result with e2d\-Scene\-Search\-Result\-Destroy() \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -270,3 +279,33 @@ Returns the current child and advances.
 {\em e2d\-Element$\ast$} & The child. Remember that you can cast this pointer to the actual element type by checking \hyperlink{structe2dElement_a7df43d7f6c23b61b843acb56eb3ca19a}{e2d\-Element\-::type}. \\
 \hline
 \end{DoxyRetVals}
+\hypertarget{group__e2dGroup_gab4ce5d4021112416fecd57eea234dfc9}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Search\-By\-Attribute@{e2d\-Group\-Search\-By\-Attribute}}
+\index{e2d\-Group\-Search\-By\-Attribute@{e2d\-Group\-Search\-By\-Attribute}!e2dGroup@{e2d\-Group}}
+\subsubsection[{e2d\-Group\-Search\-By\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} {\bf e2d\-Search\-Result}$\ast$ {\bf e2d\-Group\-Search\-By\-Attribute} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group, }
+\item[{const char $\ast$}]{attr\-\_\-str}
+\end{DoxyParamCaption}
+)}}\label{group__e2dGroup_gab4ce5d4021112416fecd57eea234dfc9}
+
+
+Searches the group for an element with an attribute equal to attr\-\_\-str.\-You should always destroy the result with e2d\-Scene\-Search\-Result\-Destroy() 
+
+\begin{DoxySeeAlso}{See also}
+e2d\-Scene\-Search\-Result\-Destroy() 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dGroup_ga0c495948b5e2e14d004d1daacf4811af}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Search\-By\-I\-D@{e2d\-Group\-Search\-By\-I\-D}}
+\index{e2d\-Group\-Search\-By\-I\-D@{e2d\-Group\-Search\-By\-I\-D}!e2dGroup@{e2d\-Group}}
+\subsubsection[{e2d\-Group\-Search\-By\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} {\bf e2d\-Search\-Result}$\ast$ {\bf e2d\-Group\-Search\-By\-I\-D} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group, }
+\item[{const char $\ast$}]{id\-\_\-str}
+\end{DoxyParamCaption}
+)}}\label{group__e2dGroup_ga0c495948b5e2e14d004d1daacf4811af}
+
+
+Searches the group for an element with an I\-D equal to id\-\_\-str. You should always destroy the result with e2d\-Scene\-Search\-Result\-Destroy() 
+
+\begin{DoxySeeAlso}{See also}
+e2d\-Scene\-Search\-Result\-Destroy() 
+\end{DoxySeeAlso}

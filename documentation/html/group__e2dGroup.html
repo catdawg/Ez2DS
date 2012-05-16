@@ -134,6 +134,8 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct is used to group elements in the scene. This struct is created from the "g" element in SVG. It "inherits" from <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> by placing it as the first element in the struct, if you typecast e2dGroup* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.  <a href="structe2dGroup.html#details">More...</a><br/></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dGroupIterator.html">e2dGroupIterator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An iterator for the children of <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>.  <a href="structe2dGroupIterator.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dSearchResult.html">e2dSearchResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct represents the results returns by search methods in the <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct. You should always destroy it with <a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a>.  <a href="structe2dSearchResult.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga3c7f6acf28180141c87806a9d260f3f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dGroup.html">e2dGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga3c7f6acf28180141c87806a9d260f3f9">e2dGroupCreate</a> (const <a class="el" href="structe2dScene.html">e2dScene</a> *scene)</td></tr>
@@ -158,6 +160,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga5a20617c4666d240ab6c0efdde72d23f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current child and advances.  <a href="#ga5a20617c4666d240ab6c0efdde72d23f"></a><br/></td></tr>
 <tr class="memitem:ga2e74310ea432fa45cea8b03da8fc29ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="Ez2DS_8h.html#aac8cdc3a3bcd6b56a8c3e0bb6979cbf8">E2D_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga2e74310ea432fa45cea8b03da8fc29ef">e2dGroupIteratorHasNext</a> (<a class="el" href="structe2dGroupIterator.html">e2dGroupIterator</a> *iter)</td></tr>
 <tr class="memdesc:ga2e74310ea432fa45cea8b03da8fc29ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if we have a child at current element pointed by iter, if not, we have reached the end of the child list.  <a href="#ga2e74310ea432fa45cea8b03da8fc29ef"></a><br/></td></tr>
+<tr class="memitem:ga0775c9a7e2ec5311263f84339afb52bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0775c9a7e2ec5311263f84339afb52bc"></a>
+<a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc">e2dSearchResultDestroy</a> (<a class="el" href="structe2dSearchResult.html">e2dSearchResult</a> *ssr)</td></tr>
+<tr class="memdesc:ga0775c9a7e2ec5311263f84339afb52bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the search result struct. Call on the results of search methods when you are done with them. <br/></td></tr>
+<tr class="memitem:ga0c495948b5e2e14d004d1daacf4811af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dSearchResult.html">e2dSearchResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga0c495948b5e2e14d004d1daacf4811af">e2dGroupSearchByID</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group, const char *id_str)</td></tr>
+<tr class="memdesc:ga0c495948b5e2e14d004d1daacf4811af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches the group for an element with an ID equal to id_str. You should always destroy the result with e2dSceneSearchResultDestroy()  <a href="#ga0c495948b5e2e14d004d1daacf4811af"></a><br/></td></tr>
+<tr class="memitem:gab4ce5d4021112416fecd57eea234dfc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dSearchResult.html">e2dSearchResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#gab4ce5d4021112416fecd57eea234dfc9">e2dGroupSearchByAttribute</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group, const char *attr_str)</td></tr>
+<tr class="memdesc:gab4ce5d4021112416fecd57eea234dfc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches the group for an element with an attribute equal to attr_str.You should always destroy the result with e2dSceneSearchResultDestroy()  <a href="#gab4ce5d4021112416fecd57eea234dfc9"></a><br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="ga364ad3636ddb85fafbd8817b4d6e2c1d"></a>
@@ -513,12 +522,72 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="gab4ce5d4021112416fecd57eea234dfc9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dSearchResult.html">e2dSearchResult</a>* <a class="el" href="group__e2dGroup.html#gab4ce5d4021112416fecd57eea234dfc9">e2dGroupSearchByAttribute</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe2dGroup.html">e2dGroup</a> *&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>attr_str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Searches the group for an element with an attribute equal to attr_str.You should always destroy the result with e2dSceneSearchResultDestroy() </p>
+<dl class="section see"><dt>See also:</dt><dd>e2dSceneSearchResultDestroy() </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0c495948b5e2e14d004d1daacf4811af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dSearchResult.html">e2dSearchResult</a>* <a class="el" href="group__e2dGroup.html#ga0c495948b5e2e14d004d1daacf4811af">e2dGroupSearchByID</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe2dGroup.html">e2dGroup</a> *&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id_str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Searches the group for an element with an ID equal to id_str. You should always destroy the result with e2dSceneSearchResultDestroy() </p>
+<dl class="section see"><dt>See also:</dt><dd>e2dSceneSearchResultDestroy() </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Fri May 11 2012 03:28:13 for Ez2DS by
+    <li class="footer">Generated on Wed May 16 2012 23:32:18 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Ez2DS: e2dPoint Struct Reference</title>
+<title>Ez2DS: e2dSearchResult Struct Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="style.css" rel="stylesheet" type="text/css" />
@@ -109,7 +109,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('structe2dPoint.html','');
+  initNavTree('structe2dSearchResult.html','');
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -130,59 +130,84 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">e2dPoint Struct Reference<div class="ingroups"><a class="el" href="group__e2dPoint.html">e2dPoint</a></div></div>  </div>
+<div class="title">e2dSearchResult Struct Reference<div class="ingroups"><a class="el" href="group__e2dGroup.html">e2dGroup</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> struct which contains two floats.  
- <a href="structe2dPoint.html#details">More...</a></p>
+<p>This struct represents the results returns by search methods in the <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct. You should always destroy it with <a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a>.  
+ <a href="structe2dSearchResult.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="e2dPoint_8h_source.html">e2dPoint.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="e2dGroup_8h_source.html">e2dGroup.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for e2dSearchResult:</div>
+<div class="dyncontent">
+<div class="center"><img src="structe2dSearchResult__coll__graph.png" border="0" usemap="#e2dSearchResult_coll__map" alt="Collaboration graph"/></div>
+<map name="e2dSearchResult_coll__map" id="e2dSearchResult_coll__map">
+<area shape="rect" id="node2" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="149,125,240,152"/><area shape="rect" id="node4" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="171,229,249,256"/><area shape="rect" id="node11" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi..." alt="" coords="225,320,305,347"/><area shape="rect" id="node7" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="103,5,176,32"/><area shape="rect" id="node9" href="structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="211,5,289,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ad0da36b2558901e21e7a30f6c227a45e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dPoint.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></td></tr>
-<tr class="memitem:aa4f0d3eebc3c443f9be81bf48561a217"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dPoint.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></td></tr>
+<tr class="memitem:a65874957dc9197a16158b3807acb5d1e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dSearchResult.html#a65874957dc9197a16158b3807acb5d1e">resultListNum</a></td></tr>
+<tr class="memitem:acb54f0ae39cc6710460aa41f5f0afd9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dElement.html">e2dElement</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dSearchResult.html#acb54f0ae39cc6710460aa41f5f0afd9f">resultList</a></td></tr>
+<tr class="memitem:a0b7370bba258bd87e0d7ae10af711d34"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dSearchResult.html#a0b7370bba258bd87e0d7ae10af711d34">resultListAlloc</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats.">e2dPoint</a> struct which contains two floats. </p>
+<div class="textblock"><p>This struct represents the results returns by search methods in the <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> struct. You should always destroy it with <a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a>. </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dGroup.html#ga0c495948b5e2e14d004d1daacf4811af" title="Searches the group for an element with an ID equal to id_str. You should always destroy the result wi...">e2dGroupSearchByID()</a> </dd>
+<dd>
+<a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a> </dd></dl>
 </div><hr/><h2>Field Documentation</h2>
-<a class="anchor" id="ad0da36b2558901e21e7a30f6c227a45e"></a>
+<a class="anchor" id="acb54f0ae39cc6710460aa41f5f0afd9f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float <a class="el" href="structe2dPoint.html#ad0da36b2558901e21e7a30f6c227a45e">x</a></td>
+          <td class="memname"><a class="el" href="structe2dElement.html">e2dElement</a>** <a class="el" href="structe2dSearchResult.html#acb54f0ae39cc6710460aa41f5f0afd9f">resultList</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>The X coordinate of the point </p>
+<p>Array containing the resulting elements </p>
 
 </div>
 </div>
-<a class="anchor" id="aa4f0d3eebc3c443f9be81bf48561a217"></a>
+<a class="anchor" id="a0b7370bba258bd87e0d7ae10af711d34"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float <a class="el" href="structe2dPoint.html#aa4f0d3eebc3c443f9be81bf48561a217">y</a></td>
+          <td class="memname">unsigned int <a class="el" href="structe2dSearchResult.html#a0b7370bba258bd87e0d7ae10af711d34">resultListAlloc</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>The Y coordinate of the point </p>
+<p>Currently allocated memory in <a class="el" href="structe2dSearchResult.html#acb54f0ae39cc6710460aa41f5f0afd9f">e2dSearchResult::resultList</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a65874957dc9197a16158b3807acb5d1e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="structe2dSearchResult.html#a65874957dc9197a16158b3807acb5d1e">resultListNum</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Number of elements in <a class="el" href="structe2dSearchResult.html#acb54f0ae39cc6710460aa41f5f0afd9f">e2dSearchResult::resultList</a> Array </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="e2dPoint_8h_source.html">e2dPoint.h</a></li>
+<li><a class="el" href="e2dGroup_8h_source.html">e2dGroup.h</a></li>
 </ul>
 </div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="structe2dPoint.html">e2dPoint</a>      </li>
+      <li class="navelem"><a class="el" href="structe2dSearchResult.html">e2dSearchResult</a>      </li>
 
     <li class="footer">Generated on Wed May 16 2012 23:32:20 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">

@@ -10,5 +10,8 @@ var e2dGroup_8h =
     [ "e2dGroupGetChildIterator", "group__e2dGroup.html#ga35b130caa1b107616881615e9c8fb9ad", null ],
     [ "e2dGroupInit", "group__e2dGroup.html#gafa3f224a6509fbff5063dc910d4e3f1e", null ],
     [ "e2dGroupIteratorHasNext", "group__e2dGroup.html#ga2e74310ea432fa45cea8b03da8fc29ef", null ],
-    [ "e2dGroupIteratorNext", "group__e2dGroup.html#ga5a20617c4666d240ab6c0efdde72d23f", null ]
+    [ "e2dGroupIteratorNext", "group__e2dGroup.html#ga5a20617c4666d240ab6c0efdde72d23f", null ],
+    [ "e2dGroupSearchByAttribute", "group__e2dGroup.html#gab4ce5d4021112416fecd57eea234dfc9", null ],
+    [ "e2dGroupSearchByID", "group__e2dGroup.html#ga0c495948b5e2e14d004d1daacf4811af", null ],
+    [ "e2dSearchResultDestroy", "group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc", null ]
 ];

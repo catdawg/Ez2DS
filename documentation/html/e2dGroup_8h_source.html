@@ -185,17 +185,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00205"></a>00205     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="Ez2DS_8h.html#aac8cdc3a3bcd6b56a8c3e0bb6979cbf8" title="Boolean implementation.">E2D_BOOL</a>
 <a name="l00206"></a>00206     <a class="code" href="group__e2dGroup.html#ga2e74310ea432fa45cea8b03da8fc29ef" title="Checks if we have a child at current element pointed by iter, if not, we have reached the end of the ...">e2dGroupIteratorHasNext</a>(<a class="code" href="structe2dGroupIterator.html" title="An iterator for the children of e2dGroup.">e2dGroupIterator</a>* iter);
 <a name="l00207"></a>00207 
-<a name="l00208"></a>00208 
-<a name="l00209"></a>00209 
-<a name="l00214"></a>00214 <span class="preprocessor">#endif   </span><span class="comment">/* E2DGROUP_H */</span>
-<a name="l00215"></a>00215 
+<a name="l00208"></a>00208     
+<a name="l00217"></a><a class="code" href="structe2dSearchResult.html">00217</a>     <span class="keyword">struct </span><a class="code" href="structe2dSearchResult.html" title="This struct represents the results returns by search methods in the e2dGroup struct. You should always destroy it with e2dSearchResultDestroy().">e2dSearchResult</a> {
+<a name="l00218"></a>00218         
+<a name="l00219"></a><a class="code" href="structe2dSearchResult.html#a65874957dc9197a16158b3807acb5d1e">00219</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dSearchResult.html#a65874957dc9197a16158b3807acb5d1e">resultListNum</a>;
+<a name="l00220"></a><a class="code" href="structe2dSearchResult.html#acb54f0ae39cc6710460aa41f5f0afd9f">00220</a>         <a class="code" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a>** <a class="code" href="structe2dSearchResult.html#acb54f0ae39cc6710460aa41f5f0afd9f">resultList</a>;
+<a name="l00221"></a><a class="code" href="structe2dSearchResult.html#a0b7370bba258bd87e0d7ae10af711d34">00221</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structe2dSearchResult.html#a0b7370bba258bd87e0d7ae10af711d34">resultListAlloc</a>;
+<a name="l00222"></a>00222     };
+<a name="l00223"></a>00223     
+<a name="l00224"></a>00224 
+<a name="l00225"></a>00225     
+<a name="l00231"></a>00231     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <span class="keywordtype">void</span> 
+<a name="l00232"></a>00232     <a class="code" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy</a>(<a class="code" href="structe2dSearchResult.html" title="This struct represents the results returns by search methods in the e2dGroup struct. You should always destroy it with e2dSearchResultDestroy().">e2dSearchResult</a>* ssr);
+<a name="l00233"></a>00233     
+<a name="l00240"></a>00240     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="structe2dSearchResult.html" title="This struct represents the results returns by search methods in the e2dGroup struct. You should always destroy it with e2dSearchResultDestroy().">e2dSearchResult</a>* 
+<a name="l00241"></a>00241     <a class="code" href="group__e2dGroup.html#ga0c495948b5e2e14d004d1daacf4811af" title="Searches the group for an element with an ID equal to id_str. You should always destroy the result wi...">e2dGroupSearchByID</a>(<a class="code" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group, <span class="keyword">const</span> <span class="keywordtype">char</span> * id_str);
+<a name="l00242"></a>00242     
+<a name="l00243"></a>00243     
+<a name="l00250"></a>00250     <a class="code" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9" title="Cross platform shared library exporting.">E2D_EXPORT</a> <a class="code" href="structe2dSearchResult.html" title="This struct represents the results returns by search methods in the e2dGroup struct. You should always destroy it with e2dSearchResultDestroy().">e2dSearchResult</a>* 
+<a name="l00251"></a>00251     <a class="code" href="group__e2dGroup.html#gab4ce5d4021112416fecd57eea234dfc9" title="Searches the group for an element with an attribute equal to attr_str.You should always destroy the r...">e2dGroupSearchByAttribute</a>(<a class="code" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a>* group, <span class="keyword">const</span> <span class="keywordtype">char</span> * attr_str);
+<a name="l00252"></a>00252 
+<a name="l00257"></a>00257 <span class="preprocessor">#endif   </span><span class="comment">/* E2DGROUP_H */</span>
+<a name="l00258"></a>00258 
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="e2dGroup_8h.html">e2dGroup.h</a>      </li>
 
-    <li class="footer">Generated on Fri May 11 2012 03:28:12 for Ez2DS by
+    <li class="footer">Generated on Wed May 16 2012 23:32:15 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>
