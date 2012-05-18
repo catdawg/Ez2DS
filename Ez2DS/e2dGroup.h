@@ -233,9 +233,11 @@
     
     /**
      *  @brief Searches the group for an element with an ID equal to id_str. You should
-     * always destroy the result with e2dSceneSearchResultDestroy()
+     * always destroy the result with e2dSearchResultDestroy(). Uses wildcmp()
+     * for comparison.
      * 
-     * @see e2dSceneSearchResultDestroy() 
+     * @see wildcmp()
+     * @see e2dSearchResultDestroy() 
      **/
     E2D_EXPORT e2dSearchResult* 
     e2dGroupSearchByID(e2dGroup* group, const char * id_str);
@@ -243,12 +245,26 @@
     
     /**
      *  @brief Searches the group for an element with an attribute equal to attr_str.You should
-     * always destroy the result with e2dSceneSearchResultDestroy()
+     * always destroy the result with e2dSearchResultDestroy(). Uses wildcmp()
+     * for comparison.
      * 
-     * @see e2dSceneSearchResultDestroy() 
+     * @see wildcmp()
+     * @see e2dSearchResultDestroy() 
      **/
     E2D_EXPORT e2dSearchResult* 
     e2dGroupSearchByAttribute(e2dGroup* group, const char * attr_str);
+    
+    
+    /**
+     *  @brief Searches the group for an element with an attribute equal to attr_str having a value equal to
+     * value_str. You should always destroy the result with e2dSearchResultDestroy(). Uses wildcmp()
+     * for comparison.
+     * 
+     * @see wildcmp()
+     * @see e2dSearchResultDestroy() 
+     **/
+    E2D_EXPORT e2dSearchResult* 
+    e2dGroupSearchByAttributeWithValue(e2dGroup* group, const char * attr_str, const char * value_str);
 
     /**
      * @}

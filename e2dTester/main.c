@@ -138,7 +138,21 @@ int main(int argc, const char* argv[]) {
     e2dSceneCenterAllAtBBox(scene, 0.5, 0.5);
     e2dSceneCalculateEffectiveTransforms(scene);
     
-    e2dSearchResult* ssr = e2dGroupSearchByAttribute(scene->root, "id");
+    e2dSearchResult* ssr = e2dGroupSearchByID(scene->root, "path*");
+    if(ssr->resultListNum > 0)
+    {
+        printf("found it\n");
+    }
+    e2dSearchResultDestroy(ssr);
+    
+    ssr = e2dGroupSearchByAttribute(scene->root, "id");
+    if(ssr->resultListNum > 0)
+    {
+        printf("found it\n");
+    }
+    e2dSearchResultDestroy(ssr);
+    
+    ssr = e2dGroupSearchByAttributeWithValue(scene->root, "id", "path3176-8-6");
     if(ssr->resultListNum > 0)
     {
         printf("found it\n");

@@ -108,6 +108,16 @@ __typeof__ (b) _b = (b); \
 _a > _b ? _a : _b; })
 */
 
+/**
+* @brief Compares the two strings where wild can have wildcard symbols like this:
+ * "*thing?" matches with "lotsofthings" and with "onething", but not with "thingsarenice"
+ * and not with "thiiings".
+* @param [in] wild  A wild card string.
+* @param [in] string  The string where the wildcard will be matched
+* @retval boolean True if the wild card matched correctly, false otherwise.
+**/
+E2D_BOOL wildcmp(const char *wild, const char *string);
+
 
 
 

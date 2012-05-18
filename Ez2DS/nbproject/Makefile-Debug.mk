@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/e2dImage.o \
 	${OBJECTDIR}/e2dMatrix.o \
+	${OBJECTDIR}/Ez2DS.o \
 	${OBJECTDIR}/e2dPath.o \
 	${OBJECTDIR}/e2dPoint.o \
 	${OBJECTDIR}/e2dElement.o \
@@ -76,6 +77,11 @@ ${OBJECTDIR}/e2dMatrix.o: e2dMatrix.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -g -Idependencies/mxml-2.7/include  -MMD -MP -MF $@.d -o ${OBJECTDIR}/e2dMatrix.o e2dMatrix.c
+
+${OBJECTDIR}/Ez2DS.o: Ez2DS.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -Idependencies/mxml-2.7/include  -MMD -MP -MF $@.d -o ${OBJECTDIR}/Ez2DS.o Ez2DS.c
 
 ${OBJECTDIR}/e2dPath.o: e2dPath.c 
 	${MKDIR} -p ${OBJECTDIR}

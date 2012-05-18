@@ -101,7 +101,7 @@ e2dElementGetAttribute(e2dElement* element,
         n1 = name;
         n2 = element->attributeNames[i];
         if (!strcmp(name, element->attributeNames[i]))
-            return element->attributeNames[i];
+            return element->attributeValues[i];
     }
     return E2D_NULL;
 }

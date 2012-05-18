@@ -20,6 +20,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Ez2DS.c</itemPath>
       <itemPath>e2dElement.c</itemPath>
       <itemPath>e2dGroup.c</itemPath>
       <itemPath>e2dImage.c</itemPath>
