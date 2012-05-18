@@ -19,5 +19,6 @@ var Ez2DS_8h =
     [ "e2dPoint", "Ez2DS_8h.html#a6659ac6d13a4ebd7168ef99f8ded9201", null ],
     [ "e2dScene", "Ez2DS_8h.html#a4663bede7d265bce67f2176cbe6d1f97", null ],
     [ "e2dSearchResult", "Ez2DS_8h.html#a02fa66f06ed7ece0b89f08926aca2d35", null ],
-    [ "E2D_BOOL", "Ez2DS_8h.html#aac8cdc3a3bcd6b56a8c3e0bb6979cbf8", null ]
+    [ "E2D_BOOL", "Ez2DS_8h.html#aac8cdc3a3bcd6b56a8c3e0bb6979cbf8", null ],
+    [ "wildcmp", "Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f", null ]
 ];

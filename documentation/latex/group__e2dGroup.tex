@@ -39,9 +39,11 @@ struct \hyperlink{structe2dSearchResult}{e2d\-Search\-Result}
 
 \begin{DoxyCompactList}\small\item\em Destroys the search result struct. Call on the results of search methods when you are done with them. \end{DoxyCompactList}\item 
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dSearchResult}{e2d\-Search\-Result} $\ast$ \hyperlink{group__e2dGroup_ga0c495948b5e2e14d004d1daacf4811af}{e2d\-Group\-Search\-By\-I\-D} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group, const char $\ast$id\-\_\-str)
-\begin{DoxyCompactList}\small\item\em Searches the group for an element with an I\-D equal to id\-\_\-str. You should always destroy the result with e2d\-Scene\-Search\-Result\-Destroy() \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Searches the group for an element with an I\-D equal to id\-\_\-str. You should always destroy the result with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. Uses \hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} for comparison. \end{DoxyCompactList}\item 
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dSearchResult}{e2d\-Search\-Result} $\ast$ \hyperlink{group__e2dGroup_gab4ce5d4021112416fecd57eea234dfc9}{e2d\-Group\-Search\-By\-Attribute} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group, const char $\ast$attr\-\_\-str)
-\begin{DoxyCompactList}\small\item\em Searches the group for an element with an attribute equal to attr\-\_\-str.\-You should always destroy the result with e2d\-Scene\-Search\-Result\-Destroy() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Searches the group for an element with an attribute equal to attr\-\_\-str.\-You should always destroy the result with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. Uses \hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} for comparison. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dSearchResult}{e2d\-Search\-Result} $\ast$ \hyperlink{group__e2dGroup_ga7f7a0b0f0538109d19b8d52cf96a1cea}{e2d\-Group\-Search\-By\-Attribute\-With\-Value} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group, const char $\ast$attr\-\_\-str, const char $\ast$value\-\_\-str)
+\begin{DoxyCompactList}\small\item\em Searches the group for an element with an attribute equal to attr\-\_\-str having a value equal to value\-\_\-str. You should always destroy the result with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. Uses \hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} for comparison. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -289,10 +291,30 @@ Returns the current child and advances.
 )}}\label{group__e2dGroup_gab4ce5d4021112416fecd57eea234dfc9}
 
 
-Searches the group for an element with an attribute equal to attr\-\_\-str.\-You should always destroy the result with e2d\-Scene\-Search\-Result\-Destroy() 
+Searches the group for an element with an attribute equal to attr\-\_\-str.\-You should always destroy the result with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. Uses \hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} for comparison. 
 
 \begin{DoxySeeAlso}{See also}
-e2d\-Scene\-Search\-Result\-Destroy() 
+\hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} 
+
+\hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dGroup_ga7f7a0b0f0538109d19b8d52cf96a1cea}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Search\-By\-Attribute\-With\-Value@{e2d\-Group\-Search\-By\-Attribute\-With\-Value}}
+\index{e2d\-Group\-Search\-By\-Attribute\-With\-Value@{e2d\-Group\-Search\-By\-Attribute\-With\-Value}!e2dGroup@{e2d\-Group}}
+\subsubsection[{e2d\-Group\-Search\-By\-Attribute\-With\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} {\bf e2d\-Search\-Result}$\ast$ {\bf e2d\-Group\-Search\-By\-Attribute\-With\-Value} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group, }
+\item[{const char $\ast$}]{attr\-\_\-str, }
+\item[{const char $\ast$}]{value\-\_\-str}
+\end{DoxyParamCaption}
+)}}\label{group__e2dGroup_ga7f7a0b0f0538109d19b8d52cf96a1cea}
+
+
+Searches the group for an element with an attribute equal to attr\-\_\-str having a value equal to value\-\_\-str. You should always destroy the result with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. Uses \hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} for comparison. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} 
+
+\hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()} 
 \end{DoxySeeAlso}
 \hypertarget{group__e2dGroup_ga0c495948b5e2e14d004d1daacf4811af}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Search\-By\-I\-D@{e2d\-Group\-Search\-By\-I\-D}}
 \index{e2d\-Group\-Search\-By\-I\-D@{e2d\-Group\-Search\-By\-I\-D}!e2dGroup@{e2d\-Group}}
@@ -304,8 +326,10 @@ e2d\-Scene\-Search\-Result\-Destroy()
 )}}\label{group__e2dGroup_ga0c495948b5e2e14d004d1daacf4811af}
 
 
-Searches the group for an element with an I\-D equal to id\-\_\-str. You should always destroy the result with e2d\-Scene\-Search\-Result\-Destroy() 
+Searches the group for an element with an I\-D equal to id\-\_\-str. You should always destroy the result with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. Uses \hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} for comparison. 
 
 \begin{DoxySeeAlso}{See also}
-e2d\-Scene\-Search\-Result\-Destroy() 
+\hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} 
+
+\hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()} 
 \end{DoxySeeAlso}

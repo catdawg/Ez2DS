@@ -67,6 +67,11 @@ enum \hyperlink{Ez2DS_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O\-O
 {\bfseries E2\-D\-\_\-\-T\-R\-U\-E}
  \}
 \begin{DoxyCompactList}\small\item\em Boolean implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Ez2DS_8h_aac8cdc3a3bcd6b56a8c3e0bb6979cbf8}{E2\-D\-\_\-\-B\-O\-O\-L} \hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp} (const char $\ast$wild, const char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Compares the two strings where wild can have wildcard symbols like this\-: \char`\"{}$\ast$thing?\char`\"{} matches with \char`\"{}lotsofthings\char`\"{} and with \char`\"{}onething\char`\"{}, but not with \char`\"{}thingsarenice\char`\"{} and not with \char`\"{}thiiings\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -185,3 +190,29 @@ Forward declaration \hypertarget{Ez2DS_8h_a02fa66f06ed7ece0b89f08926aca2d35}{\in
 \index{e2d\-Search\-Result@{e2d\-Search\-Result}!Ez2DS.h@{Ez2\-D\-S.\-h}}
 \subsubsection[{e2d\-Search\-Result}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf e2d\-Search\-Result} {\bf e2d\-Search\-Result}}}\label{Ez2DS_8h_a02fa66f06ed7ece0b89f08926aca2d35}
 Forward declaration 
+
+\subsection{Function Documentation}
+\hypertarget{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{\index{Ez2\-D\-S.\-h@{Ez2\-D\-S.\-h}!wildcmp@{wildcmp}}
+\index{wildcmp@{wildcmp}!Ez2DS.h@{Ez2\-D\-S.\-h}}
+\subsubsection[{wildcmp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-B\-O\-O\-L} {\bf wildcmp} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{wild, }
+\item[{const char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}\label{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}
+
+
+Compares the two strings where wild can have wildcard symbols like this\-: \char`\"{}$\ast$thing?\char`\"{} matches with \char`\"{}lotsofthings\char`\"{} and with \char`\"{}onething\char`\"{}, but not with \char`\"{}thingsarenice\char`\"{} and not with \char`\"{}thiiings\char`\"{}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em wild} & A wild card string. \\
+\hline
+\mbox{\tt in}  & {\em string} & The string where the wildcard will be matched \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em boolean} & True if the wild card matched correctly, false otherwise. \\
+\hline
+\end{DoxyRetVals}

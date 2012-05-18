@@ -129,7 +129,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#define-members">Defines</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Ez2DS.h File Reference</div>  </div>
 </div><!--header-->
@@ -185,6 +186,10 @@ Enumerations</h2></td></tr>
 <b>E2D_TRUE</b>
  }</td></tr>
 <tr class="memdesc:aac8cdc3a3bcd6b56a8c3e0bb6979cbf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean implementation. <br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a64615e3e2147eb59622dbbe4f7af2e5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#aac8cdc3a3bcd6b56a8c3e0bb6979cbf8">E2D_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f">wildcmp</a> (const char *wild, const char *string)</td></tr>
+<tr class="memdesc:a64615e3e2147eb59622dbbe4f7af2e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the two strings where wild can have wildcard symbols like this: "*thing?" matches with "lotsofthings" and with "onething", but not with "thingsarenice" and not with "thiiings".  <a href="#a64615e3e2147eb59622dbbe4f7af2e5f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>File which contains global definitions useful to be included on every other file of the library. These definitions include forward declaration of all the structs, and some utility functions. </p>
@@ -486,13 +491,56 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a64615e3e2147eb59622dbbe4f7af2e5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#aac8cdc3a3bcd6b56a8c3e0bb6979cbf8">E2D_BOOL</a> <a class="el" href="Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f">wildcmp</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>wild</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Compares the two strings where wild can have wildcard symbols like this: "*thing?" matches with "lotsofthings" and with "onething", but not with "thingsarenice" and not with "thiiings". </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">wild</td><td>A wild card string. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>The string where the wildcard will be matched </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt><b>Return values:</b></dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">boolean</td><td>True if the wild card matched correctly, false otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="Ez2DS_8h.html">Ez2DS.h</a>      </li>
 
-    <li class="footer">Generated on Wed May 16 2012 23:32:18 for Ez2DS by
+    <li class="footer">Generated on Fri May 18 2012 23:43:15 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

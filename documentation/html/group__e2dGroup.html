@@ -164,9 +164,11 @@ Functions</h2></td></tr>
 <a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc">e2dSearchResultDestroy</a> (<a class="el" href="structe2dSearchResult.html">e2dSearchResult</a> *ssr)</td></tr>
 <tr class="memdesc:ga0775c9a7e2ec5311263f84339afb52bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the search result struct. Call on the results of search methods when you are done with them. <br/></td></tr>
 <tr class="memitem:ga0c495948b5e2e14d004d1daacf4811af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dSearchResult.html">e2dSearchResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga0c495948b5e2e14d004d1daacf4811af">e2dGroupSearchByID</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group, const char *id_str)</td></tr>
-<tr class="memdesc:ga0c495948b5e2e14d004d1daacf4811af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches the group for an element with an ID equal to id_str. You should always destroy the result with e2dSceneSearchResultDestroy()  <a href="#ga0c495948b5e2e14d004d1daacf4811af"></a><br/></td></tr>
+<tr class="memdesc:ga0c495948b5e2e14d004d1daacf4811af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches the group for an element with an ID equal to id_str. You should always destroy the result with <a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a>. Uses <a class="el" href="Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f" title="Compares the two strings where wild can have wildcard symbols like this: &quot;*thing?&quot; matches with &quot;lots...">wildcmp()</a> for comparison.  <a href="#ga0c495948b5e2e14d004d1daacf4811af"></a><br/></td></tr>
 <tr class="memitem:gab4ce5d4021112416fecd57eea234dfc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dSearchResult.html">e2dSearchResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#gab4ce5d4021112416fecd57eea234dfc9">e2dGroupSearchByAttribute</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group, const char *attr_str)</td></tr>
-<tr class="memdesc:gab4ce5d4021112416fecd57eea234dfc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches the group for an element with an attribute equal to attr_str.You should always destroy the result with e2dSceneSearchResultDestroy()  <a href="#gab4ce5d4021112416fecd57eea234dfc9"></a><br/></td></tr>
+<tr class="memdesc:gab4ce5d4021112416fecd57eea234dfc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches the group for an element with an attribute equal to attr_str.You should always destroy the result with <a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a>. Uses <a class="el" href="Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f" title="Compares the two strings where wild can have wildcard symbols like this: &quot;*thing?&quot; matches with &quot;lots...">wildcmp()</a> for comparison.  <a href="#gab4ce5d4021112416fecd57eea234dfc9"></a><br/></td></tr>
+<tr class="memitem:ga7f7a0b0f0538109d19b8d52cf96a1cea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dSearchResult.html">e2dSearchResult</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dGroup.html#ga7f7a0b0f0538109d19b8d52cf96a1cea">e2dGroupSearchByAttributeWithValue</a> (<a class="el" href="structe2dGroup.html">e2dGroup</a> *group, const char *attr_str, const char *value_str)</td></tr>
+<tr class="memdesc:ga7f7a0b0f0538109d19b8d52cf96a1cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches the group for an element with an attribute equal to attr_str having a value equal to value_str. You should always destroy the result with <a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a>. Uses <a class="el" href="Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f" title="Compares the two strings where wild can have wildcard symbols like this: &quot;*thing?&quot; matches with &quot;lots...">wildcmp()</a> for comparison.  <a href="#ga7f7a0b0f0538109d19b8d52cf96a1cea"></a><br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="ga364ad3636ddb85fafbd8817b4d6e2c1d"></a>
@@ -547,8 +549,48 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Searches the group for an element with an attribute equal to attr_str.You should always destroy the result with e2dSceneSearchResultDestroy() </p>
-<dl class="section see"><dt>See also:</dt><dd>e2dSceneSearchResultDestroy() </dd></dl>
+<p>Searches the group for an element with an attribute equal to attr_str.You should always destroy the result with <a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a>. Uses <a class="el" href="Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f" title="Compares the two strings where wild can have wildcard symbols like this: &quot;*thing?&quot; matches with &quot;lots...">wildcmp()</a> for comparison. </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f" title="Compares the two strings where wild can have wildcard symbols like this: &quot;*thing?&quot; matches with &quot;lots...">wildcmp()</a> </dd>
+<dd>
+<a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7f7a0b0f0538109d19b8d52cf96a1cea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dSearchResult.html">e2dSearchResult</a>* <a class="el" href="group__e2dGroup.html#ga7f7a0b0f0538109d19b8d52cf96a1cea">e2dGroupSearchByAttributeWithValue</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe2dGroup.html">e2dGroup</a> *&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>attr_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>value_str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Searches the group for an element with an attribute equal to attr_str having a value equal to value_str. You should always destroy the result with <a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a>. Uses <a class="el" href="Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f" title="Compares the two strings where wild can have wildcard symbols like this: &quot;*thing?&quot; matches with &quot;lots...">wildcmp()</a> for comparison. </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f" title="Compares the two strings where wild can have wildcard symbols like this: &quot;*thing?&quot; matches with &quot;lots...">wildcmp()</a> </dd>
+<dd>
+<a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a> </dd></dl>
 
 </div>
 </div>
@@ -577,8 +619,10 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Searches the group for an element with an ID equal to id_str. You should always destroy the result with e2dSceneSearchResultDestroy() </p>
-<dl class="section see"><dt>See also:</dt><dd>e2dSceneSearchResultDestroy() </dd></dl>
+<p>Searches the group for an element with an ID equal to id_str. You should always destroy the result with <a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a>. Uses <a class="el" href="Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f" title="Compares the two strings where wild can have wildcard symbols like this: &quot;*thing?&quot; matches with &quot;lots...">wildcmp()</a> for comparison. </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="Ez2DS_8h.html#a64615e3e2147eb59622dbbe4f7af2e5f" title="Compares the two strings where wild can have wildcard symbols like this: &quot;*thing?&quot; matches with &quot;lots...">wildcmp()</a> </dd>
+<dd>
+<a class="el" href="group__e2dGroup.html#ga0775c9a7e2ec5311263f84339afb52bc" title="Destroys the search result struct. Call on the results of search methods when you are done with them...">e2dSearchResultDestroy()</a> </dd></dl>
 
 </div>
 </div>
@@ -587,7 +631,7 @@ Functions</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Wed May 16 2012 23:32:18 for Ez2DS by
+    <li class="footer">Generated on Fri May 18 2012 23:43:15 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>
