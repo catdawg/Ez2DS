@@ -52,7 +52,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Ldependencies/gl/lib -Ldependencies/IL/lib -L../Ez2DS/dist/Debug/MinGW-Windows -lEz2DS_d -lglu32 -lopengl32 -lglut32 -lDevIL -lILU -lILUT
+LDLIBSOPTIONS=-Ldependencies/gl/lib -Ldependencies/IL/lib -lglu32 -lopengl32 -lglut32 -lDevIL -lILU -lILUT -L../Ez2DS/dist/Debug/MinGW-Windows -lEz2DS_d
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -77,7 +77,6 @@ ${OBJECTDIR}/main.o: main.c
 # Subprojects
 .build-subprojects:
 	cd ../Ez2DS && ${MAKE}  -f Makefile CONF=Debug
-	cd ../Ez2DS && ${MAKE}  -f Makefile CONF=Debug
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
@@ -86,7 +85,6 @@ ${OBJECTDIR}/main.o: main.c
 
 # Subprojects
 .clean-subprojects:
-	cd ../Ez2DS && ${MAKE}  -f Makefile CONF=Debug clean
 	cd ../Ez2DS && ${MAKE}  -f Makefile CONF=Debug clean
 
 # Enable dependency checking

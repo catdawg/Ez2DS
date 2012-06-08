@@ -3,6 +3,7 @@
 #include "e2dGroup.h"
 #include "e2dImage.h"
 #include "e2dPath.h"
+#include "e2dClone.h"
 
 #include "e2dScene.h"
 #include "stdlib.h"
@@ -33,6 +34,11 @@ e2dElementInit(e2dElement *element, e2dElementType type, const e2dScene* scene) 
     element->bboxWidth = -1;
     element->bboxPosition.x = 0;
     element->bboxPosition.y = 0;
+    
+    element->clonesNum = 0;
+    element->clonesAlloc = 1;
+    element->clones = (e2dClone**) malloc(sizeof(e2dClone*)*
+            element->clonesAlloc);
 
 }
 
@@ -47,6 +53,7 @@ e2dElementFreeMembers(e2dElement* elem) {
     free(elem->attributeValues);
     if (elem->id)
         free(elem->id);
+    free(elem->clones);
 }
 
 void
@@ -60,6 +67,9 @@ e2dElementDestroy(e2dElement* elem) {
             break;
         case(E2D_PATH):
             e2dPathDestroy((e2dPath*) elem);
+            break;
+        case(E2D_CLONE):
+            e2dCloneDestroy((e2dClone*) elem);
             break;
         default:
             break;
@@ -151,6 +161,9 @@ e2dElementCalculateBoundingBox(e2dElement* elem) {
         case(E2D_PATH):
             e2dPathCalculateBoundingBox((e2dPath*) elem);
             break;
+        case(E2D_CLONE):
+            e2dCloneCalculateBoundingBox((e2dClone*) elem);
+            break;
         default:
             break;
     }
@@ -168,7 +181,47 @@ e2dElementCenterAtBBox(e2dElement* elem, float tx, float ty) {
         case(E2D_PATH):
             e2dPathCenterAtBBox((e2dPath*) elem, tx, ty);
             break;
+        case(E2D_CLONE):
+            e2dCloneCenterAtBBox((e2dClone*) elem, tx, ty);
+            break;
         default:
             break;
     }
 }
+
+static void
+e2dElementIncreaseClonesSpace(e2dElement* element) {
+    element->clonesAlloc *= 2;
+    element->clones = (e2dClone**) realloc(element->clones, element->clonesAlloc * sizeof (e2dClone*));
+}
+
+void 
+e2dElementAddClone(e2dElement* elem, e2dClone* clone) {
+    if (elem->clonesNum + 1 > elem->clonesAlloc)
+        e2dElementIncreaseClonesSpace(elem);
+
+    elem->clones[elem->clonesNum] = clone;
+    elem->clonesNum++;
+}
+
+
+void 
+e2dElementApplyTransformationToAllClones(e2dElement* elem, e2dMatrix *transformation) {
+    int i;
+    for(i = 0; i < elem->clonesNum; ++i)
+    {
+        e2dClone* clone = elem->clones[i];
+        clone->element.localTransform = e2dMatrixMultiply(&clone->element.localTransform, transformation);
+    }
+}
+
+void 
+e2dElementRecalculateBBoxOnClones(e2dElement* elem)  {
+    int i;
+    for(i = 0; i < elem->clonesNum; ++i) {
+        if(elem->clones[i]->element.bboxHeight == -1)
+            continue;
+        e2dCloneCalculateBoundingBox(elem->clones[i]);
+    }
+}
+

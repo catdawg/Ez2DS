@@ -128,17 +128,18 @@ glutStuff(int argc, const char *argv[])
 int main(int argc, const char* argv[]) {
     
     glutStuff(argc, argv);
-    
     scene = createSceneFromFile("test5.svg");
-    e2dGroupFlatten(scene->root);
+    //e2dGroupFlatten(scene->root);
     e2dMatrix mat;
     e2dMatrixSetAsScale(&mat, 1, -1);
-    ((e2dElement*)scene->root)->localTransform = e2dMatrixMultiply(&(((e2dElement*)scene->root)->localTransform), &mat);
+    ((e2dElement*)scene->root)->localTransform = 
+            e2dMatrixMultiply(&(((e2dElement*)scene->root)->localTransform), 
+            &mat);
     e2dSceneCalculateAllBBox(scene);
     e2dSceneCenterAllAtBBox(scene, 0.5, 0.5);
-    e2dSceneCalculateEffectiveTransforms(scene);
+    //e2dSceneCalculateEffectiveTransforms(scene);
     
-    e2dSearchResult* ssr = e2dGroupSearchByID(scene->root, "path*");
+    e2dSearchResult* ssr = e2dGroupSearchByID(scene->root, "image*");
     if(ssr->resultListNum > 0)
     {
         printf("found it\n");

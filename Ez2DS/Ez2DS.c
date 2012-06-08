@@ -4,7 +4,6 @@ E2D_BOOL wildcmp(const char *wild, const char *string) {
    while (*string) {
       switch (*wild) {
          case '?':
-            if (*string == '.') return E2D_FALSE;
             break;
          case '*':
             return !*(wild + 1) ||
@@ -17,5 +16,7 @@ E2D_BOOL wildcmp(const char *wild, const char *string) {
       ++string, ++wild;
    } /* endwhile */
    while (*wild == '*') ++wild;
+   if(*wild)
+       return E2D_FALSE;
    return E2D_TRUE;
 }

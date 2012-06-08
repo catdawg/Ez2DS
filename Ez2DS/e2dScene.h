@@ -78,6 +78,18 @@
     e2dSceneCalculateAllBBox(e2dScene* scene);
     
     
+    /**
+     * @brief   This method will iterate all clones in the scene, finding their targets,
+     * placing them in e2dClone::pointsToElement, and adding the clone to the target 
+     * element with e2dElementAddClone.
+     *
+     * @param [in] scene  The e2dScene struct where the clones will be updated.
+     * 
+     **/
+    E2D_EXPORT void 
+    e2dSceneUpdateClones(e2dScene* scene);
+    
+    
 
     /**
      * @brief   Reads the SVG in the path "file" using MiniXML (http://minixml.org/)

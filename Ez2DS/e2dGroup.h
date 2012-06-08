@@ -129,7 +129,10 @@
      * @brief   Adds a transformation to the group which subtracts the position
      * of the Bounding Box (offset by (tx, ty)), and adds the position of the bounding box to all the 
      * children, effectively bringing the origin of the local coordinate system
-     * to the bounding box. See e2dElementCenterAtBBox() for an explanation on "tx"
+     * to the bounding box. Since this method moves the elements under it,
+     * it automatically calls e2dElementApplyTransformationToAllClones() on all the
+     * elements with the inverse tranformation applied to the elements. With this the clones
+     * to do not move. See e2dElementCenterAtBBox() for an explanation on "tx"
      * and "ty".
      *
      * @param [in] group  The e2dGroup struct to be centered.
@@ -265,6 +268,15 @@
      **/
     E2D_EXPORT e2dSearchResult* 
     e2dGroupSearchByAttributeWithValue(e2dGroup* group, const char * attr_str, const char * value_str);
+    
+    
+    /**
+     *  @brief Searches the group for an element with type. You should always destroy the result with e2dSearchResultDestroy().
+     * 
+     * @see e2dSearchResultDestroy() 
+     **/
+    E2D_EXPORT e2dSearchResult* 
+    e2dGroupSearchByType(e2dGroup* group, e2dElementType type);
 
     /**
      * @}

@@ -5,6 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Ez2DS.h</itemPath>
+      <itemPath>e2dClone.h</itemPath>
       <itemPath>e2dElement.h</itemPath>
       <itemPath>e2dGroup.h</itemPath>
       <itemPath>e2dImage.h</itemPath>
@@ -21,6 +22,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>Ez2DS.c</itemPath>
+      <itemPath>e2dClone.c</itemPath>
       <itemPath>e2dElement.c</itemPath>
       <itemPath>e2dGroup.c</itemPath>
       <itemPath>e2dImage.c</itemPath>

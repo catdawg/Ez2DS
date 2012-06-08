@@ -9,6 +9,7 @@
 #include "e2dGroup.h"
 #include "e2dImage.h"
 #include "e2dPath.h"
+#include "e2dClone.h"
 
 static mxml_node_t *tree;
 
@@ -112,6 +113,36 @@ e2dImage* parseImage(mxml_node_t* node, e2dScene* scene) {
         strcpy(image->imagePath, value);
     }
     return image;
+}
+
+static
+e2dClone* parseClone(mxml_node_t* node, e2dScene* scene) {
+    e2dClone* clone = e2dCloneCreate(scene);
+    
+    
+    //parse transformation
+    clone->element.localTransform = parseTransform(node);
+
+    //parse attributes
+    parseAttributes(node, (e2dElement*) clone);
+
+    const char* value = mxmlElementGetAttr(node, "x");
+    if (value != NULL)
+        clone->position.x = (float) atof(value);
+
+    value = mxmlElementGetAttr(node, "y");
+    if (value != NULL)
+        clone->position.y = (float) atof(value);
+
+
+    value = mxmlElementGetAttr(node, "xlink:href");
+    if (value != NULL) {
+        clone->pointsToID = (char*) malloc(sizeof (char) *strlen(value) + 1);
+        if(value[0] == '#')
+            value++;
+        strcpy(clone->pointsToID, value);
+    }
+    return clone;
 }
 
 static float
@@ -507,8 +538,14 @@ parseChildElements(mxml_node_t* node, e2dScene* scene, e2dGroup* parent) {
         else {
             if (strcmp("image", currentName) == 0)
                 e2dGroupAddChild(parent, (e2dElement*) parseImage(current, scene));
-            else if (strcmp("path", currentName) == 0)
-                e2dGroupAddChild(parent, (e2dElement*) parsePath(current, scene));
+            else {
+                if (strcmp("path", currentName) == 0)
+                    e2dGroupAddChild(parent, (e2dElement*) parsePath(current, scene));
+                else {
+                    if(strcmp("use", currentName) == 0)
+                        e2dGroupAddChild(parent, (e2dElement*) parseClone(current, scene));
+                }
+            }
         }
 
         current = mxmlGetNextSibling(current);
@@ -555,6 +592,7 @@ createSceneFromFile(char* file) {
     fclose(fp);
 
     e2dSceneCalculateEffectiveTransforms(scene);
+    e2dSceneUpdateClones(scene);
     return scene;
 }
 
@@ -620,6 +658,23 @@ e2dSceneCenterAllAtBBox(e2dScene* scene, float tx, float ty) {
 void
 e2dSceneCalculateAllBBox(e2dScene* scene) {
     e2dGroupCalculateBoundingBox(scene->root);
+}
+
+void 
+e2dSceneUpdateClones(e2dScene* scene) {
+    
+    e2dSearchResult* ssr = e2dGroupSearchByType(scene->root, E2D_CLONE);
+    int i;
+    for(i = 0; i < ssr->resultListNum; ++i)
+    {
+        e2dElement* elem = e2dCloneDereference(((e2dClone*)ssr->resultList[i]));
+        if(!elem)
+            continue;
+        ((e2dClone*)ssr->resultList[i])->pointsToElement = elem;
+        e2dElementAddClone(elem, ((e2dClone*)ssr->resultList[i]));
+        
+    }
+    e2dSearchResultDestroy(ssr);
 }
 
 

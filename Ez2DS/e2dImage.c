@@ -1,10 +1,11 @@
 #include "e2dImage.h"
+#include "e2dClone.h"
 #include <stdlib.h>
 
 void
 e2dImageInit(e2dImage *image, const e2dScene* scene) {
     image->imagePath = E2D_NULL;
-    image->position = E2DPOINT_ZERO_ZERO;
+    image->position = E2D_ZERO_ZERO_POINT;
     image->height = 0;
     image->width = 0;
 
@@ -43,13 +44,18 @@ e2dImageCenterAtBBox(e2dImage* image, float tx, float ty)  {
             offset.y);
     
     image->element.localTransform = 
-            e2dMatrixMultiply(&image->element.localTransform, &mat);
+            e2dMatrixMultiply(&mat, &image->element.localTransform);
+    
+    
     
     image->position.x -= offset.x; 
     image->position.y -= offset.y; 
     
     image->element.bboxPosition.x -= offset.x;
     image->element.bboxPosition.y -= offset.y;
+    
+    
+    
 }
 
 void

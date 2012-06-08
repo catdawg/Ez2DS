@@ -27,6 +27,7 @@ typedef struct e2dPathElement e2dPathElement; /**< Forward declaration **/
 typedef struct e2dPathPoint e2dPathPoint; /**< Forward declaration **/
 typedef struct e2dPathCurve e2dPathCurve; /**< Forward declaration **/
 typedef struct e2dImage e2dImage; /**< Forward declaration **/
+typedef struct e2dClone e2dClone; /**< Forward declaration **/
 typedef struct e2dPoint e2dPoint; /**< Forward declaration **/
 typedef struct e2dMatrix e2dMatrix; /**< Forward declaration **/
 typedef struct e2dPathElementIterator e2dPathElementIterator; /**< Forward declaration **/

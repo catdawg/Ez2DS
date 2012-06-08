@@ -1,5 +1,6 @@
 #include "e2dGroup.h"
 #include "e2dScene.h"
+#include "e2dClone.h"
 #include <float.h>
 #include <stdlib.h>
 #include <string.h>
@@ -124,12 +125,12 @@ e2dGroupCalculateBoundingBox(e2dGroup* group) {
     group->element.bboxPosition = pos;
     group->element.bboxWidth = width;
     group->element.bboxHeight = height;
+    
 }
 
 
 void
 e2dGroupCenterAtBBox(e2dGroup* group, float tx, float ty) {
-    
     e2dMatrix mat;
     e2dPoint offset;
     offset.x = group->element.bboxPosition.x + group->element.bboxWidth*tx;
@@ -141,7 +142,7 @@ e2dGroupCenterAtBBox(e2dGroup* group, float tx, float ty) {
     
     group->element.localTransform = 
             e2dMatrixMultiply(&group->element.localTransform, &mat);
-     
+    
     group->element.bboxPosition.x -= offset.x;
     group->element.bboxPosition.y -= offset.y;
     
@@ -151,9 +152,16 @@ e2dGroupCenterAtBBox(e2dGroup* group, float tx, float ty) {
     
     e2dGroupIterator iter = e2dGroupGetChildIterator(group);
     e2dElement* elem;
+    e2dMatrix inverseMatrix = e2dMatrixGetInverse(&mat);
     while(e2dGroupIteratorHasNext(&iter))  {
         elem = e2dGroupIteratorNext(&iter);
         elem->localTransform = e2dMatrixMultiply(&mat, &elem->localTransform);
+        
+        //changing the transformation also changes the position of the boundingbox, 
+        //so we need to propagate the transformation and the bounding boxes need
+        //be recalculated
+        e2dElementApplyTransformationToAllClones(elem, &inverseMatrix);
+        e2dElementRecalculateBBoxOnClones(elem);
     }
 }
 
@@ -370,3 +378,38 @@ e2dGroupSearchByAttributeWithValue(e2dGroup* group, const char * attr_str, const
     _e2dGroupSearchByAttributeWithValue(group, ssr, attr_str, value_str);
     return ssr;
 }
+
+void
+_e2dGroupSearchByType(e2dGroup* group, e2dSearchResult* ssr, e2dElementType type)
+{
+    
+    e2dElement* elem;
+    e2dGroupIterator iter = e2dGroupGetChildIterator(group);
+    while(e2dGroupIteratorHasNext(&iter))  {
+        elem = e2dGroupIteratorNext(&iter);
+        if(elem->type == type)
+            e2dSearchResultAddResult(ssr, elem);
+        if(elem->type == E2D_GROUP)
+            _e2dGroupSearchByType((e2dGroup*)elem, ssr, type);
+    }
+    return;
+}
+
+ e2dSearchResult* 
+ e2dGroupSearchByType(e2dGroup* group, e2dElementType type) {
+     
+    e2dSearchResult* ssr = 
+            (e2dSearchResult*)malloc(sizeof(e2dSearchResult));
+    ssr->resultListAlloc = 1;
+    ssr->resultListNum = 0;
+    ssr->resultList = (e2dElement**)malloc(sizeof(e2dElement*)*ssr->resultListAlloc);
+    
+    
+    
+    if(group->element.type == type) {
+        e2dSearchResultAddResult(ssr, (e2dElement*)group);
+    }
+    
+    _e2dGroupSearchByType(group, ssr, type);
+    return ssr;
+ }

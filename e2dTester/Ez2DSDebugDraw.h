@@ -26,6 +26,7 @@ void drawElement(e2dElement* elem);
 void drawGroup(e2dGroup* group);
 void drawPath(e2dPath* path);
 void drawImage(e2dImage* image);
+void drawClone(e2dClone* clone);
 
 void drawAxis();
 void drawRect(e2dPoint point, float width, float height);

@@ -28,7 +28,8 @@
     typedef enum e2dElementType {
         E2D_GROUP,
         E2D_PATH,
-        E2D_IMAGE
+        E2D_IMAGE,
+        E2D_CLONE
     } e2dElementType;
 
      /**
@@ -62,7 +63,7 @@
         
         unsigned int attributeNum;/**< Number of attributes in e2dElement::attributeNames and
                                    * e2dElement::attributeValues. **/
-        unsigned int attributeAlloc;/**< Allocated size of e2dGroup::childList**/
+        unsigned int attributeAlloc;/**< Allocated size of e2dElement::clones**/
         char** attributeNames;  /**< Attribute names array, allocated size given by
                                  * e2dGroup::attributeAlloc. 
                                  * @see e2dElementAddAttribute()**/
@@ -79,6 +80,12 @@
         e2dPoint bboxPosition;/**< Bounding box position.
                          * @see e2dElementCalculateBoundingBox()
                          * @see e2dElementCenterAtBBox() **/
+        
+        e2dClone** clones;/**< Clones array, allocated size given by
+                            * e2dElement::clonesAlloc. 
+                            * @see e2dElementAddClone()**/
+        unsigned int clonesNum;/**< Number of clones in e2dElement::clones**/
+        unsigned int clonesAlloc;/**< Allocated size of e2dElement::clones**/
     };
 
 
@@ -253,6 +260,44 @@
     **/
     E2D_EXPORT void 
     e2dElementCenterAtBBox(e2dElement* elem, float tx, float ty);
+    
+    /**
+     * @brief   Adds a clone that references elem to the e2dElement.clonesReferencingThis array.
+     * 
+     * @param [in] elem  Referenced element
+     * @param [in] clone  Referring clone.
+     * 
+    **/
+    E2D_EXPORT void 
+    e2dElementAddClone(e2dElement* elem, e2dClone* clone);
+    
+    /**
+     * @brief   Applies a transformation to all clones referencing this element.
+     * This is specially useful when you need to move an element, but don't want all
+     * the clones to move in parallel, so you apply the inverse transformation to all clones.
+     * This is used internally in e2dGroupCenterAtBBox(), since when you center the group you
+     * move all the elements under it.
+     * 
+     * @param [in] elem  The element to have its clones moved.
+     * @param [in] transformation  The transformation.
+     * 
+     * @see e2dElementCenterAtBBox()
+    **/
+    E2D_EXPORT void 
+    e2dElementApplyTransformationToAllClones(e2dElement* elem, e2dMatrix *transformation);
+    
+    
+    /**
+     * @brief   Recalculates the bounding box on the clones. This is useful after you change
+     * the bounding box of the element and want the clones to reflect that change.
+     * 
+     * @param [in] elem  The element to have its clones' bounding boxes recalculated.
+     * 
+     * @see e2dElementCenterAtBBox()
+    **/
+    E2D_EXPORT void 
+    e2dElementRecalculateBBoxOnClones(e2dElement* elem);
+    
 
 
 

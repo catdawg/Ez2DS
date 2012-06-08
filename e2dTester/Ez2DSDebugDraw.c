@@ -12,6 +12,7 @@
 #include <e2dGroup.h>
 #include <e2dImage.h>
 #include <e2dPath.h>
+#include <e2dClone.h>
 #include <e2dMatrix.h>
 #include <e2dPoint.h>
 #include <e2dScene.h>
@@ -112,7 +113,11 @@ drawElement(e2dElement* elem)  {
         case(E2D_IMAGE):
             drawImage((e2dImage*)elem);
             break;
-        
+          
+        case(E2D_CLONE):
+            drawClone((e2dClone*)elem);
+            break;
+            
         default:
             break;
     }
@@ -128,6 +133,8 @@ drawGroup(e2dGroup* group)  {
     while(e2dGroupIteratorHasNext(&iter))  {
         drawElement(e2dGroupIteratorNext(&iter));
     }
+    drawAxis();
+    drawRect(group->element.bboxPosition, group->element.bboxWidth, group->element.bboxHeight);
 }
 
 void 
@@ -143,6 +150,18 @@ drawImage(e2dImage* image)  {
     glTexCoord2f(0.0, 1.0); glVertex2f(image->position.x, image->position.y);
     glEnd();
     
+    //drawAxis();
+    //drawRect(image->element.bboxPosition, image->element.bboxWidth, image->element.bboxHeight);
+}
+
+void
+drawClone(e2dClone* clone) {
+    glPushMatrix();
+    glTranslatef((clone->position).x, (clone->position).y, 0);
+    drawElement(clone->pointsToElement);
+    glPopMatrix();
+    drawAxis();
+    drawRect(clone->element.bboxPosition, clone->element.bboxWidth, clone->element.bboxHeight);
 }
 
 void
@@ -259,6 +278,8 @@ drawPath(e2dPath* path)  {
     }
     glColor4ub(255, 255, 255, 255);
     
+    drawAxis();
+    drawRect(path->element.bboxPosition, path->element.bboxWidth, path->element.bboxHeight);
     
 }
 

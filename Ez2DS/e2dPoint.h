@@ -31,7 +31,7 @@
     /**
      *  @brief Utility constant which defines a (0,0) point.
      **/
-    static e2dPoint const E2DPOINT_ZERO_ZERO = {0, 0};
+    static e2dPoint const E2D_ZERO_ZERO_POINT = {0, 0};
 
     /**
      * @}

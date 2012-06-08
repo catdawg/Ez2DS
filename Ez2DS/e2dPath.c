@@ -213,8 +213,8 @@ e2dPathCenterAtBBox(e2dPath* path, float tx, float ty) {
             offset.y);
 
     path->element.localTransform =
-            e2dMatrixMultiply(&path->element.localTransform, &mat);
-
+            e2dMatrixMultiply(&path->element.localTransform, &mat );
+    
     unsigned int i;
     e2dPathElement* pathElem;
     for (i = 0; i < path->pathElementsNum; ++i) {
@@ -239,6 +239,9 @@ e2dPathCenterAtBBox(e2dPath* path, float tx, float ty) {
 
     path->element.bboxPosition.x -= offset.x;
     path->element.bboxPosition.y -= offset.y;
+    
+    //changing the bounding box requires the clones' bounding boxes to be recalculated.
+    e2dElementRecalculateBBoxOnClones((e2dElement*) path);
 }
 
 
@@ -277,7 +280,7 @@ e2dPathPointCreate() {
 void
 e2dPathPointInit(e2dPathPoint* point) {
 
-    point->point = E2DPOINT_ZERO_ZERO;
+    point->point = E2D_ZERO_ZERO_POINT;
     e2dPathElementInit((e2dPathElement*) point, E2D_PATHPOINT);
 
 }
@@ -302,9 +305,9 @@ e2dPathCurveCreate() {
 
 void
 e2dPathCurveInit(e2dPathCurve* curve) {
-    curve->controlPoint1 = E2DPOINT_ZERO_ZERO;
-    curve->controlPoint2 = E2DPOINT_ZERO_ZERO;
-    curve->endPoint = E2DPOINT_ZERO_ZERO;
+    curve->controlPoint1 = E2D_ZERO_ZERO_POINT;
+    curve->controlPoint2 = E2D_ZERO_ZERO_POINT;
+    curve->endPoint = E2D_ZERO_ZERO_POINT;
     e2dPathElementInit((e2dPathElement*) curve, E2D_PATHCURVE);
 }
 

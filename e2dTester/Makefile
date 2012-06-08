@@ -53,8 +53,9 @@ CCADMIN=CCadmin
 # build
 build: .build-post
 
-.build-pre:
+.build-pre: 
 # Add your pre 'build' code here...
+
 
 .build-post: .build-impl copyDLL
 # Add your post 'build' code here...
@@ -62,12 +63,12 @@ build: .build-post
 copyDLL:
 	echo copying dll
 ifeq ($(CONF), Debug)
+	echo copied Debug dll
 	CP ../Ez2DS/dist/$(CONF)/MinGW-Windows/Ez2DS_d.dll $(CND_DISTDIR)/$(CONF)/MinGW-Windows/
 else
+	echo copied Release dll
 	CP ../Ez2DS/dist/$(CONF)/MinGW-Windows/Ez2DS.dll $(CND_DISTDIR)/$(CONF)/MinGW-Windows/
 endif
-
-
 
 # clean
 clean: .clean-post

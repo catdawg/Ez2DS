@@ -30,11 +30,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70000002"
-     inkscape:cx="422.7072"
-     inkscape:cy="604.85206"
+     inkscape:zoom="0.49497476"
+     inkscape:cx="502.83837"
+     inkscape:cy="417.25984"
      inkscape:document-units="px"
-     inkscape:current-layer="level"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="591"
      inkscape:window-height="691"
@@ -66,11 +66,11 @@
       <image
          sodipodi:absref="C:\Users\Rui\Desktop\Ez2DS\e2dTester\./background2dfinal.png"
          xlink:href="./background2dfinal.png"
-         height="718"
-         width="746"
-         y="0"
+         id="image3797"
          x="0"
-         id="image3797" />
+         y="0"
+         width="746"
+         height="718" />
       <path
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 69.700524,179.08533 8.08122,15.15229 12.626906,13.63706 10.6066,9.59645 10.10153,5.55584 12.12183,4.54568 9.59645,3.53554 14.14213,2.52538 22.72843,4.04061 21.21321,4.04061 18.18274,6.06091 16.66752,11.11168 8.08122,10.10153 5.55584,10.6066 2.52538,12.6269 -0.50508,8.5863 -4.04061,9.59645 -4.04061,7.57614 -9.09137,9.59645 -11.11168,7.07107 -10.6066,5.05076 -11.61675,3.53554 -51.51778,8.58629 -16.16244,4.54569 -13.13199,6.56599 -9.59644,6.56599 -10.10153,9.59645 -7.071067,13.13198 -5.555839,10.10153 -2.525381,17.17259 0,18.68782 2.020305,18.68782 7.576143,23.23351 16.162439,31.81981 13.13198,19.19289 22.22336,22.22336 21.71828,14.14213 23.73858,8.08122 15.15229,3.03046 22.72843,1.01015 19.69798,-4.04061 22.22335,-8.08122 15.15229,-12.6269 16.16244,-21.71828 7.57614,-20.70813 0,-29.7995 -3.03045,-18.68782 -5.05077,-27.27412 -2.0203,-14.64721 -1.51523,-17.67767 1.51523,-11.11167 5.05076,-9.59645 7.07107,-7.07107 7.57614,-5.05076 9.09138,-2.02031 11.11167,1.51523 10.10153,6.06091 8.58629,8.08123 8.5863,15.15228 5.55584,19.1929 2.0203,17.17259 0.50508,25.25382 2.02031,37.37564 2.52538,25.25381 5.55584,26.76904 8.08122,22.22336 8.58629,22.22335 19.1929,30.80966 16.66752,19.69797 21.2132,16.66752 c 70.6754,51.74958 167.30637,19.39357 196.57853,-36.08434 29.27216,-55.47791 13.70318,-121.36993 -69.80439,-143.72281 l -36.36549,-5.55584 -19.69797,-4.04061 -20.20305,-7.57614 -14.64722,-12.12183 -15.15228,-21.21321 -7.57615,-26.26396 -2.0203,-26.76904 2.0203,-19.1929 5.55584,-17.67767 11.11168,-13.63706 11.11168,-5.05076 7.57614,-2.52538 16.66752,4.04061 7.57614,5.05076 8.08122,9.59645 9.09137,19.69797 6.06092,20.20305 6.06091,11.61676 5.55584,7.57614 8.08122,8.08122 11.61676,5.55584 9.59645,3.03046 9.59645,1.01015 14.14213,-1.01015 14.14214,-4.04061 13.13198,-7.57615 17.67767,-17.17259 13.13198,-22.22336 5.55584,-18.68782 5.05076,-24.74873 1.51523,-59.09393 -6.56599,-39.90102 -11.61676,-28.28427 -16.66751,-25.25381 -20.70813,-16.66752 -16.16244,-8.5863 -17.67767,-4.54568 -24.24366,0 -16.16244,4.54568 -11.61675,6.56599 -8.5863,6.566 -11.61675,15.65736 -11.61676,21.71828 -11.11167,15.65736 -8.5863,9.09138 -8.5863,5.55583 -7.07106,2.02031 -11.11168,1.51523 -13.63706,-5.05076 -13.63706,-11.61676 -7.57614,-16.66751 -3.03046,-21.71828 1.51523,-16.66752 3.53553,-19.69797 4.04061,-23.73859 1.01015,-26.263964 -5.05076,-16.667516 -9.59645,-15.152288 -13.63706,-12.12183 -19.69797,-9.091373 -18.68782,-2.525381 -19.69798,5.050762 -11.61675,5.555839 -11.11168,8.08122 -10.6066,13.131983 -6.56599,11.111678 -4.04061,18.182745 -1.51523,34.345185 -4.54569,21.71828 -5.05076,11.11168 -10.6066,12.12183 -11.11168,5.55584 -18.18274,1.01015 -17.67767,-10.6066 -8.5863,-10.10153 -7.57614,-12.6269 -16.66752,-37.37565 -12.12183,-17.677666 -13.13198,-11.111678 -12.62691,-5.555839 -9.59645,-4.04061 -12.6269,-1.515228 -17.1726,1.515228 -14.64721,5.050763 -15.152286,9.091373 -10.101525,10.101525 -8.08122,9.596452 -7.576144,12.6269 -4.04061,17.67767 -1.515229,15.15229 2.525381,15.65736 3.030458,12.62691 z"
@@ -78,21 +78,6 @@
          inkscape:connector-curvature="0"
          Shape="line"
          sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccczcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-         x="-282.85715"
-         y="155.21935"
-         id="text3015"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan3017"
-           x="-282.85715"
-           y="155.21935">lololol</tspan><tspan
-           sodipodi:role="line"
-           x="-282.85715"
-           y="205.21935"
-           id="tspan3019" /></text>
     </g>
     <g
        id="ball"
@@ -111,17 +96,17 @@
       <image
          sodipodi:absref="C:\Users\Rui\Desktop\Ez2DS\e2dTester\./smileyface.png"
          xlink:href="./smileyface.png"
-         width="32.163677"
-         height="32.163677"
-         id="image3171"
+         y="-0.28585222"
          x="-0.35292709"
-         y="-0.28585222" />
+         id="image3171"
+         height="32.163677"
+         width="32.163677" />
     </g>
     <g
        id="ball-4"
        Physics=""
        Body=""
-       transform="matrix(0.95184981,-0.30656475,0.30656475,0.95184981,392.91485,285.62541)"
+       transform="matrix(0.95184981,-0.30656475,0.30656475,0.95184981,469.68644,241.17869)"
        Control="">
       <path
          style="fill:none;stroke:#000000;stroke-width:1.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0"
@@ -134,11 +119,11 @@
       <image
          sodipodi:absref="C:\Users\Rui\Desktop\Ez2DS\e2dTester\./scaredface.png"
          xlink:href="./scaredface.png"
-         y="-0.28585222"
-         x="-0.35292709"
-         id="image3171-9"
+         width="32.163677"
          height="32.163677"
-         width="32.163677" />
+         id="image3171-9"
+         x="-0.35292709"
+         y="-0.28585222" />
     </g>
     <g
        id="ball-4-1"
@@ -157,11 +142,59 @@
       <image
          sodipodi:absref="C:\Users\Rui\Desktop\Ez2DS\e2dTester\./moustacheface.png"
          xlink:href="./moustacheface.png"
-         y="-0.28585222"
-         x="-0.35292709"
-         id="image3171-9-4"
+         width="32.163677"
          height="32.163677"
-         width="32.163677" />
+         id="image3171-9-4"
+         x="-0.35292709"
+         y="-0.28585222" />
     </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#ball-4"
+       id="use3027"
+       transform="matrix(1.2994875,0,0,1.249573,-132.45716,39.284707)"
+       width="744.09448"
+       height="100000000" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3027"
+       id="use3033"
+       transform="matrix(1.2688769,0,0,1,-366.9951,-37.955067)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3027"
+       id="use3033-4"
+       transform="matrix(1.8117838,0,0,2.6235675,-536.51047,-530.57217)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3027"
+       id="use3033-5"
+       transform="matrix(-0.73142389,-1.3431893,1.1572064,-0.63014825,175.44835,1340.6164)"
+       height="100000"
+       width="1" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3027"
+       id="use3033-1"
+       transform="translate(-353.15243,187.79088)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3027"
+       id="use3033-9"
+       transform="matrix(2.8706321,0,0,1.5647191,-998.55608,-35.192722)"
+       width="744.09448"
+       height="1052.3622" />
   </g>
 </svg>
