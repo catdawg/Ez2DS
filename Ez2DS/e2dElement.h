@@ -275,7 +275,7 @@
      * @brief   Applies a transformation to all clones referencing this element.
      * This is specially useful when you need to move an element, but don't want all
      * the clones to move in parallel, so you apply the inverse transformation to all clones.
-     * This is used internally in e2dGroupCenterAtBBox(), since when you center the group you
+     * This is used internally in e2dGroupCenterAtBBox(), since when you center the group you 
      * move all the elements under it.
      * 
      * @param [in] elem  The element to have its clones moved.
