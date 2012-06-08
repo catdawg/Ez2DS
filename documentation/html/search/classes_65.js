@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['e2dclone',['e2dClone',['../structe2dClone.html',1,'']]],
   ['e2delement',['e2dElement',['../structe2dElement.html',1,'']]],
   ['e2dgroup',['e2dGroup',['../structe2dGroup.html',1,'']]],
   ['e2dgroupiterator',['e2dGroupIterator',['../structe2dGroupIterator.html',1,'']]],

@@ -1,5 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$e2dGroup_8h.html" title="File which contains the e2dGroup struct and its &quot;methods&quot;." alt="" coords="5,80,93,107"/>
-<area shape="rect" id="node5" href="$e2dImage_8h.html" title="File which contains the e2dImage struct and its &quot;methods&quot;." alt="" coords="118,80,207,107"/>
-<area shape="rect" id="node7" href="$e2dPath_8h.html" title="File which contains the e2dPath struct and its &quot;methods&quot;." alt="" coords="231,80,312,107"/>
+<area shape="rect" id="node3" href="$e2dClone_8h.html" title="File which contains the e2dClone struct and its &quot;methods&quot;." alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node5" href="$e2dGroup_8h.html" title="File which contains the e2dGroup struct and its &quot;methods&quot;." alt="" coords="115,80,204,107"/>
+<area shape="rect" id="node7" href="$e2dImage_8h.html" title="File which contains the e2dImage struct and its &quot;methods&quot;." alt="" coords="229,80,317,107"/>
+<area shape="rect" id="node9" href="$e2dPath_8h.html" title="File which contains the e2dPath struct and its &quot;methods&quot;." alt="" coords="342,80,423,107"/>
 </map>

@@ -143,7 +143,7 @@ Collaboration diagram for e2dElement:</div>
 <div class="dyncontent">
 <div class="center"><img src="structe2dElement__coll__graph.png" border="0" usemap="#e2dElement_coll__map" alt="Collaboration graph"/></div>
 <map name="e2dElement_coll__map" id="e2dElement_coll__map">
-<area shape="rect" id="node2" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="30,229,108,256"/><area shape="rect" id="node9" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi..." alt="" coords="84,320,164,347"/><area shape="rect" id="node5" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="5,5,77,32"/><area shape="rect" id="node7" href="structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="113,5,191,32"/></map>
+<area shape="rect" id="node2" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="277,229,355,256"/><area shape="rect" id="node9" href="structe2dClone.html" title="The e2dClone struct is used for holding a pointer to another element in the scene, by having its ID. It is taken from the use tag in SVG, with the exception of the (width,height) attributes being ignored, as they seem to be useless in Inkscape." alt="" coords="15,229,91,256"/><area shape="rect" id="node13" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi..." alt="" coords="331,320,411,347"/><area shape="rect" id="node5" href="structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="5,5,77,32"/><area shape="rect" id="node7" href="structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="182,5,260,32"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
@@ -163,6 +163,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a6a1d9b223870deeaec7f5e8b23ca4b22"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dElement.html#a6a1d9b223870deeaec7f5e8b23ca4b22">bboxWidth</a></td></tr>
 <tr class="memitem:a680d0d4219ac8720005c46b55a9676ae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dElement.html#a680d0d4219ac8720005c46b55a9676ae">bboxHeight</a></td></tr>
 <tr class="memitem:ac2c17ce4cba805b594b314a77923cbf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dElement.html#ac2c17ce4cba805b594b314a77923cbf5">bboxPosition</a></td></tr>
+<tr class="memitem:a4347bc7eb8d31d574115ef75ae074bb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structe2dClone.html">e2dClone</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dElement.html#a4347bc7eb8d31d574115ef75ae074bb7">clones</a></td></tr>
+<tr class="memitem:ab4c733639f1fdab67f8d25a1439a8b1a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dElement.html#ab4c733639f1fdab67f8d25a1439a8b1a">clonesNum</a></td></tr>
+<tr class="memitem:a4bdf6d903ed95cd67debbba1ef3dbdae"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structe2dElement.html#a4bdf6d903ed95cd67debbba1ef3dbdae">clonesAlloc</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct is the base of all elements in the scene. Common scene information such as id, attribute values or transformations are saved in the <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct. You are not meant to instance this struct by itself. By creating other elements such as <a class="el" href="structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme...">e2dGroup</a> or <a class="el" href="structe2dImage.html" title="The e2dImage struct is used for holding the paths to images and their size and position. The struct is composed directly from the contents of the SVG image element. It &quot;inherits&quot; from e2dElement by placing it as the first element in the struct, if you typecast e2dImage* into e2dElement*, it will work thus mimicing inheritance in e.g. C++.">e2dImage</a>, this struct will be automatically allocated in them. This "inheritance" is mimic'd by placing the <a class="el" href="structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id...">e2dElement</a> struct as the first element in structs which are meant to be "substructs" of it. </p>
@@ -177,7 +180,7 @@ Data Fields</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Allocated size of <a class="el" href="structe2dGroup.html#a55f6dde874716dc99dcd270fc0999a01">e2dGroup::childList</a> </p>
+<p>Allocated size of <a class="el" href="structe2dElement.html#a4347bc7eb8d31d574115ef75ae074bb7">e2dElement::clones</a> </p>
 
 </div>
 </div>
@@ -273,6 +276,49 @@ Data Fields</h2></td></tr>
 <dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga575c7363927670f1ea8c52b7ea23fcd5" title="Will check type and calculate the appropriate method (e.g. e2dGroupCalculateBoundingBox())">e2dElementCalculateBoundingBox()</a> </dd>
 <dd>
 <a class="el" href="group__e2dElement.html#gab829b280fa22a3509c40425fc84b5061" title="Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e...">e2dElementCenterAtBBox()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4347bc7eb8d31d574115ef75ae074bb7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structe2dClone.html">e2dClone</a>** <a class="el" href="structe2dElement.html#a4347bc7eb8d31d574115ef75ae074bb7">clones</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Clones array, allocated size given by <a class="el" href="structe2dElement.html#a4bdf6d903ed95cd67debbba1ef3dbdae">e2dElement::clonesAlloc</a>. </p>
+<dl class="section see"><dt>See also:</dt><dd><a class="el" href="group__e2dElement.html#ga80b7a45c28ec6e95d97b0316358a3290" title="Adds a clone that references elem to the e2dElement.clonesReferencingThis array.">e2dElementAddClone()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4bdf6d903ed95cd67debbba1ef3dbdae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="structe2dElement.html#a4bdf6d903ed95cd67debbba1ef3dbdae">clonesAlloc</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Allocated size of <a class="el" href="structe2dElement.html#a4347bc7eb8d31d574115ef75ae074bb7">e2dElement::clones</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="ab4c733639f1fdab67f8d25a1439a8b1a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="structe2dElement.html#ab4c733639f1fdab67f8d25a1439a8b1a">clonesNum</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Number of clones in <a class="el" href="structe2dElement.html#a4347bc7eb8d31d574115ef75ae074bb7">e2dElement::clones</a> </p>
 
 </div>
 </div>
@@ -405,7 +451,7 @@ Data Fields</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="structe2dElement.html">e2dElement</a>      </li>
 
-    <li class="footer">Generated on Fri May 18 2012 23:43:15 for Ez2DS by
+    <li class="footer">Generated on Fri Jun 8 2012 01:22:08 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

@@ -140,6 +140,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga1d33ba7ce041a68b061cfa6b0291b886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls e2dElementCenterAtBBox on all the elements in the scene. Needs Bounding Boxes to have been calculated. See <a class="el" href="group__e2dGroup.html#ga2800a7dc3827e8753e2f2c6ef2e05eb9" title="Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx...">e2dGroupCenterAtBBox()</a> for an explanation on the tx and ty parameters.  <a href="#ga1d33ba7ce041a68b061cfa6b0291b886"></a><br/></td></tr>
 <tr class="memitem:gaa202610ee0b2e5c47bded576b365c195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#gaa202610ee0b2e5c47bded576b365c195">e2dSceneCalculateAllBBox</a> (<a class="el" href="structe2dScene.html">e2dScene</a> *scene)</td></tr>
 <tr class="memdesc:gaa202610ee0b2e5c47bded576b365c195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls e2dGroupCalculateBBox() on the root of the scene.  <a href="#gaa202610ee0b2e5c47bded576b365c195"></a><br/></td></tr>
+<tr class="memitem:gadfc497f7e653990ad03c4cd845eb8943"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#gadfc497f7e653990ad03c4cd845eb8943">e2dSceneUpdateClones</a> (<a class="el" href="structe2dScene.html">e2dScene</a> *scene)</td></tr>
+<tr class="memdesc:gadfc497f7e653990ad03c4cd845eb8943"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will iterate all clones in the scene, finding their targets, placing them in <a class="el" href="structe2dClone.html#a237249b3b105a04b15b87304bba704a2">e2dClone::pointsToElement</a>, and adding the clone to the target element with e2dElementAddClone.  <a href="#gadfc497f7e653990ad03c4cd845eb8943"></a><br/></td></tr>
 <tr class="memitem:ga9994e9f2692c5007b91d02c19350cd1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> <a class="el" href="structe2dScene.html">e2dScene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__e2dScene.html#ga9994e9f2692c5007b91d02c19350cd1b">createSceneFromFile</a> (char *file)</td></tr>
 <tr class="memdesc:ga9994e9f2692c5007b91d02c19350cd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the SVG in the path "file" using MiniXML (<a href="http://minixml.org/">http://minixml.org/</a>) and creates a <a class="el" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a> struct which is returned.  <a href="#ga9994e9f2692c5007b91d02c19350cd1b"></a><br/></td></tr>
 </table>
@@ -279,12 +281,37 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="gadfc497f7e653990ad03c4cd845eb8943"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Ez2DS_8h.html#a9f14e9cb869e1a85fdaba03afcca0df9">E2D_EXPORT</a> void <a class="el" href="group__e2dScene.html#gadfc497f7e653990ad03c4cd845eb8943">e2dSceneUpdateClones</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structe2dScene.html">e2dScene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This method will iterate all clones in the scene, finding their targets, placing them in <a class="el" href="structe2dClone.html#a237249b3b105a04b15b87304bba704a2">e2dClone::pointsToElement</a>, and adding the clone to the target element with e2dElementAddClone. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>The <a class="el" href="structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi...">e2dScene</a> struct where the clones will be updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Fri May 18 2012 23:43:15 for Ez2DS by
+    <li class="footer">Generated on Fri Jun 8 2012 01:22:08 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

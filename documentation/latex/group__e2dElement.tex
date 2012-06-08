@@ -17,7 +17,8 @@ struct \hyperlink{structe2dElement}{e2d\-Element}
 \item 
 enum \hyperlink{group__e2dElement_ga9bc8cfdec08c7e9069fc707ee456fd38}{e2d\-Element\-Type} \{ {\bfseries E2\-D\-\_\-\-G\-R\-O\-U\-P}, 
 {\bfseries E2\-D\-\_\-\-P\-A\-T\-H}, 
-{\bfseries E2\-D\-\_\-\-I\-M\-A\-G\-E}
+{\bfseries E2\-D\-\_\-\-I\-M\-A\-G\-E}, 
+{\bfseries E2\-D\-\_\-\-C\-L\-O\-N\-E}
  \}
 \begin{DoxyCompactList}\small\item\em The e2d\-Element\-Type enum defines the possible \char`\"{}substructs\char`\"{} of \hyperlink{structe2dElement}{e2d\-Element}. This is used for reflection. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -44,7 +45,13 @@ void \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dElement_ga575c7363927670f1ea8c52b7ea23fcd5}{e2d\-Element\-Calculate\-Bounding\-Box} (\hyperlink{structe2dElement}{e2d\-Element} $\ast$elem)
 \begin{DoxyCompactList}\small\item\em Will check type and calculate the appropriate method (e.\-g. \hyperlink{group__e2dGroup_gacf5659083b312e030456721b2560d4f4}{e2d\-Group\-Calculate\-Bounding\-Box()}) \end{DoxyCompactList}\item 
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dElement_gab829b280fa22a3509c40425fc84b5061}{e2d\-Element\-Center\-At\-B\-Box} (\hyperlink{structe2dElement}{e2d\-Element} $\ast$elem, float tx, float ty)
-\begin{DoxyCompactList}\small\item\em Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e.\-g. \hyperlink{group__e2dGroup_ga2800a7dc3827e8753e2f2c6ef2e05eb9}{e2d\-Group\-Center\-At\-B\-Box()}). (tx, ty) will define where in the bounding box, the element will be centered, e.\-g. (0,0, will center on the top left corner, (0.\-5, 0.\-5) will center on the center of the bbox. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Needs bounding box to have been calculated. Will check type and calculate the appropriate method (e.\-g. \hyperlink{group__e2dGroup_ga2800a7dc3827e8753e2f2c6ef2e05eb9}{e2d\-Group\-Center\-At\-B\-Box()}). (tx, ty) will define where in the bounding box, the element will be centered, e.\-g. (0,0, will center on the top left corner, (0.\-5, 0.\-5) will center on the center of the bbox. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dElement_ga80b7a45c28ec6e95d97b0316358a3290}{e2d\-Element\-Add\-Clone} (\hyperlink{structe2dElement}{e2d\-Element} $\ast$elem, \hyperlink{structe2dClone}{e2d\-Clone} $\ast$clone)
+\begin{DoxyCompactList}\small\item\em Adds a clone that references elem to the e2d\-Element.\-clones\-Referencing\-This array. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dElement_ga93766be398e89c9f4cc25a4170db3b18}{e2d\-Element\-Apply\-Transformation\-To\-All\-Clones} (\hyperlink{structe2dElement}{e2d\-Element} $\ast$elem, \hyperlink{structe2dMatrix}{e2d\-Matrix} $\ast$transformation)
+\begin{DoxyCompactList}\small\item\em Applies a transformation to all clones referencing this element. This is specially useful when you need to move an element, but don't want all the clones to move in parallel, so you apply the inverse transformation to all clones. This is used internally in \hyperlink{group__e2dGroup_ga2800a7dc3827e8753e2f2c6ef2e05eb9}{e2d\-Group\-Center\-At\-B\-Box()}, since when you center the group you move all the elements under it. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dElement_ga25c04f507b20b96fbd9065623163b791}{e2d\-Element\-Recalculate\-B\-Box\-On\-Clones} (\hyperlink{structe2dElement}{e2d\-Element} $\ast$elem)
+\begin{DoxyCompactList}\small\item\em Recalculates the bounding box on the clones. This is useful after you change the bounding box of the element and want the clones to reflect that change. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -70,6 +77,47 @@ Will add an attribute to the element. Increases the size of the array if necessa
 \mbox{\tt in}  & {\em value} & The value of the attribute. \\
 \hline
 \end{DoxyParams}
+\hypertarget{group__e2dElement_ga80b7a45c28ec6e95d97b0316358a3290}{\index{e2d\-Element@{e2d\-Element}!e2d\-Element\-Add\-Clone@{e2d\-Element\-Add\-Clone}}
+\index{e2d\-Element\-Add\-Clone@{e2d\-Element\-Add\-Clone}!e2dElement@{e2d\-Element}}
+\subsubsection[{e2d\-Element\-Add\-Clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void {\bf e2d\-Element\-Add\-Clone} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Element} $\ast$}]{elem, }
+\item[{{\bf e2d\-Clone} $\ast$}]{clone}
+\end{DoxyParamCaption}
+)}}\label{group__e2dElement_ga80b7a45c28ec6e95d97b0316358a3290}
+
+
+Adds a clone that references elem to the e2d\-Element.\-clones\-Referencing\-This array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & Referenced element \\
+\hline
+\mbox{\tt in}  & {\em clone} & Referring clone. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__e2dElement_ga93766be398e89c9f4cc25a4170db3b18}{\index{e2d\-Element@{e2d\-Element}!e2d\-Element\-Apply\-Transformation\-To\-All\-Clones@{e2d\-Element\-Apply\-Transformation\-To\-All\-Clones}}
+\index{e2d\-Element\-Apply\-Transformation\-To\-All\-Clones@{e2d\-Element\-Apply\-Transformation\-To\-All\-Clones}!e2dElement@{e2d\-Element}}
+\subsubsection[{e2d\-Element\-Apply\-Transformation\-To\-All\-Clones}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void {\bf e2d\-Element\-Apply\-Transformation\-To\-All\-Clones} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Element} $\ast$}]{elem, }
+\item[{{\bf e2d\-Matrix} $\ast$}]{transformation}
+\end{DoxyParamCaption}
+)}}\label{group__e2dElement_ga93766be398e89c9f4cc25a4170db3b18}
+
+
+Applies a transformation to all clones referencing this element. This is specially useful when you need to move an element, but don't want all the clones to move in parallel, so you apply the inverse transformation to all clones. This is used internally in \hyperlink{group__e2dGroup_ga2800a7dc3827e8753e2f2c6ef2e05eb9}{e2d\-Group\-Center\-At\-B\-Box()}, since when you center the group you move all the elements under it. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The element to have its clones moved. \\
+\hline
+\mbox{\tt in}  & {\em transformation} & The transformation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dElement_gab829b280fa22a3509c40425fc84b5061}{e2d\-Element\-Center\-At\-B\-Box()} 
+\end{DoxySeeAlso}
 \hypertarget{group__e2dElement_ga575c7363927670f1ea8c52b7ea23fcd5}{\index{e2d\-Element@{e2d\-Element}!e2d\-Element\-Calculate\-Bounding\-Box@{e2d\-Element\-Calculate\-Bounding\-Box}}
 \index{e2d\-Element\-Calculate\-Bounding\-Box@{e2d\-Element\-Calculate\-Bounding\-Box}!e2dElement@{e2d\-Element}}
 \subsubsection[{e2d\-Element\-Calculate\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void {\bf e2d\-Element\-Calculate\-Bounding\-Box} (
@@ -323,4 +371,23 @@ Called by the create methods of structs which inherit \hyperlink{structe2dElemen
 \hyperlink{group__e2dImage_gad7713253bd08e8ca835df5bbd1d0e483}{e2d\-Image\-Create()} 
 
 \hyperlink{group__e2dPath_gaceacae85646a55f26e71461fe1bf657e}{e2d\-Path\-Create()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dElement_ga25c04f507b20b96fbd9065623163b791}{\index{e2d\-Element@{e2d\-Element}!e2d\-Element\-Recalculate\-B\-Box\-On\-Clones@{e2d\-Element\-Recalculate\-B\-Box\-On\-Clones}}
+\index{e2d\-Element\-Recalculate\-B\-Box\-On\-Clones@{e2d\-Element\-Recalculate\-B\-Box\-On\-Clones}!e2dElement@{e2d\-Element}}
+\subsubsection[{e2d\-Element\-Recalculate\-B\-Box\-On\-Clones}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void {\bf e2d\-Element\-Recalculate\-B\-Box\-On\-Clones} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Element} $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}}\label{group__e2dElement_ga25c04f507b20b96fbd9065623163b791}
+
+
+Recalculates the bounding box on the clones. This is useful after you change the bounding box of the element and want the clones to reflect that change. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em elem} & The element to have its clones' bounding boxes recalculated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dElement_gab829b280fa22a3509c40425fc84b5061}{e2d\-Element\-Center\-At\-B\-Box()} 
 \end{DoxySeeAlso}

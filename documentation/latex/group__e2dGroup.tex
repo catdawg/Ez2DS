@@ -26,7 +26,7 @@ struct \hyperlink{structe2dSearchResult}{e2d\-Search\-Result}
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dGroup_gacf5659083b312e030456721b2560d4f4}{e2d\-Group\-Calculate\-Bounding\-Box} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group)
 \begin{DoxyCompactList}\small\item\em Calculates the bounding box of the group using the bounding boxes of the children. If a child doesn't have the bounding box calculated, then \hyperlink{group__e2dElement_ga575c7363927670f1ea8c52b7ea23fcd5}{e2d\-Element\-Calculate\-Bounding\-Box()} is called in the child. \end{DoxyCompactList}\item 
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dGroup_ga2800a7dc3827e8753e2f2c6ef2e05eb9}{e2d\-Group\-Center\-At\-B\-Box} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group, float tx, float ty)
-\begin{DoxyCompactList}\small\item\em Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx, ty)), and adds the position of the bounding box to all the children, effectively bringing the origin of the local coordinate system to the bounding box. See \hyperlink{group__e2dElement_gab829b280fa22a3509c40425fc84b5061}{e2d\-Element\-Center\-At\-B\-Box()} for an explanation on \char`\"{}tx\char`\"{} and \char`\"{}ty\char`\"{}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx, ty)), and adds the position of the bounding box to all the children, effectively bringing the origin of the local coordinate system to the bounding box. Since this method moves the elements under it, it automatically calls \hyperlink{group__e2dElement_ga93766be398e89c9f4cc25a4170db3b18}{e2d\-Element\-Apply\-Transformation\-To\-All\-Clones()} on all the elements with the inverse tranformation applied to the elements. With this the clones to do not move. See \hyperlink{group__e2dElement_gab829b280fa22a3509c40425fc84b5061}{e2d\-Element\-Center\-At\-B\-Box()} for an explanation on \char`\"{}tx\char`\"{} and \char`\"{}ty\char`\"{}. \end{DoxyCompactList}\item 
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dGroup_ga406ebab73c321b771a9a58e26c3a5d79}{e2d\-Group\-Flatten} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group)
 \begin{DoxyCompactList}\small\item\em Recursively removes all the groups which are children (directly or indirectly) and makes all the remaining elements have a \hyperlink{structe2dElement_a52bda732df714953f93c1e6f5f7c7c93}{e2d\-Element\-::local\-Transform} which yields a transformation equal to if there were groups. I.\-e., it flattens the group, making it have only one level. Calling this on the \hyperlink{structe2dScene_aa5444ac46bf18449921a4094bcadde1c}{e2d\-Scene\-::root} will make \char`\"{}group\char`\"{} be the only in the tree. !!\-Warning!! custom (and non custom) tags written in groups are lost! \end{DoxyCompactList}\item 
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dGroupIterator}{e2d\-Group\-Iterator} \hyperlink{group__e2dGroup_ga35b130caa1b107616881615e9c8fb9ad}{e2d\-Group\-Get\-Child\-Iterator} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group)
@@ -43,7 +43,9 @@ struct \hyperlink{structe2dSearchResult}{e2d\-Search\-Result}
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dSearchResult}{e2d\-Search\-Result} $\ast$ \hyperlink{group__e2dGroup_gab4ce5d4021112416fecd57eea234dfc9}{e2d\-Group\-Search\-By\-Attribute} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group, const char $\ast$attr\-\_\-str)
 \begin{DoxyCompactList}\small\item\em Searches the group for an element with an attribute equal to attr\-\_\-str.\-You should always destroy the result with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. Uses \hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} for comparison. \end{DoxyCompactList}\item 
 \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dSearchResult}{e2d\-Search\-Result} $\ast$ \hyperlink{group__e2dGroup_ga7f7a0b0f0538109d19b8d52cf96a1cea}{e2d\-Group\-Search\-By\-Attribute\-With\-Value} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group, const char $\ast$attr\-\_\-str, const char $\ast$value\-\_\-str)
-\begin{DoxyCompactList}\small\item\em Searches the group for an element with an attribute equal to attr\-\_\-str having a value equal to value\-\_\-str. You should always destroy the result with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. Uses \hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} for comparison. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Searches the group for an element with an attribute equal to attr\-\_\-str having a value equal to value\-\_\-str. You should always destroy the result with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. Uses \hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} for comparison. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dSearchResult}{e2d\-Search\-Result} $\ast$ \hyperlink{group__e2dGroup_gac87e9f3df41684e44fc60110b33b7f63}{e2d\-Group\-Search\-By\-Type} (\hyperlink{structe2dGroup}{e2d\-Group} $\ast$group, \hyperlink{group__e2dElement_ga9bc8cfdec08c7e9069fc707ee456fd38}{e2d\-Element\-Type} type)
+\begin{DoxyCompactList}\small\item\em Searches the group for an element with type. You should always destroy the result with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -96,7 +98,7 @@ Calculates the bounding box of the group using the bounding boxes of the childre
 )}}\label{group__e2dGroup_ga2800a7dc3827e8753e2f2c6ef2e05eb9}
 
 
-Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx, ty)), and adds the position of the bounding box to all the children, effectively bringing the origin of the local coordinate system to the bounding box. See \hyperlink{group__e2dElement_gab829b280fa22a3509c40425fc84b5061}{e2d\-Element\-Center\-At\-B\-Box()} for an explanation on \char`\"{}tx\char`\"{} and \char`\"{}ty\char`\"{}. 
+Adds a transformation to the group which subtracts the position of the Bounding Box (offset by (tx, ty)), and adds the position of the bounding box to all the children, effectively bringing the origin of the local coordinate system to the bounding box. Since this method moves the elements under it, it automatically calls \hyperlink{group__e2dElement_ga93766be398e89c9f4cc25a4170db3b18}{e2d\-Element\-Apply\-Transformation\-To\-All\-Clones()} on all the elements with the inverse tranformation applied to the elements. With this the clones to do not move. See \hyperlink{group__e2dElement_gab829b280fa22a3509c40425fc84b5061}{e2d\-Element\-Center\-At\-B\-Box()} for an explanation on \char`\"{}tx\char`\"{} and \char`\"{}ty\char`\"{}. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -331,5 +333,20 @@ Searches the group for an element with an I\-D equal to id\-\_\-str. You should 
 \begin{DoxySeeAlso}{See also}
 \hyperlink{Ez2DS_8h_a64615e3e2147eb59622dbbe4f7af2e5f}{wildcmp()} 
 
+\hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()} 
+\end{DoxySeeAlso}
+\hypertarget{group__e2dGroup_gac87e9f3df41684e44fc60110b33b7f63}{\index{e2d\-Group@{e2d\-Group}!e2d\-Group\-Search\-By\-Type@{e2d\-Group\-Search\-By\-Type}}
+\index{e2d\-Group\-Search\-By\-Type@{e2d\-Group\-Search\-By\-Type}!e2dGroup@{e2d\-Group}}
+\subsubsection[{e2d\-Group\-Search\-By\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} {\bf e2d\-Search\-Result}$\ast$ {\bf e2d\-Group\-Search\-By\-Type} (
+\begin{DoxyParamCaption}
+\item[{{\bf e2d\-Group} $\ast$}]{group, }
+\item[{{\bf e2d\-Element\-Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{group__e2dGroup_gac87e9f3df41684e44fc60110b33b7f63}
+
+
+Searches the group for an element with type. You should always destroy the result with \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()}. 
+
+\begin{DoxySeeAlso}{See also}
 \hyperlink{group__e2dGroup_ga0775c9a7e2ec5311263f84339afb52bc}{e2d\-Search\-Result\-Destroy()} 
 \end{DoxySeeAlso}

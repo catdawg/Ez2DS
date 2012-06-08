@@ -1,5 +1,6 @@
 var annotated =
 [
+    [ "e2dClone", "structe2dClone.html", "structe2dClone" ],
     [ "e2dElement", "structe2dElement.html", "structe2dElement" ],
     [ "e2dGroup", "structe2dGroup.html", "structe2dGroup" ],
     [ "e2dGroupIterator", "structe2dGroupIterator.html", "structe2dGroupIterator" ],

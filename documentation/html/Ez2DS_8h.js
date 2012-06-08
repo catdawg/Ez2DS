@@ -6,6 +6,7 @@ var Ez2DS_8h =
     [ "E2D_MAX", "Ez2DS_8h.html#ad83dd4bb9cfe5f1bad4afe517f2d2e22", null ],
     [ "E2D_MIN", "Ez2DS_8h.html#afac575ed72392fbb218c777b548f328d", null ],
     [ "E2D_NULL", "Ez2DS_8h.html#ae6c89cca978cb0aa64dc7034b016f5cd", null ],
+    [ "e2dClone", "Ez2DS_8h.html#a5e57d7431cd0a6c078bc9ba540b2662b", null ],
     [ "e2dElement", "Ez2DS_8h.html#a7d730be997ced9a362d3fbde0c925029", null ],
     [ "e2dGroup", "Ez2DS_8h.html#af3a345c79086b4c4a3bef68d54ec75bb", null ],
     [ "e2dGroupIterator", "Ez2DS_8h.html#a271ae036141142028e18270850818134", null ],

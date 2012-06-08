@@ -1,9 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$e2dElement_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;." alt="" coords="93,155,195,181"/>
-<area shape="rect" id="node5" href="$e2dGroup_8h.html" title="File which contains the e2dGroup struct and its &quot;methods&quot;." alt="" coords="5,229,93,256"/>
-<area shape="rect" id="node7" href="$e2dImage_8h.html" title="File which contains the e2dImage struct and its &quot;methods&quot;." alt="" coords="155,229,244,256"/>
-<area shape="rect" id="node9" href="$e2dPath_8h.html" title="File which contains the e2dPath struct and its &quot;methods&quot;." alt="" coords="307,229,388,256"/>
-<area shape="rect" id="node11" href="$e2dMatrix_8h.html" title="File which contains a 3x3 matrix implementation and utility methods." alt="" coords="80,80,171,107"/>
-<area shape="rect" id="node14" href="$e2dPoint_8h.html" title="File which contains a struct definition of a point (two floats)." alt="" coords="195,80,279,107"/>
-<area shape="rect" id="node20" href="$e2dScene_8h.html" title="File which contains the e2dScene struct and its &quot;methods&quot;." alt="" coords="405,80,496,107"/>
+<area shape="rect" id="node3" href="$e2dClone_8h.html" title="File which contains the e2dClone struct and its &quot;methods&quot;." alt="" coords="5,229,91,256"/>
+<area shape="rect" id="node5" href="$e2dElement_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;." alt="" coords="145,155,247,181"/>
+<area shape="rect" id="node8" href="$e2dGroup_8h.html" title="File which contains the e2dGroup struct and its &quot;methods&quot;." alt="" coords="133,229,221,256"/>
+<area shape="rect" id="node10" href="$e2dImage_8h.html" title="File which contains the e2dImage struct and its &quot;methods&quot;." alt="" coords="265,229,353,256"/>
+<area shape="rect" id="node12" href="$e2dPath_8h.html" title="File which contains the e2dPath struct and its &quot;methods&quot;." alt="" coords="387,229,468,256"/>
+<area shape="rect" id="node14" href="$e2dMatrix_8h.html" title="File which contains a 3x3 matrix implementation and utility methods." alt="" coords="151,80,241,107"/>
+<area shape="rect" id="node17" href="$e2dPoint_8h.html" title="File which contains a struct definition of a point (two floats)." alt="" coords="266,80,349,107"/>
+<area shape="rect" id="node21" href="$e2dScene_8h.html" title="File which contains the e2dScene struct and its &quot;methods&quot;." alt="" coords="476,80,567,107"/>
 </map>

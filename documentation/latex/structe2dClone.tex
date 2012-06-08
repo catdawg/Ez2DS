@@ -1,0 +1,59 @@
+\hypertarget{structe2dClone}{\section{e2d\-Clone Struct Reference}
+\label{structe2dClone}\index{e2d\-Clone@{e2d\-Clone}}
+}
+
+
+The \hyperlink{structe2dClone}{e2d\-Clone} struct is used for holding a pointer to another element in the scene, by having its I\-D. It is taken from the use tag in S\-V\-G, with the exception of the (width,height) attributes being ignored, as they seem to be useless in Inkscape.  
+
+
+
+
+{\ttfamily \#include $<$e2d\-Clone.\-h$>$}
+
+
+
+Collaboration diagram for e2d\-Clone\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structe2dClone__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structe2dElement}{e2d\-Element} \hyperlink{structe2dClone_a55bc7a3a0af41fba9e5b91f390c5928c}{element}
+\item 
+\hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{structe2dClone_afa8983f25fd6aa6aca18feb07d8d2249}{position}
+\item 
+char $\ast$ \hyperlink{structe2dClone_a8e7bcbfdc0e0c94d13e02502f2c7ba01}{points\-To\-I\-D}
+\item 
+\hyperlink{structe2dElement}{e2d\-Element} $\ast$ \hyperlink{structe2dClone_a237249b3b105a04b15b87304bba704a2}{points\-To\-Element}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{structe2dClone}{e2d\-Clone} struct is used for holding a pointer to another element in the scene, by having its I\-D. It is taken from the use tag in S\-V\-G, with the exception of the (width,height) attributes being ignored, as they seem to be useless in Inkscape. 
+
+\hyperlink{structe2dClone_a237249b3b105a04b15b87304bba704a2}{e2d\-Clone\-::points\-To\-Element} is added for convenience. When you load a scene, all clones are dereferenced (using \hyperlink{group__e2dClone_ga7a2d3abbe249ab9c4a402d31ef0b9275}{e2d\-Clone\-Dereference()}) and the result is saved here.
+
+It \char`\"{}inherits\char`\"{} from \hyperlink{structe2dElement}{e2d\-Element} by placing it as the first element in the struct, if you typecast e2d\-Clone$\ast$ into e2d\-Element$\ast$, it will work thus mimicing inheritance in e.\-g. C++. 
+
+\subsection{Field Documentation}
+\hypertarget{structe2dClone_a55bc7a3a0af41fba9e5b91f390c5928c}{\index{e2d\-Clone@{e2d\-Clone}!element@{element}}
+\index{element@{element}!e2dClone@{e2d\-Clone}}
+\subsubsection[{element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Element} {\bf element}}}\label{structe2dClone_a55bc7a3a0af41fba9e5b91f390c5928c}
+\hyperlink{structe2dClone}{e2d\-Clone} inherits from \hyperlink{structe2dElement}{e2d\-Element}. Typecasting e2d\-Clone$\ast$ to e2d\-Element$\ast$ will work. \hypertarget{structe2dClone_a237249b3b105a04b15b87304bba704a2}{\index{e2d\-Clone@{e2d\-Clone}!points\-To\-Element@{points\-To\-Element}}
+\index{points\-To\-Element@{points\-To\-Element}!e2dClone@{e2d\-Clone}}
+\subsubsection[{points\-To\-Element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Element}$\ast$ {\bf points\-To\-Element}}}\label{structe2dClone_a237249b3b105a04b15b87304bba704a2}
+The actual element pointed by this clone, this is calculated by the \hyperlink{group__e2dScene_gadfc497f7e653990ad03c4cd845eb8943}{e2d\-Scene\-Update\-Clones()} method \hypertarget{structe2dClone_a8e7bcbfdc0e0c94d13e02502f2c7ba01}{\index{e2d\-Clone@{e2d\-Clone}!points\-To\-I\-D@{points\-To\-I\-D}}
+\index{points\-To\-I\-D@{points\-To\-I\-D}!e2dClone@{e2d\-Clone}}
+\subsubsection[{points\-To\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf points\-To\-I\-D}}}\label{structe2dClone_a8e7bcbfdc0e0c94d13e02502f2c7ba01}
+I\-D of the element pointed by this struct \hypertarget{structe2dClone_afa8983f25fd6aa6aca18feb07d8d2249}{\index{e2d\-Clone@{e2d\-Clone}!position@{position}}
+\index{position@{position}!e2dClone@{e2d\-Clone}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Point} {\bf position}}}\label{structe2dClone_afa8983f25fd6aa6aca18feb07d8d2249}
+Position of the clone, refers to the x and y attributes of the S\-V\-G specification for clones. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{e2dClone_8h}{e2d\-Clone.\-h}\end{DoxyCompactItemize}

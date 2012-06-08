@@ -45,7 +45,7 @@ PROJECT_BRIEF          = "Easy 2D Scene (Ez2DS), is a library for transforming a
 # exceed 55 pixels and the maximum width should not exceed 200 pixels. 
 # Doxygen will copy the logo to the output directory.
 
-PROJECT_LOGO           = C:/Users/Rui/Desktop/Ez2DS/gh-pages/images/logo_s.png
+PROJECT_LOGO           = C:/Users/Rui/Desktop/Ez2DSdoc/images/logo_s.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) 
 # base path where the generated documentation will be put. 

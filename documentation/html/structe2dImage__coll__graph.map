@@ -1,7 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="6,5,79,32"/>
-<area shape="rect" id="node4" href="$structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="116,125,207,152"/>
+<area shape="rect" id="node2" href="$structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="169,5,241,32"/>
+<area shape="rect" id="node4" href="$structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="216,125,307,152"/>
+<area shape="rect" id="node12" href="$structe2dClone.html" title="The e2dClone struct is used for holding a pointer to another element in the scene, by having its ID. It is taken from the use tag in SVG, with the exception of the (width,height) attributes being ignored, as they seem to be useless in Inkscape." alt="" coords="430,229,505,256"/>
 <area shape="rect" id="node6" href="$structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="165,229,243,256"/>
-<area shape="rect" id="node12" href="$structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi..." alt="" coords="219,320,299,347"/>
-<area shape="rect" id="node10" href="$structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="137,5,215,32"/>
+<area shape="rect" id="node16" href="$structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi..." alt="" coords="219,320,299,347"/>
+<area shape="rect" id="node10" href="$structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="277,5,355,32"/>
 </map>

@@ -16,7 +16,7 @@ Collaboration diagram for e2d\-Element\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=291pt]{structe2dElement__coll__graph}
+\includegraphics[width=350pt]{structe2dElement__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Data Fields}
@@ -51,6 +51,12 @@ float \hyperlink{structe2dElement_a6a1d9b223870deeaec7f5e8b23ca4b22}{bbox\-Width
 float \hyperlink{structe2dElement_a680d0d4219ac8720005c46b55a9676ae}{bbox\-Height}
 \item 
 \hyperlink{structe2dPoint}{e2d\-Point} \hyperlink{structe2dElement_ac2c17ce4cba805b594b314a77923cbf5}{bbox\-Position}
+\item 
+\hyperlink{structe2dClone}{e2d\-Clone} $\ast$$\ast$ \hyperlink{structe2dElement_a4347bc7eb8d31d574115ef75ae074bb7}{clones}
+\item 
+unsigned int \hyperlink{structe2dElement_ab4c733639f1fdab67f8d25a1439a8b1a}{clones\-Num}
+\item 
+unsigned int \hyperlink{structe2dElement_a4bdf6d903ed95cd67debbba1ef3dbdae}{clones\-Alloc}
 \end{DoxyCompactItemize}
 
 
@@ -61,7 +67,7 @@ The \hyperlink{structe2dElement}{e2d\-Element} struct is the base of all element
 \hypertarget{structe2dElement_a70d94929e3789bf7c019c939b0084985}{\index{e2d\-Element@{e2d\-Element}!attribute\-Alloc@{attribute\-Alloc}}
 \index{attribute\-Alloc@{attribute\-Alloc}!e2dElement@{e2d\-Element}}
 \subsubsection[{attribute\-Alloc}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf attribute\-Alloc}}}\label{structe2dElement_a70d94929e3789bf7c019c939b0084985}
-Allocated size of \hyperlink{structe2dGroup_a55f6dde874716dc99dcd270fc0999a01}{e2d\-Group\-::child\-List} \hypertarget{structe2dElement_af9b5d9dbbf270b6f92a3ee66ce1b47ac}{\index{e2d\-Element@{e2d\-Element}!attribute\-Names@{attribute\-Names}}
+Allocated size of \hyperlink{structe2dElement_a4347bc7eb8d31d574115ef75ae074bb7}{e2d\-Element\-::clones} \hypertarget{structe2dElement_af9b5d9dbbf270b6f92a3ee66ce1b47ac}{\index{e2d\-Element@{e2d\-Element}!attribute\-Names@{attribute\-Names}}
 \index{attribute\-Names@{attribute\-Names}!e2dElement@{e2d\-Element}}
 \subsubsection[{attribute\-Names}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ {\bf attribute\-Names}}}\label{structe2dElement_af9b5d9dbbf270b6f92a3ee66ce1b47ac}
 Attribute names array, allocated size given by e2d\-Group\-::attribute\-Alloc. \begin{DoxySeeAlso}{See also}
@@ -100,7 +106,19 @@ Bounding box width. \begin{DoxySeeAlso}{See also}
 
 \hyperlink{group__e2dElement_gab829b280fa22a3509c40425fc84b5061}{e2d\-Element\-Center\-At\-B\-Box()} 
 \end{DoxySeeAlso}
-\hypertarget{structe2dElement_a6c8e26945f09b5157e2111e42f99b879}{\index{e2d\-Element@{e2d\-Element}!effective\-Transform@{effective\-Transform}}
+\hypertarget{structe2dElement_a4347bc7eb8d31d574115ef75ae074bb7}{\index{e2d\-Element@{e2d\-Element}!clones@{clones}}
+\index{clones@{clones}!e2dElement@{e2d\-Element}}
+\subsubsection[{clones}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Clone}$\ast$$\ast$ {\bf clones}}}\label{structe2dElement_a4347bc7eb8d31d574115ef75ae074bb7}
+Clones array, allocated size given by \hyperlink{structe2dElement_a4bdf6d903ed95cd67debbba1ef3dbdae}{e2d\-Element\-::clones\-Alloc}. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__e2dElement_ga80b7a45c28ec6e95d97b0316358a3290}{e2d\-Element\-Add\-Clone()} 
+\end{DoxySeeAlso}
+\hypertarget{structe2dElement_a4bdf6d903ed95cd67debbba1ef3dbdae}{\index{e2d\-Element@{e2d\-Element}!clones\-Alloc@{clones\-Alloc}}
+\index{clones\-Alloc@{clones\-Alloc}!e2dElement@{e2d\-Element}}
+\subsubsection[{clones\-Alloc}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf clones\-Alloc}}}\label{structe2dElement_a4bdf6d903ed95cd67debbba1ef3dbdae}
+Allocated size of \hyperlink{structe2dElement_a4347bc7eb8d31d574115ef75ae074bb7}{e2d\-Element\-::clones} \hypertarget{structe2dElement_ab4c733639f1fdab67f8d25a1439a8b1a}{\index{e2d\-Element@{e2d\-Element}!clones\-Num@{clones\-Num}}
+\index{clones\-Num@{clones\-Num}!e2dElement@{e2d\-Element}}
+\subsubsection[{clones\-Num}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf clones\-Num}}}\label{structe2dElement_ab4c733639f1fdab67f8d25a1439a8b1a}
+Number of clones in \hyperlink{structe2dElement_a4347bc7eb8d31d574115ef75ae074bb7}{e2d\-Element\-::clones} \hypertarget{structe2dElement_a6c8e26945f09b5157e2111e42f99b879}{\index{e2d\-Element@{e2d\-Element}!effective\-Transform@{effective\-Transform}}
 \index{effective\-Transform@{effective\-Transform}!e2dElement@{e2d\-Element}}
 \subsubsection[{effective\-Transform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf e2d\-Matrix} {\bf effective\-Transform}}}\label{structe2dElement_a6c8e26945f09b5157e2111e42f99b879}
 Actual transform calculated applied here. \begin{DoxySeeAlso}{See also}

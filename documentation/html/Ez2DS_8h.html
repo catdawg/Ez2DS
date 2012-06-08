@@ -143,7 +143,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="Ez2DS_8h__dep__incl.png" border="0" usemap="#Ez2DS_8hdep" alt=""/></div>
 <map name="Ez2DS_8hdep" id="Ez2DS_8hdep">
-<area shape="rect" id="node3" href="e2dElement_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;." alt="" coords="93,155,195,181"/><area shape="rect" id="node5" href="e2dGroup_8h.html" title="File which contains the e2dGroup struct and its &quot;methods&quot;." alt="" coords="5,229,93,256"/><area shape="rect" id="node7" href="e2dImage_8h.html" title="File which contains the e2dImage struct and its &quot;methods&quot;." alt="" coords="155,229,244,256"/><area shape="rect" id="node9" href="e2dPath_8h.html" title="File which contains the e2dPath struct and its &quot;methods&quot;." alt="" coords="307,229,388,256"/><area shape="rect" id="node11" href="e2dMatrix_8h.html" title="File which contains a 3x3 matrix implementation and utility methods." alt="" coords="80,80,171,107"/><area shape="rect" id="node14" href="e2dPoint_8h.html" title="File which contains a struct definition of a point (two floats)." alt="" coords="195,80,279,107"/><area shape="rect" id="node20" href="e2dScene_8h.html" title="File which contains the e2dScene struct and its &quot;methods&quot;." alt="" coords="405,80,496,107"/></map>
+<area shape="rect" id="node3" href="e2dClone_8h.html" title="File which contains the e2dClone struct and its &quot;methods&quot;." alt="" coords="5,229,91,256"/><area shape="rect" id="node5" href="e2dElement_8h.html" title="File which contains the e2dElement struct and its &quot;methods&quot;." alt="" coords="145,155,247,181"/><area shape="rect" id="node8" href="e2dGroup_8h.html" title="File which contains the e2dGroup struct and its &quot;methods&quot;." alt="" coords="133,229,221,256"/><area shape="rect" id="node10" href="e2dImage_8h.html" title="File which contains the e2dImage struct and its &quot;methods&quot;." alt="" coords="265,229,353,256"/><area shape="rect" id="node12" href="e2dPath_8h.html" title="File which contains the e2dPath struct and its &quot;methods&quot;." alt="" coords="387,229,468,256"/><area shape="rect" id="node14" href="e2dMatrix_8h.html" title="File which contains a 3x3 matrix implementation and utility methods." alt="" coords="151,80,241,107"/><area shape="rect" id="node17" href="e2dPoint_8h.html" title="File which contains a struct definition of a point (two floats)." alt="" coords="266,80,349,107"/><area shape="rect" id="node21" href="e2dScene_8h.html" title="File which contains the e2dScene struct and its &quot;methods&quot;." alt="" coords="476,80,567,107"/></map>
 </div>
 </div>
 <p><a href="Ez2DS_8h_source.html">Go to the source code of this file.</a></p>
@@ -174,6 +174,7 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a86cca845a62399e375916a400ce3f703"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structe2dPathPoint.html">e2dPathPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Ez2DS_8h.html#a86cca845a62399e375916a400ce3f703">e2dPathPoint</a></td></tr>
 <tr class="memitem:a0ac56e0545e02476afb28cf4920751d9"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structe2dPathCurve.html">e2dPathCurve</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Ez2DS_8h.html#a0ac56e0545e02476afb28cf4920751d9">e2dPathCurve</a></td></tr>
 <tr class="memitem:aa743382cda21581102015f44280c875e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structe2dImage.html">e2dImage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Ez2DS_8h.html#aa743382cda21581102015f44280c875e">e2dImage</a></td></tr>
+<tr class="memitem:a5e57d7431cd0a6c078bc9ba540b2662b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structe2dClone.html">e2dClone</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Ez2DS_8h.html#a5e57d7431cd0a6c078bc9ba540b2662b">e2dClone</a></td></tr>
 <tr class="memitem:a6659ac6d13a4ebd7168ef99f8ded9201"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structe2dPoint.html">e2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Ez2DS_8h.html#a6659ac6d13a4ebd7168ef99f8ded9201">e2dPoint</a></td></tr>
 <tr class="memitem:a097c8c058b4f43e8e154374d63432b3c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structe2dMatrix.html">e2dMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Ez2DS_8h.html#a097c8c058b4f43e8e154374d63432b3c">e2dMatrix</a></td></tr>
 <tr class="memitem:a76fc6b98f46ca44dd6b09fe824160485"><td class="memItemLeft" align="right" valign="top">typedef struct <br class="typebreak"/>
@@ -309,6 +310,20 @@ Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Typedef Documentation</h2>
+<a class="anchor" id="a5e57d7431cd0a6c078bc9ba540b2662b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structe2dClone.html">e2dClone</a> <a class="el" href="structe2dClone.html">e2dClone</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Forward declaration </p>
+
+</div>
+</div>
 <a class="anchor" id="a7d730be997ced9a362d3fbde0c925029"></a>
 <div class="memitem">
 <div class="memproto">
@@ -540,7 +555,7 @@ Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="Ez2DS_8h.html">Ez2DS.h</a>      </li>
 
-    <li class="footer">Generated on Fri May 18 2012 23:43:15 for Ez2DS by
+    <li class="footer">Generated on Fri Jun 8 2012 01:22:08 for Ez2DS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.0 </li>
    </ul>

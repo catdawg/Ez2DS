@@ -1,7 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="149,125,240,152"/>
-<area shape="rect" id="node4" href="$structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="171,229,249,256"/>
-<area shape="rect" id="node11" href="$structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi..." alt="" coords="225,320,305,347"/>
-<area shape="rect" id="node7" href="$structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="103,5,176,32"/>
-<area shape="rect" id="node9" href="$structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="211,5,289,32"/>
+<area shape="rect" id="node2" href="$structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="164,125,255,152"/>
+<area shape="rect" id="node4" href="$structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="74,229,152,256"/>
+<area shape="rect" id="node11" href="$structe2dClone.html" title="The e2dClone struct is used for holding a pointer to another element in the scene, by having its ID. It is taken from the use tag in SVG, with the exception of the (width,height) attributes being ignored, as they seem to be useless in Inkscape." alt="" coords="254,229,329,256"/>
+<area shape="rect" id="node15" href="$structe2dScene.html" title="The e2dScene struct defines a scene obtained from an SVG file. The struct contains the root under whi..." alt="" coords="5,320,85,347"/>
+<area shape="rect" id="node7" href="$structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="405,5,477,32"/>
+<area shape="rect" id="node9" href="$structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="170,5,248,32"/>
 </map>

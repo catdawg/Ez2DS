@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['e2dclone',['e2dClone',['../Ez2DS_8h.html#a5e57d7431cd0a6c078bc9ba540b2662b',1,'Ez2DS.h']]],
   ['e2delement',['e2dElement',['../Ez2DS_8h.html#a7d730be997ced9a362d3fbde0c925029',1,'Ez2DS.h']]],
   ['e2delementtype',['e2dElementType',['../group__e2dElement.html#ga13e962cd8fa5eaa7d4bec3fc7d774d59',1,'e2dElement.h']]],
   ['e2dgroup',['e2dGroup',['../Ez2DS_8h.html#af3a345c79086b4c4a3bef68d54ec75bb',1,'Ez2DS.h']]],

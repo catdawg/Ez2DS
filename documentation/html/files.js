@@ -1,5 +1,6 @@
 var files =
 [
+    [ "e2dClone.h", "e2dClone_8h.html", "e2dClone_8h" ],
     [ "e2dElement.h", "e2dElement_8h.html", "e2dElement_8h" ],
     [ "e2dGroup.h", "e2dGroup_8h.html", "e2dGroup_8h" ],
     [ "e2dImage.h", "e2dImage_8h.html", "e2dImage_8h" ],

@@ -1,0 +1,50 @@
+\hypertarget{e2dClone_8h}{\section{e2d\-Clone.\-h File Reference}
+\label{e2dClone_8h}\index{e2d\-Clone.\-h@{e2d\-Clone.\-h}}
+}
+
+
+File which contains the \hyperlink{structe2dClone}{e2d\-Clone} struct and its \char`\"{}methods\char`\"{}.  
+
+
+{\ttfamily \#include \char`\"{}Ez2\-D\-S.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e2d\-Element.\-h\char`\"{}}\\*
+Include dependency graph for e2d\-Clone.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{e2dClone_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structe2dClone}{e2d\-Clone}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{structe2dClone}{e2d\-Clone} struct is used for holding a pointer to another element in the scene, by having its I\-D. It is taken from the use tag in S\-V\-G, with the exception of the (width,height) attributes being ignored, as they seem to be useless in Inkscape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dClone}{e2d\-Clone} $\ast$ \hyperlink{group__e2dClone_ga338cd34d170f00f5cf140cbc7c09b15e}{e2d\-Clone\-Create} (const \hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em This is the constructor of \hyperlink{structe2dClone}{e2d\-Clone}. It returns a pointer to a new \hyperlink{structe2dClone}{e2d\-Clone}. Inside it calls \hyperlink{group__e2dClone_ga8a4825b7db0df1dc9aba4a82b46cf9cc}{e2d\-Clone\-Init()} to initialize the members of the struct. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dClone_ga8a4825b7db0df1dc9aba4a82b46cf9cc}{e2d\-Clone\-Init} (\hyperlink{structe2dClone}{e2d\-Clone} $\ast$clone, const \hyperlink{structe2dScene}{e2d\-Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em This method will initialize the members of the struct, i.\-e. it will zero the members, and call \hyperlink{group__e2dElement_ga8734d10ef40a380dfc51bfe1790a92a7}{e2d\-Element\-Init()}. It is called by \hyperlink{group__e2dClone_ga338cd34d170f00f5cf140cbc7c09b15e}{e2d\-Clone\-Create()}. \end{DoxyCompactList}\item 
+void \hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{group__e2dClone_ga7681ea62c6809fe1daf1c4ac6e873df5}{e2d\-Clone\-Destroy} (\hyperlink{structe2dClone}{e2d\-Clone} $\ast$clone)
+\begin{DoxyCompactList}\small\item\em Calls \hyperlink{group__e2dClone_gae3437977dc551bb014cefcfad690009a}{e2d\-Clone\-Free\-Members()}, \hyperlink{group__e2dElement_ga5c3a7d29f41609686a3a455bad6ef7c9}{e2d\-Element\-Free\-Members()}, and then frees the pointer. \hyperlink{group__e2dElement_ga2fdc3435e0e1ac9d1e1f0b330d9539fa}{e2d\-Element\-Destroy()} will call this method. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dClone_gae3437977dc551bb014cefcfad690009a}{e2d\-Clone\-Free\-Members} (\hyperlink{structe2dClone}{e2d\-Clone} $\ast$clone)
+\begin{DoxyCompactList}\small\item\em Will free all the dynamically allocated memory inside the \hyperlink{structe2dClone}{e2d\-Clone} struct pointed by elem, i.\-e. it checks if e2d\-Clone\-::points\-To has been defined and frees the pointer. It is called by \hyperlink{group__e2dClone_ga7681ea62c6809fe1daf1c4ac6e873df5}{e2d\-Clone\-Destroy()}. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{structe2dElement}{e2d\-Element} $\ast$ \hyperlink{group__e2dClone_ga7a2d3abbe249ab9c4a402d31ef0b9275}{e2d\-Clone\-Dereference} (\hyperlink{structe2dClone}{e2d\-Clone} $\ast$clone)
+\begin{DoxyCompactList}\small\item\em This method simply calls \hyperlink{group__e2dGroup_ga0c495948b5e2e14d004d1daacf4811af}{e2d\-Group\-Search\-By\-I\-D()} on the root of the scene where this clone belongs to, and returns the result. You usually do not need this as the target clone is already provided in \hyperlink{structe2dClone_a237249b3b105a04b15b87304bba704a2}{e2d\-Clone\-::points\-To\-Element} . If you receive a clone here it means that you have a clone of a clone, which is usually not desired, but quite common problem. To avoid this, you should always call \hyperlink{group__e2dClone_ga06841abcefcbb9de290b3421ace940cc}{e2d\-Clone\-Normalize()} to remove the middle clones. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dClone_ga06841abcefcbb9de290b3421ace940cc}{e2d\-Clone\-Normalize} (\hyperlink{structe2dClone}{e2d\-Clone} $\ast$clone)
+\begin{DoxyCompactList}\small\item\em This method, will deference the clone recursively until it finds something which is not clone, it will save the transformations of each redirection and apply to this clone, making it point to the actual non-\/clone element. It is useful to do this when you accidentally make clones of clones. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dClone_ga1fd79c4951343de24f9fbe9c954a1c6c}{e2d\-Clone\-Calculate\-Bounding\-Box} (\hyperlink{structe2dClone}{e2d\-Clone} $\ast$clone)
+\begin{DoxyCompactList}\small\item\em Will check the element pointed by this clone, check if the element already has a Bounding\-Box, if it doesn't, call \hyperlink{group__e2dElement_ga575c7363927670f1ea8c52b7ea23fcd5}{e2d\-Element\-Calculate\-Bounding\-Box()} on it. Using the bounding boxes limits, we will calculate the bounding box in this element. This method is also called by \hyperlink{group__e2dElement_ga575c7363927670f1ea8c52b7ea23fcd5}{e2d\-Element\-Calculate\-Bounding\-Box()} using the reflection provided by the \hyperlink{structe2dElement_a7df43d7f6c23b61b843acb56eb3ca19a}{e2d\-Element\-::type} attribute. \end{DoxyCompactList}\item 
+\hyperlink{Ez2DS_8h_a9f14e9cb869e1a85fdaba03afcca0df9}{E2\-D\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{group__e2dClone_ga1923a52d6153c4942e03fae899e0d0d8}{e2d\-Clone\-Center\-At\-B\-Box} (\hyperlink{structe2dClone}{e2d\-Clone} $\ast$clone, float tx, float ty)
+\begin{DoxyCompactList}\small\item\em Adds a transformation to the clone which subtracts the position (offset by (tx,ty)) of the Bounding Box, and adds the position of the bounding box to the clone position, effectively bringing the origin of the local coordinate system to the bounding box. See \hyperlink{group__e2dElement_gab829b280fa22a3509c40425fc84b5061}{e2d\-Element\-Center\-At\-B\-Box()} for an explanation on \char`\"{}tx\char`\"{} and \char`\"{}ty\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File which contains the \hyperlink{structe2dClone}{e2d\-Clone} struct and its \char`\"{}methods\char`\"{}. \begin{DoxyAuthor}{Author}
+Rui (\href{mailto:ruir2c@gmail.com}{\tt ruir2c@gmail.\-com})
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May, 2012 
+\end{DoxyDate}

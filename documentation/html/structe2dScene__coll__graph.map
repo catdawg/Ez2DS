@@ -1,6 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node4" href="$structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="108,125,199,152"/>
+<area shape="rect" id="node4" href="$structe2dElement.html" title="The e2dElement struct is the base of all elements in the scene. Common scene information such as id..." alt="" coords="121,125,212,152"/>
 <area shape="rect" id="node2" href="$structe2dGroup.html" title="The e2dGroup struct is used to group elements in the scene. This struct is created from the &quot;g&quot; eleme..." alt="" coords="43,229,121,256"/>
-<area shape="rect" id="node7" href="$structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="117,5,189,32"/>
-<area shape="rect" id="node9" href="$structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="225,5,303,32"/>
+<area shape="rect" id="node11" href="$structe2dClone.html" title="The e2dClone struct is used for holding a pointer to another element in the scene, by having its ID. It is taken from the use tag in SVG, with the exception of the (width,height) attributes being ignored, as they seem to be useless in Inkscape." alt="" coords="333,229,408,256"/>
+<area shape="rect" id="node7" href="$structe2dPoint.html" title="The e2dPoint struct which contains two floats." alt="" coords="346,5,419,32"/>
+<area shape="rect" id="node9" href="$structe2dMatrix.html" title="The e2dMatrix struct contains the implementation of a 3x3 matrix which is row major. See http://en.wikipedia.org/wiki/Row&#45;major_order if you have doubts." alt="" coords="118,5,196,32"/>
 </map>

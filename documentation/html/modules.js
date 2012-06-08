@@ -1,5 +1,6 @@
 var modules =
 [
+    [ "e2dClone", "group__e2dClone.html", "group__e2dClone" ],
     [ "e2dElement", "group__e2dElement.html", "group__e2dElement" ],
     [ "e2dGroup", "group__e2dGroup.html", "group__e2dGroup" ],
     [ "e2dImage", "group__e2dImage.html", "group__e2dImage" ],
